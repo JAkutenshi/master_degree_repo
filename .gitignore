@@ -1,0 +1,4 @@
+# say no for sucks doc* files
+*.doc
+*.docx
+*.odt
