@@ -1,0 +1,71 @@
+\documentclass[conference]{IEEEtran}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[russian,english]{babel}
+
+\renewcommand{\sfdefault}{cmss}
+\renewcommand{\rmdefault}{cmr}
+\renewcommand{\ttdefault}{cmt}
+\renewcommand\IEEEkeywordsname{Ключевые слова}
+
+\usepackage{booktabs}
+\usepackage{csquotes}
+%\usepackage{fontspec}
+%\setmainfont[Ligatures=TeX]{Times New Roman}
+
+\usepackage[%
+style=ieee,
+url=true,
+defernumbers=true,
+sorting=none,
+bibencoding=utf8,
+backend=biber,
+language=auto,    % get main language from babel
+autolang=other,
+]{biblatex}
+\addbibresource{refs.bib}
+
+\begin{document}
+	\title{Performance problem of multi-agent frameworks for autonomous robots software development}
+	\author{
+		\IEEEauthorblockN{Mikhail Efremov}
+		\IEEEauthorblockA{
+			Saint-Petersburg \\
+			Electrotechnical University\\
+			SPbETU "LETI" \\
+			Email: jakutenshi@gmail.com}
+	}
+
+	\maketitle
+	\selectlanguage{russian}
+	\begin{abstract}
+		Данная работа выделяет ряд проблем и задач, выполняемых таким промежуточным ПО, как фреймворки для разработки робототехнических приложений для автономных роботов. Данная статья делает упор на обнаружение критических областей для производительности в многоагентной архитектуре, так как подобный подход является наиболее пригодным для разработки рассматриваемых робототехнических фреймворков. Так же были выделены для исследования ряд существующих и наиболее используемых  фреймворков для рассмотрения способов решения проблем разработки такой архитектуры, выделяя подходы и технологии, которые необходимо протестировать для получения различных характеристик производительности распределенной системы.
+	\end{abstract}
+
+	\begin{IEEEkeywords}
+		robotics, frameworks, middleware, performance, multi-agent systems
+	\end{IEEEkeywords}
+
+	\section{Введение}
+		\input{tex/introduction.tex}
+	\section{Обзор предметной области }
+		\input{tex/domain_overview.tex}
+	\section{Выбор метода решения}
+		\input{tex/solution_method_selection.tex}
+	\section{Описание метода решения}
+		\input{tex/solution_method_description.tex}
+	\section{Заключение}
+		\input{tex/conclusion.tex}
+		
+	\printbibliography
+	
+	\newpage
+	\begin{otherlanguage}{english}
+	\begin{abstract}
+		This paper highlights a number of problems and tasks for such middleware as robotics software development frameworks for autonomous robots. This article emphasizes the detection of critical areas for multi-agent architecture performance, because this approach is most suitable for the development of the considered robotic frameworks. Also, a number of existing and most used frameworks were selected for research to consider ways to solve the problems of developing such an architecture, highlighting approaches and technologies that need to be tested to obtain various characteristics of a distributed system's performance.
+	\end{abstract}
+	\end{otherlanguage}
+
+\end{document}
