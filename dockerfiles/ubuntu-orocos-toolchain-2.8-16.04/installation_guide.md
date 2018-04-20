@@ -69,7 +69,7 @@ typing these three commands::
 
 Now edit .autoproj/remotes/github__orocos_toolchain_autoproj_git/orocos.osdeps (don't forget a dot before "autoproj" - it's a hidden direcotry!) in lines:
 
-__line ~107 (search for "")__
+__line ~107 (search for "gccxml:")__
 > '12.04,14.04,14.10,15.04,15.10': gccxml
 
 replace on:
@@ -80,9 +80,7 @@ __line ~175 (search for "clang-3.4:")__
 
 replace on:
 > debian, ubuntu: 
-
 > '16.04': [llvm-3.7, clang-3.8, libclang-3.8-dev] 
-
 >  default: [llvm-3.4, clang-3.4, libclang-3.4-dev]
 
 ### Step 4
