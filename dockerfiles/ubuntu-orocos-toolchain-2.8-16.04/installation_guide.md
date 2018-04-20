@@ -4,7 +4,7 @@
 
 As base image used jakutenshi/ubuntu-dev:latest - 16.04 version. libboost already in image.
 
-## Step 1
+### Step 1
 
 Setup our container:
 
@@ -27,7 +27,7 @@ Let's try to setup orocos toolchain:
 # sh ~/build/bootstrap.sh
 ```
 
-**IT'S ALL OK** It should crash whith something like that:
+**IT'S ALL OK!!** It should crash with something like that:
 
 ```
 Command failed
@@ -44,7 +44,7 @@ typing these three commands::
 It's ok. Now you should edit ./autoproj/manifest file at line 3:
 > branch: add_pkgconfig_osdep
 
-replace by
+replace on:
 > branch: master
 
 ### Step 3
@@ -67,6 +67,47 @@ typing these three commands::
  autoproj build
 ```
 
+Now edit .autoproj/remotes/github__orocos_toolchain_autoproj_git/orocos.osdeps (don't forget a dot before "autoproj" - it's a hidden direcotry!) in lines:
 
+__line ~107 (search for "")__
+> '12.04,14.04,14.10,15.04,15.10': gccxml
 
+replace on:
+> '12.04,14.04,14.10,15.04,15.10,16.04': gccxml
 
+__line ~175 (search for "clang-3.4:")__
+> debian, ubuntu: [llvm-3.4, clang-3.4, libclang-3.4-dev]
+
+replace on:
+> debian, ubuntu: 
+
+> '16.04': [llvm-3.7, clang-3.8, libclang-3.8-dev] 
+
+>  default: [llvm-3.4, clang-3.4, libclang-3.4-dev]
+
+### Step 4
+
+Now we can build orocos-toolchain:
+```
+# . env.sh 
+# autoproj update
+# autoproj build
+# source env.sh
+```
+
+Thats it!
+
+### Finish
+
+Add 
+```
+source ~/orocos/env.sh
+```
+
+to your .bashrc file and try to exec some orocos tools:
+
+```
+typegen
+deployer-gnulinux
+ctaskbrowser
+```
