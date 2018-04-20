@@ -12,14 +12,14 @@ Setup our container:
 # git config --global user.name "Your_name"
 # git config --global user.email yourname@yourmail.com
 # apt-get update
-# apt-get install ruby-dev bundler clang
+# apt-get install -y ruby-dev bundler clang
 # git clone https://github.com/orocos-toolchain/build.git
 # cd build/
 # git checkout toolchain-2.8-16.04
 ```
 ### Step 2
 
-Let's try to setup orocos toolchain:
+Let's try to setup orocos-toolchain (press enter for questions):
 
 ```
 # mkdir ~/orocos
@@ -41,7 +41,7 @@ typing these three commands::
   autoproj build
 ```
 
-It's ok. Now you should edit ./autoproj/manifest file at line 3:
+It's ok. Now you should edit "autoproj/manifest" file at line 3:
 > branch: add_pkgconfig_osdep
 
 replace on:
@@ -49,10 +49,10 @@ replace on:
 
 ### Step 3
 
-Next try:
+Next try (press enter too. TAO CORBA libs don't exists in repos and in ma be cause of errors later, then press enter and choose Omniorb):
 
 ```
- sh ../build/bootstrap.sh
+ sh ~/build/bootstrap.sh
 ```
 
 Yes, it crushes too with something like this:
@@ -67,7 +67,7 @@ typing these three commands::
  autoproj build
 ```
 
-Now edit .autoproj/remotes/github__orocos_toolchain_autoproj_git/orocos.osdeps (don't forget a dot before "autoproj" - it's a hidden direcotry!) in lines:
+Now edit ".autoproj/remotes/github__orocos_toolchain_autoproj_git/orocos.osdeps" file (don't forget a dot before "autoproj" - it's a hidden direcotry!) in lines:
 
 __line ~107 (search for "gccxml:")__
 > '12.04,14.04,14.10,15.04,15.10': gccxml
