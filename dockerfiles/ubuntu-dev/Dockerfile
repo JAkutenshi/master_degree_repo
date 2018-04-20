@@ -19,6 +19,7 @@ ADD ./c.vim /root/.vim/after/syntax
 ADD ./cpp.vim /root/.vim/after/syntax
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y vim
+RUN apt-get install -y lsb-release
 
 EXPOSE 22
 
