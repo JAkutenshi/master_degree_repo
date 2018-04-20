@@ -80,7 +80,7 @@ __line ~175 (search for "clang-3.4:")__
 
 replace on:
 > debian, ubuntu: \
-> '16.04': [llvm-3.7, clang-3.8, libclang-3.8-dev] 
+> '16.04': [llvm-3.7, clang-3.8, libclang-3.8-dev] \
 >  default: [llvm-3.4, clang-3.4, libclang-3.4-dev]
 
 ### Step 4
