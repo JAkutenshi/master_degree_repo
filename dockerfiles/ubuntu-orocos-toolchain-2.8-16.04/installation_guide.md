@@ -9,8 +9,8 @@ As base image used jakutenshi/ubuntu-dev:latest - 16.04 version. libboost alread
 Setup our container:
 
 ```
-# git config --global user.name "JAkutenshi"
-# git config --global user.email jakutenshi@gmail.com
+# git config --global user.name "Your_name"
+# git config --global user.email yourname@yourmail.com
 # apt-get update
 # apt-get install ruby-dev bundler clang
 # git clone https://github.com/orocos-toolchain/build.git
