@@ -16,14 +16,35 @@ Steps:
 # sh ../build/bootstrap.sh
 ```
 It should crash whith something like that:
-> Command failed
-> git:https://github.com/orocos-toolchain/autoproj.git branch=add_pkgconfig_osdep interactive=false push_to=git@github.com:/orocos-toolchain/autoproj.git repository_id=github:/orocos-toolchain/autoproj.git retry_count=10(/root/orocos/.autoproj/remotes/github__orocos_toolchain_autoproj_git): failed in import phase
->    cannot resolve refs/remotes/autobuild/add_pkgconfig_osdep
-> autoproj failed to update your configuration. This means most of the time that there
-> was an temporary network problem. You can try to manually complete the bootstrap by
+```Command failed
+git:https://github.com/orocos-toolchain/autoproj.git branch=add_pkgconfig_osdep interactive=false push_to=git@github.com:/orocos-toolchain/autoproj.git repository_id=github:/orocos-toolchain/autoproj.git retry_count=10(/root/orocos/.autoproj/remotes/github__orocos_toolchain_autoproj_git): failed in import phase
+  cannot resolve refs/remotes/autobuild/add_pkgconfig_osdep
+  autoproj failed to update your configuration. This means most of the time that there
+  was an temporary network problem. You can try to manually complete the bootstrap by
 typing these three commands::
->  . env.sh
->  autoproj update
->  autoproj build
+  . env.sh
+  autoproj update
+  autoproj build```
+It's ok. Now you should edit ./autoproj/manifest file at line 3:
+> branch: add_pkgconfig_osdep
+replace by
+> branch: master
+
+Next try:
+```
+ sh ../build/bootstrap.sh
+```
+Yes, it crushes too with something like this:
+'''
+ ERROR: typelib is selected in the manifest or on the command line, but it is excluded from the build: gccxml is marked as unavailable for this operating system (dependency chain: typelib>gccxml)
+autoproj failed to update your configuration. This means most of the time that there
+was an temporary network problem. You can try to manually complete the bootstrap by
+typing these three commands::
+ . env.sh
+ autoproj update
+ autoproj build
+'''
+
+
 
 
