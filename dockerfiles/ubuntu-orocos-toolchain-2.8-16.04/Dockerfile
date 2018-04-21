@@ -15,10 +15,9 @@ ADD orocos-before-update.tar.gz /root/
 
 # Step 4
 WORKDIR /root/orocos
-RUN echo "source /root/orocos/env.sh" >> ~/.bashrc
-RUN /bin/bash -c ". env.sh && autoproj update && autoproj build"
-
+RUN echo "source /root/orocos/env.sh" >> ~/.bashrc                  \
+    && /bin/bash -c ". env.sh && autoproj update && autoproj build" \
 # Clear workspace
-RUN rm -rf /root/build/ && rm /root/manual_from_step_2.md
+    && rm -rf /root/build/ && rm /root/manual_from_step_2.md
 
 WORKDIR /root/

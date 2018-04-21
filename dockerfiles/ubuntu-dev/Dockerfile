@@ -1,20 +1,14 @@
-FROM ubuntu:latest
+FROM ubuntu:16.04
 MAINTAINER JAkutenshi <jakutenshi@gmail.com>
 
-ADD ./.vimrc /root/
-RUN mkdir -p /root/.vim/swap
-RUN mkdir -p /root/.vim/backup
-RUN mkdir -p /root/.vim/colors
-RUN mkdir -p /root/.vim/after/syntax
-ADD ./monokai.vim /root/.vim/colors
-ADD ./c.vim /root/.vim/after/syntax
-ADD ./cpp.vim /root/.vim/after/syntax
+WORKDIR /root/
+ADD vim_setup.tar.gz /root/
 
-RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     locales          \
     lsb-release      \
     ranger           \
+    htop             \
     vim              \
     git              \
     tmux             \
@@ -28,10 +22,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
     pkg-config
 
 RUN locale-gen en_US.UTF-8 ru_RU.UTF-8
-ENV LANG en_US.UTF-8  
-ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
+ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 
 EXPOSE 22
 
-WORKDIR /root/
