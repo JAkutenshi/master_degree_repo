@@ -48,6 +48,6 @@ WORKDIR /root/
 ADD mira-installer-no-interact.sh /root/
 RUN chmod +x /root/mira-installer-no-interact.sh \
     && /root/mira-installer-no-interact.sh
-RUN echo "export MIRA_PATH=/my/path/to/mira" >> .bashrc                            \
- && echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/my/path/to/mira/lib" >> .bashrc \
- && echo "export PATH=$PATH:/my/path/to/mira/bin" >> .bashrc
+RUN echo "export MIRA_PATH=/root/mira" >> .bashrc                            \
+ && echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/root/mira/lib" >> .bashrc \
+ && echo "export PATH=$PATH:/root/mira/bin" >> .bashrc
