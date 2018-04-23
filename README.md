@@ -6,12 +6,12 @@
 
 ## Roadmap
 
-### Stage 1 - Create docker images with equal environment
+### Stage 1 - Create docker images with equal environment -  DONE (except OpenRTM)
 - [x] Make dockerfile for ROS.
-- [ ] Make dockerfile for MIRA.
+- [x] Make dockerfile for MIRA.
 - [x] Make dockerfile for OROCOS.
-- [ ] Make dockerfile for YARP.
-- [ ] Make dockerfile for OpenRTM-aist.
+- [x] Make dockerfile for YARP.
+- [ ] Make dockerfile for OpenRTM-aist. (waiting for docs, later)
 
 ### Stage 2 - Analyse middlewares documentation and sorts by categories their exists communication methods
 - [ ] Make communication_methods.md for ROS.
