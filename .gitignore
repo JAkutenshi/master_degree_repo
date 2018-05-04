@@ -2,3 +2,6 @@
 *.doc
 *.docx
 *.odt
+
+# exclude tmp/ dir with temporary files
+tmp/*
