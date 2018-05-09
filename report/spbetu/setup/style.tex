@@ -18,6 +18,7 @@
 \setmainfont{Times New Roman}
 
 %=== Заголовки
+%%%% Главы
 \titleformat{\chapter}[hang]{\normalfont\bfseries\centering\uppercase}{\thechapter . }{0pt}{}
 \titlespacing{\chapter}{0pt}{-4ex}{2.5ex}
 %%%% Разделы
@@ -25,12 +26,16 @@
 \titlespacing{\section}{\parindent}{0pt}{2.5ex}
 %%%% Подразделы
 \titleformat{\subsection}[hang]{\normalfont\bfseries}{\thesubsection . }{0pt}{}
-\titlespacing{\subsection}{\parindent}{0pt}{0pt}
+\titlespacing{\subsection}{\parindent}{0pt}{2.5ex}
+%%%% Подподразделы
+\titleformat{\subsubsection}[hang]{\normalfont\bfseries}{\thesubsubsection . }{0pt}{}
+\titlespacing{\subsubsection}{\parindent}{0pt}{2.5ex}
+
 
 %=== Форматирование содержания
 %%%% Глубина вложенности содержания 
 \setcounter{tocdepth}{1}           % до подразделов
-\setcounter{secnumdepth}{1}        % считать тоже до подразделов
+\setcounter{secnumdepth}{3}        % считать тоже до подразделов
 %%%% Формат глав
 \titlecontents{chapter}
 [0.0cm]             				% левый отступ

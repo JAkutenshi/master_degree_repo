@@ -13,20 +13,23 @@
 
 \begin{document}
 	\pagenumbering{gobble}
-	%\lipsum[1-20]
 
-	\input{tex/essay.tex}
-	\input{tex/abstract.tex}
-	\input{tex/table_of_contents.tex}	
-	\input{tex/definitions.tex}
+	\input{tex/essay.tex}             % Реферат ! ВНУТРИ НАЧИНАЕТСЯ НУМЕРАЦИЯ !
+	\input{tex/abstract.tex}          % Аннотация на английском
+	\input{tex/table_of_contents.tex} % Оглавление	
+	\input{tex/definitions.tex}       % Определения
 	
-	\input{tex/introduction.tex}
+	\input{tex/introduction.tex}      % Введение
 	
-	\input{tex/tmp/chapter1.tex}
-	\input{tex/tmp/chapter2.tex}
-	\input{tex/tmp/chapter3.tex}
-	\input{tex/tmp/chapter4.tex}
+	\input{tex/content/chapter1.tex}  % Обзор предметной области
+	\input{tex/content/chapter2.tex}  % Обзор робототехнического ППО
+	\input{tex/content/chapter3.tex}  % Разбор методов коммуникации МАРППО и построение тестовых случаев
+	\input{tex/content/chapter4.tex}  % Рассмотрение фреймворков для тестирования производительности
+	\input{tex/content/chapter5.tex}  % Реализация тестирования
+	\input{tex/content/chapter6.tex}  % Результаты тестирования
+	\input{tex/content/chapter7.tex}  % Автоматизация тестирования, обработки  результатов, а так же их визуализация
+	\input{tex/content/chapter8.tex}  % Технико-экономическое обоснование
 
-	\input{tex/conclusion.tex}
-	\input{tex/references.tex}
+	\input{tex/conclusion.tex}        % Заключение
+	\input{tex/references.tex}        % Список использованнх источников
 \end{document}
