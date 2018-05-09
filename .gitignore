@@ -5,3 +5,7 @@
 
 # exclude tmp/ dir with temporary files
 tmp/*
+
+# some backup files
+*.recover.bak~
+*.bak

@@ -1,0 +1,47 @@
+%=== Разметка документа
+\geometry{
+	a4paper, 
+	top = 2cm,
+	bottom = 2cm,
+	left = 3cm,
+	right = 1cm
+}
+%=== Форматирование текста
+%%%% Междустрочный интервал 1.5 строки
+\onehalfspacing					
+%%%% Отступ красной строки - 1.25см
+\setlength{\parindent}{1.25cm}	
+%%%% Шрифт Times New Roman
+\setmainfont{Times New Roman}
+
+%=== Заголовки
+%%%% Главы
+\titleformat{\chapter} % command
+[hang] % shape
+{bf center} % format
+{Story No. \ \thechapter} % label
+{0.5ex} % sep
+{}
+
+%%%% Разделы
+\titleformat{\section}[hang]{\normalfont\bfseries}{}{0pt}{}
+\titlespacing{\section}{\parindent}{4ex}{0pt}
+%%%% Подразделы
+\titleformat{\subsection}[hang]{\normalfont\bfseries\itshape}{\arabic{subsection}. }{0pt}{}
+\titlespacing{\subsection}{\parindent}{4ex}{0pt}
+
+%=== Минимизируем количество переносов
+\tolerance = 500
+\hyphenpenalty = 20000
+\emergencystretch = 1cm
+
+%=== Номера только для тех формул, на которые есть ссылки в тексте
+\mathtoolsset{showonlyrefs=true}
+
+%=== Работа с гиперссылками
+\hypersetup{
+	colorlinks=true,
+	urlcolor=blue,
+	filecolor=green,
+	linkcolor=red
+}

@@ -3,7 +3,7 @@
 
 %%% Макет страницы %%%
 % Выставляем значения полей (ГОСТ 7.0.11-2011, 5.3.7)
-\geometry{a4paper,top=2cm,bottom=2cm,left=2.5cm,right=1cm,nofoot,nomarginpar} %,showframe
+\geometry{a4paper,top=2cm,bottom=2cm,left=3cm,right=1cm,nofoot,nomarginpar} %,showframe
 \setlength{\topskip}{0pt}   %размер дополнительного верхнего поля
 \setlength{\footskip}{12.3pt} % снимет warning, согласно https://tex.stackexchange.com/a/334346
 
@@ -13,7 +13,7 @@
 %% И правит сразу и в таблицах (если со звёздочкой) 
 %\DoubleSpacing*     % Двойной интервал
 \OnehalfSpacing*    % Полуторный интервал
-%\setSpacing{1.42}   % Полуторный интервал, подобный Ворду (возможно, стоит включать вместе с предыдущей строкой)
+\setSpacing{1.45}   % Полуторный интервал, подобный Ворду (возможно, стоит включать вместе с предыдущей строкой)
 
 %%% Выравнивание и переносы %%%
 %% http://tex.stackexchange.com/questions/241343/what-is-the-meaning-of-fussy-sloppy-emergencystretch-tolerance-hbadness
@@ -69,10 +69,10 @@
 
 %%% Колонтитулы %%%
 % Порядковый номер страницы печатают на середине верхнего поля страницы (ГОСТ Р 7.0.11-2011, 5.3.8)
-\makeevenhead{plain}{}{\thepage}{}
-\makeoddhead{plain}{}{\thepage}{}
-\makeevenfoot{plain}{}{}{}
-\makeoddfoot{plain}{}{}{}
+\makeevenhead{plain}{}{}{}
+\makeoddhead{plain}{}{}{}
+\makeevenfoot{plain}{}{\thepage}{}
+\makeoddfoot{plain}{}{\thepage}{}
 \pagestyle{plain}
 
 %%% добавить Стр. над номерами страниц в оглавлении
@@ -138,7 +138,7 @@
 
 \ifnumequal{\value{chapstyle}}{1}{%
     \chapterstyle{thesisgostchapname}
-    \renewcommand*{\cftchaptername}{\chaptername\space} % будет вписано слово Глава перед каждым номером раздела в оглавлении
+    \renewcommand*{\cftchaptername}{\space} % будет вписано слово Глава перед каждым номером раздела в оглавлении
 }{}%
 
 %%% Интервалы между заголовками

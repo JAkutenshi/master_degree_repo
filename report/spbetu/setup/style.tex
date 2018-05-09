@@ -1,0 +1,50 @@
+%=== Разметка документа
+\geometry{
+	a4paper, 
+	top = 2cm,
+	bottom = 2cm,
+	left = 3cm,
+	right = 1cm,
+	%includeheadfoot,
+	%asymmetric
+}
+%=== Форматирование текста
+%%%% Междустрочный интервал 1.5 строки
+\onehalfspacing		
+\linespread{1.43}
+%%%% Отступ красной строки - 1.25см
+\setlength{\parindent}{1.25cm}	
+%%%% Шрифт Times New Roman
+\setmainfont{Times New Roman}
+
+%=== Заголовки
+\titleformat{\chapter}[hang]{\normalfont\bfseries\centering\uppercase}{\thechapter . }{0pt}{}
+\titlespacing{\chapter}{0pt}{-4ex}{2.5ex}
+%%%% Разделы
+\titleformat{\section}[hang]{\normalfont\bfseries\centering\uppercase}{\thesection .  }{0pt}{}
+\titlespacing{\section}{\parindent}{0pt}{0pt}
+%%%% Подразделы
+\titleformat{\subsection}[hang]{\normalfont\bfseries}{\thesubsection . }{0pt}{}
+\titlespacing{\subsection}{\parindent}{0pt}{0pt}
+
+%=== Минимизируем количество переносов
+\tolerance = 500
+\hyphenpenalty = 20000
+\emergencystretch = 2cm
+
+%=== Номера только для тех формул, на которые есть ссылки в тексте
+\mathtoolsset{showonlyrefs=true}
+
+%=== Работа с гиперссылками
+\hypersetup{
+	colorlinks=true,
+	urlcolor=blue,
+	filecolor=green,
+	linkcolor=red
+}
+
+%=== Стиль документа
+%%%% Номера страниц внизу
+\newpagestyle{mystyle}{\setfoot[\thepage][][]{}{\thepage}{}}
+%%%% Применить стиль
+\pagestyle{mystyle}

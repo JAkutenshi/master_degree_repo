@@ -1,0 +1,19 @@
+% Шаблон для отчетов по ВКР в СПбГЭТУ "ЛЭТИ"
+% Ефремов М.А. 2018г
+\documentclass[oneside,14pt]{book}
+
+\input{setup/packages.tex}
+\input{setup/style.tex}
+\input{setup/commands.tex}
+
+\usepackage{lipsum}
+
+\begin{document}
+	\pagenumbering{gobble}
+	\lipsum[1-20]
+
+	\input{tex/essay.tex}
+	\input{tex/abstract.tex}
+	\input{tex/table_of_contents.tex}	
+	
+\end{document}
