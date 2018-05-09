@@ -27,6 +27,25 @@
 \titleformat{\subsection}[hang]{\normalfont\bfseries}{\thesubsection . }{0pt}{}
 \titlespacing{\subsection}{\parindent}{0pt}{0pt}
 
+%=== Форматирование содержания
+%%%% Глубина вложенности содержания 
+\setcounter{tocdepth}{1}           % до подразделов
+\setcounter{secnumdepth}{1}        % считать тоже до подразделов
+%%%% Формат глав
+\titlecontents{chapter}
+[0.0cm]             				% левый отступ
+{}                  				% предваряющий код
+{\contentslabel{3.2em}}  			% формат, если заголовок нумерованный
+{}                                  % формат, если заголовок НЕнумерованный
+{\titlerule*[1pc]{ }\contentspage}  % заполнение \titlerule*[какой длины повторение]{чем} до номера страницы заголовка.
+%%%% Формат разделов
+\titlecontents{section}
+[0em]
+{}
+{\contentslabel{2.3em}}
+{\hspace*{-2.3em}}
+{\titlerule*[1pc]{ }\contentspage}
+
 %=== Минимизируем количество переносов
 \tolerance = 500
 \hyphenpenalty = 20000

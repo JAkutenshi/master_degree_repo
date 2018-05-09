@@ -1,9 +1,11 @@
 %=== Библиография
 \usepackage[
-	backend=biber,
+	%backend=biber,
 	bibencoding=utf8,
-	sorting=ynt,
-	maxcitenames=2,
-	style=gost-footnote
+	sorting=none,
+	maxcitenames=4,
+	language=auto, % получение языка из babel
+	autolang=other, % многоязычная библиография
+	style=gost-numeric
 ]{biblatex}
-\addbibresource{bib/biblist.bib}
+\addbibresource{bib/bibliography.bib}
