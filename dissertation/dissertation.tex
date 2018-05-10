@@ -7,8 +7,18 @@
 \input{setup/bibliography.tex}
 \input{setup/commands.tex}
 
+\usepackage{csquotes}
 \usepackage{lipsum}
 \usepackage{enumitem}
+\usepackage{rotating}
+
+%@online{,
+%	title  = {},
+%	url   = {},
+%	media = {eresource},
+%	urldate = {2017-11-05}
+%}
+
 
 \begin{document}
 	\pagenumbering{gobble}
@@ -18,7 +28,6 @@
 	\input{tex/definitions.tex}       % Определения
 	
 	\input{tex/introduction.tex}      % Введение
-	
 	\input{tex/content/chapter1.tex}  % Обзор предметной области
 	\input{tex/content/chapter2.tex}  % План тестирования
 	\input{tex/content/chapter3.tex}  % Результаты тестирования
@@ -26,4 +35,16 @@
 
 	\input{tex/conclusion.tex}        % Заключение
 	\input{tex/references.tex}        % Список использованнх источников
+	
+
+
+	\setcounter{chapter}{0}
+%	\addtocontents{toc}{\setcounter{tocdepth}{0}}	
+	\begingroup
+		\renewcommand\thechapter{\Alph{chapter}}
+		\titleformat{\chapter}[hang]{\normalfont\bfseries\centering\uppercase}{Приложение \thechapter . }{0pt}{}
+		\titlecontents{chapter}[2cm]{}{Приложение \thecontentslabel . }{}{\titlerule*[1pc]{ }\contentspage}
+		\input{tex/application/A-tables.tex}
+	\endgroup
+	
 \end{document}
