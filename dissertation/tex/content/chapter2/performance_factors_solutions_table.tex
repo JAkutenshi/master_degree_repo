@@ -1,0 +1,16 @@
+\begin{table}[!h]
+	\centering
+	\small
+	\def\arraystretch{1.3}
+	\caption{Реализация критических для производительности задач для отобранных фреймворков}
+	\label{table:chapter2:performance_factors_solutions}
+	\begin{tabular}{|p{3.6cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|}
+		\hline
+		& \textbf{ROS} & \textbf{MIRA} & \textbf{ORoCoS} & \textbf{YARP} \\ \hline
+		\textbf{Централизованные сервисы} & Сервисы поиска, именования, сервис параметров & Нет & Сервисы поиска, именования & Сервис имен \\ \hline
+		\textbf{Взаимодействие между узлами} & Топики, параметры, сервисы & Топики, RPC & Порты, сервисы, события, параметры & Порты, топики \\ \hline
+		\textbf{Протоколы коммуникации} & TCP, UDP, собственный протокол rosserial & IPC, TCP & CORBA, TCP, UDP, SSL,UNIX Sockets, MQueue, EtherCAT, CanOPEN & ACE, TCP, UDP, IPC \\ \hline
+		\textbf{Формат сообщений} & Бинарный & Бинарный, XML, JSON & Сериализация на основе CORBA & Бинарный \\ \hline
+		\textbf{Взаимодействие с аппаратурой} & Инкапсуляция в узлах & Инкапсуляция в узлах и RPC-API & Инкапсуляция в узлах и RPC-API & Инкапсуляция в узлах и динамически подключаемые библиотеки \\ \hline
+	\end{tabular}
+\end{table}
