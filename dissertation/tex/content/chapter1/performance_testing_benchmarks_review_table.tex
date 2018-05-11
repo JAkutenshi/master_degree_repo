@@ -1,0 +1,19 @@
+\begin{table}[!h]
+	\centering
+	\def\arraystretch{1.2}
+%	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|p{3.3cm}|p{2.4cm}|p{2.4cm}|p{3.2cm}|p{3.2cm}|}
+			\hline
+			& \textbf{Hayai} & \textbf{Celero} & \textbf{Nonius} & \textbf{Google Benchmark} \\ \hline
+			\textbf{Вывод} & stdio, json, junit & stdio, csv, junit & stdio, csv, junit, html & stdio, csv, json \\ \hline
+			\textbf{Счетчики} & Нет & Нет & Нет & Да \\ \hline
+			\textbf{Итерации} & Вручную & Вручную & Автоматически & Автоматически \\ \hline
+			\textbf{Документация} & Скудная & Подробная & Подробная & Подробная \\ \hline
+			\textbf{Фикстуры} & Да & Да & Да & Да \\ \hline
+			\textbf{Вычисление времени} & std::chrono & std::chrono & std::chrono & std::chrono, rdtsc \\ \hline
+			\textbf{Зависимости} & STL & STL & STL, Boost & STL \\ \hline
+		\end{tabular}%
+%	}
+	\caption{Соответствие найденных фреймворков для написания бенчмарков на языке C++ выделенным в разделе \ref{title:chapter1:performance_testing_criterias} критериям}
+	\label{table:chapter1:performance_testing_benchmarks_review_table}
+\end{table}
