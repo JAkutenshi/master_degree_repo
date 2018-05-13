@@ -1,0 +1,24 @@
+\begin{table}[!h]
+	\centering
+	\caption{Факторизация параметров для тестирования производительности MIRA}
+	\label{table:chapter2:mira_test_cases}
+	\small
+	\def\arraystretch{1.3}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|p{3.5cm}|p{3cm}|p{3cm}|p{2.5cm}|}
+			\hline
+			\textbf{Подход к коммуникации} & \textbf{Реализация модуля} & \textbf{Размер сообщения} & \textbf{Время хранения сообщений в очереди} \\ \hline
+			Шаблон наблюдатель & В одном процессе (разделяемая память) & 1 КБ & 1 мс \\ \hline
+			RPC & В разных процессах (TCP) & 10 КБ & 10 мс \\ \hline
+			\multirow{8}{*}{} & \multirow{8}{*}{} & 100 КБ & 100 мс \\ \cline{3-4} 
+			&  & 1 МБ & 1 с \\ \cline{3-4} 
+			&  & 10 МБ & 10 с \\ \cline{3-4} 
+			&  & 50 МБ & 100 с \\ \cline{3-4} 
+			&  & 100 МБ & \multirow{4}{*}{} \\ \cline{3-3}
+			&  & 250 МБ &  \\ \cline{3-3}
+			&  & 500 МБ &  \\ \cline{3-3}
+			&  & \todo{1 ГБ} &  \\ \hline
+		\end{tabular}%
+	}
+	
+\end{table}

@@ -19,6 +19,8 @@
 %	urldate = {2017-11-05}
 %}
 
+% http://cito-web.yspu.org/link1/metod/met125/node29.html статистическая обработка результата
+
 \begin{document}
 	\pagenumbering{gobble}
 	\input{tex/essay.tex}             % Реферат ! ВНУТРИ НАЧИНАЕТСЯ НУМЕРАЦИЯ !
@@ -41,7 +43,8 @@
 		\renewcommand\thechapter{\Alph{chapter}}
 		\titleformat{\chapter}[hang]{\normalfont\bfseries\centering\uppercase}{Приложение \thechapter . }{0pt}{}
 		\titlecontents{chapter}[2cm]{}{Приложение \thecontentslabel . }{}{\titlerule*[1pc]{ }\contentspage}
-%		\input{tex/application/A-tables.tex}
+%		\input{tex/application/tables.tex}
+		\input{tex/application/dockerfiles.tex}
 	\endgroup
 	
 \end{document}

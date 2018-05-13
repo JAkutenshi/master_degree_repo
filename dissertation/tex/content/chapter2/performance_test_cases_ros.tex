@@ -1,0 +1,23 @@
+\begin{table}[!h]
+\centering
+\small
+\def\arraystretch{1.3}
+\caption{Факторизация параметров для тестирования производительности ROS}
+\label{table:chapter2:ros_test_cases}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|p{4cm}|p{3cm}|p{3cm}|p{2cm}|}
+\hline
+\textbf{Тип взаимодействия} & \textbf{Размер сообщения} & \textbf{Количество подписчиков или клиентов} & \textbf{Размер буфера}     \\ \hline
+Издатель/ подписчик & 1 КБ             & 1                                   & 10                \\ \hline
+Сервисы            & 10 КБ            & 2                                   & 100               \\ \hline
+\multirow{8}{*}{}  & 100 КБ           & 4                                   & 1000              \\ \cline{2-4} 
+                   & 1 МБ             & 8                                   & 2000              \\ \cline{2-4} 
+                   & 10 МБ            & 16                                  & 5000              \\ \cline{2-4} 
+                   & 50 МБ            & 32                                  & 10000             \\ \cline{2-4} 
+                   & 100 МБ           & \multirow{4}{*}{}                   & \multirow{4}{*}{} \\ \cline{2-2}
+                   & 250 МБ           &                                     &                   \\ \cline{2-2}
+                   & 500 МБ           &                                     &                   \\ \cline{2-2}
+                   & \todo{1 ГБ}             &                                     &                   \\ \hline
+\end{tabular}%
+}
+\end{table}

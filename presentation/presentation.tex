@@ -1,0 +1,71 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[main=russian, english]{babel}
+\usepackage[T2A, T1]{fontenc}
+\usefonttheme{serif}
+\usetheme{Berkeley}
+\usecolortheme{seagull}
+
+\usepackage{fontspec}  
+\setmainfont{Times New Roman} 
+\setmonofont{Courier New}
+\logo{\includegraphics[scale=0.5]{eltech-black-logo.eps}}
+
+%\defbeamertemplate*{title page}{customized}[1][]
+%{
+%	\usebeamerfont{title}\inserttitle\par
+%	\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
+%	\bigskip
+%	\usebeamerfont{author}\insertauthor\par
+%	\usebeamerfont{institute}\insertinstitute\par
+%	\usebeamerfont{date}\insertdate\par
+%}
+
+\title[MARM Performance Testing]{Тестирование производительности middleware фреймворков для разработки программного обеспечения мобильных роботов}
+%\author[Ефремов М.А.]{Студент: Ефремов Михаил Александрович}
+%\date{Руководитель: к.т.н. Кринкин К.В.}
+\date{}
+
+\begin{document}
+	
+	\begin{frame}
+	  \titlepage
+	  	  \vspace{-6em}
+	   	  \centering
+	  	  \begin{tabular}{r|l}
+	  	  	Студент & Ефремов Михаил Александрович \\
+	  	  	Руководитель & к.т.н. Кринкин Кирилл Владимирович
+	  	  \end{tabular}
+	\end{frame}
+	
+	\section{Введение}
+%	\subsection{Подраздел 1}
+	\begin{frame}{Введение}
+		\begin{itemize}
+		  \item Введение начинается здесь
+		  \item Вот \texttt{так} можно выделить важные моменты
+		\end{itemize}
+		
+		\vskip 1cm
+		
+		\begin{block}{Пример}
+			Блок примеров
+		\end{block}
+	\end{frame}
+	
+	\subsection{Подраздел 2}
+	\begin{frame}
+		\begin{table}
+			\centering
+			\begin{tabular}{l|r}
+				Item & Quantity \\\hline
+				Widgets & 42 \\
+				Gadgets & 13
+			\end{tabular}
+			\caption{\label{tab:widgets}An example table.}
+		\end{table}
+	
+	\end{frame}
+
+\end{document}

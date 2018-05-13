@@ -74,9 +74,13 @@
 \captionsetup[table]{labelsep=endash}
 %%%% К рисункам
 \captionsetup[figure]{labelsep=endash}
+%%%% К рисункам
+\captionsetup[lstlisting]{labelsep=endash}
 
 %=== Стиль документа
 %%%% Номера страниц внизу
 \newpagestyle{mystyle}{\setfoot[\thepage][][]{}{\thepage}{}}
 %%%% Применить стиль
 \pagestyle{mystyle}
+
+\input{setup/listings.tex}
