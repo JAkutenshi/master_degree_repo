@@ -1,28 +1,30 @@
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
 % \usepackage{graphicx}
-\begin{table}[!h]
+\begin{table}[]
 	\centering
 	\caption{Факторизация параметров для тестирования производительности YARP}
 	\label{table:chapter2:yarp_test_cases}
-	\small
+%	\footnotesize
 	\def\arraystretch{1.5}
-	\resizebox{\textwidth}{!}{%
-	\begin{tabular}{|p{2cm}|p{2.5cm}|p{2.3cm}|p{2.3cm}|p{2.3cm}|p{2cm}|}
-	\hline
-	\multirow{2}{*}{\textbf{Тип порта}} & \multirow{2}{2.5cm}{\textbf{Транспорт соединения}} & \multirow{2}{2.3cm}{\textbf{Размер сообщения}} & \multirow{2}{2.3cm}{\textbf{Количество читающих портов}} & \multicolumn{2}{l|}{\textbf{QoS}}              \\ \cline{5-6} 
-	                           &                                       &                                   &                                             & \textbf{Статус }           & \textbf{Приоритет}         \\ \hline
-	Обычный                    & tcp                                   & 1 КБ                              & 1                                           & Применяется       & LOW               \\ \hline
-	С буфером             & udp                                   & 10 КБ                             & 2                                           & Не применяется    & NORMAL            \\ \hline
-	RPC         & mcast                                 & 100 КБ                            & 4                                           & \multirow{8}{*}{} & HIGH              \\ \cline{1-4} \cline{6-6} 
-	\multirow{7}{*}{}          & shmem                                 & 1 МБ                              & 8                                           &                   & CRITICAL          \\ \cline{2-4} \cline{6-6} 
-	                           & \todo{local}                          & 10 МБ                             & 16                                          &                   & \multirow{6}{*}{} \\ \cline{2-4}
-	                           & fast\_tcp                             & 50 МБ                             & 32                                          &                   &                   \\ \cline{2-4}
-	                           & \multirow{4}{*}{}                     & 100 МБ                            & \multirow{4}{*}{}                           &                   &                   \\ \cline{3-3}
-	                           &                                       & 250 МБ                            &                                             &                   &                   \\ \cline{3-3}
-	                           &                                       & 500 МБ                            &                                             &                   &                   \\ \cline{3-3}
-	                           &                                       & \todo{1 ГБ}                       &                                             &                   &                   \\ \hline
-	\end{tabular}%
-}
+	\newcommand{\sr}{\rule[-0.45cm]{0pt}{0.9cm}}
+%	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|p{2cm}|p{2.5cm}|p{2.4cm}|p{2.1cm}|p{2.7cm}|p{2.4cm}|}
+		\hline
+		\multirow{2}{2cm}{\textbf{Тип порта}} & \multirow{2}{2.5cm}{\textbf{Транспорт соединения}} & \multirow{2}{2.4cm}{\textbf{Размер сообщения}} & \multirow{2}{2.1cm}[-0.2cm]{\textbf{Число входящих портов}} & \multicolumn{2}{l|}{ \sr \textbf{QoS}} \\ \cline{5-6} 
+		 & & & & \sr \textbf{Статус } & \sr \textbf{Приоритет} \\ \hline
+		Обычный           & tcp   & 1 КБ    & 1  & Применяется       & LOW               \\ \hline
+		С буфером         & udp   & 4 КБ    & 2  & Не применяется    & NORMAL            \\ \hline
+		RPC               & mcast & 16 КБ   & 4  & \multirow{8}{*}{} & HIGH              \\ \cline{1-4} \cline{6-6} 
+		\multirow{7}{*}{} & shmem & 64 КБ   & 8  &                   & CRITICAL          \\ \cline{2-4} \cline{6-6} 
+		 & \todo{local}           & 256 КБ  & 16                &    & \multirow{6}{*}{} \\ \cline{2-4}
+	     & fast\_tcp              & 1 МБ    & 32                &    &                   \\ \cline{2-4}
+		 & \multirow{4}{*}{}      & 4 МБ    & \multirow{4}{*}{} &    &                   \\ \cline{3-3}
+		 &                        & 16 МБ   &                   &    &                   \\ \cline{3-3}
+		 &                        & 64 МБ   &                   &    &                   \\ \cline{3-3}
+		 &                        & 256 МБ  &                   &    &                   \\ \cline{3-3}
+		 &                        & \todo{1 ГБ}  &              &    &                   \\ \hline
+		\end{tabular}%
+%	}
 
 \end{table}

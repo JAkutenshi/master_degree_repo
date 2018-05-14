@@ -1,0 +1,25 @@
+\begin{table}[]
+	\centering
+	\caption{Факторизация параметров для тестирования производительности \toolchain}
+	\label{table:chapter2:orocos_test_cases}
+%	\footnotesize
+	\def\arraystretch{1.3}
+%	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|p{3.2cm}|p{2.6cm}|p{3.6cm}|p{2.5cm}|p{1.6cm}|}
+			\hline
+			\multicolumn{2}{|l|}{\textbf{Протокол коммуникации}} & \multirow{2}{3.6cm}{\textbf{Тип взаимодействия}} & \multirow{2}{2.5cm}{\textbf{Размер сообщения}} & \multirow{2}{1.6cm}{\textbf{Размер буфера}} \\ \cline{1-2}
+			\textbf{Расположение} & \textbf{Протокол} &  &  &  \\ \hline
+			Внутри процесса & Разделяемая память & Порты & 1 КБ & 10 \\ \hline
+			Между процессами & MQueue & Удаленный вызов операции & 4 КБ & 100 \\ \hline
+			\multirow{2}{*}{} & CORBA & Сервис & 16 КБ & 1000 \\ \cline{2-5} 
+			& CORBA+ MQueue & \multirow{7}{*}{} & 64 КБ & 2000 \\ \cline{1-2} \cline{4-5} 
+			\multicolumn{2}{|l|}{\multirow{6}{*}{}} &  & 256 КБ & 5000 \\ \cline{4-5} 
+			\multicolumn{2}{|l|}{} &  & 1 МБ & 10000 \\ \cline{4-5} 
+			\multicolumn{2}{|l|}{} &  & 16 МБ & \multirow{4}{*}{} \\ \cline{4-4}
+			\multicolumn{2}{|l|}{} &  & 64 МБ &  \\ \cline{4-4}
+			\multicolumn{2}{|l|}{} &  & 256 МБ &  \\ \cline{4-4}
+			\multicolumn{2}{|l|}{} &  & \todo{1 ГБ} &  \\ \hline
+		\end{tabular}%
+%	}
+	
+\end{table}
