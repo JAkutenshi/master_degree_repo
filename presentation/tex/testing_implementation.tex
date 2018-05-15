@@ -1,0 +1,59 @@
+\section{Реализация}
+
+
+\subsection{Конфигурация окружения}
+\begin{frame}{Конфигурация окружения}
+	Тут спеки машины
+	
+	Тут картинка из иерархии docker-образов
+\end{frame}
+
+\subsection{Архитектура}
+\begin{frame}{Конвейер}
+	Тут картинка из шагов:
+	\begin{itemize}
+		\item Получения результатов с
+		\begin{itemize}
+			\item ROS benchmark 
+			\item YARP benchmark
+			\item MIRA benchmark
+			\item ORoCoS benchmark
+		\end{itemize}
+		\item Разбиения на таблицы при помощи утилиты из 
+		\begin{itemize}
+			\item набор из основного json и дополнительных, которые будут сливаться с основным
+			\item input.xml, описывающий входные json-ы и выходные csv
+		\end{itemize}
+		\item Обработка таблиц при помощи R и утилиты преобразования из
+			\item набора из множества csv таблиц
+			\item analyse.xml, описывающий что читать из таблиц, каким R-скриптом это обрабатывать
+		\item В конце результаты: rmd html pdf
+	\end{itemize}
+\end{frame}
+
+\subsection{Бенчмарк}
+\begin{frame}{Пример алгоритма реализации бенчмарка}
+	Картинка с описанием связей узлов, сообщений и макросов тестов
+\end{frame}
+
+\subsection{Преобразователь}
+\begin{frame}{Реализация преобразователя json to csv}
+	Картинка с описанием шагов:
+	\begin{itemize}
+		\item XML configuration
+		\item JSON merge
+		\item Преобразование (и схранение отдельным csv) JSON в структуру список-списков-списков(1) 
+		\item Преобразование (1) в список-списков средних значений измерений с СКО по множеству многофакторных бенчмарков;
+		\item Распиливание этого списка по множеству требуемых csv файлов
+	\end{itemize}
+\end{frame}
+
+\subsection{Анализатор}
+\begin{frame}{Реализация анализатора таблиц}
+	Картинка с описанием шагов:
+	\begin{itemize}
+		\item XML configuration
+		\item Преобразование таблицы в R-chunk и запись его в файл
+		\item Вызов knit и файлы результатов на выходе
+	\end{itemize}
+\end{frame}

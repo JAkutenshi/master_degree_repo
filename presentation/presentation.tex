@@ -12,6 +12,13 @@
 \setmonofont{Courier New}
 \logo{\includegraphics[scale=0.5]{eltech-black-logo.eps}}
 
+\addtobeamertemplate{navigation symbols}{}{%
+	\usebeamerfont{footline}%
+	\usebeamercolor[fg]{footline}%
+	\hspace{1em}%
+	\insertframenumber/\inserttotalframenumber
+}
+
 %\defbeamertemplate*{title page}{customized}[1][]
 %{
 %	\usebeamerfont{title}\inserttitle\par
@@ -28,44 +35,10 @@
 \date{}
 
 \begin{document}
-	
-	\begin{frame}
-	  \titlepage
-	  	  \vspace{-6em}
-	   	  \centering
-	  	  \begin{tabular}{r|l}
-	  	  	Студент & Ефремов Михаил Александрович \\
-	  	  	Руководитель & к.т.н. Кринкин Кирилл Владимирович
-	  	  \end{tabular}
-	\end{frame}
-	
-	\section{Введение}
-%	\subsection{Подраздел 1}
-	\begin{frame}{Введение}
-		\begin{itemize}
-		  \item Введение начинается здесь
-		  \item Вот \texttt{так} можно выделить важные моменты
-		\end{itemize}
-		
-		\vskip 1cm
-		
-		\begin{block}{Пример}
-			Блок примеров
-		\end{block}
-	\end{frame}
-	
-	\subsection{Подраздел 2}
-	\begin{frame}
-		\begin{table}
-			\centering
-			\begin{tabular}{l|r}
-				Item & Quantity \\\hline
-				Widgets & 42 \\
-				Gadgets & 13
-			\end{tabular}
-			\caption{\label{tab:widgets}An example table.}
-		\end{table}
-	
-	\end{frame}
-
+	\input{tex/title.tex}
+	\input{tex/introduction.tex}
+	\input{tex/testing_description.tex}
+	\input{tex/testing_implementation.tex}
+	\input{tex/testing_results.tex}
+	\input{tex/conclusions.tex}
 \end{document}
