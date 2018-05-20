@@ -1,0 +1,7 @@
+{
+    "PublisherFixture/ROS_BM_Publish_method": [
+        "subs_count",
+        "size",
+        "buffer"
+    ]
+}

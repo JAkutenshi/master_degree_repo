@@ -1,5 +1,10 @@
 <merger>
     <json url="result_low.json">
+        <benchmark name="PublisherFixture/ROS_BM_Publish_method">
+            <factor name="subs_count"/>
+            <factor name="size"/>
+            <factor name="buffer"/>
+        </benchmark>
         <secondary url="subscriber_results_low.json" key="bm_id"/>
     </json>
 </merger>

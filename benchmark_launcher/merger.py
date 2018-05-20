@@ -2,6 +2,7 @@ import json
 import re
 import csv
 import xml.etree.ElementTree as ET
+import itertools
 
 json_file_urls = []
 
@@ -34,6 +35,15 @@ def process_primary(primary: ET.Element):
     regexpr = re.compile(r'_mean|_median|_stddev$')
     benchmarks = [benchmark for benchmark in primary_json['benchmarks'] if not re.search(regexpr, benchmark["name"])]
 
+    # получим названия бенчмарков и их факторов
+    benchmarks_descriptions = {}
+    for benchmark in primary.findall("benchmark"):
+        name = benchmark.attrib["name"]
+        benchmarks_descriptions[name] = []
+        for factor in benchmark.findall("factor"):
+            benchmarks_descriptions[name].append(factor.attrib["name"])
+    write_json_to_file("benchmarks_descriptions.json", benchmarks_descriptions)
+
     # перебираем все дополнительные json-ы
     for secondary in primary.findall('secondary'):
         url = secondary.attrib['url']
@@ -59,8 +69,7 @@ def process_primary(primary: ET.Element):
         #######################
         # закончили со всеми вторичными файлами
     ###########################
-    # записываем результат в общий full.json
-    write_json_to_file("full.json", benchmarks)
+    return benchmarks
 
 
 def process_xml(url: str):
@@ -68,7 +77,12 @@ def process_xml(url: str):
     root = tree.getroot()
     primaries = []
     for primary in root:
-        primaries.append(process_primary(primary))
+        benchmarks = process_primary(primary)
+        for benchmark in benchmarks:
+            primaries.append(benchmark)
+
+    # записываем результат в общий full.json
+    write_json_to_file("full.json", primaries)
 
 
 def process_full_json():
@@ -196,16 +210,98 @@ def process_full_json():
 
 def process_results_to_rmd():
     # Определим название бенчмарков и их факторы
+    benchmarks_descriptions_from_json = read_json_from_file("benchmarks_descriptions.json")
+
+    # Создаем словари с возможными значениями факторов. Они пойдут столбцами в таблицы как Х-значения
+    benchmarks_descriptions = {}
+    for benchmark_name in benchmarks_descriptions_from_json:
+        for factor_name in benchmarks_descriptions_from_json[benchmark_name]:
+            if benchmark_name not in benchmarks_descriptions:
+                benchmarks_descriptions[benchmark_name] = {}
+            benchmarks_descriptions[benchmark_name][factor_name] = []
+
+    # получаем наши бенчмарки и из названий пытаемся сопоставить с их описанием,
+    # заполняя возможные варианты
     benchmarks = read_json_from_file("benchmarks_results.json")
     benchmark_name_regexp = re.compile(r"([a-zA-Z_]*\/[a-zA-Z_]*)\/.*")
     factors_string_regexp = re.compile(r"[a-zA-Z_]*\/[a-zA-Z_]*(\/.*)")
     factor_match = re.compile(r"\/(\d*)")
-    benchmarks_descriptions = {}
+
     for benchmark in benchmarks:
-        name = benchmark_name_regexp.findall(benchmark)
-        factors = factors_string_regexp.findall(benchmark)
-        factors_list = factor_match.findall(factors[0])
-        print(factors_list)
+        name = benchmark_name_regexp.findall(benchmark)[0]
+        if name in benchmarks_descriptions:
+            factors = factors_string_regexp.findall(benchmark)
+            factors_list = factor_match.findall(factors[0])
+            for i in range(0, len(factors_list)):
+                factor_name = benchmarks_descriptions_from_json[name][i]  # имя фактора в очередности их описания
+                if factors_list[i] not in benchmarks_descriptions[name][factor_name]:
+                    benchmarks_descriptions[name][factor_name].append(factors_list[i])
+    #print(benchmarks_descriptions)
+
+    # далее надо составить множество таблиц путем выборки одного фактора и фиксации других
+    # для этого составим регулярку для бенчмарков по конкретному фактору
+    tables = []
+    for benchmark_info in benchmarks_descriptions:
+        factors_dict = benchmarks_descriptions[benchmark_info]
+        print(factors_dict)
+        factors_order = list(benchmarks_descriptions[benchmark_info].keys())
+        # в этом цикле берется один фактор, который будет Х-осью, остальные фиксируются
+        for current_factor in factors_dict:
+            fixed_factors = []
+            # все факторы кроме выбранного должны быть перебраны
+            for factor in factors_dict:
+                if factor != current_factor:
+                    fixed_factors.append(factors_dict[factor])
+                else:
+                    fixed_factors.append([-1])
+            # все возможные комбинации фиксированных факторов
+            combinations = list(itertools.product(*fixed_factors))
+            # положение текущего фактора в имени бенчмарка
+            current_factor_place = factors_order.index(current_factor)
+            for combination in combinations:
+                # имя таблицы
+                table_name = "Benchmark name is \"" + benchmark_info + "\" by var=" + current_factor + " where "
+                # шаблон для регулярки
+                table_pattern = benchmark_info
+                index  = 0
+                for factor in combination:
+                    if index != current_factor_place:
+                        table_name += " " + factors_order[index] + "=" + factor
+                        table_pattern += "\/" + factor
+                    else:
+                        table_pattern += r"\/(\d*)"
+                    index += 1
+                table_pattern += "$"
+                #print(table_name)
+                #print(table_pattern)
+
+                regexp = re.compile(table_pattern)
+                valid_benchmarks = []
+                for benchmark in benchmarks:
+                    if regexp.findall(benchmark):
+                        valid_benchmarks.append(benchmark)
+
+                table = {}
+                table["factor"] = {
+                    "name": current_factor,
+                    "values": factors_dict[current_factor]
+                }
+                for benchmark in valid_benchmarks:
+                    for measure in benchmarks[benchmark]:
+                        if measure not in table:
+                            table[measure] = {
+                                "mean": [],
+                                "error": []
+                            }
+                        table[measure]["mean"].append(benchmarks[benchmark][measure]["mean"])
+                        table[measure]["error"].append(benchmarks[benchmark][measure]["error"])
+
+                tables.append({
+                    "name": table_name,
+                    "table": table
+                })
+    #print(tables)
+    write_json_to_file("tables.json", tables)
 
 
 if __name__ == "__main__":
