@@ -1,0 +1,10 @@
+<splitter>
+    <main_json>
+    </main_json>
+    <jsons>
+        <json>
+            <url>./subscriber_results.json</url>
+            <url>key</url>
+        </json>
+    </jsons>
+</splitter>

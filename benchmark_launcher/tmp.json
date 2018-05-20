@@ -1,0 +1,900 @@
+{
+    "PublisherFixture/ROS_BM_Publish_method/1/1024/1": {
+        "count": 10,
+        "measures": [
+            {
+                "real_time": 5481.778400750404,
+                "cpu_time": 5282.086472932955,
+                "bytes_per_second": 193862786.0879016,
+                "manual_bandwidth": 89508343.25214018,
+                "manual_latency": 193020308.18883356
+            },
+            {
+                "real_time": 5648.3599012507775,
+                "cpu_time": 5429.072642086259,
+                "bytes_per_second": 188614164.42689228,
+                "manual_bandwidth": 91667736.58297937,
+                "manual_latency": 193053397.6256799
+            },
+            {
+                "real_time": 5325.873596171205,
+                "cpu_time": 5119.356797286952,
+                "bytes_per_second": 200025128.26272976,
+                "manual_bandwidth": 88362856.4951575,
+                "manual_latency": 192266124.86131036
+            },
+            {
+                "real_time": 5384.414936446641,
+                "cpu_time": 5198.933176353991,
+                "bytes_per_second": 196963485.63536078,
+                "manual_bandwidth": 88438261.0970761,
+                "manual_latency": 192102194.10975832
+            },
+            {
+                "real_time": 5267.195791665485,
+                "cpu_time": 5103.679431337033,
+                "bytes_per_second": 200639560.8847514,
+                "manual_bandwidth": 85477186.96687259,
+                "manual_latency": 194995279.92725933
+            },
+            {
+                "real_time": 5326.647322095647,
+                "cpu_time": 5157.353735371429,
+                "bytes_per_second": 198551437.91610646,
+                "manual_bandwidth": 85635212.88138066,
+                "manual_latency": 194611532.32706606
+            },
+            {
+                "real_time": 5352.417005349429,
+                "cpu_time": 5175.866360742678,
+                "bytes_per_second": 197841274.99247637,
+                "manual_bandwidth": 86692783.9706096,
+                "manual_latency": 194859678.35254896
+            },
+            {
+                "real_time": 5338.806829988583,
+                "cpu_time": 5152.46879420143,
+                "bytes_per_second": 198739680.12235335,
+                "manual_bandwidth": 87699880.03300165,
+                "manual_latency": 192610343.29401067
+            },
+            {
+                "real_time": 5555.738935292301,
+                "cpu_time": 5348.263846918697,
+                "bytes_per_second": 191464002.02188206,
+                "manual_bandwidth": 90183284.33163089,
+                "manual_latency": 193744463.06200552
+            },
+            {
+                "real_time": 5596.368005287019,
+                "cpu_time": 5362.244985212267,
+                "bytes_per_second": 190964792.32559052,
+                "manual_bandwidth": 90784416.10366508,
+                "manual_latency": 193521848.28658855
+            }
+        ]
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/1024/10": {
+        "count": 10,
+        "measures": [
+            {
+                "real_time": 5728.688564520081,
+                "cpu_time": 5501.4146210566905,
+                "bytes_per_second": 186133943.81885618,
+                "manual_bandwidth": 97913037.4435933,
+                "manual_latency": 193237269.45862424
+            },
+            {
+                "real_time": 5604.3760396353255,
+                "cpu_time": 5380.4623894137985,
+                "bytes_per_second": 190318215.4037071,
+                "manual_bandwidth": 93174178.55245332,
+                "manual_latency": 195800856.88364393
+            },
+            {
+                "real_time": 5511.590179883147,
+                "cpu_time": 5311.478787503963,
+                "bytes_per_second": 192790000.85797405,
+                "manual_bandwidth": 94475263.18817021,
+                "manual_latency": 193093508.1246141
+            },
+            {
+                "real_time": 5638.397883659664,
+                "cpu_time": 5440.357415556206,
+                "bytes_per_second": 188222927.60985982,
+                "manual_bandwidth": 97022220.17865074,
+                "manual_latency": 192689550.55425316
+            },
+            {
+                "real_time": 5864.145909717978,
+                "cpu_time": 5641.12917618407,
+                "bytes_per_second": 181523941.0441373,
+                "manual_bandwidth": 100942126.50100227,
+                "manual_latency": 192135441.09165788
+            },
+            {
+                "real_time": 5792.79683838532,
+                "cpu_time": 5559.69157939795,
+                "bytes_per_second": 184182878.7399907,
+                "manual_bandwidth": 96310993.10171726,
+                "manual_latency": 196185787.22414914
+            },
+            {
+                "real_time": 5559.393124129311,
+                "cpu_time": 5342.833320558124,
+                "bytes_per_second": 191658608.56258768,
+                "manual_bandwidth": 94342053.85783832,
+                "manual_latency": 193377006.9018298
+            },
+            {
+                "real_time": 5594.55481860141,
+                "cpu_time": 5389.683951486908,
+                "bytes_per_second": 189992587.54634368,
+                "manual_bandwidth": 93880867.18272701,
+                "manual_latency": 195701302.63326272
+            },
+            {
+                "real_time": 5447.117683740735,
+                "cpu_time": 5226.635830482794,
+                "bytes_per_second": 195919523.22903877,
+                "manual_bandwidth": 92930237.87194516,
+                "manual_latency": 193141354.32142857
+            },
+            {
+                "real_time": 5451.541457491711,
+                "cpu_time": 5255.459614232038,
+                "bytes_per_second": 194844994.57040042,
+                "manual_bandwidth": 93816131.13144118,
+                "manual_latency": 193838903.61585674
+            }
+        ]
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/2048/1": {
+        "count": 10,
+        "measures": [
+            {
+                "real_time": 5706.421358779988,
+                "cpu_time": 5537.23690846668,
+                "bytes_per_second": 369859558.81145656,
+                "manual_bandwidth": 128885630.43336016,
+                "manual_latency": 153370829.11054704
+            },
+            {
+                "real_time": 5795.555433788718,
+                "cpu_time": 5585.702871396796,
+                "bytes_per_second": 366650365.61242366,
+                "manual_bandwidth": 133228363.48965524,
+                "manual_latency": 154212927.80193383
+            },
+            {
+                "real_time": 5756.51532474497,
+                "cpu_time": 5554.765145091079,
+                "bytes_per_second": 368692455.3074727,
+                "manual_bandwidth": 133767734.13372332,
+                "manual_latency": 152856233.473758
+            },
+            {
+                "real_time": 5845.853783412351,
+                "cpu_time": 5625.2612180858805,
+                "bytes_per_second": 364071981.83356136,
+                "manual_bandwidth": 133879744.78822681,
+                "manual_latency": 156109051.69456148
+            },
+            {
+                "real_time": 5805.703731150082,
+                "cpu_time": 5616.69603515671,
+                "bytes_per_second": 364627173.55201495,
+                "manual_bandwidth": 135728528.80491078,
+                "manual_latency": 151613696.70173168
+            },
+            {
+                "real_time": 6092.376227422549,
+                "cpu_time": 5883.716111542252,
+                "bytes_per_second": 348079336.45581245,
+                "manual_bandwidth": 142685282.17219648,
+                "manual_latency": 152847943.86627853
+            },
+            {
+                "real_time": 5940.76077286578,
+                "cpu_time": 5709.471186922894,
+                "bytes_per_second": 358702221.79083544,
+                "manual_bandwidth": 138423582.86126184,
+                "manual_latency": 152656531.2297926
+            },
+            {
+                "real_time": 5755.379150665783,
+                "cpu_time": 5602.280006484699,
+                "bytes_per_second": 365565447.93002456,
+                "manual_bandwidth": 134899363.13276258,
+                "manual_latency": 153243955.4933624
+            },
+            {
+                "real_time": 5772.7654309895115,
+                "cpu_time": 5540.620106997842,
+                "bytes_per_second": 369633716.1635322,
+                "manual_bandwidth": 136934814.20984986,
+                "manual_latency": 151713880.21283516
+            },
+            {
+                "real_time": 5869.8897502419295,
+                "cpu_time": 5661.629519212036,
+                "bytes_per_second": 361733312.47662294,
+                "manual_bandwidth": 136275763.34525478,
+                "manual_latency": 153364321.62959334
+            }
+        ]
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/2048/10": {
+        "count": 10,
+        "measures": [
+            {
+                "real_time": 5891.430505912919,
+                "cpu_time": 5676.188313048021,
+                "bytes_per_second": 360805506.62707967,
+                "manual_bandwidth": 153441505.44482735,
+                "manual_latency": 153358245.09660575
+            },
+            {
+                "real_time": 5757.938859523978,
+                "cpu_time": 5568.24270067161,
+                "bytes_per_second": 367800060.10747015,
+                "manual_bandwidth": 149316698.91882193,
+                "manual_latency": 153671974.84371653
+            },
+            {
+                "real_time": 5712.306836392978,
+                "cpu_time": 5530.5525005650625,
+                "bytes_per_second": 370306583.25560665,
+                "manual_bandwidth": 149841082.19486237,
+                "manual_latency": 153147852.80419457
+            },
+            {
+                "real_time": 5870.514838815964,
+                "cpu_time": 5684.032296925582,
+                "bytes_per_second": 360307593.8023322,
+                "manual_bandwidth": 155671474.6294792,
+                "manual_latency": 152411224.06318516
+            },
+            {
+                "real_time": 5916.19352808418,
+                "cpu_time": 5688.245206055105,
+                "bytes_per_second": 360040737.663685,
+                "manual_bandwidth": 154729921.80724773,
+                "manual_latency": 152690104.95223647
+            },
+            {
+                "real_time": 5826.235390860064,
+                "cpu_time": 5625.266782834122,
+                "bytes_per_second": 364071621.67839026,
+                "manual_bandwidth": 153322473.20862758,
+                "manual_latency": 152635784.63253698
+            },
+            {
+                "real_time": 6001.498105156682,
+                "cpu_time": 5751.084837630175,
+                "bytes_per_second": 356106727.3081492,
+                "manual_bandwidth": 152741509.88127723,
+                "manual_latency": 154691255.9550143
+            },
+            {
+                "real_time": 5984.233731427549,
+                "cpu_time": 5773.827763140888,
+                "bytes_per_second": 354704034.1372973,
+                "manual_bandwidth": 155825805.1118084,
+                "manual_latency": 153101419.77371448
+            },
+            {
+                "real_time": 5960.95176366744,
+                "cpu_time": 5731.722167793169,
+                "bytes_per_second": 357309712.5167394,
+                "manual_bandwidth": 156262124.34843755,
+                "manual_latency": 152647713.57396755
+            },
+            {
+                "real_time": 5990.080614123893,
+                "cpu_time": 5763.428468180193,
+                "bytes_per_second": 355344047.61106676,
+                "manual_bandwidth": 155872326.74186927,
+                "manual_latency": 153042586.189818
+            }
+        ]
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/4096/1": {
+        "count": 10,
+        "measures": [
+            {
+                "real_time": 5516.208555246603,
+                "cpu_time": 5456.476482622374,
+                "bytes_per_second": 750667580.6346496,
+                "manual_bandwidth": 206295622.94720885,
+                "manual_latency": 131638663.06048265
+            },
+            {
+                "real_time": 5778.834160067824,
+                "cpu_time": 5667.294885467706,
+                "bytes_per_second": 722743404.5302848,
+                "manual_bandwidth": 217716120.71664482,
+                "manual_latency": 130979515.46322896
+            },
+            {
+                "real_time": 5769.0180008055295,
+                "cpu_time": 5638.090879112992,
+                "bytes_per_second": 726487048.1556338,
+                "manual_bandwidth": 213994983.95038283,
+                "manual_latency": 132223510.4658367
+            },
+            {
+                "real_time": 5664.6218824823945,
+                "cpu_time": 5541.195140845001,
+                "bytes_per_second": 739190715.3400453,
+                "manual_bandwidth": 213080259.7221075,
+                "manual_latency": 131291749.1112738
+            },
+            {
+                "real_time": 5746.895998744926,
+                "cpu_time": 5602.677198920499,
+                "bytes_per_second": 731079063.5571867,
+                "manual_bandwidth": 215811766.42622852,
+                "manual_latency": 131110404.53705849
+            },
+            {
+                "real_time": 5855.329737303853,
+                "cpu_time": 5725.894373163619,
+                "bytes_per_second": 715346762.1053784,
+                "manual_bandwidth": 218230884.11220512,
+                "manual_latency": 131721631.04659447
+            },
+            {
+                "real_time": 5700.6157219955085,
+                "cpu_time": 5602.394515044598,
+                "bytes_per_second": 731115952.1166626,
+                "manual_bandwidth": 215196709.52146888,
+                "manual_latency": 130895086.93063836
+            },
+            {
+                "real_time": 5865.903398453534,
+                "cpu_time": 5746.867278159074,
+                "bytes_per_second": 712736139.8386244,
+                "manual_bandwidth": 212805129.64500844,
+                "manual_latency": 134040678.66025274
+            },
+            {
+                "real_time": 5732.895661624629,
+                "cpu_time": 5600.685742330289,
+                "bytes_per_second": 731339016.0498041,
+                "manual_bandwidth": 214015124.61157835,
+                "manual_latency": 131139292.37915938
+            },
+            {
+                "real_time": 5645.561471675009,
+                "cpu_time": 5526.33392129602,
+                "bytes_per_second": 741178520.5768778,
+                "manual_bandwidth": 208187672.75182182,
+                "manual_latency": 132606506.59614243
+            }
+        ]
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/4096/10": {
+        "count": 10,
+        "measures": [
+            {
+                "real_time": 5910.638688084703,
+                "cpu_time": 5784.383025855792,
+                "bytes_per_second": 708113550.1731409,
+                "manual_bandwidth": 200800932.8543284,
+                "manual_latency": 131181541.9657907
+            },
+            {
+                "real_time": 5900.458035761545,
+                "cpu_time": 5736.996440472967,
+                "bytes_per_second": 713962444.0245111,
+                "manual_bandwidth": 199306921.47719148,
+                "manual_latency": 131651102.75913206
+            },
+            {
+                "real_time": 5908.834038513731,
+                "cpu_time": 5746.853129171359,
+                "bytes_per_second": 712737894.6241844,
+                "manual_bandwidth": 198840488.94568703,
+                "manual_latency": 131980524.38489152
+            },
+            {
+                "real_time": 5863.185301649202,
+                "cpu_time": 5710.567960838287,
+                "bytes_per_second": 717266658.603731,
+                "manual_bandwidth": 197333559.15153933,
+                "manual_latency": 131826011.30719572
+            },
+            {
+                "real_time": 5937.121145896439,
+                "cpu_time": 5787.341782648333,
+                "bytes_per_second": 707751529.774977,
+                "manual_bandwidth": 202000701.8614151,
+                "manual_latency": 131010713.11205696
+            },
+            {
+                "real_time": 6029.712847641932,
+                "cpu_time": 5869.499737893418,
+                "bytes_per_second": 697844822.0307899,
+                "manual_bandwidth": 204129454.914937,
+                "manual_latency": 131430322.05312978
+            },
+            {
+                "real_time": 5857.982338912736,
+                "cpu_time": 5729.232231941118,
+                "bytes_per_second": 714930000.073018,
+                "manual_bandwidth": 199360321.7130678,
+                "manual_latency": 130978921.86180392
+            },
+            {
+                "real_time": 5845.761600295911,
+                "cpu_time": 5723.848529692409,
+                "bytes_per_second": 715602444.535707,
+                "manual_bandwidth": 198132963.8190802,
+                "manual_latency": 131294134.49724452
+            },
+            {
+                "real_time": 5837.053516493267,
+                "cpu_time": 5718.025736854415,
+                "bytes_per_second": 716331158.4276431,
+                "manual_bandwidth": 199877981.66838577,
+                "manual_latency": 131295462.26627126
+            },
+            {
+                "real_time": 5598.952940121805,
+                "cpu_time": 5490.836244657941,
+                "bytes_per_second": 745970161.4640242,
+                "manual_bandwidth": 192515746.37764165,
+                "manual_latency": 131082555.45236163
+            }
+        ]
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/1024/1": {
+        "count": 10,
+        "measures": [
+            {
+                "real_time": 6391.595355639155,
+                "cpu_time": 5852.99847031295,
+                "bytes_per_second": 349906122.54345876,
+                "manual_bandwidth": 170734131.13597885,
+                "manual_latency": 200080908.09208634
+            },
+            {
+                "real_time": 6990.1247433108065,
+                "cpu_time": 6406.4903105656995,
+                "bytes_per_second": 319675813.2330898,
+                "manual_bandwidth": 197626085.47523424,
+                "manual_latency": 196907447.24525025
+            },
+            {
+                "real_time": 6649.493213332396,
+                "cpu_time": 6154.19518718797,
+                "bytes_per_second": 332781125.3474056,
+                "manual_bandwidth": 188194920.018346,
+                "manual_latency": 196393483.92824292
+            },
+            {
+                "real_time": 6798.484720749896,
+                "cpu_time": 6271.988400662272,
+                "bytes_per_second": 326531216.1265712,
+                "manual_bandwidth": 194065565.291118,
+                "manual_latency": 196953147.9871939
+            },
+            {
+                "real_time": 6646.073854718695,
+                "cpu_time": 6101.501630196226,
+                "bytes_per_second": 335655077.082088,
+                "manual_bandwidth": 189023994.56909037,
+                "manual_latency": 196388019.8629041
+            },
+            {
+                "real_time": 6434.683953488359,
+                "cpu_time": 5898.942536476087,
+                "bytes_per_second": 347180869.67896366,
+                "manual_bandwidth": 175926761.99485415,
+                "manual_latency": 200799193.93408313
+            },
+            {
+                "real_time": 6474.21104456027,
+                "cpu_time": 5952.592790403622,
+                "bytes_per_second": 344051755.61507434,
+                "manual_bandwidth": 181122792.07033324,
+                "manual_latency": 197786350.3014521
+            },
+            {
+                "real_time": 6321.387617174453,
+                "cpu_time": 5820.863360229285,
+                "bytes_per_second": 351837841.44339186,
+                "manual_bandwidth": 182724954.10917434,
+                "manual_latency": 195424473.76215875
+            },
+            {
+                "real_time": 6493.846051814139,
+                "cpu_time": 6004.014160461614,
+                "bytes_per_second": 341105124.88240725,
+                "manual_bandwidth": 185351514.22355574,
+                "manual_latency": 195914709.15205008
+            },
+            {
+                "real_time": 6561.716788792163,
+                "cpu_time": 6037.4731781543815,
+                "bytes_per_second": 339214757.4933097,
+                "manual_bandwidth": 185183271.6226993,
+                "manual_latency": 197530412.328649
+            }
+        ]
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/1024/10": {
+        "count": 10,
+        "measures": [
+            {
+                "real_time": 6555.4749709539665,
+                "cpu_time": 6067.179494813538,
+                "bytes_per_second": 337553883.43969554,
+                "manual_bandwidth": 195365849.81985736,
+                "manual_latency": 197403425.60156125
+            },
+            {
+                "real_time": 7159.818937879373,
+                "cpu_time": 6602.555453513378,
+                "bytes_per_second": 310182930.59700245,
+                "manual_bandwidth": 176644563.2111242,
+                "manual_latency": 216829181.17452678
+            },
+            {
+                "real_time": 6671.903429500191,
+                "cpu_time": 6130.242539309417,
+                "bytes_per_second": 334081398.3896159,
+                "manual_bandwidth": 179373606.24271712,
+                "manual_latency": 211692058.80055013
+            },
+            {
+                "real_time": 6794.404743853003,
+                "cpu_time": 6273.1209842135295,
+                "bytes_per_second": 326472262.3959979,
+                "manual_bandwidth": 189762943.59082296,
+                "manual_latency": 200771253.22292104
+            },
+            {
+                "real_time": 6541.22488540336,
+                "cpu_time": 5956.14826214602,
+                "bytes_per_second": 343846376.8633756,
+                "manual_bandwidth": 174378453.44256538,
+                "manual_latency": 209088584.51373366
+            },
+            {
+                "real_time": 6348.9284314081215,
+                "cpu_time": 5850.955099410031,
+                "bytes_per_second": 350028322.761613,
+                "manual_bandwidth": 186577866.64395648,
+                "manual_latency": 198161468.26544064
+            },
+            {
+                "real_time": 6435.751716358416,
+                "cpu_time": 5824.9409350704855,
+                "bytes_per_second": 351591547.93648016,
+                "manual_bandwidth": 169791774.79821703,
+                "manual_latency": 214145779.6952236
+            },
+            {
+                "real_time": 7608.581481304841,
+                "cpu_time": 6791.947107148606,
+                "bytes_per_second": 301533561.3913211,
+                "manual_bandwidth": 124389962.97570297,
+                "manual_latency": 262227716.92898852
+            },
+            {
+                "real_time": 6490.369250887379,
+                "cpu_time": 5975.390503616089,
+                "bytes_per_second": 342739106.13216406,
+                "manual_bandwidth": 191170441.78095806,
+                "manual_latency": 198725282.24592993
+            },
+            {
+                "real_time": 6605.520183062122,
+                "cpu_time": 6061.124070271825,
+                "bytes_per_second": 337891119.9070955,
+                "manual_bandwidth": 195082543.38953376,
+                "manual_latency": 200661070.53892434
+            }
+        ]
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/2048/1": {
+        "count": 10,
+        "measures": [
+            {
+                "real_time": 7093.736886797849,
+                "cpu_time": 6625.963633163758,
+                "bytes_per_second": 618174234.9896127,
+                "manual_bandwidth": 232531619.2572933,
+                "manual_latency": 160171455.90333223
+            },
+            {
+                "real_time": 6984.338927002396,
+                "cpu_time": 6542.603703052464,
+                "bytes_per_second": 626050451.1512754,
+                "manual_bandwidth": 226181910.12726113,
+                "manual_latency": 158130559.5123683
+            },
+            {
+                "real_time": 7284.742340633952,
+                "cpu_time": 6779.240896651068,
+                "bytes_per_second": 604197440.7523143,
+                "manual_bandwidth": 205277106.9480785,
+                "manual_latency": 172657772.34947416
+            },
+            {
+                "real_time": 6453.545348840092,
+                "cpu_time": 6023.241024770874,
+                "bytes_per_second": 680032557.7467346,
+                "manual_bandwidth": 226862324.95066214,
+                "manual_latency": 153918902.16938415
+            },
+            {
+                "real_time": 6792.923082849025,
+                "cpu_time": 6202.832116422557,
+                "bytes_per_second": 660343521.0112282,
+                "manual_bandwidth": 211157610.9358171,
+                "manual_latency": 163562524.91650853
+            },
+            {
+                "real_time": 6956.701086267417,
+                "cpu_time": 6496.85977292764,
+                "bytes_per_second": 630458428.0959853,
+                "manual_bandwidth": 244307700.89843634,
+                "manual_latency": 154362191.04561746
+            },
+            {
+                "real_time": 6549.992825747148,
+                "cpu_time": 6117.194550227871,
+                "bytes_per_second": 669587989.4562811,
+                "manual_bandwidth": 231544893.26905,
+                "manual_latency": 153070480.19761932
+            },
+            {
+                "real_time": 7428.708512566814,
+                "cpu_time": 7005.398521084159,
+                "bytes_per_second": 584691932.6105806,
+                "manual_bandwidth": 220282062.45728984,
+                "manual_latency": 168855219.46305472
+            },
+            {
+                "real_time": 7105.518495504713,
+                "cpu_time": 6703.639825318109,
+                "bytes_per_second": 611011347.0789926,
+                "manual_bandwidth": 209556632.3297153,
+                "manual_latency": 168486769.45928073
+            },
+            {
+                "real_time": 6388.232258000727,
+                "cpu_time": 5962.78078600043,
+                "bytes_per_second": 686927818.915747,
+                "manual_bandwidth": 222590400.42157772,
+                "manual_latency": 154609506.6760295
+            }
+        ]
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/2048/10": {
+        "count": 10,
+        "measures": [
+            {
+                "real_time": 6888.403057513983,
+                "cpu_time": 6455.200133815132,
+                "bytes_per_second": 634527189.7215672,
+                "manual_bandwidth": 218793998.12770766,
+                "manual_latency": 158452902.2581522
+            },
+            {
+                "real_time": 6723.739312493188,
+                "cpu_time": 6297.385122072199,
+                "bytes_per_second": 650428697.0862888,
+                "manual_bandwidth": 215588142.89886093,
+                "manual_latency": 160201166.6114801
+            },
+            {
+                "real_time": 6970.043168907342,
+                "cpu_time": 6504.687612299186,
+                "bytes_per_second": 629699724.8961204,
+                "manual_bandwidth": 228485593.0228927,
+                "manual_latency": 160928273.47900188
+            },
+            {
+                "real_time": 6755.424947993683,
+                "cpu_time": 6117.4715226564995,
+                "bytes_per_second": 669557673.4325885,
+                "manual_bandwidth": 197109322.93969807,
+                "manual_latency": 166471354.63013357
+            },
+            {
+                "real_time": 7521.691362974173,
+                "cpu_time": 7097.882533226094,
+                "bytes_per_second": 577073511.8292112,
+                "manual_bandwidth": 202117599.0450429,
+                "manual_latency": 176167380.61520764
+            },
+            {
+                "real_time": 6782.474997030637,
+                "cpu_time": 6319.0374296747395,
+                "bytes_per_second": 648199990.201804,
+                "manual_bandwidth": 231086525.61033815,
+                "manual_latency": 155483371.0234838
+            },
+            {
+                "real_time": 6351.102372600385,
+                "cpu_time": 5937.688281512207,
+                "bytes_per_second": 689830756.6521214,
+                "manual_bandwidth": 222494385.64834577,
+                "manual_latency": 153461202.62991843
+            },
+            {
+                "real_time": 6771.953515416319,
+                "cpu_time": 6005.215725637451,
+                "bytes_per_second": 682073748.4106303,
+                "manual_bandwidth": 193162903.21066865,
+                "manual_latency": 171356794.96337086
+            },
+            {
+                "real_time": 6411.559116814425,
+                "cpu_time": 5948.34682350951,
+                "bytes_per_second": 688594683.7886918,
+                "manual_bandwidth": 220737254.7233093,
+                "manual_latency": 155276589.0966778
+            },
+            {
+                "real_time": 6461.223540428114,
+                "cpu_time": 6017.545607156114,
+                "bytes_per_second": 680676187.1698992
+            }
+        ]
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/4096/1": {
+        "count": 10,
+        "measures": [
+            {
+                "real_time": 6926.8562459355035,
+                "cpu_time": 6352.794188547842,
+                "bytes_per_second": 1289511316.8891397,
+                "manual_bandwidth": 363627557.7207382,
+                "manual_latency": 141636965.91872117
+            },
+            {
+                "real_time": 7054.80037103851,
+                "cpu_time": 6707.358539999559,
+                "bytes_per_second": 1221345176.5172133,
+                "manual_bandwidth": 414284668.15804935,
+                "manual_latency": 135351955.57516435
+            },
+            {
+                "real_time": 7163.153888276037,
+                "cpu_time": 6392.7313712266805,
+                "bytes_per_second": 1281455378.662042,
+                "manual_bandwidth": 316647311.9643517,
+                "manual_latency": 155226329.556
+            },
+            {
+                "real_time": 6777.6014186294515,
+                "cpu_time": 6423.987991737366,
+                "bytes_per_second": 1275220316.4975834,
+                "manual_bandwidth": 392075046.39278555,
+                "manual_latency": 135831628.38332564
+            },
+            {
+                "real_time": 7289.074842199012,
+                "cpu_time": 6837.815657321139,
+                "bytes_per_second": 1198043411.8941123,
+                "manual_bandwidth": 384480453.27545345,
+                "manual_latency": 142818641.44770998
+            },
+            {
+                "real_time": 7222.671894387474,
+                "cpu_time": 6894.3260766336325,
+                "bytes_per_second": 1188223462.1545484,
+                "manual_bandwidth": 398843932.6732506,
+                "manual_latency": 140407080.09435344
+            },
+            {
+                "real_time": 7270.686007351533,
+                "cpu_time": 6829.242009718664,
+                "bytes_per_second": 1199547473.6935668,
+                "manual_bandwidth": 368918893.7643494,
+                "manual_latency": 144024372.01803884
+            },
+            {
+                "real_time": 6590.2152176151885,
+                "cpu_time": 6240.100668428168,
+                "bytes_per_second": 1312799333.74272,
+                "manual_bandwidth": 401332117.5031961,
+                "manual_latency": 132718966.85312212
+            },
+            {
+                "real_time": 6507.65792723182,
+                "cpu_time": 6151.477280194617,
+                "bytes_per_second": 1331712632.0819032,
+                "manual_bandwidth": 392854334.23546,
+                "manual_latency": 132934768.56156863
+            },
+            {
+                "real_time": 6531.675674553815,
+                "cpu_time": 6089.483645033883,
+                "bytes_per_second": 1345270055.3159,
+                "manual_bandwidth": 391735344.2379473,
+                "manual_latency": 133481792.66724111
+            }
+        ]
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/4096/10": {
+        "count": 10,
+        "measures": [
+            {
+                "real_time": 6660.969626348784,
+                "cpu_time": 6291.82807198792,
+                "bytes_per_second": 1302006333.6555405,
+                "manual_bandwidth": 376992635.01261055,
+                "manual_latency": 133138898.05385996
+            },
+            {
+                "real_time": 6744.157652438782,
+                "cpu_time": 6392.055409837742,
+                "bytes_per_second": 1281590892.8749332,
+                "manual_bandwidth": 378563319.2640707,
+                "manual_latency": 135702614.02997926
+            },
+            {
+                "real_time": 6625.282033412575,
+                "cpu_time": 6290.090812111664,
+                "bytes_per_second": 1302365934.7216709,
+                "manual_bandwidth": 379493410.6162131,
+                "manual_latency": 132110436.16960785
+            },
+            {
+                "real_time": 6885.448967581421,
+                "cpu_time": 6485.119775908914,
+                "bytes_per_second": 1263199490.9996648,
+                "manual_bandwidth": 385510014.00075334,
+                "manual_latency": 134957303.59911826
+            },
+            {
+                "real_time": 6727.285235537359,
+                "cpu_time": 6336.877091293557,
+                "bytes_per_second": 1292750337.7421124,
+                "manual_bandwidth": 390632942.76919353,
+                "manual_latency": 132180802.86308107
+            },
+            {
+                "real_time": 6791.69905797885,
+                "cpu_time": 6422.323156602485,
+                "bytes_per_second": 1275550887.1549377,
+                "manual_bandwidth": 375088930.38558865,
+                "manual_latency": 135605516.13110003
+            },
+            {
+                "real_time": 6577.209198986106,
+                "cpu_time": 6157.438531234208,
+                "bytes_per_second": 1330423350.3014736,
+                "manual_bandwidth": 359590207.862518,
+                "manual_latency": 136142172.1992972
+            },
+            {
+                "real_time": 6362.796778554019,
+                "cpu_time": 6040.552118461024,
+                "bytes_per_second": 1356167423.0015764,
+                "manual_bandwidth": 375234396.602018,
+                "manual_latency": 131164777.12516645
+            },
+            {
+                "real_time": 6529.952381304889,
+                "cpu_time": 6168.321628646768,
+                "bytes_per_second": 1328076013.7336087,
+                "manual_bandwidth": 380217361.99049795,
+                "manual_latency": 132225166.51213948
+            },
+            {
+                "real_time": 7752.721666286294,
+                "cpu_time": 7378.191964316116,
+                "bytes_per_second": 1110299113.8777337,
+                "manual_bandwidth": 332478725.3283561,
+                "manual_latency": 154733990.7213376
+            }
+        ]
+    }
+}
