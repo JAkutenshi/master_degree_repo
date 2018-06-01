@@ -45,7 +45,11 @@ if (bm.computeResults()) {           \
 
 #define BENCHMARK_STD_OUT_JSON() std::cout << bm_keeper.getJSON();
 
-#define BENCHMARK_WRITE_JSON(file_name) bm_keeper.writeJSON(file_name);
+#define BENCHMARK_WRITE_JSON(file_name)                             \
+std::cout << "\n===== WRITE RESULTS TO JSON =====\n";               \
+bm_keeper.writeJSON(file_name);                                     \
+std::cout << "Results stored in \"" << file_name << "\" file\n";    \
+std::cout << "======= BENCHMARK ENDS(?) =======\n";
 
 class Benchmark {
     struct Test {
