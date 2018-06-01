@@ -22,7 +22,7 @@ int main()
         BENCHMARK_REPETITIONS_END()
     }
 
-    BENCHMARK_WRITE_JSON("tests.json")
+    BENCHMARK_WRITE_JSON("/home/jakutenshi/tests.json")
 
     return 0;
 }

@@ -18,7 +18,7 @@ std::cout << " and " << std::to_string(BENCHMARKS_SKIP_FIRST_COUNT) << " will sk
 
 #define BENCHMARK_REPETITIONS_START(count) \
 std::cout << "=====" << std::to_string(count) << " repetitions starts =====\n"; \
-for (int i = 0; i < count; i++) {
+for (int bm_repetition_index = 0; bm_repetition_index < count; bm_repetition_index++) {
 
 
 #define BENCHMARK_REPETITIONS_END() \
@@ -26,12 +26,12 @@ for (int i = 0; i < count; i++) {
 std::cout << "===== repetitions ends =====\n"; \
 
 #define BENCHMARK_START_CUSTOM_NAME()                   \
-for (int i = 0; i < BENCHMARKS_ITERATIONS_COUNT + BENCHMARKS_SKIP_FIRST_COUNT; ++i) { \
+for (int bm_iteration_index = 0; bm_iteration_index < BENCHMARKS_ITERATIONS_COUNT + BENCHMARKS_SKIP_FIRST_COUNT; bm_iteration_index++) { \
     bm.start();
 
 #define BENCHMARK_START(bm_name)                        \
 bm.setNewBenchmark(bm_name);                            \
-for (int i = 0; i < BENCHMARKS_ITERATIONS_COUNT + BENCHMARKS_SKIP_FIRST_COUNT; ++i) { \
+for (int bm_iteration_index = 0; bm_iteration_index < BENCHMARKS_ITERATIONS_COUNT + BENCHMARKS_SKIP_FIRST_COUNT; bm_iteration_index++) { \
     bm.start();
 
 #define BENCHMARK_END(bytes)         \
