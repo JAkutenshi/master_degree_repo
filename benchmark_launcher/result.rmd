@@ -1,0 +1,2276 @@
+---
+title: "Пример обработки данных"
+author: "Ефремов Михаил"
+output:
+    html_document:
+        toc: true
+        theme: united
+---
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=subs_count where size=1024 buffer=1
+``` {r echo=FALSE}
+subs_count <- c(1, 2, 4, 8, 16)
+real_time <- c(5762.151474074552, 6515.108646128284, 9588.594259477197, 9631.021119578032, 11479.391921055012)
+cpu_time <- c(5511.991751085399, 5990.88027850596, 8076.393616234585, 6014.977289390416, 5678.42180657531)
+bytes_per_second <- c(185807569.47570375, 342071898.0614012, 514009034.8637738, 1362054592.62426, 2885561826.2298803)
+manual_bandwidth <- c(84887476.95477971, 234847246.73977432, 329361128.899888, 10565884420.565378, 21649812614.63233)
+manual_latency <- c(176422707.94710818, 175204212.80990335, 225933601.6856928, 10317196.650073051, 6487418.853135959)
+df <- data.frame("factor"=subs_count, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(subs_count, real_time, type="o", col="black", lty=1, ylim=c(-3194.450607743279, 20185.83427988369), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Кол-во подписчиков", ylab="Задержка (нс)")
+err <- c(55.7021581542048, 133.87980552810356, 787.3136065679304, 162.65126306353196, 175.6742752097538)
+avg <- real_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+points(subs_count, cpu_time, col="red", pch="X")
+lines(subs_count, cpu_time, col="red", lty=2)
+err <- c(53.84340288856311, 115.99891928247483, 686.6463305907037, 42.6355802514493, 40.065025851185986)
+avg <- cpu_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(subs_count, bytes_per_second, type="o", col="black", lty=1, ylim=c(-29631278703.707115, 51365978795.29423), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Кол-во подписчиков", ylab="Широта пропускания (байт/сек)")
+err <- c(1792966.5791764068, 6434322.204926152, 46073448.90046708, 9700210.428536173, 20394748.953109287)
+avg <- bytes_per_second
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+text(subs_count, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(subs_count, manual_bandwidth, col="red", pch="X")
+lines(subs_count, manual_bandwidth, col="red", lty=2)
+err <- c(6809129.179331567, 10932670.449058853, 70154700.10943703, 1030571256.2108198, 2281611221.322732)
+avg <- manual_bandwidth
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+text(subs_count, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=subs_count where size=1024 buffer=10
+``` {r echo=FALSE}
+subs_count <- c(1, 2, 4, 8, 16)
+real_time <- c(5677.399062014275, 6601.2034626912355, 10294.561611671763, 9686.734470414154, 11651.789745227887)
+cpu_time <- c(5435.2655851345935, 6012.268904471075, 8738.449419625118, 5958.467840187074, 5694.719626846354)
+bytes_per_second <- c(188443743.64644736, 341115692.4896895, 472661240.1000574, 1375082578.9571123, 2877283182.324693)
+manual_bandwidth <- c(90147891.40960772, 195164947.80284008, 257100392.53546986, 10824249078.041183, 18405012851.707745)
+manual_latency <- c(195051698.77442074, 178778069.1438293, 202077038.17224345, 9960703.671470972, 6917235.483797975)
+df <- data.frame("factor"=subs_count, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(subs_count, real_time, type="o", col="black", lty=1, ylim=c(-2843.2129919058098, 19930.26832226829), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Кол-во подписчиков", ylab="Задержка (нс)")
+err <- c(72.65811494515783, 159.60201101554006, 468.1366176117794, 339.5736040369768, 142.72976447984456)
+avg <- real_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+points(subs_count, cpu_time, col="red", pch="X")
+lines(subs_count, cpu_time, col="red", lty=2)
+err <- c(62.884336167692034, 171.1078571972602, 564.8800674007884, 58.23912258455574, 38.57012865562051)
+avg <- cpu_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(subs_count, bytes_per_second, type="o", col="black", lty=1, ylim=c(-27251458273.577827, 45746619016.69518), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Кол-во подписчиков", ylab="Широта пропускания (байт/сек)")
+err <- c(2186411.9589901785, 9570201.102417208, 34657681.639627434, 13524543.301032322, 19471782.924843565)
+avg <- bytes_per_second
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+text(subs_count, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(subs_count, manual_bandwidth, col="red", pch="X")
+lines(subs_count, manual_bandwidth, col="red", lty=2)
+err <- c(1469190.276974091, 9538109.69054442, 65466669.05041874, 1877510297.2704492, 2616450953.765932)
+avg <- manual_bandwidth
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+text(subs_count, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=subs_count where size=1024 buffer=100
+``` {r echo=FALSE}
+subs_count <- c(1, 2, 4, 8, 16)
+real_time <- c(5677.207529298062, 6689.216032675807, 9180.322245855734, 9914.398591513605, 12335.922536428228)
+cpu_time <- c(5417.667006387333, 6067.7532228340715, 7406.547587433665, 6128.975128659707, 6033.288876703565)
+bytes_per_second <- c(189080434.25304586, 338094934.19561553, 590169279.2534575, 1337453647.0353367, 2716025324.921956)
+manual_bandwidth <- c(89980283.25430173, 197649889.3839014, 265499061.90180072, 12479182334.994421, 18779284542.081642)
+manual_latency <- c(197559116.37927487, 175750961.3373794, 209456227.8806928, 9740404.462292695, 7127108.07893981)
+df <- data.frame("factor"=subs_count, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(subs_count, real_time, type="o", col="black", lty=1, ylim=c(-6003.783595523755, 23757.373138339317), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Кол-во подписчиков", ylab="Задержка (нс)")
+err <- c(95.03408285826814, 190.47391736691543, 1341.0588049574665, 244.7886218443048, 131.1419241139973)
+avg <- real_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+points(subs_count, cpu_time, col="red", pch="X")
+lines(subs_count, cpu_time, col="red", lty=2)
+err <- c(78.21814723107119, 190.41834474100568, 1320.0756554544328, 117.28634692712461, 56.49601950892548)
+avg <- cpu_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(subs_count, bytes_per_second, type="o", col="black", lty=1, ylim=c(-26119322991.35901, 44988587816.69495), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Кол-во подписчиков", ylab="Широта пропускания (байт/сек)")
+err <- c(2724882.422814536, 10386516.680014698, 119556159.9509565, 25308166.251452528, 25819743.993326977)
+avg <- bytes_per_second
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+text(subs_count, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(subs_count, manual_bandwidth, col="red", pch="X")
+lines(subs_count, manual_bandwidth, col="red", lty=2)
+err <- c(2449253.808190723, 13152164.688226826, 36813421.65967075, 2124365742.8530977, 1874390371.7845101)
+avg <- manual_bandwidth
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+text(subs_count, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=subs_count where size=2048 buffer=1
+``` {r echo=FALSE}
+subs_count <- c(1, 2, 4, 8, 16)
+real_time <- c(5912.367532295206, 6628.693996848304, 10936.355951138099, 10718.91714240513, 13503.321181832502)
+cpu_time <- c(5685.6283849771935, 6150.664764128857, 9231.508199238666, 6722.220900918296, 6379.360501851848)
+bytes_per_second <- c(360252479.70551836, 666994894.6180211, 887454889.2712266, 2437975621.2126136, 5137162629.910631)
+manual_bandwidth <- c(151145561.53127238, 263267276.585007, 609905086.3445393, 8362857665.465825, 21365404700.826935)
+manual_latency <- c(155328647.36711866, 139246136.3453689, 148386540.2796475, 18432939.110543463, 8908279.025144354)
+df <- data.frame("factor"=subs_count, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(subs_count, real_time, type="o", col="black", lty=1, ylim=c(-3553.577720603631, 22742.527287413326), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Кол-во подписчиков", ylab="Задержка (нс)")
+err <- c(58.274198777612234, 203.75404353650833, 83.26259470221892, 332.4608609299193, 307.84926672883637)
+avg <- real_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+points(subs_count, cpu_time, col="red", pch="X")
+lines(subs_count, cpu_time, col="red", lty=2)
+err <- c(48.52652114770537, 187.35671548946783, 56.70466893805662, 84.61818731466391, 51.93173242946943)
+avg <- cpu_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(subs_count, bytes_per_second, type="o", col="black", lty=1, ylim=c(-32876298374.881653, 54392848637.23986), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Кол-во подписчиков", ylab="Широта пропускания (байт/сек)")
+err <- c(3066561.089014811, 19620112.285890196, 5485279.459341115, 30980354.605033983, 41739021.80920283)
+avg <- bytes_per_second
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+text(subs_count, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(subs_count, manual_bandwidth, col="red", pch="X")
+lines(subs_count, manual_bandwidth, col="red", lty=2)
+err <- c(3764655.0909720026, 10359113.7156982, 54709705.02874079, 1427382047.761918, 3468539303.274993)
+avg <- manual_bandwidth
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+text(subs_count, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=subs_count where size=2048 buffer=10
+``` {r echo=FALSE}
+subs_count <- c(1, 2, 4, 8, 16)
+real_time <- c(5899.708626310296, 6612.400898520646, 8892.575051324315, 10401.535071598062, 13278.702375869532)
+cpu_time <- c(5682.888596708641, 6071.1968480188325, 7383.950480508941, 6631.112368290269, 6339.445722941872)
+bytes_per_second <- c(360456308.5701947, 675471962.3897566, 1175367153.8482504, 2471095568.382846, 5169183875.349147)
+manual_bandwidth <- c(152878837.85134694, 362889150.36991525, 430291093.2332088, 9672989619.089046, 23558390513.094204)
+manual_latency <- c(154254831.09278336, 136135631.69427267, 165906039.62201613, 15999330.451271925, 7384563.807185312)
+df <- data.frame("factor"=subs_count, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(subs_count, real_time, type="o", col="black", lty=1, ylim=c(-6374.5279447116145, 25336.118917289787), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Кол-во подписчиков", ylab="Задержка (нс)")
+err <- c(80.34739509241528, 150.0296031200656, 1295.8678287830091, 243.47872954283739, 249.607908075919)
+avg <- real_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+points(subs_count, cpu_time, col="red", pch="X")
+lines(subs_count, cpu_time, col="red", lty=2)
+err <- c(62.63691480648545, 158.35760170247082, 1316.713572032683, 57.03510863255652, 34.99047783962849)
+avg <- cpu_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(subs_count, bytes_per_second, type="o", col="black", lty=1, ylim=c(-31014358845.037777, 54725628195.98333), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Кол-во подписчиков", ylab="Широта пропускания (байт/сек)")
+err <- c(3931048.734025646, 17684216.419997532, 210655990.91868344, 21057052.324058343, 28606790.34593611)
+avg <- bytes_per_second
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+text(subs_count, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(subs_count, manual_bandwidth, col="red", pch="X")
+lines(subs_count, manual_bandwidth, col="red", lty=2)
+err <- c(1670897.346910092, 10203835.423895083, 115392412.91220616, 2012045294.5350811, 2126274330.2852006)
+avg <- manual_bandwidth
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+text(subs_count, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=subs_count where size=2048 buffer=100
+``` {r echo=FALSE}
+subs_count <- c(1, 2, 4, 8, 16)
+real_time <- c(6178.418633261133, 6895.666920077092, 9376.33741957146, 10611.92027701659, 13343.883543950611)
+cpu_time <- c(5913.828917272391, 6330.879783978852, 8013.749850551659, 6709.959765021316, 6363.06491792179)
+bytes_per_second <- c(346666239.59387755, 649773683.5484797, 1046183565.6935747, 2442372742.4424744, 5150195839.0031395)
+manual_bandwidth <- c(150465010.74700624, 321389828.543557, 455290687.6289614, 8082094472.943006, 21172866891.259453)
+manual_latency <- c(156788555.44836718, 135570409.44420248, 174147861.10430297, 15907792.459457073, 8365833.850577059)
+df <- data.frame("factor"=subs_count, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(subs_count, real_time, type="o", col="black", lty=1, ylim=c(-4664.7650029939305, 23922.477464216932), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Кол-во подписчиков", ylab="Задержка (нс)")
+err <- c(162.02390564812507, 314.88480676872683, 895.818245888448, 266.8135976410529, 371.8938660558028)
+avg <- real_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+points(subs_count, cpu_time, col="red", pch="X")
+lines(subs_count, cpu_time, col="red", lty=2)
+err <- c(145.3549374702196, 313.9261900718888, 873.4196839110745, 81.84622093598304, 46.068001846031606)
+avg <- cpu_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(subs_count, bytes_per_second, type="o", col="black", lty=1, ylim=c(-28564742392.445698, 49888074294.452156), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Кол-во подписчиков", ylab="Широта пропускания (байт/сек)")
+err <- c(8312593.942245445, 31987292.820324138, 126431606.98952858, 29335968.05309394, 37400838.748960994)
+avg <- bytes_per_second
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+text(subs_count, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(subs_count, manual_bandwidth, col="red", pch="X")
+lines(subs_count, manual_bandwidth, col="red", lty=2)
+err <- c(5247778.864860073, 16338680.48711213, 103932881.23696665, 1351653294.3076777, 2142479170.533752)
+avg <- manual_bandwidth
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+text(subs_count, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=subs_count where size=4096 buffer=1
+``` {r echo=FALSE}
+subs_count <- c(1, 2, 4, 8, 16)
+real_time <- c(6064.753097395251, 7004.712184550718, 10464.149224663863, 12749.708416357407, 15154.606183301661)
+cpu_time <- c(5862.8118895971, 6532.5935616702, 9105.589597756803, 8051.833586202952, 7337.010652117165)
+bytes_per_second <- c(698966125.582258, 1258362110.9106307, 1835134223.5402703, 4079921482.2861986, 8932721612.592697)
+manual_bandwidth <- c(200083699.29120055, 468219300.6324353, 787395598.3458843, 7040026669.029938, 21868598089.762226)
+manual_latency <- c(134206631.46673398, 116987280.82950318, 153549784.7118854, 23571911.544572838, 11025219.51174006)
+df <- data.frame("factor"=subs_count, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(subs_count, real_time, type="o", col="black", lty=1, ylim=c(-6622.197592999639, 27639.6156658984), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Кол-во подписчиков", ylab="Задержка (нс)")
+err <- c(142.2298761631892, 300.21954168332155, 870.6858657748589, 555.9754277471984, 646.6909915601905)
+avg <- real_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+points(subs_count, cpu_time, col="red", pch="X")
+lines(subs_count, cpu_time, col="red", lty=2)
+err <- c(97.87654943396018, 295.8578776975271, 880.2017658732093, 299.5867727946742, 40.24364333019101)
+avg <- cpu_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(subs_count, bytes_per_second, type="o", col="black", lty=1, ylim=c(-39454271680.845085, 61522953469.89851), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Кол-во подписчиков", ylab="Широта пропускания (байт/сек)")
+err <- c(11077735.128701564, 54554076.43028336, 211041815.18725434, 157271828.17210537, 49072107.265579894)
+avg <- bytes_per_second
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+text(subs_count, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(subs_count, manual_bandwidth, col="red", pch="X")
+lines(subs_count, manual_bandwidth, col="red", lty=2)
+err <- c(4449673.562519474, 20223198.72500361, 96992723.33869115, 1490132606.010116, 5452392022.626355)
+avg <- manual_bandwidth
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+text(subs_count, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=subs_count where size=4096 buffer=10
+``` {r echo=FALSE}
+subs_count <- c(1, 2, 4, 8, 16)
+real_time <- c(5988.6947048497, 6968.551771984763, 10397.271503534617, 11635.055750963684, 15031.005619840496)
+cpu_time <- c(5826.28220097248, 6512.371737867159, 9105.507777957937, 7426.570689494949, 7295.688038482619)
+bytes_per_second <- c(703314620.2438577, 1260062586.3858705, 1832398885.645062, 4412805889.1070385, 8984275607.801382)
+manual_bandwidth <- c(206469631.92016575, 439546880.9351667, 522238862.0867113, 5395421652.821287, 20724046818.66098)
+manual_latency <- c(132407240.85432987, 119396251.12080006, 156973040.6200074, 28490526.792711526, 10565293.495890697)
+df <- data.frame("factor"=subs_count, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(subs_count, real_time, type="o", col="black", lty=1, ylim=c(-6459.464596182352, 27316.752416995325), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Кол-во подписчиков", ylab="Задержка (нс)")
+err <- c(97.8334251166108, 226.26997570453412, 797.9541093582458, 266.75732492463686, 416.0342305831382)
+avg <- real_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+points(subs_count, cpu_time, col="red", pch="X")
+lines(subs_count, cpu_time, col="red", lty=2)
+err <- c(91.27907350018329, 206.29955249494483, 845.4152281752949, 61.97796168392386, 69.36363864139186)
+avg <- cpu_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(subs_count, bytes_per_second, type="o", col="black", lty=1, ylim=c(-32592340516.40444, 53522856966.98559), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Кол-во подписчиков", ylab="Широта пропускания (байт/сек)")
+err <- c(10650966.482911708, 38603980.74119332, 202794614.35525253, 36829297.617959976, 85833601.22572206)
+avg <- bytes_per_second
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+text(subs_count, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(subs_count, manual_bandwidth, col="red", pch="X")
+lines(subs_count, manual_bandwidth, col="red", lty=2)
+err <- c(1501662.044521992, 14184648.466289502, 63807952.13287298, 1327446918.4678457, 3630759387.821533)
+avg <- manual_bandwidth
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+text(subs_count, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=subs_count where size=4096 buffer=100
+``` {r echo=FALSE}
+subs_count <- c(1, 2, 4, 8, 16)
+real_time <- c(6021.126371409809, 6960.503153786127, 9381.024477278956, 11725.682561471414, 14978.421701990688)
+cpu_time <- c(5831.705339375053, 6503.18295909899, 8219.372980676815, 7397.907388344693, 7348.881636696899)
+bytes_per_second <- c(702567119.9114236, 1260810237.9093943, 2028461717.046023, 4429790290.368351, 8918838097.670992)
+manual_bandwidth <- c(182904401.4740767, 477982426.203835, 757653857.5696265, 7989746247.477152, 17620156350.44376)
+manual_latency <- c(132480765.37301612, 118769408.48312147, 148002007.77369764, 21882890.482430223, 12004750.649651352)
+df <- data.frame("factor"=subs_count, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(subs_count, real_time, type="o", col="black", lty=1, ylim=c(-6482.478533222844, 27292.605574588582), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Кол-во подписчиков", ylab="Задержка (нс)")
+err <- c(82.93502845571173, 157.9500019023853, 874.2360296295091, 263.35173853567636, 353.0872648100231)
+avg <- real_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+points(subs_count, cpu_time, col="red", pch="X")
+lines(subs_count, cpu_time, col="red", lty=2)
+err <- c(73.53425445165556, 147.27248572422317, 813.5581266681223, 54.770644545929294, 58.73608482312316)
+avg <- cpu_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(subs_count, bytes_per_second, type="o", col="black", lty=1, ylim=c(-25529740652.04168, 43332801403.95952), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Кол-во подписчиков", ylab="Широта пропускания (байт/сек)")
+err <- c(9005010.767549189, 28128412.56151783, 202330675.26236966, 32992245.051225796, 72459620.75520661)
+avg <- bytes_per_second
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+text(subs_count, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(subs_count, manual_bandwidth, col="red", pch="X")
+lines(subs_count, manual_bandwidth, col="red", lty=2)
+err <- c(3623722.3723261473, 18818729.03244267, 139992289.5382784, 2272328235.575655, 2388235647.450835)
+avg <- manual_bandwidth
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+text(subs_count, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=subs_count where size=8192 buffer=1
+``` {r echo=FALSE}
+subs_count <- c(1, 2, 4, 8, 16)
+real_time <- c(7617.966748958043, 7958.133049644176, 10518.969747729123, 16851.460509198147, 20895.419041291934)
+cpu_time <- c(7189.768262834351, 7410.564288221935, 9317.1873833335, 10708.184733924627, 10230.386805786971)
+bytes_per_second <- c(1139700241.902439, 2213446781.8429346, 3560191296.252838, 6148989990.261017, 12813132244.741947)
+manual_bandwidth <- c(226769638.1782125, 426248711.45972127, 757562305.7462928, 5390641970.798925, 17311707998.668312)
+manual_latency <- c(120816691.44397838, 108375597.5783745, 128158010.59552205, 44654900.52485968, 13483155.040643916)
+df <- data.frame("factor"=subs_count, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(subs_count, real_time, type="o", col="black", lty=1, ylim=c(-12315.7808689238, 40400.96817305009), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Кол-во подписчиков", ylab="Задержка (нс)")
+err <- c(112.81484918891617, 198.5098315300305, 798.557344688391, 1649.8760691540917, 741.2194265204628)
+avg <- real_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+points(subs_count, cpu_time, col="red", pch="X")
+lines(subs_count, cpu_time, col="red", lty=2)
+err <- c(87.4961064249, 192.35785459333817, 788.4670119582654, 563.516017003512, 71.63470749009464)
+avg <- cpu_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(subs_count, bytes_per_second, type="o", col="black", lty=1, ylim=c(-31955174846.53646, 49493652483.38299), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Кол-во подписчиков", ylab="Широта пропускания (байт/сек)")
+err <- c(14170719.243701003, 55852450.30602687, 291597427.33972126, 311960737.9364056, 89679271.81777583)
+avg <- bytes_per_second
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+text(subs_count, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(subs_count, manual_bandwidth, col="red", pch="X")
+lines(subs_count, manual_bandwidth, col="red", lty=2)
+err <- c(2733750.149337271, 11278138.472417116, 95409244.99267, 1591032346.7051141, 4594438453.612926)
+avg <- manual_bandwidth
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+text(subs_count, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=subs_count where size=8192 buffer=10
+``` {r echo=FALSE}
+subs_count <- c(1, 2, 4, 8, 16)
+real_time <- c(7320.52749586245, 7938.039059568349, 11202.538247454922, 17173.791285041403, 20348.99118017918)
+cpu_time <- c(6987.910225719829, 7455.012607740505, 10193.95903082583, 10576.06657613522, 10330.239983020854)
+bytes_per_second <- c(1173042494.657084, 2200375508.3733015, 3236267235.02942, 6204427806.16756, 12689918322.651155)
+manual_bandwidth <- c(236796400.01412207, 502072542.954383, 733720486.2099138, 5253097155.844455, 15327740644.373968)
+manual_latency <- c(120718695.08009219, 109255716.1437808, 122807578.28255038, 39131791.45333838, 14859747.598340873)
+df <- data.frame("factor"=subs_count, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(subs_count, real_time, type="o", col="black", lty=1, ylim=c(-10570.211261979504, 37907.11266787851), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Кол-во подписчиков", ylab="Задержка (нс)")
+err <- c(162.06587430255, 212.80908875930723, 577.4003596963411, 1138.3827372635535, 548.4835551172612)
+avg <- real_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+points(subs_count, cpu_time, col="red", pch="X")
+lines(subs_count, cpu_time, col="red", lty=2)
+err <- c(131.63696049079076, 194.29253061041794, 589.015603006565, 289.3781903296913, 91.21714305581922)
+avg <- cpu_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(subs_count, bytes_per_second, type="o", col="black", lty=1, ylim=c(-23938127403.952003, 39502664448.340096), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Кол-во подписчиков", ylab="Широта пропускания (байт/сек)")
+err <- c(22104919.668658216, 58033190.85105177, 215657150.59279376, 162118852.14770705, 111583295.6461062)
+avg <- bytes_per_second
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+text(subs_count, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(subs_count, manual_bandwidth, col="red", pch="X")
+lines(subs_count, manual_bandwidth, col="red", lty=2)
+err <- c(4435392.3927244535, 21154946.83047862, 107895166.07742171, 1261703130.710858, 2686913660.4478354)
+avg <- manual_bandwidth
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+text(subs_count, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=subs_count where size=8192 buffer=100
+``` {r echo=FALSE}
+subs_count <- c(1, 2, 4, 8, 16)
+real_time <- c(7361.441354827017, 7684.153472761658, 10349.853294650275, 17277.86022489756, 21162.471527506237)
+cpu_time <- c(7009.996183197321, 7225.7034919465705, 9456.772976312357, 10421.038601762228, 10295.824832124552)
+bytes_per_second <- c(1169764787.2165534, 2270949758.0909357, 3528440352.880639, 6295917136.79559, 12731473062.211334)
+manual_bandwidth <- c(242612749.04321975, 480022340.5958458, 639248640.638405, 6534237646.843073, 19160733576.08847)
+manual_latency <- c(121578499.98301265, 107434811.14017653, 136859499.20015877, 39008283.741716824, 11714967.955432069)
+df <- data.frame("factor"=subs_count, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(subs_count, real_time, type="o", col="black", lty=1, ylim=c(-12108.59065065615, 40281.05836135971), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Кол-во подписчиков", ylab="Задержка (нс)")
+err <- c(217.73887488466235, 245.37640647063938, 971.370584991273, 1373.705716880358, 1019.4806990523168)
+avg <- real_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+points(subs_count, cpu_time, col="red", pch="X")
+lines(subs_count, cpu_time, col="red", lty=2)
+err <- c(167.1847999497207, 210.80196440734457, 922.8072738191323, 264.5488761373109, 64.27306044832996)
+avg <- cpu_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(subs_count, bytes_per_second, type="o", col="black", lty=1, ylim=c(-34665456787.82801, 54068803112.9597), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Кол-во подписчиков", ylab="Широта пропускания (байт/сек)")
+err <- c(27381994.095191654, 68041007.07744066, 370778652.0695617, 159156449.68773875, 79756422.37623468)
+avg <- bytes_per_second
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+text(subs_count, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(subs_count, manual_bandwidth, col="red", pch="X")
+lines(subs_count, manual_bandwidth, col="red", lty=2)
+err <- c(6957839.183469559, 12733284.700918445, 73479731.77960299, 2449513055.673449, 4852916989.830231)
+avg <- manual_bandwidth
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+text(subs_count, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=subs_count where size=16384 buffer=1
+``` {r echo=FALSE}
+subs_count <- c(1, 2, 4, 8, 16)
+real_time <- c(11198.813589712434, 11212.776708187976, 13439.197781021203, 40902.80977810843, 45113.235599582826)
+cpu_time <- c(10148.66093955644, 10266.11305592825, 12436.725853427886, 19779.614090648734, 20337.94345771462)
+bytes_per_second <- c(1614930651.3089564, 3192434135.456427, 5289102361.226442, 6643463029.039995, 12911013856.937643)
+manual_bandwidth <- c(266375104.07131857, 522981399.35801667, 705962799.4488102, 699554564.4974298, 5394619768.816589)
+manual_latency <- c(104319033.18212126, 105931026.89766285, 133677542.06885907, 286053373.0861536, 49043212.560835466)
+df <- data.frame("factor"=subs_count, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(subs_count, real_time, type="o", col="black", lty=1, ylim=c(-37860.69447976135, 93122.59101890061), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Кол-во подписчиков", ylab="Задержка (нс)")
+err <- c(184.01746908684117, 130.53621894162694, 617.6211662099324, 1550.122522815973, 3644.049040738733)
+avg <- real_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+points(subs_count, cpu_time, col="red", pch="X")
+lines(subs_count, cpu_time, col="red", lty=2)
+err <- c(139.71049738435664, 104.1736062026717, 570.3039766087714, 767.6480942277794, 632.0251726420167)
+avg <- cpu_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(subs_count, bytes_per_second, type="o", col="black", lty=1, ylim=c(-19281633290.985443, 32459022251.994404), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Кол-во подписчиков", ylab="Широта пропускания (байт/сек)")
+err <- c(21912605.938158195, 32146939.390407592, 243609922.92542216, 246922396.91289106, 395689810.71363485)
+avg <- bytes_per_second
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+text(subs_count, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(subs_count, manual_bandwidth, col="red", pch="X")
+lines(subs_count, manual_bandwidth, col="red", lty=2)
+err <- c(21900327.0540678, 14504549.864793211, 43297094.98683895, 109598902.45324478, 2022947646.628103)
+avg <- manual_bandwidth
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+text(subs_count, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=subs_count where size=16384 buffer=10
+``` {r echo=FALSE}
+subs_count <- c(1, 2, 4, 8, 16)
+real_time <- c(11486.0641631454, 11428.65503253595, 15168.000847853578, 40463.97944235131, 45179.2073817865)
+cpu_time <- c(10397.274559081528, 10368.548336281285, 13782.393141996907, 20172.592044498593, 19955.79997752696)
+bytes_per_second <- c(1576036434.664502, 3161351403.8168545, 4766836520.880892, 6509724422.584126, 13143464931.712065)
+manual_bandwidth <- c(264575299.01536265, 571286719.9248741, 695214144.8341162, 620615792.1902885, 7415443382.008635)
+manual_latency <- c(115662410.25141613, 107082455.22154945, 134880703.7277866, 300391135.7689594, 42996599.50191142)
+df <- data.frame("factor"=subs_count, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(subs_count, real_time, type="o", col="black", lty=1, ylim=c(-31461.415355750363, 87009.17107381814), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Кол-во подписчиков", ylab="Задержка (нс)")
+err <- c(104.75290937644917, 124.84970211591421, 577.7051819851142, 1702.8295787906977, 1586.3342869711921)
+avg <- real_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+points(subs_count, cpu_time, col="red", pch="X")
+lines(subs_count, cpu_time, col="red", lty=2)
+err <- c(95.83500810862616, 141.22088264932836, 503.8584661567505, 661.3343307406988, 360.82464979601735)
+avg <- cpu_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(subs_count, bytes_per_second, type="o", col="black", lty=1, ylim=c(-23917241932.109943, 37325282162.83737), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Кол-во подписчиков", ylab="Широта пропускания (байт/сек)")
+err <- c(14734962.529045634, 42779757.34593404, 183430032.87748975, 211728221.5434699, 227510729.10154578)
+avg <- bytes_per_second
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+text(subs_count, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(subs_count, manual_bandwidth, col="red", pch="X")
+lines(subs_count, manual_bandwidth, col="red", lty=2)
+err <- c(2461537.179453442, 15017889.136787303, 66959766.27433538, 99013861.50036561, 3438381650.5786347)
+avg <- manual_bandwidth
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+text(subs_count, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=subs_count where size=16384 buffer=100
+``` {r echo=FALSE}
+subs_count <- c(1, 2, 4, 8, 16)
+real_time <- c(11451.355648756102, 11270.660087047625, 13582.928545085853, 39399.39844681375, 44214.193377113486)
+cpu_time <- c(10362.344728231903, 10283.194048424511, 12569.860134250981, 19675.333709761173, 19672.955629694035)
+bytes_per_second <- c(1581376385.859411, 3188166699.6154776, 5230770905.017803, 6670651935.99484, 13345515803.105358)
+manual_bandwidth <- c(275032651.34473354, 566219754.7743962, 557187345.3451502, 632372086.3001907, 6757500152.518776)
+manual_latency <- c(115710141.3852957, 107499817.54281804, 122408370.34123449, 289095324.52739817, 36540260.559376635)
+df <- data.frame("factor"=subs_count, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(subs_count, real_time, type="o", col="black", lty=1, ylim=c(-37688.84114363986, 92186.22856917785), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Кол-во подписчиков", ylab="Задержка (нс)")
+err <- c(136.7078733011893, 188.27202585791355, 634.4871725933298, 1846.0192707624253, 3982.09222481966)
+avg <- real_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+points(subs_count, cpu_time, col="red", pch="X")
+lines(subs_count, cpu_time, col="red", lty=2)
+err <- c(101.58218359018268, 173.32750459787457, 548.2091678489268, 545.7971860702021, 576.7058187091551)
+avg <- cpu_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(subs_count, bytes_per_second, type="o", col="black", lty=1, ylim=c(-21192640724.775055, 34813189179.22514), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Кол-во подписчиков", ylab="Широта пропускания (байт/сек)")
+err <- c(15488157.069890378, 54255958.54788825, 222385523.2568936, 182675528.02048823, 396172792.45702493)
+avg <- bytes_per_second
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+text(subs_count, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(subs_count, manual_bandwidth, col="red", pch="X")
+lines(subs_count, manual_bandwidth, col="red", lty=2)
+err <- c(3593099.035562126, 17597882.22176393, 63846963.74114615, 110971660.60523413, 2497956795.7326245)
+avg <- manual_bandwidth
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+text(subs_count, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=subs_count where size=32768 buffer=1
+``` {r echo=FALSE}
+subs_count <- c(1, 2, 4, 8, 16)
+real_time <- c(14654.677425215448, 15592.37050806123, 22675.122229933353, 66721.94726403196, 95693.05198324294)
+cpu_time <- c(13367.103445662675, 14442.082432970288, 20673.461757355635, 31991.66179554852, 36153.102145714336)
+bytes_per_second <- c(2451633042.762136, 4539804147.680972, 6343894149.52158, 8197906399.715651, 14523023186.503622)
+manual_bandwidth <- c(227442256.65863076, 464225864.28023255, 581889023.3184118, 618178782.6198943, 278199562.8512043)
+manual_latency <- c(103806432.09583913, 112284619.49209225, 148281598.32384315, 294879541.2236522, 563200529.4161808)
+df <- data.frame("factor"=subs_count, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(subs_count, real_time, type="o", col="black", lty=1, ylim=c(-99947.6787281297, 209007.83415703534), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Кол-во подписчиков", ylab="Задержка (нс)")
+err <- c(98.61717894246543, 184.62299016378245, 563.7838394548265, 1921.882912857171, 8668.560067526807)
+avg <- real_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+points(subs_count, cpu_time, col="red", pch="X")
+lines(subs_count, cpu_time, col="red", lty=2)
+err <- c(100.11007149145364, 227.54087163289938, 372.7559723681257, 518.345880702961, 1033.8089290054568)
+avg <- cpu_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(subs_count, bytes_per_second, type="o", col="black", lty=1, ylim=c(-16088247934.966291, 30838713378.128544), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Кол-во подписчиков", ylab="Широта пропускания (байт/сек)")
+err <- c(18358020.32272509, 70540531.57267855, 119384343.72003593, 132339519.75307542, 421074262.99602586)
+avg <- bytes_per_second
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+text(subs_count, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(subs_count, manual_bandwidth, col="red", pch="X")
+lines(subs_count, manual_bandwidth, col="red", lty=2)
+err <- c(18320345.658484492, 15113436.35000982, 43277457.08402558, 62651443.201076776, 44032336.94942489)
+avg <- manual_bandwidth
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+text(subs_count, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=subs_count where size=32768 buffer=10
+``` {r echo=FALSE}
+subs_count <- c(1, 2, 4, 8, 16)
+real_time <- c(14617.795181903606, 15616.685674247545, 21572.12961352828, 66552.4936780651, 110286.00181911715)
+cpu_time <- c(13324.90649335472, 14145.179213573221, 19700.70598622381, 33114.46647319527, 39946.81183702224)
+bytes_per_second <- c(2459255486.55791, 4633679585.902322, 6681483479.487194, 7926184064.5140915, 13129299705.017578)
+manual_bandwidth <- c(276281067.55309474, 504859609.3031933, 563758825.6829872, 541022051.7925999, 312860885.1642907)
+manual_latency <- c(115960028.5260524, 112019702.80498865, 146396586.667224, 303525239.72968626, 709104725.7042271)
+df <- data.frame("factor"=subs_count, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(subs_count, real_time, type="o", col="black", lty=1, ylim=c(-100956.49563933014, 224567.403951802), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Кол-во подписчиков", ylab="Задержка (нс)")
+err <- c(84.61310766228439, 163.24455811054926, 1186.9596134300707, 1704.3303225277346, 4023.307109882031)
+avg <- real_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+points(subs_count, cpu_time, col="red", pch="X")
+lines(subs_count, cpu_time, col="red", lty=2)
+err <- c(64.40553385465537, 119.57216044488447, 945.883732505907, 876.3248993062608, 573.317283599801)
+avg <- cpu_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(subs_count, bytes_per_second, type="o", col="black", lty=1, ylim=c(-14260182870.625498, 27665763643.19617), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Кол-во подписчиков", ylab="Широта пропускания (байт/сек)")
+err <- c(11911512.18523733, 39123346.54394559, 335740118.98093027, 212576902.15534315, 184157596.40587375)
+avg <- bytes_per_second
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+text(subs_count, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(subs_count, manual_bandwidth, col="red", pch="X")
+lines(subs_count, manual_bandwidth, col="red", lty=2)
+err <- c(3182718.5823035697, 19656535.68418927, 58167506.71706679, 54703443.46451077, 36007952.727830864)
+avg <- manual_bandwidth
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+text(subs_count, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=subs_count where size=32768 buffer=100
+``` {r echo=FALSE}
+subs_count <- c(1, 2, 4, 8, 16)
+real_time <- c(14688.050281890526, 15699.989889636689, 22348.35792982665, 66101.28034325143, 106676.98694615494)
+cpu_time <- c(13404.96951768446, 14433.579543724447, 20185.738771492153, 32321.569355999993, 40299.62731537829)
+bytes_per_second <- c(2444529464.014451, 4542266019.532547, 6511528625.283918, 8120219790.11915, 13021960977.059132)
+manual_bandwidth <- c(273533543.11706114, 429825626.57070047, 658700142.7725842, 560364456.4994348, 270241099.58402175)
+manual_latency <- c(115412334.2720571, 101158828.43783337, 146871092.14063543, 320606141.7978099, 707741220.8556793)
+df <- data.frame("factor"=subs_count, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(subs_count, real_time, type="o", col="black", lty=1, ylim=c(-101238.87709382152, 221320.83355766092), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Кол-во подписчиков", ylab="Задержка (нс)")
+err <- c(57.416918901184005, 147.36195614820699, 766.4813229400239, 2680.148918867438, 5389.751068261925)
+avg <- real_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+points(subs_count, cpu_time, col="red", pch="X")
+lines(subs_count, cpu_time, col="red", lty=2)
+err <- c(51.23024195971724, 212.78765077790402, 783.9057092801168, 837.7732133423124, 937.4099122991626)
+avg <- cpu_time
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(subs_count, bytes_per_second, type="o", col="black", lty=1, ylim=c(-14044591268.938168, 27336793345.58132), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Кол-во подписчиков", ylab="Широта пропускания (байт/сек)")
+err <- c(9354632.981023232, 67232964.96622376, 267077067.27193314, 213337698.16080737, 298556934.5720403)
+avg <- bytes_per_second
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="black")
+text(subs_count, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(subs_count, manual_bandwidth, col="red", pch="X")
+lines(subs_count, manual_bandwidth, col="red", lty=2)
+err <- c(3316485.636505382, 39961959.79110868, 46958284.45030584, 81216498.78944276, 16437965.82673413)
+avg <- manual_bandwidth
+arrows(subs_count, avg-err, subs_count, avg+err, length=0.05, angle=90, code=3, col="red")
+text(subs_count, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=size where subs_count=1 buffer=1
+``` {r echo=FALSE}
+size <- c(1024, 2048, 4096, 8192, 16384, 32768)
+real_time <- c(5762.151474074552, 5912.367532295206, 6064.753097395251, 7617.966748958043, 11198.813589712434, 14654.677425215448)
+cpu_time <- c(5511.991751085399, 5685.6283849771935, 5862.8118895971, 7189.768262834351, 10148.66093955644, 13367.103445662675)
+bytes_per_second <- c(185807569.47570375, 360252479.70551836, 698966125.582258, 1139700241.902439, 1614930651.3089564, 2451633042.762136)
+manual_bandwidth <- c(84887476.95477971, 151145561.53127238, 200083699.29120055, 226769638.1782125, 266375104.07131857, 227442256.65863076)
+manual_latency <- c(176422707.94710818, 155328647.36711866, 134206631.46673398, 120816691.44397838, 104319033.18212126, 103806432.09583913)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(size, real_time, type="o", col="black", lty=1, ylim=c(-4658.282360920361, 24824.951537221208), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер сообщения (б)", ylab="Задержка (нс)")
+err <- c(55.7021581542048, 58.274198777612234, 142.2298761631892, 112.81484918891617, 184.01746908684117, 98.61717894246543)
+avg <- real_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+points(size, cpu_time, col="red", pch="X")
+lines(size, cpu_time, col="red", lty=2)
+err <- c(53.84340288856311, 48.52652114770537, 97.87654943396018, 87.4961064249, 139.71049738435664, 100.11007149145364)
+avg <- cpu_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(size, bytes_per_second, type="o", col="black", lty=1, ylim=c(-2468124445.551235, 5004644965.26815), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер сообщения (б)", ylab="Широта пропускания (байт/сек)")
+err <- c(1792966.5791764068, 3066561.089014811, 11077735.128701564, 14170719.243701003, 21912605.938158195, 18358020.32272509)
+avg <- bytes_per_second
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+text(size, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(size, manual_bandwidth, col="red", pch="X")
+lines(size, manual_bandwidth, col="red", lty=2)
+err <- c(6809129.179331567, 3764655.0909720026, 4449673.562519474, 2733750.149337271, 21900327.0540678, 18320345.658484492)
+avg <- manual_bandwidth
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+text(size, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=size where subs_count=1 buffer=10
+``` {r echo=FALSE}
+size <- c(1024, 2048, 4096, 8192, 16384, 32768)
+real_time <- c(5677.399062014275, 5899.708626310296, 5988.6947048497, 7320.52749586245, 11486.0641631454, 14617.795181903606)
+cpu_time <- c(5435.2655851345935, 5682.888596708641, 5826.28220097248, 6987.910225719829, 10397.274559081528, 13324.90649335472)
+bytes_per_second <- c(188443743.64644736, 360456308.5701947, 703314620.2438577, 1173042494.657084, 1576036434.664502, 2459255486.55791)
+manual_bandwidth <- c(90147891.40960772, 152878837.85134694, 206469631.92016575, 236796400.01412207, 264575299.01536265, 276281067.55309474)
+manual_latency <- c(195051698.77442074, 154254831.09278336, 132407240.85432987, 120718695.08009219, 115662410.25141613, 115960028.5260524)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(size, real_time, type="o", col="black", lty=1, ylim=c(-4708.794701810774, 24761.855468848975), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер сообщения (б)", ylab="Задержка (нс)")
+err <- c(72.65811494515783, 80.34739509241528, 97.8334251166108, 162.06587430255, 104.75290937644917, 84.61310766228439)
+avg <- real_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+points(size, cpu_time, col="red", pch="X")
+lines(size, cpu_time, col="red", lty=2)
+err <- c(62.884336167692034, 62.63691480648545, 91.27907350018329, 131.63696049079076, 95.83500810862616, 64.40553385465537)
+avg <- cpu_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(size, bytes_per_second, type="o", col="black", lty=1, ylim=c(-2465940334.46895, 5015343712.436468), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер сообщения (б)", ylab="Широта пропускания (байт/сек)")
+err <- c(2186411.9589901785, 3931048.734025646, 10650966.482911708, 22104919.668658216, 14734962.529045634, 11911512.18523733)
+avg <- bytes_per_second
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+text(size, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(size, manual_bandwidth, col="red", pch="X")
+lines(size, manual_bandwidth, col="red", lty=2)
+err <- c(1469190.276974091, 1670897.346910092, 1501662.044521992, 4435392.3927244535, 2461537.179453442, 3182718.5823035697)
+avg <- manual_bandwidth
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+text(size, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=size where subs_count=1 buffer=100
+``` {r echo=FALSE}
+size <- c(1024, 2048, 4096, 8192, 16384, 32768)
+real_time <- c(5677.207529298062, 6178.418633261133, 6021.126371409809, 7361.441354827017, 11451.355648756102, 14688.050281890526)
+cpu_time <- c(5417.667006387333, 5913.828917272391, 5831.705339375053, 7009.996183197321, 10362.344728231903, 13404.96951768446)
+bytes_per_second <- c(189080434.25304586, 346666239.59387755, 702567119.9114236, 1169764787.2165534, 1581376385.859411, 2444529464.014451)
+manual_bandwidth <- c(89980283.25430173, 150465010.74700624, 182904401.4740767, 242612749.04321975, 275032651.34473354, 273533543.11706114)
+manual_latency <- c(197559116.37927487, 156788555.44836718, 132480765.37301612, 121578499.98301265, 115710141.3852957, 115412334.2720571)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(size, real_time, type="o", col="black", lty=1, ylim=c(-4991.225945033476, 25096.943233311336), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер сообщения (б)", ylab="Задержка (нс)")
+err <- c(95.03408285826814, 162.02390564812507, 82.93502845571173, 217.73887488466235, 136.7078733011893, 57.416918901184005)
+avg <- real_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+points(size, cpu_time, col="red", pch="X")
+lines(size, cpu_time, col="red", lty=2)
+err <- c(78.21814723107119, 145.3549374702196, 73.53425445165556, 167.1847999497207, 101.58218359018268, 51.23024195971724)
+avg <- cpu_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(size, bytes_per_second, type="o", col="black", lty=1, ylim=c(-2467180538.23895, 5001690285.507702), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер сообщения (б)", ylab="Широта пропускания (байт/сек)")
+err <- c(2724882.422814536, 8312593.942245445, 9005010.767549189, 27381994.095191654, 15488157.069890378, 9354632.981023232)
+avg <- bytes_per_second
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+text(size, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(size, manual_bandwidth, col="red", pch="X")
+lines(size, manual_bandwidth, col="red", lty=2)
+err <- c(2449253.808190723, 5247778.864860073, 3623722.3723261473, 6957839.183469559, 3593099.035562126, 3316485.636505382)
+avg <- manual_bandwidth
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+text(size, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=size where subs_count=2 buffer=1
+``` {r echo=FALSE}
+size <- c(1024, 2048, 4096, 8192, 16384, 32768)
+real_time <- c(6515.108646128284, 6628.693996848304, 7004.712184550718, 7958.133049644176, 11212.776708187976, 15592.37050806123)
+cpu_time <- c(5990.88027850596, 6150.664764128857, 6532.5935616702, 7410.564288221935, 10266.11305592825, 14442.082432970288)
+bytes_per_second <- c(342071898.0614012, 666994894.6180211, 1258362110.9106307, 2213446781.8429346, 3192434135.456427, 4539804147.680972)
+manual_bandwidth <- c(234847246.73977432, 263267276.585007, 468219300.6324353, 426248711.45972127, 522981399.35801667, 464225864.28023255)
+manual_latency <- c(175204212.80990335, 139246136.3453689, 116987280.82950318, 108375597.5783745, 105931026.89766285, 112284619.49209225)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(size, real_time, type="o", col="black", lty=1, ylim=c(-5021.365041745374, 26604.615828312562), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер сообщения (б)", ylab="Задержка (нс)")
+err <- c(133.87980552810356, 203.75404353650833, 300.21954168332155, 198.5098315300305, 130.53621894162694, 184.62299016378245)
+avg <- real_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+points(size, cpu_time, col="red", pch="X")
+lines(size, cpu_time, col="red", lty=2)
+err <- c(115.99891928247483, 187.35671548946783, 295.8578776975271, 192.35785459333817, 104.1736062026717, 227.54087163289938)
+avg <- cpu_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(size, bytes_per_second, type="o", col="black", lty=1, ylim=c(-4504033147.123786, 9278684541.544533), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер сообщения (б)", ylab="Широта пропускания (байт/сек)")
+err <- c(6434322.204926152, 19620112.285890196, 54554076.43028336, 55852450.30602687, 32146939.390407592, 70540531.57267855)
+avg <- bytes_per_second
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+text(size, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(size, manual_bandwidth, col="red", pch="X")
+lines(size, manual_bandwidth, col="red", lty=2)
+err <- c(10932670.449058853, 10359113.7156982, 20223198.72500361, 11278138.472417116, 14504549.864793211, 15113436.35000982)
+avg <- manual_bandwidth
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+text(size, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=size where subs_count=2 buffer=10
+``` {r echo=FALSE}
+size <- c(1024, 2048, 4096, 8192, 16384, 32768)
+real_time <- c(6601.2034626912355, 6612.400898520646, 6968.551771984763, 7938.039059568349, 11428.65503253595, 15616.685674247545)
+cpu_time <- c(6012.268904471075, 6071.1968480188325, 6512.371737867159, 7455.012607740505, 10368.548336281285, 14145.179213573221)
+bytes_per_second <- c(341115692.4896895, 675471962.3897566, 1260062586.3858705, 2200375508.3733015, 3161351403.8168545, 4633679585.902322)
+manual_bandwidth <- c(195164947.80284008, 362889150.36991525, 439546880.9351667, 502072542.954383, 571286719.9248741, 504859609.3031933)
+manual_latency <- c(178778069.1438293, 136135631.69427267, 119396251.12080006, 109255716.1437808, 107082455.22154945, 112019702.80498865)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(size, real_time, type="o", col="black", lty=1, ylim=c(-4773.805628478274, 26402.760207196894), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер сообщения (б)", ylab="Задержка (нс)")
+err <- c(159.60201101554006, 150.0296031200656, 226.26997570453412, 212.80908875930723, 124.84970211591421, 163.24455811054926)
+avg <- real_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+points(size, cpu_time, col="red", pch="X")
+lines(size, cpu_time, col="red", lty=2)
+err <- c(171.1078571972602, 158.35760170247082, 206.29955249494483, 194.29253061041794, 141.22088264932836, 119.57216044488447)
+avg <- cpu_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(size, bytes_per_second, type="o", col="black", lty=1, ylim=c(-4645178313.839877, 9474022847.545038), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер сообщения (б)", ylab="Широта пропускания (байт/сек)")
+err <- c(9570201.102417208, 17684216.419997532, 38603980.74119332, 58033190.85105177, 42779757.34593404, 39123346.54394559)
+avg <- bytes_per_second
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+text(size, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(size, manual_bandwidth, col="red", pch="X")
+lines(size, manual_bandwidth, col="red", lty=2)
+err <- c(9538109.69054442, 10203835.423895083, 14184648.466289502, 21154946.83047862, 15017889.136787303, 19656535.68418927)
+avg <- manual_bandwidth
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+text(size, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=size where subs_count=2 buffer=100
+``` {r echo=FALSE}
+size <- c(1024, 2048, 4096, 8192, 16384, 32768)
+real_time <- c(6689.216032675807, 6895.666920077092, 6960.503153786127, 7684.153472761658, 11270.660087047625, 15699.989889636689)
+cpu_time <- c(6067.7532228340715, 6330.879783978852, 6503.18295909899, 7225.7034919465705, 10283.194048424511, 14433.579543724447)
+bytes_per_second <- c(338094934.19561553, 649773683.5484797, 1260810237.9093943, 2270949758.0909357, 3188166699.6154776, 4542266019.532547)
+manual_bandwidth <- c(197649889.3839014, 321389828.543557, 477982426.203835, 480022340.5958458, 566219754.7743962, 429825626.57070047)
+manual_latency <- c(175750961.3373794, 135570409.44420248, 118769408.48312147, 107434811.14017653, 107499817.54281804, 101158828.43783337)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(size, real_time, type="o", col="black", lty=1, ylim=c(-5022.238178291729, 26789.981290762487), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер сообщения (б)", ylab="Задержка (нс)")
+err <- c(190.47391736691543, 314.88480676872683, 157.9500019023853, 245.37640647063938, 188.27202585791355, 147.36195614820699)
+avg <- real_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+points(size, cpu_time, col="red", pch="X")
+lines(size, cpu_time, col="red", lty=2)
+err <- c(190.41834474100568, 313.9261900718888, 147.27248572422317, 210.80196440734457, 173.32750459787457, 212.78765077790402)
+avg <- cpu_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(size, bytes_per_second, type="o", col="black", lty=1, ylim=c(-4575124169.212243, 9315040078.12869), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер сообщения (б)", ylab="Широта пропускания (байт/сек)")
+err <- c(10386516.680014698, 31987292.820324138, 28128412.56151783, 68041007.07744066, 54255958.54788825, 67232964.96622376)
+avg <- bytes_per_second
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+text(size, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(size, manual_bandwidth, col="red", pch="X")
+lines(size, manual_bandwidth, col="red", lty=2)
+err <- c(13152164.688226826, 16338680.48711213, 18818729.03244267, 12733284.700918445, 17597882.22176393, 39961959.79110868)
+avg <- manual_bandwidth
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+text(size, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=size where subs_count=4 buffer=1
+``` {r echo=FALSE}
+size <- c(1024, 2048, 4096, 8192, 16384, 32768)
+real_time <- c(9588.594259477197, 10936.355951138099, 10464.149224663863, 10518.969747729123, 13439.197781021203, 22675.122229933353)
+cpu_time <- c(8076.393616234585, 9231.508199238666, 9105.589597756803, 9317.1873833335, 12436.725853427886, 20673.461757355635)
+bytes_per_second <- c(514009034.8637738, 887454889.2712266, 1835134223.5402703, 3560191296.252838, 5289102361.226442, 6343894149.52158)
+manual_bandwidth <- c(329361128.899888, 609905086.3445393, 787395598.3458843, 757562305.7462928, 705962799.4488102, 581889023.3184118)
+manual_latency <- c(225933601.6856928, 148386540.2796475, 153549784.7118854, 128158010.59552205, 133677542.06885907, 148281598.32384315)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(size, real_time, type="o", col="black", lty=1, ylim=c(-9980.89690235607, 40732.412748524), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер сообщения (б)", ylab="Задержка (нс)")
+err <- c(787.3136065679304, 83.26259470221892, 870.6858657748589, 798.557344688391, 617.6211662099324, 563.7838394548265)
+avg <- real_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+points(size, cpu_time, col="red", pch="X")
+lines(size, cpu_time, col="red", lty=2)
+err <- c(686.6463305907037, 56.70466893805662, 880.2017658732093, 788.4670119582654, 570.3039766087714, 372.7559723681257)
+avg <- cpu_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(size, bytes_per_second, type="o", col="black", lty=1, ylim=c(-6889850567.506024, 13563105845.927492), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер сообщения (б)", ylab="Широта пропускания (байт/сек)")
+err <- c(46073448.90046708, 5485279.459341115, 211041815.18725434, 291597427.33972126, 243609922.92542216, 119384343.72003593)
+avg <- bytes_per_second
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+text(size, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(size, manual_bandwidth, col="red", pch="X")
+lines(size, manual_bandwidth, col="red", lty=2)
+err <- c(70154700.10943703, 54709705.02874079, 96992723.33869115, 95409244.99267, 43297094.98683895, 43277457.08402558)
+avg <- manual_bandwidth
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+text(size, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=size where subs_count=4 buffer=10
+``` {r echo=FALSE}
+size <- c(1024, 2048, 4096, 8192, 16384, 32768)
+real_time <- c(10294.561611671763, 8892.575051324315, 10397.271503534617, 11202.538247454922, 15168.000847853578, 21572.12961352828)
+cpu_time <- c(8738.449419625118, 7383.950480508941, 9105.507777957937, 10193.95903082583, 13782.393141996907, 19700.70598622381)
+bytes_per_second <- c(472661240.1000574, 1175367153.8482504, 1832398885.645062, 3236267235.02942, 4766836520.880892, 6681483479.487194)
+manual_bandwidth <- c(257100392.53546986, 430291093.2332088, 522238862.0867113, 733720486.2099138, 695214144.8341162, 563758825.6829872)
+manual_latency <- c(202077038.17224345, 165906039.62201613, 156973040.6200074, 122807578.28255038, 134880703.7277866, 146396586.667224)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(size, real_time, type="o", col="black", lty=1, ylim=c(-11595.44968246268, 40551.5297764999), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер сообщения (б)", ylab="Задержка (нс)")
+err <- c(468.1366176117794, 1295.8678287830091, 797.9541093582458, 577.4003596963411, 577.7051819851142, 1186.9596134300707)
+avg <- real_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+points(size, cpu_time, col="red", pch="X")
+lines(size, cpu_time, col="red", lty=2)
+err <- c(564.8800674007884, 1316.713572032683, 845.4152281752949, 589.015603006565, 503.8584661567505, 945.883732505907)
+avg <- cpu_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(size, bytes_per_second, type="o", col="black", lty=1, ylim=c(-7529296217.604725, 14467880089.627388), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер сообщения (б)", ylab="Широта пропускания (байт/сек)")
+err <- c(34657681.639627434, 210655990.91868344, 202794614.35525253, 215657150.59279376, 183430032.87748975, 335740118.98093027)
+avg <- bytes_per_second
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+text(size, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(size, manual_bandwidth, col="red", pch="X")
+lines(size, manual_bandwidth, col="red", lty=2)
+err <- c(65466669.05041874, 115392412.91220616, 63807952.13287298, 107895166.07742171, 66959766.27433538, 58167506.71706679)
+avg <- manual_bandwidth
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+text(size, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=size where subs_count=4 buffer=100
+``` {r echo=FALSE}
+size <- c(1024, 2048, 4096, 8192, 16384, 32768)
+real_time <- c(9180.322245855734, 9376.33741957146, 9381.024477278956, 10349.853294650275, 13582.928545085853, 22348.35792982665)
+cpu_time <- c(7406.547587433665, 8013.749850551659, 8219.372980676815, 9456.772976312357, 12569.860134250981, 20185.738771492153)
+bytes_per_second <- c(590169279.2534575, 1046183565.6935747, 2028461717.046023, 3528440352.880639, 5230770905.017803, 6511528625.283918)
+manual_bandwidth <- c(265499061.90180072, 455290687.6289614, 757653857.5696265, 639248640.638405, 557187345.3451502, 658700142.7725842)
+manual_latency <- c(209456227.8806928, 174147861.10430297, 148002007.77369764, 136859499.20015877, 122408370.34123449, 146871092.14063543)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(size, real_time, type="o", col="black", lty=1, ylim=c(-12439.635567447114, 42194.54108470742), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер сообщения (б)", ylab="Задержка (нс)")
+err <- c(1341.0588049574665, 895.818245888448, 874.2360296295091, 971.370584991273, 634.4871725933298, 766.4813229400239)
+avg <- real_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+points(size, cpu_time, col="red", pch="X")
+lines(size, cpu_time, col="red", lty=2)
+err <- c(1320.0756554544328, 873.4196839110745, 813.5581266681223, 922.8072738191323, 548.2091678489268, 783.9057092801168)
+avg <- cpu_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(size, bytes_per_second, type="o", col="black", lty=1, ylim=c(-7442245801.065063, 14219273488.250782), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер сообщения (б)", ylab="Широта пропускания (байт/сек)")
+err <- c(119556159.9509565, 126431606.98952858, 202330675.26236966, 370778652.0695617, 222385523.2568936, 267077067.27193314)
+avg <- bytes_per_second
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+text(size, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(size, manual_bandwidth, col="red", pch="X")
+lines(size, manual_bandwidth, col="red", lty=2)
+err <- c(36813421.65967075, 103932881.23696665, 139992289.5382784, 73479731.77960299, 63846963.74114615, 46958284.45030584)
+avg <- manual_bandwidth
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+text(size, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=size where subs_count=8 buffer=1
+``` {r echo=FALSE}
+size <- c(1024, 2048, 4096, 8192, 16384, 32768)
+real_time <- c(9631.021119578032, 10718.91714240513, 12749.708416357407, 16851.460509198147, 40902.80977810843, 66721.94726403196)
+cpu_time <- c(6014.977289390416, 6722.220900918296, 8051.833586202952, 10708.184733924627, 19779.614090648734, 31991.66179554852)
+bytes_per_second <- c(1362054592.62426, 2437975621.2126136, 4079921482.2861986, 6148989990.261017, 6643463029.039995, 8197906399.715651)
+manual_bandwidth <- c(10565884420.565378, 8362857665.465825, 7040026669.029938, 5390641970.798925, 699554564.4974298, 618178782.6198943)
+manual_latency <- c(10317196.650073051, 18432939.110543463, 23571911.544572838, 44654900.52485968, 286053373.0861536, 294879541.2236522)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(size, real_time, type="o", col="black", lty=1, ylim=c(-63685.17821384044, 136422.1027672628), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер сообщения (б)", ylab="Задержка (нс)")
+err <- c(162.65126306353196, 332.4608609299193, 555.9754277471984, 1649.8760691540917, 1550.122522815973, 1921.882912857171)
+avg <- real_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+points(size, cpu_time, col="red", pch="X")
+lines(size, cpu_time, col="red", lty=2)
+err <- c(42.6355802514493, 84.61818731466391, 299.5867727946742, 563.516017003512, 767.6480942277794, 518.345880702961)
+avg <- cpu_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(size, bytes_per_second, type="o", col="black", lty=1, ylim=c(-14759112412.00872, 25943175615.193993), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер сообщения (б)", ylab="Широта пропускания (байт/сек)")
+err <- c(9700210.428536173, 30980354.605033983, 157271828.17210537, 311960737.9364056, 246922396.91289106, 132339519.75307542)
+avg <- bytes_per_second
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+text(size, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(size, manual_bandwidth, col="red", pch="X")
+lines(size, manual_bandwidth, col="red", lty=2)
+err <- c(1030571256.2108198, 1427382047.761918, 1490132606.010116, 1591032346.7051141, 109598902.45324478, 62651443.201076776)
+avg <- manual_bandwidth
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+text(size, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=size where subs_count=8 buffer=10
+``` {r echo=FALSE}
+size <- c(1024, 2048, 4096, 8192, 16384, 32768)
+real_time <- c(9686.734470414154, 10401.535071598062, 11635.055750963684, 17173.791285041403, 40463.97944235131, 66552.4936780651)
+cpu_time <- c(5958.467840187074, 6631.112368290269, 7426.570689494949, 10576.06657613522, 20172.592044498593, 33114.46647319527)
+bytes_per_second <- c(1375082578.9571123, 2471095568.382846, 4412805889.1070385, 6204427806.16756, 6509724422.584126, 7926184064.5140915)
+manual_bandwidth <- c(10824249078.041183, 9672989619.089046, 5395421652.821287, 5253097155.844455, 620615792.1902885, 541022051.7925999)
+manual_latency <- c(9960703.671470972, 15999330.451271925, 28490526.792711526, 39131791.45333838, 300391135.7689594, 303525239.72968626)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(size, real_time, type="o", col="black", lty=1, ylim=c(-62948.683289420835, 135459.644807673), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер сообщения (б)", ylab="Задержка (нс)")
+err <- c(339.5736040369768, 243.47872954283739, 266.75732492463686, 1138.3827372635535, 1702.8295787906977, 1704.3303225277346)
+avg <- real_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+points(size, cpu_time, col="red", pch="X")
+lines(size, cpu_time, col="red", lty=2)
+err <- c(58.23912258455574, 57.03510863255652, 61.97796168392386, 289.3781903296913, 661.3343307406988, 876.3248993062608)
+avg <- cpu_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(size, bytes_per_second, type="o", col="black", lty=1, ylim=c(-16493706738.827164, 27858977868.66095), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер сообщения (б)", ylab="Широта пропускания (байт/сек)")
+err <- c(13524543.301032322, 21057052.324058343, 36829297.617959976, 162118852.14770705, 211728221.5434699, 212576902.15534315)
+avg <- bytes_per_second
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+text(size, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(size, manual_bandwidth, col="red", pch="X")
+lines(size, manual_bandwidth, col="red", lty=2)
+err <- c(1877510297.2704492, 2012045294.5350811, 1327446918.4678457, 1261703130.710858, 99013861.50036561, 54703443.46451077)
+avg <- manual_bandwidth
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+text(size, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=size where subs_count=8 buffer=100
+``` {r echo=FALSE}
+size <- c(1024, 2048, 4096, 8192, 16384, 32768)
+real_time <- c(9914.398591513605, 10611.92027701659, 11725.682561471414, 17277.86022489756, 39399.39844681375, 66101.28034325143)
+cpu_time <- c(6128.975128659707, 6709.959765021316, 7397.907388344693, 10421.038601762228, 19675.333709761173, 32321.569355999993)
+bytes_per_second <- c(1337453647.0353367, 2442372742.4424744, 4429790290.368351, 6295917136.79559, 6670651935.99484, 8120219790.11915)
+manual_bandwidth <- c(12479182334.994421, 8082094472.943006, 7989746247.477152, 6534237646.843073, 632372086.3001907, 560364456.4994348)
+manual_latency <- c(9740404.462292695, 15907792.459457073, 21882890.482430223, 39008283.741716824, 289095324.52739817, 320606141.7978099)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(size, real_time, type="o", col="black", lty=1, ylim=c(-65150.40699515067, 137380.6624670618), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер сообщения (б)", ylab="Задержка (нс)")
+err <- c(244.7886218443048, 266.8135976410529, 263.35173853567636, 1373.705716880358, 1846.0192707624253, 2680.148918867438)
+avg <- real_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+points(size, cpu_time, col="red", pch="X")
+lines(size, cpu_time, col="red", lty=2)
+err <- c(117.28634692712461, 81.84622093598304, 54.770644545929294, 264.5488761373109, 545.7971860702021, 837.7732133423124)
+avg <- cpu_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(size, bytes_per_second, type="o", col="black", lty=1, ylim=c(-19547884788.507996, 32587431580.00185), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер сообщения (б)", ylab="Широта пропускания (байт/сек)")
+err <- c(25308166.251452528, 29335968.05309394, 32992245.051225796, 159156449.68773875, 182675528.02048823, 213337698.16080737)
+avg <- bytes_per_second
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+text(size, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(size, manual_bandwidth, col="red", pch="X")
+lines(size, manual_bandwidth, col="red", lty=2)
+err <- c(2124365742.8530977, 1351653294.3076777, 2272328235.575655, 2449513055.673449, 110971660.60523413, 81216498.78944276)
+avg <- manual_bandwidth
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+text(size, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=size where subs_count=16 buffer=1
+``` {r echo=FALSE}
+size <- c(1024, 2048, 4096, 8192, 16384, 32768)
+real_time <- c(11479.391921055012, 13503.321181832502, 15154.606183301661, 20895.419041291934, 45113.235599582826, 95693.05198324294)
+cpu_time <- c(5678.42180657531, 6379.360501851848, 7337.010652117165, 10230.386805786971, 20337.94345771462, 36153.102145714336)
+bytes_per_second <- c(2885561826.2298803, 5137162629.910631, 8932721612.592697, 12813132244.741947, 12911013856.937643, 14523023186.503622)
+manual_bandwidth <- c(21649812614.63233, 21365404700.826935, 21868598089.762226, 17311707998.668312, 5394619768.816589, 278199562.8512043)
+manual_latency <- c(6487418.853135959, 8908279.025144354, 11025219.51174006, 13483155.040643916, 49043212.560835466, 563200529.4161808)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(size, real_time, type="o", col="black", lty=1, ylim=c(-115709.47608825882, 217080.94987807708), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер сообщения (б)", ylab="Задержка (нс)")
+err <- c(175.6742752097538, 307.84926672883637, 646.6909915601905, 741.2194265204628, 3644.049040738733, 8668.560067526807)
+avg <- real_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+points(size, cpu_time, col="red", pch="X")
+lines(size, cpu_time, col="red", lty=2)
+err <- c(40.065025851185986, 51.93173242946943, 40.24364333019101, 71.63470749009464, 632.0251726420167, 1033.8089290054568)
+avg <- cpu_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(size, bytes_per_second, type="o", col="black", lty=1, ylim=c(-39294134160.54707, 61440931813.16051), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер сообщения (б)", ylab="Широта пропускания (байт/сек)")
+err <- c(20394748.953109287, 41739021.80920283, 49072107.265579894, 89679271.81777583, 395689810.71363485, 421074262.99602586)
+avg <- bytes_per_second
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+text(size, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(size, manual_bandwidth, col="red", pch="X")
+lines(size, manual_bandwidth, col="red", lty=2)
+err <- c(2281611221.322732, 3468539303.274993, 5452392022.626355, 4594438453.612926, 2022947646.628103, 44032336.94942489)
+avg <- manual_bandwidth
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+text(size, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=size where subs_count=16 buffer=10
+``` {r echo=FALSE}
+size <- c(1024, 2048, 4096, 8192, 16384, 32768)
+real_time <- c(11651.789745227887, 13278.702375869532, 15031.005619840496, 20348.99118017918, 45179.2073817865, 110286.00181911715)
+cpu_time <- c(5694.719626846354, 6339.445722941872, 7295.688038482619, 10330.239983020854, 19955.79997752696, 39946.81183702224)
+bytes_per_second <- c(2877283182.324693, 5169183875.349147, 8984275607.801382, 12689918322.651155, 13143464931.712065, 13129299705.017578)
+manual_bandwidth <- c(18405012851.707745, 23558390513.094204, 20724046818.66098, 15327740644.373968, 7415443382.008635, 312860885.1642907)
+manual_latency <- c(6917235.483797975, 7384563.807185312, 10565293.495890697, 14859747.598340873, 42996599.50191142, 709104725.7042271)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(size, real_time, type="o", col="black", lty=1, ylim=c(-116598.37871567228, 232579.10016163578), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер сообщения (б)", ylab="Задержка (нс)")
+err <- c(142.72976447984456, 249.607908075919, 416.0342305831382, 548.4835551172612, 1586.3342869711921, 4023.307109882031)
+avg <- real_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+points(size, cpu_time, col="red", pch="X")
+lines(size, cpu_time, col="red", lty=2)
+err <- c(38.57012865562051, 34.99047783962849, 69.36363864139186, 91.21714305581922, 360.82464979601735, 573.317283599801)
+avg <- cpu_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(size, bytes_per_second, type="o", col="black", lty=1, ylim=c(-35350299326.408875, 59221550724.667366), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер сообщения (б)", ylab="Широта пропускания (байт/сек)")
+err <- c(19471782.924843565, 28606790.34593611, 85833601.22572206, 111583295.6461062, 227510729.10154578, 184157596.40587375)
+avg <- bytes_per_second
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+text(size, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(size, manual_bandwidth, col="red", pch="X")
+lines(size, manual_bandwidth, col="red", lty=2)
+err <- c(2616450953.765932, 2126274330.2852006, 3630759387.821533, 2686913660.4478354, 3438381650.5786347, 36007952.727830864)
+avg <- manual_bandwidth
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+text(size, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=size where subs_count=16 buffer=100
+``` {r echo=FALSE}
+size <- c(1024, 2048, 4096, 8192, 16384, 32768)
+real_time <- c(12335.922536428228, 13343.883543950611, 14978.421701990688, 21162.471527506237, 44214.193377113486, 106676.98694615494)
+cpu_time <- c(6033.288876703565, 6363.06491792179, 7348.881636696899, 10295.824832124552, 19672.955629694035, 40299.62731537829)
+bytes_per_second <- c(2716025324.921956, 5150195839.0031395, 8918838097.670992, 12731473062.211334, 13345515803.105358, 13021960977.059132)
+manual_bandwidth <- c(18779284542.081642, 21172866891.259453, 17620156350.44376, 19160733576.08847, 6757500152.518776, 270241099.58402175)
+manual_latency <- c(7127108.07893981, 8365833.850577059, 12004750.649651352, 11714967.955432069, 36540260.559376635, 707741220.8556793)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(size, real_time, type="o", col="black", lty=1, ylim=c(-116350.82240783235, 229061.09823069087), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер сообщения (б)", ylab="Задержка (нс)")
+err <- c(131.1419241139973, 371.8938660558028, 353.0872648100231, 1019.4806990523168, 3982.09222481966, 5389.751068261925)
+avg <- real_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+points(size, cpu_time, col="red", pch="X")
+lines(size, cpu_time, col="red", lty=2)
+err <- c(56.49601950892548, 46.068001846031606, 58.73608482312316, 64.27306044832996, 576.7058187091551, 937.4099122991626)
+avg <- cpu_time
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(size, bytes_per_second, type="o", col="black", lty=1, ylim=c(-36721558650.148895, 58164666640.99237), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер сообщения (б)", ylab="Широта пропускания (байт/сек)")
+err <- c(25819743.993326977, 37400838.748960994, 72459620.75520661, 79756422.37623468, 396172792.45702493, 298556934.5720403)
+avg <- bytes_per_second
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="black")
+text(size, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(size, manual_bandwidth, col="red", pch="X")
+lines(size, manual_bandwidth, col="red", lty=2)
+err <- c(1874390371.7845101, 2142479170.533752, 2388235647.450835, 4852916989.830231, 2497956795.7326245, 16437965.82673413)
+avg <- manual_bandwidth
+arrows(size, avg-err, size, avg+err, length=0.05, angle=90, code=3, col="red")
+text(size, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=1 size=1024
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(5762.151474074552, 5677.399062014275, 5677.207529298062)
+cpu_time <- c(5511.991751085399, 5435.2655851345935, 5417.667006387333)
+bytes_per_second <- c(185807569.47570375, 188443743.64644736, 189080434.25304586)
+manual_bandwidth <- c(84887476.95477971, 90147891.40960772, 89980283.25430173)
+manual_latency <- c(176422707.94710818, 195051698.77442074, 197559116.37927487)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(4761.35265845512, 6418.465822006765), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(55.7021581542048, 72.65811494515783, 95.03408285826814)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(53.84340288856311, 62.884336167692034, 78.21814723107119)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-45623428.66432761, 319591339.87215316), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(1792966.5791764068, 2186411.9589901785, 2724882.422814536)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(6809129.179331567, 1469190.276974091, 2449253.808190723)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=1 size=2048
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(5912.367532295206, 5899.708626310296, 6178.418633261133)
+cpu_time <- c(5685.6283849771935, 5682.888596708641, 5913.828917272391)
+bytes_per_second <- c(360252479.70551836, 360456308.5701947, 346666239.59387755)
+manual_bandwidth <- c(151145561.53127238, 152878837.85134694, 150465010.74700624)
+manual_latency <- c(155328647.36711866, 154254831.09278336, 156788555.44836718)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(4660.307950819336, 7200.999279150438), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(58.274198777612234, 80.34739509241528, 162.02390564812507)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(48.52652114770537, 62.63691480648545, 145.3549374702196)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-95794893.18830255, 606716212.5055034), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(3066561.089014811, 3931048.734025646, 8312593.942245445)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(3764655.0909720026, 1670897.346910092, 5247778.864860073)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=1 size=4096
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(6064.753097395251, 5988.6947048497, 6021.126371409809)
+cpu_time <- c(5862.8118895971, 5826.28220097248, 5831.705339375053)
+bytes_per_second <- c(698966125.582258, 703314620.2438577, 702567119.9114236)
+manual_bandwidth <- c(200083699.29120055, 206469631.92016575, 182904401.4740767)
+manual_latency <- c(134206631.46673398, 132407240.85432987, 132480765.37301612)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(5134.975143622683, 6756.060154745047), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(142.2298761631892, 97.8334251166108, 82.93502845571173)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(97.87654943396018, 91.27907350018329, 73.53425445165556)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-397867307.1331683, 1284086328.8511028), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(11077735.128701564, 10650966.482911708, 9005010.767549189)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(4449673.562519474, 1501662.044521992, 3623722.3723261473)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=1 size=8192
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(7617.966748958043, 7320.52749586245, 7361.441354827017)
+cpu_time <- c(7189.768262834351, 6987.910225719829, 7009.996183197321)
+bytes_per_second <- c(1139700241.902439, 1173042494.657084, 1169764787.2165534)
+manual_bandwidth <- c(226769638.1782125, 236796400.01412207, 242612749.04321975)
+manual_latency <- c(120816691.44397838, 120718695.08009219, 121578499.98301265)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(5651.3603641772515, 8954.516610500621), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(112.81484918891617, 162.06587430255, 217.73887488466235)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(87.4961064249, 131.63696049079076, 167.1847999497207)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-851701042.8196968, 2251513175.654993), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(14170719.243701003, 22104919.668658216, 27381994.095191654)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(2733750.149337271, 4435392.3927244535, 6957839.183469559)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=1 size=16384
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(11198.813589712434, 11486.0641631454, 11451.355648756102)
+cpu_time <- c(10148.66093955644, 10397.274559081528, 10362.344728231903)
+bytes_per_second <- c(1614930651.3089564, 1576036434.664502, 1581376385.859411)
+manual_bandwidth <- c(266375104.07131857, 264575299.01536265, 275032651.34473354)
+manual_latency <- c(104319033.18212126, 115662410.25141613, 115710141.3852957)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(8173.933400618823, 13460.791702083015), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(184.01746908684117, 104.75290937644917, 136.7078733011893)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(139.71049738435664, 95.83500810862616, 101.58218359018268)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-1221226899.301201, 3100732849.62552), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(21912605.938158195, 14734962.529045634, 15488157.069890378)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(21900327.0540678, 2461537.179453442, 3593099.035562126)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=1 size=32768
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(14654.677425215448, 14617.795181903606, 14688.050281890526)
+cpu_time <- c(13367.103445662675, 13324.90649335472, 13404.96951768446)
+bytes_per_second <- c(2451633042.762136, 2459255486.55791, 2444529464.014451)
+manual_bandwidth <- c(227442256.65863076, 276281067.55309474, 273533543.11706114)
+manual_latency <- c(103806432.09583913, 115960028.5260524, 115412334.2720571)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(11583.264293768616, 16429.692481476628), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(98.61717894246543, 84.61310766228439, 57.416918901184005)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(100.11007149145364, 64.40553385465537, 51.23024195971724)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-2172871497.73606, 4859569240.9526005), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(18358020.32272509, 11911512.18523733, 9354632.981023232)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(18320345.658484492, 3182718.5823035697, 3316485.636505382)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=2 size=1024
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(6515.108646128284, 6601.2034626912355, 6689.216032675807)
+cpu_time <- c(5990.88027850596, 6012.268904471075, 6067.7532228340715)
+bytes_per_second <- c(342071898.0614012, 341115692.4896895, 338094934.19561553)
+manual_bandwidth <- c(234847246.73977432, 195164947.80284008, 197649889.3839014)
+manual_latency <- c(175204212.80990335, 178778069.1438293, 175750961.3373794)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(4667.158592790183, 8012.937718391584), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(133.87980552810356, 159.60201101554006, 190.47391736691543)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(115.99891928247483, 171.1078571972602, 190.41834474100568)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(140939.49784773588, 537095906.3663936), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(6434322.204926152, 9570201.102417208, 10386516.680014698)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(10932670.449058853, 9538109.69054442, 13152164.688226826)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=2 size=2048
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(6628.693996848304, 6612.400898520646, 6895.666920077092)
+cpu_time <- c(6150.664764128857, 6071.1968480188325, 6330.879783978852)
+bytes_per_second <- c(666994894.6180211, 675471962.3897566, 649773683.5484797)
+manual_bandwidth <- c(263267276.585007, 362889150.36991525, 321389828.543557)
+manual_latency <- c(139246136.3453689, 136135631.69427267, 135570409.44420248)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(4229.360371374607, 8737.503396721317), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(203.75404353650833, 150.0296031200656, 314.88480676872683)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(187.35671548946783, 158.35760170247082, 313.9261900718888)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-268708251.2529849, 1207447490.2277484), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(19620112.285890196, 17684216.419997532, 31987292.820324138)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(10359113.7156982, 10203835.423895083, 16338680.48711213)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=2 size=4096
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(7004.712184550718, 6968.551771984763, 6960.503153786127)
+cpu_time <- c(6532.5935616702, 6512.371737867159, 6503.18295909899)
+bytes_per_second <- c(1258362110.9106307, 1260062586.3858705, 1260810237.9093943)
+manual_bandwidth <- c(468219300.6324353, 439546880.9351667, 477982426.203835)
+manual_latency <- c(116987280.82950318, 119396251.12080006, 118769408.48312147)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(5045.896693156378, 8461.998450493329), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(300.21954168332155, 226.26997570453412, 157.9500019023853)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(295.8578776975271, 206.29955249494483, 147.27248572422317)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-591897280.8216507, 2292254399.6662116), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(54554076.43028336, 38603980.74119332, 28128412.56151783)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(20223198.72500361, 14184648.466289502, 18818729.03244267)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=2 size=8192
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(7958.133049644176, 7938.039059568349, 7684.153472761658)
+cpu_time <- c(7410.564288221935, 7455.012607740505, 7225.7034919465705)
+bytes_per_second <- c(2213446781.8429346, 2200375508.3733015, 2270949758.0909357)
+manual_bandwidth <- c(426248711.45972127, 502072542.954383, 480022340.5958458)
+manual_latency <- c(108375597.5783745, 109255716.1437808, 107434811.14017653)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(5695.985596305103, 9487.850945285645), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(198.5098315300305, 212.80908875930723, 245.37640647063938)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(192.35785459333817, 194.29253061041794, 210.80196440734457)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-1721614509.44312, 4418812978.993777), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(55852450.30602687, 58033190.85105177, 68041007.07744066)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(11278138.472417116, 21154946.83047862, 12733284.700918445)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=2 size=16384
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(11212.776708187976, 11428.65503253595, 11270.660087047625)
+cpu_time <- c(10266.11305592825, 10368.548336281285, 10283.194048424511)
+bytes_per_second <- c(3192434135.456427, 3161351403.8168545, 3188166699.6154776)
+manual_bandwidth <- c(522981399.35801667, 571286719.9248741, 566219754.7743962)
+manual_latency <- c(105931026.89766285, 107082455.22154945, 107499817.54281804)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(8461.800700330634, 13232.967388133566), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(130.53621894162694, 124.84970211591421, 188.27202585791355)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(104.1736062026717, 141.22088264932836, 173.32750459787457)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-2448137445.043768, 6163552979.8582115), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(32146939.390407592, 42779757.34593404, 54255958.54788825)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(14504549.864793211, 15017889.136787303, 17597882.22176393)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=2 size=32768
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(15592.37050806123, 15616.685674247545, 15699.989889636689)
+cpu_time <- c(14442.082432970288, 14145.179213573221, 14433.579543724447)
+bytes_per_second <- c(4539804147.680972, 4633679585.902322, 4542266019.532547)
+manual_bandwidth <- c(464225864.28023255, 504859609.3031933, 429825626.57070047)
+manual_latency <- c(112284619.49209225, 112019702.80498865, 101158828.43783337)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(11807.251301644592, 18037.91780156532), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(184.62299016378245, 163.24455811054926, 147.36195614820699)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(227.54087163289938, 119.57216044488447, 212.78765077790402)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-4202896678.602805, 9266401891.075829), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(70540531.57267855, 39123346.54394559, 67232964.96622376)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(15113436.35000982, 19656535.68418927, 39961959.79110868)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=4 size=1024
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(9588.594259477197, 10294.561611671763, 9180.322245855734)
+cpu_time <- c(8076.393616234585, 8738.449419625118, 7406.547587433665)
+bytes_per_second <- c(514009034.8637738, 472661240.1000574, 590169279.2534575)
+manual_bandwidth <- c(329361128.899888, 257100392.53546986, 265499061.90180072)
+manual_latency <- c(225933601.6856928, 202077038.17224345, 209456227.8806928)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(216.85056661551607, 17484.258632489913), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(787.3136065679304, 468.1366176117794, 1341.0588049574665)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(686.6463305907037, 564.8800674007884, 1320.0756554544328)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-463246034.3663824, 1310515706.1553097), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(46073448.90046708, 34657681.639627434, 119556159.9509565)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(70154700.10943703, 65466669.05041874, 36813421.65967075)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=4 size=2048
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(10936.355951138099, 8892.575051324315, 9376.33741957146)
+cpu_time <- c(9231.508199238666, 7383.950480508941, 8013.749850551659)
+bytes_per_second <- c(887454889.2712266, 1175367153.8482504, 1046183565.6935747)
+manual_bandwidth <- c(609905086.3445393, 430291093.2332088, 455290687.6289614)
+manual_latency <- c(148386540.2796475, 165906039.62201613, 174147861.10430297)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(-427.8873369529929, 18748.19376860003), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(83.26259470221892, 1295.8678287830091, 895.818245888448)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(56.70466893805662, 1316.713572032683, 873.4196839110745)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-1005072342.2605038, 2610730589.341963), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(5485279.459341115, 210655990.91868344, 126431606.98952858)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(54709705.02874079, 115392412.91220616, 103932881.23696665)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=4 size=4096
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(10464.149224663863, 10397.271503534617, 9381.024477278956)
+cpu_time <- c(9105.589597756803, 9105.507777957937, 8219.372980676815)
+bytes_per_second <- c(1835134223.5402703, 1832398885.645062, 2028461717.046023)
+manual_bandwidth <- c(787395598.3458843, 522238862.0867113, 757653857.5696265)
+manual_latency <- c(153549784.7118854, 156973040.6200074, 148002007.77369764)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(3133.7324502834663, 15549.789755057212), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(870.6858657748589, 797.9541093582458, 874.2360296295091)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(880.2017658732093, 845.4152281752949, 813.5581266681223)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-1713524762.7010543, 4264225341.833789), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(211041815.18725434, 202794614.35525253, 202330675.26236966)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(96992723.33869115, 63807952.13287298, 139992289.5382784)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=4 size=8192
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(10518.969747729123, 11202.538247454922, 10349.853294650275)
+cpu_time <- c(9317.1873833335, 10193.95903082583, 9456.772976312357)
+bytes_per_second <- c(3560191296.252838, 3236267235.02942, 3528440352.880639)
+manual_bandwidth <- c(757562305.7462928, 733720486.2099138, 639248640.638405)
+manual_latency <- c(128158010.59552205, 122807578.28255038, 136859499.20015877)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(4326.3201625330585, 16193.405468255363), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(798.557344688391, 577.4003596963411, 971.370584991273)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(788.4670119582654, 589.015603006565, 922.8072738191323)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-3577154969.1723914, 7776594906.063635), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(291597427.33972126, 215657150.59279376, 370778652.0695617)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(95409244.99267, 107895166.07742171, 73479731.77960299)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=4 size=16384
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(13439.197781021203, 15168.000847853578, 13582.928545085853)
+cpu_time <- c(12436.725853427886, 13782.393141996907, 12569.860134250981)
+bytes_per_second <- c(5289102361.226442, 4766836520.880892, 5230770905.017803)
+manual_bandwidth <- c(705962799.4488102, 695214144.8341162, 557187345.3451502)
+manual_latency <- c(133677542.06885907, 134880703.7277866, 122408370.34123449)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(7601.976874241587, 20002.74982703988), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(617.6211662099324, 577.7051819851142, 634.4871725933298)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(570.3039766087714, 503.8584661567505, 548.2091678489268)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-5166514182.399015, 11012803888.970608), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(243609922.92542216, 183430032.87748975, 222385523.2568936)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(43297094.98683895, 66959766.27433538, 63846963.74114615)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=4 size=32768
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(22675.122229933353, 21572.12961352828, 22348.35792982665)
+cpu_time <- c(20673.461757355635, 19700.70598622381, 20185.738771492153)
+bytes_per_second <- c(6343894149.52158, 6681483479.487194, 6511528625.283918)
+manual_bandwidth <- c(581889023.3184118, 563758825.6829872, 658700142.7725842)
+manual_latency <- c(148281598.32384315, 146396586.667224, 146871092.14063543)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(12897.994128695569, 29477.834087461593), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(563.7838394548265, 1186.9596134300707, 766.4813229400239)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(372.7559723681257, 945.883732505907, 783.9057092801168)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-6900646429.652314, 14145888734.822495), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(119384343.72003593, 335740118.98093027, 267077067.27193314)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(43277457.08402558, 58167506.71706679, 46958284.45030584)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=8 size=1024
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(9631.021119578032, 9686.734470414154, 9914.398591513605)
+cpu_time <- c(6014.977289390416, 5958.467840187074, 6128.975128659707)
+bytes_per_second <- c(1362054592.62426, 1375082578.9571123, 1337453647.0353367)
+manual_bandwidth <- c(10565884420.565378, 10824249078.041183, 12479182334.994421)
+manual_latency <- c(10317196.650073051, 9960703.671470972, 9740404.462292695)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(752.0623787795876, 15120.804052921092), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(162.65126306353196, 339.5736040369768, 244.7886218443048)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(42.6355802514493, 58.23912258455574, 117.28634692712461)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-16946895278.166304, 30763531260.19606), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(9700210.428536173, 13524543.301032322, 25308166.251452528)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(1030571256.2108198, 1877510297.2704492, 2124365742.8530977)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=8 size=2048
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(10718.91714240513, 10401.535071598062, 10611.92027701659)
+cpu_time <- c(6722.220900918296, 6631.112368290269, 6709.959765021316)
+bytes_per_second <- c(2437975621.2126136, 2471095568.382846, 2442372742.4424744)
+manual_bandwidth <- c(8362857665.465825, 9672989619.089046, 8082094472.943006)
+manual_latency <- c(18432939.110543463, 15999330.451271925, 15907792.459457073)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(1308.288686586915, 16041.740824108483), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(332.4608609299193, 243.47872954283739, 266.8135976410529)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(84.61818731466391, 57.03510863255652, 81.84622093598304)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-11396129489.616392, 23507094729.918053), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(30980354.605033983, 21057052.324058343, 29335968.05309394)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(1427382047.761918, 2012045294.5350811, 1351653294.3076777)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=8 size=4096
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(12749.708416357407, 11635.055750963684, 11725.682561471414)
+cpu_time <- c(8051.833586202952, 7426.570689494949, 7397.907388344693)
+bytes_per_second <- c(4079921482.2861986, 4412805889.1070385, 4429790290.368351)
+manual_bandwidth <- c(7040026669.029938, 5395421652.821287, 7989746247.477152)
+manual_latency <- c(23571911.544572838, 28490526.792711526, 21882890.482430223)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(54.99248291502681, 20092.623321787072), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(555.9754277471984, 266.75732492463686, 263.35173853567636)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(299.5867727946742, 61.97796168392386, 54.770644545929294)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-7069612051.4488325, 19139279781.21218), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(157271828.17210537, 36829297.617959976, 32992245.051225796)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(1490132606.010116, 1327446918.4678457, 2272328235.575655)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=8 size=8192
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(16851.460509198147, 17173.791285041403, 17277.86022489756)
+cpu_time <- c(10708.184733924627, 10576.06657613522, 10421.038601762228)
+bytes_per_second <- c(6148989990.261017, 6204427806.16756, 6295917136.79559)
+manual_bandwidth <- c(5390641970.798925, 5253097155.844455, 6534237646.843073)
+manual_latency <- c(44654900.52485968, 39131791.45333838, 39008283.741716824)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(-1893.2399169075543, 29592.13874356734), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(1649.8760691540917, 1138.3827372635535, 1373.705716880358)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(563.516017003512, 289.3781903296913, 264.5488761373109)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-3685590832.2917867, 15472925634.979313), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(311960737.9364056, 162118852.14770705, 159156449.68773875)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(1591032346.7051141, 1261703130.710858, 2449513055.673449)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=8 size=16384
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(40902.80977810843, 40463.97944235131, 39399.39844681375)
+cpu_time <- c(19779.614090648734, 20172.592044498593, 19675.333709761173)
+bytes_per_second <- c(6643463029.039995, 6509724422.584126, 6670651935.99484)
+manual_bandwidth <- c(699554564.4974298, 620615792.1902885, 632372086.3001907)
+manual_latency <- c(286053373.0861536, 300391135.7689594, 289095324.52739817)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(-8336.175901366965, 68914.31938923657), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(1550.122522815973, 1702.8295787906977, 1846.0192707624253)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(767.6480942277794, 661.3343307406988, 545.7971860702021)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-6497381589.234453, 13788649317.419582), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(246922396.91289106, 211728221.5434699, 182675528.02048823)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(109598902.45324478, 99013861.50036561, 110971660.60523413)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=8 size=32768
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(66721.94726403196, 66552.4936780651, 66101.28034325143)
+cpu_time <- c(31991.66179554852, 33114.46647319527, 32321.569355999993)
+bytes_per_second <- c(8197906399.715651, 7926184064.5140915, 8120219790.11915)
+manual_bandwidth <- c(618178782.6198943, 541022051.7925999, 560364456.4994348)
+manual_latency <- c(294879541.2236522, 303525239.72968626, 320606141.7978099)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(-12783.59959484815, 111497.20865442863), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(1921.882912857171, 1704.3303225277346, 2680.148918867438)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(518.345880702961, 876.3248993062608, 837.7732133423124)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-8160053377.825106, 16898981829.333357), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(132339519.75307542, 212576902.15534315, 213337698.16080737)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(62651443.201076776, 54703443.46451077, 81216498.78944276)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=16 size=1024
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(11479.391921055012, 11651.789745227887, 12335.922536428228)
+cpu_time <- c(5678.42180657531, 5694.719626846354, 6033.288876703565)
+bytes_per_second <- c(2885561826.2298803, 2877283182.324693, 2716025324.921956)
+manual_bandwidth <- c(21649812614.63233, 18405012851.707745, 18779284542.081642)
+manual_latency <- c(6487418.853135959, 6917235.483797975, 7127108.07893981)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(-1856.5442129204903, 19870.88855592403), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(175.6742752097538, 142.72976447984456, 131.1419241139973)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(40.065025851185986, 38.57012865562051, 56.49601950892548)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-25275449285.94833, 49641287225.50262), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(20394748.953109287, 19471782.924843565, 25819743.993326977)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(2281611221.322732, 2616450953.765932, 1874390371.7845101)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=16 size=2048
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(13503.321181832502, 13278.702375869532, 13343.883543950611)
+cpu_time <- c(6379.360501851848, 6339.445722941872, 6363.06491792179)
+bytes_per_second <- c(5137162629.910631, 5169183875.349147, 5150195839.0031395)
+manual_bandwidth <- c(21365404700.826935, 23558390513.094204, 21172866891.259453)
+manual_latency <- c(8908279.025144354, 7384563.807185312, 8365833.850577059)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(-2335.494493666278, 22178.261398440653), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(307.84926672883637, 249.607908075919, 371.8938660558028)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(51.93173242946943, 34.99047783962849, 46.068001846031606)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-24957598487.5846, 53653151630.58943), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(41739021.80920283, 28606790.34593611, 37400838.748960994)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(3468539303.274993, 2126274330.2852006, 2142479170.533752)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=16 size=4096
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(15154.606183301661, 15031.005619840496, 14978.421701990688)
+cpu_time <- c(7337.010652117165, 7295.688038482619, 7348.881636696899)
+bytes_per_second <- c(8932721612.592697, 8984275607.801382, 8918838097.670992)
+manual_bandwidth <- c(21868598089.762226, 20724046818.66098, 17620156350.44376)
+manual_latency <- c(11025219.51174006, 10565293.495890697, 12004750.649651352)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(-2960.9180874139656, 25411.212309198243), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(646.6909915601905, 416.0342305831382, 353.0872648100231)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(40.24364333019101, 69.36363864139186, 58.73608482312316)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-21580825164.166508, 52368261351.599724), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(49072107.265579894, 85833601.22572206, 72459620.75520661)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(5452392022.626355, 3630759387.821533, 2388235647.450835)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=16 size=8192
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(20895.419041291934, 20348.99118017918, 21162.471527506237)
+cpu_time <- c(10230.386805786971, 10330.239983020854, 10295.824832124552)
+bytes_per_second <- c(12813132244.741947, 12689918322.651155, 12731473062.211334)
+manual_bandwidth <- c(17311707998.668312, 15327740644.373968, 19160733576.08847)
+manual_latency <- c(13483155.040643916, 14859747.598340873, 11714967.955432069)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(-4408.692319080441, 35801.55065237365), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(741.2194265204628, 548.4835551172612, 1019.4806990523168)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(71.63470749009464, 91.21714305581922, 64.27306044832996)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-9148480361.931742, 40999132260.67137), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(89679271.81777583, 111583295.6461062, 79756422.37623468)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(4594438453.612926, 2686913660.4478354, 4852916989.830231)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=16 size=16384
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(45113.235599582826, 45179.2073817865, 44214.193377113486)
+cpu_time <- c(20337.94345771462, 19955.79997752696, 19672.955629694035)
+bytes_per_second <- c(12911013856.937643, 13143464931.712065, 13345515803.105358)
+manual_bandwidth <- c(5394619768.816589, 7415443382.008635, 6757500152.518776)
+manual_latency <- c(49043212.560835466, 42996599.50191142, 36540260.559376635)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(-19453.094606943996, 84305.25761842454), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(3644.049040738733, 1586.3342869711921, 3982.09222481966)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(632.0251726420167, 360.82464979601735, 576.7058187091551)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-13612804183.980385, 32352939755.902332), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(395689810.71363485, 227510729.10154578, 396172792.45702493)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(2022947646.628103, 3438381650.5786347, 2497956795.7326245)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "PublisherFixture/ROS_BM_Publish_method" by var=buffer where subs_count=16 size=32768
+``` {r echo=FALSE}
+buffer <- c(1, 10, 100)
+real_time <- c(95693.05198324294, 110286.00181911715, 106676.98694615494)
+cpu_time <- c(36153.102145714336, 39946.81183702224, 40299.62731537829)
+bytes_per_second <- c(14523023186.503622, 13129299705.017578, 13021960977.059132)
+manual_bandwidth <- c(278199562.8512043, 312860885.1642907, 270241099.58402175)
+manual_latency <- c(563200529.4161808, 709104725.7042271, 707741220.8556793)
+df <- data.frame("factor"=buffer, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Широта пропускания принимающего (б/с)"=manual_bandwidth, "Задержка передачи (нс)"=manual_latency)
+df
+plot(buffer, real_time, type="o", col="black", lty=1, ylim=c(-68558.97872069172, 214998.0826855232), xlab="", ylab="")
+title(main="Зависимость задержки от фактора", xlab="Размер буфера", ylab="Задержка (нс)")
+err <- c(8668.560067526807, 4023.307109882031, 5389.751068261925)
+avg <- real_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+points(buffer, cpu_time, col="red", pch="X")
+lines(buffer, cpu_time, col="red", lty=2)
+err <- c(1033.8089290054568, 573.317283599801, 937.4099122991626)
+avg <- cpu_time
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(buffer, bytes_per_second, type="o", col="black", lty=1, ylim=c(-16000510306.96924, 30793774593.056885), xlab="", ylab="")
+title(main="Зависимость широты пропускания от фактора", xlab="Размер буфера", ylab="Широта пропускания (байт/сек)")
+err <- c(421074262.99602586, 184157596.40587375, 298556934.5720403)
+avg <- bytes_per_second
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="black")
+text(buffer, bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+points(buffer, manual_bandwidth, col="red", pch="X")
+lines(buffer, manual_bandwidth, col="red", lty=2)
+err <- c(44032336.94942489, 36007952.727830864, 16437965.82673413)
+avg <- manual_bandwidth
+arrows(buffer, avg-err, buffer, avg+err, length=0.05, angle=90, code=3, col="red")
+text(buffer, manual_bandwidth, labels=manual_bandwidth, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+

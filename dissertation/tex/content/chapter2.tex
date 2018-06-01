@@ -1,4 +1,4 @@
-\chapter{\todo{План тестирования}}
+\chapter{План тестирования}
 \label{title:chapter2}
 
 \section{Предмет тестирования}
@@ -29,23 +29,29 @@
 \label{title:chapter2:performance_test_cases}
 \input{tex/content/chapter2/performance_test_cases.tex}
 	
-\section{\todo{Реализация}}
+\section{Реализация}
 	\subsection{Создание тестового окружения}
 	\label{title:chapter2:testing_environment_description}
 	\input{tex/content/chapter2/testing_environment_description.tex}
-	\subsection{\todo{Используемое API Google benchmark}}
-	\subsection{\todo{Детали реализации тестовых случаев}}
-		\subsubsection{\todo{ROS}}
-		\label{title:chapter2:ros_test_details}
-		\input{tex/content/chapter2/ros_test_details.tex}
+	\subsection{Используемое API Google benchmark}
+	\label{title:chapter2:testing_google_benchmark_api}
+	\input{tex/content/chapter2/testing_google_benchmark_api.tex}
+%	\subsection{\todo{Детали реализации тестовых случаев}}
+%		\subsubsection{\todo{ROS}}
+%		\label{title:chapter2:ros_test_details}
+%		\input{tex/content/chapter2/ros_test_details.tex}
 		
-		\subsubsection{\todo{YARP}}
-		\subsubsection{\todo{MIRA}}
-		\subsubsection{\todo{OROCOS}}
-	\subsection{\todo{Обработка результатов}}
-	\subsection{\todo{Автоматизация тестирования и обработки результатов}}
-		\subsubsection{\todo{Архитектура}}
-		\subsubsection{\todo{Реализация}}
-		\subsubsection{\todo{Примеры работы}}
-		\subsubsection{\todo{Тестирование}}
-\section{\todo{Выводы}}
+%		\subsubsection{\todo{YARP}
+%		\subsubsection{\todo{MIRA}}
+%		\subsubsection{\todo{OROCOS}}
+	\subsection{Автоматизация обработки результатов}
+	\label{title:chapter2:testing_analyser}
+		\subsubsection{Описание решения}
+		\label{title:chapter2:testing_analyser_description}
+		\input{tex/content/chapter2/testing_analyser_description.tex}
+		\subsubsection{Примеры работы}
+		\label{title:chapter2:analyser_examples}
+		\input{tex/content/chapter2/analyser_examples.tex}
+\section{Выводы}
+	Таким образом, были выявлены предмет тестирования и тестовые случаи, было создано тестовое окружение при помощи Docker-контейнеров, реализованы тестовые случаи при помощи описанного API Google Benchmark и было реализовано приложение, обрабатывающее входные результаты экспериментов в формате json и дающее на выходе rmarkdown файл с таблицами и графиками результатов экспериментов, который может быть преобразован в html страницу.
+

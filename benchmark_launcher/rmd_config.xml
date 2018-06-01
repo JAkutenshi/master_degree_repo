@@ -1,0 +1,25 @@
+<rmd>
+    <benchmark name="PublisherFixture/ROS_BM_Publish_method">
+        <titles>
+            <remap title="subs_count" remap="Кол-во подписчиков"/>
+            <remap title="size" remap="Размер сообщения (б)"/>
+            <remap title="buffer" remap="Размер буфера"/>
+            <remap title="real_time" remap="Время отправки (нс)"/>
+            <remap title="cpu_time" remap="Время отправки CPU (нс)"/>
+            <remap title="bytes_per_second" remap="Широта пропускания публикующего (б/с)"/>
+            <remap title="manual_latency" remap="Задержка передачи (нс)"/>
+            <remap title="manual_bandwidth" remap="Широта пропускания принимающего (б/с)"/>
+        </titles>
+        <plots>
+            <plot title="Зависимость задержки от фактора" ylab="Задержка (нс)" values="False">
+                <measure name="real_time" col="black" type="o" lty="1"/>
+                <measure name="cpu_time" col="red" type="X" lty="2"/>
+                <!--measure name="manual_latency" col="blue" type="+" lty="3"/-->
+            </plot>
+            <plot title="Зависимость широты пропускания от фактора" ylab="Широта пропускания (байт/сек)" values="True">
+                <measure name="bytes_per_second" col="black" type="o" lty="1"/>
+                <measure name="manual_bandwidth" col="red" type="X" lty="2"/>
+            </plot>
+        </plots>
+    </benchmark>
+</rmd>

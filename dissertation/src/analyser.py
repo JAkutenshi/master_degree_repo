@@ -27,7 +27,7 @@ def write_json_to_file(filename: str, json_obj):
         json.dump(json_obj, json_in, separators=(',', ': '), indent=4)
 
 
-def processz_primary(primary: ET.Element):
+def process_primary(primary: ET.Element):
     json_url = primary.attrib['url']
     primary_json = read_json_from_file(json_url)
 

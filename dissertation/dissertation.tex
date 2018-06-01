@@ -20,6 +20,10 @@
 %}
 
 % http://cito-web.yspu.org/link1/metod/met125/node29.html статистическая обработка результата
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\textit{#1}}
+\usepackage{unicode-math}
+\setmathfont{XITS Math}
+\usepackage{mathtext}
 
 \begin{document}
 	\pagenumbering{gobble}
@@ -32,7 +36,7 @@
 	\input{tex/content/chapter1.tex}  % Обзор предметной области
 	\input{tex/content/chapter2.tex}  % План тестирования
 	\input{tex/content/chapter3.tex}  % Результаты тестирования
-%	\input{tex/content/chapter4.tex}  % Технико-экономическое обоснование
+	\input{tex/content/chapter4.tex}  % Технико-экономическое обоснование
 
 	\input{tex/conclusion.tex}        % Заключение
 	\input{tex/references.tex}        % Список использованнх источников
@@ -45,6 +49,8 @@
 		\titlecontents{chapter}[2cm]{}{Приложение \thecontentslabel . }{}{\titlerule*[1pc]{ }\contentspage}
 %		\input{tex/application/tables.tex}
 		\input{tex/application/dockerfiles.tex}
+		\input{tex/application/analyser.tex}
+		\input{tex/application/configs.tex}
 	\endgroup
 	
 \end{document}
