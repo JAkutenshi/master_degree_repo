@@ -1,6 +1,5 @@
 #include <iostream>
 #include <chrono>
-#include "Benchmark.h"
 #include "BenchmarkKeeper.h"
 
 int fibonacci(int n)
