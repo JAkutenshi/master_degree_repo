@@ -1,0 +1,142 @@
+---
+title: "Пример обработки данных"
+author: "Ефремов Михаил"
+output:
+    html_document:
+        toc: true
+        theme: united
+---
+## Benchmark name is "MIRA_PUB_SUB_INNER_BM_64" by var=size where
+``` {r echo=TRUE}
+#png(filename="plot.png", width = 1600, height = 900)
+size <- c(1024, 4096, 16384, 65536, 262144, 1048576, 4194304, 16777216, 67108864)
+real_time <- c(1794.7186319, 1656.0838081999998, 1657.7157215, 1630.5704070999998, 1616.5322531, 1503.7493749999999, 1543.3212322999998, 1571.2986896999998, 1589.9019902000002)
+cpu_time <- c(1795.864012, 1655.8415681, 1657.9540108, 1630.9049162000001, 1616.7235234999996, 1503.4641225, 1543.3403649, 1571.571565, 1590.60727)
+bytes_per_second <- c(4853778.761585699, 83407865.56992581, 827121360.8949069, 3867483129.867816, 16152920547.767572, 69569598974.06021, 273245737099.94342, 1073081021196.8617, 4239222165995.8594)
+manual_time <- c(3887.3, 4526.4, 3955.5, 3621.7, 5747.3, 3637.3, 3016.8, 3380.0, 4113.9)
+manual_bps <- c(27558159.649204694, 131191703.4346489, 425539842.24463284, 2045345401.1722145, 7049883608.697081, 30478477481.634228, 147734504859.9131, 514920585433.5671, 2164415352358.4302)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Задержка передачи (нс)"=manual_time, "Широта пропускания принимающего (б/с)"=manual_bps)
+plot(factor(size, levels=size), real_time, type="o", col="black", lty=0, ylim=c(-11124.571873624449, 18375.33599612445), xlab="", ylab="")
+points(factor(size, levels=size), real_time, col="black", pch="o")
+lines(factor(size, levels=size), real_time, col="black", lty=1, lwd=2)
+title(main="Зависимость задержки от размера сообщения", xlab="Размер сообщения (б)", ylab="Задержка (нс)")
+points(factor(size, levels=size), cpu_time, col="red", pch="X")
+lines(factor(size, levels=size), cpu_time, col="red", lty=2, lwd=2)
+points(factor(size, levels=size), manual_time, col="blue", pch="+")
+lines(factor(size, levels=size), manual_time, col="blue", lty=3, lwd=2)
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)", "Задержка передачи (нс)"), col=c("black", "red", "blue"), lty=c(1, 2, 3), pch=c("o", "X", "+"), ncol=1)
+plot(factor(size, levels=size), bytes_per_second, type="o", col="black", lty=0, ylim=c(-3471166404557.8193, 7710393424332.439), xlab="", ylab="")
+points(factor(size, levels=size), bytes_per_second, col="black", pch="o")
+lines(factor(size, levels=size), bytes_per_second, col="black", lty=1, lwd=2)
+title(main="Зависимость широты пропускания от размера сообщения", xlab="Размер сообщения (б)", ylab="Широта пропускания (байт/сек)")
+points(factor(size, levels=size), manual_bps, col="red", pch="X")
+lines(factor(size, levels=size), manual_bps, col="red", lty=2, lwd=2)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "MIRA_PUB_SUB_OUTER_BM_64" by var=size where
+``` {r echo=TRUE}
+#png(filename="plot.png", width = 1600, height = 900)
+size <- c(1024, 4096, 16384, 65536, 262144, 1048576, 4194304, 16777216, 67108864)
+real_time <- c(1122.6468948, 1109.8495050000001, 1091.7597360000002, 1185.7989599, 894.1334531, 960.8632263000002, 1067.0151218, 918.6111011, 890.4206820999998)
+cpu_time <- c(1119.9821877999998, 1106.9932056, 1088.6530892, 1183.3674303000003, 886.7807753999999, 952.0783027, 1058.0215409, 911.7032061999998, 883.5805469999999)
+bytes_per_second <- c(8113368.4283499, 131560437.0188622, 1295662393.2351851, 5635256834.389523, 29046179175.038452, 109050619333.65392, 397820664918.36224, 1831473562830.4902, 7542320470154.612)
+manual_time <- c(6118035.8, 14367990.7, 22488837.2, 9313783.0, 6840089.6, 8817207.8, 12587785.0, 28643665.2, 60538946.8)
+manual_bps <- c(30619.416385, 35082.9929197, 76106.4533962, 740431.6069606, 3901140.533323, 12095738.4135749, 33809618.682818905, 59159007.803795494, 17893148.120781202)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Задержка передачи (нс)"=manual_time, "Широта пропускания принимающего (б/с)"=manual_bps)
+plot(factor(size, levels=size), real_time, type="o", col="black", lty=0, ylim=c(-117954697.44493994, 178494527.82548693), xlab="", ylab="")
+points(factor(size, levels=size), real_time, col="black", pch="o")
+lines(factor(size, levels=size), real_time, col="black", lty=1, lwd=2)
+title(main="Зависимость задержки от размера сообщения", xlab="Размер сообщения (б)", ylab="Задержка (нс)")
+points(factor(size, levels=size), cpu_time, col="red", pch="X")
+lines(factor(size, levels=size), cpu_time, col="red", lty=2, lwd=2)
+points(factor(size, levels=size), manual_time, col="blue", pch="+")
+lines(factor(size, levels=size), manual_time, col="blue", lty=3, lwd=2)
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)", "Задержка передачи (нс)"), col=c("black", "red", "blue"), lty=c(1, 2, 3), pch=c("o", "X", "+"), ncol=1)
+plot(factor(size, levels=size), bytes_per_second, type="o", col="black", lty=0, ylim=c(-4086098520933.1953, 11628419021707.225), xlab="", ylab="")
+points(factor(size, levels=size), bytes_per_second, col="black", pch="o")
+lines(factor(size, levels=size), bytes_per_second, col="black", lty=1, lwd=2)
+title(main="Зависимость широты пропускания от размера сообщения", xlab="Размер сообщения (б)", ylab="Широта пропускания (байт/сек)")
+points(factor(size, levels=size), manual_bps, col="red", pch="X")
+lines(factor(size, levels=size), manual_bps, col="red", lty=2, lwd=2)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "MIRA_PUB_SUB_OUTER_BM_256" by var=size where
+``` {r echo=TRUE}
+#png(filename="plot.png", width = 1600, height = 900)
+size <- c(1024, 4096, 16384, 65536, 262144, 1048576, 4194304, 16777216, 67108864, 268435456)
+real_time <- c(1137.5120611, 975.5428243999999, 905.3395839000001, 942.8018900999999, 888.3077407999999, 963.5165718999999, 894.9838384999999, 918.141224, 918.7508451, 968.1491848999998)
+cpu_time <- c(1135.0593776, 975.4916464, 905.1353268, 940.2535633, 885.8471913999999, 958.0350892, 887.0755938, 914.3749582, 913.5676089000001, 964.1400860000001)
+bytes_per_second <- c(7861533.502788101, 142614204.5858677, 1532311739.398297, 6798970992.628386, 29637120128.654713, 110912738338.9644, 468575985289.80206, 1859599163296.6575, 7387839581791.778, 28013430475900.832)
+manual_time <- c(34593585.6, 66284543.8, 49254540.7, 12321882.9, 6532605.4, 9083078.3, 14431866.2, 32068348.1, 61316396.3, 121641351.6)
+manual_bps <- c(2976.0925631, 6653.4779131000005, 39233.059778899995, 562334.9283886, 4105443.6851007, 11637641.384385899, 29476139.294398703, 53057690.37101771, 17697833.332836203, 8891360.2824183)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Задержка передачи (нс)"=manual_time, "Широта пропускания принимающего (б/с)"=manual_bps)
+plot(factor(size, levels=size), real_time, type="o", col="black", lty=0, ylim=c(-390805362.853975, 512447600.3011664), xlab="", ylab="")
+points(factor(size, levels=size), real_time, col="black", pch="o")
+lines(factor(size, levels=size), real_time, col="black", lty=1, lwd=2)
+title(main="Зависимость задержки от размера сообщения", xlab="Размер сообщения (б)", ylab="Задержка (нс)")
+points(factor(size, levels=size), cpu_time, col="red", pch="X")
+lines(factor(size, levels=size), cpu_time, col="red", lty=2, lwd=2)
+points(factor(size, levels=size), manual_time, col="blue", pch="+")
+lines(factor(size, levels=size), manual_time, col="blue", lty=3, lwd=2)
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)", "Задержка передачи (нс)"), col=c("black", "red", "blue"), lty=c(1, 2, 3), pch=c("o", "X", "+"), ncol=1)
+plot(factor(size, levels=size), bytes_per_second, type="o", col="black", lty=0, ylim=c(-18179537801720.773, 46192968280597.7), xlab="", ylab="")
+points(factor(size, levels=size), bytes_per_second, col="black", pch="o")
+lines(factor(size, levels=size), bytes_per_second, col="black", lty=1, lwd=2)
+title(main="Зависимость широты пропускания от размера сообщения", xlab="Размер сообщения (б)", ylab="Широта пропускания (байт/сек)")
+points(factor(size, levels=size), manual_bps, col="red", pch="X")
+lines(factor(size, levels=size), manual_bps, col="red", lty=2, lwd=2)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "MIRA_PUB_SUB_INNER_BM_256" by var=size where
+``` {r echo=TRUE}
+#png(filename="plot.png", width = 1600, height = 900)
+size <- c(1024, 4096, 16384, 65536, 262144, 1048576, 4194304, 16777216, 67108864, 268435456)
+real_time <- c(1815.9800179000001, 1788.4149814, 1618.3398138, 1435.2221623, 1413.370477, 1484.5248925, 1585.3241922999998, 1443.4481447000003, 1403.170987, 1424.4405643)
+cpu_time <- c(1816.8241794, 1789.061245, 1618.6224569, 1434.8823903999998, 1412.5217159999997, 1483.8891529, 1585.3865991999999, 1442.6063054, 1402.2039458, 1423.9961931)
+bytes_per_second <- c(4755855.7589009, 77191622.6796711, 867788083.9928226, 4389681286.868398, 18374696697.819588, 70527278089.74957, 268931708573.8851, 1164010771142.8352, 4783153793710.275, 18874299188878.996)
+manual_time <- c(3659.2, 3211.7, 3580.8, 3337.2, 3142.2, 10135.6, 3690.6, 3180.9, 3706.9, 4192.9)
+manual_bps <- c(30602920.9948422, 134220039.9778034, 517801010.9657726, 2012939275.117082, 9093963444.268234, 27903848647.134594, 114665149353.29964, 559199285850.928, 1967786794721.316, 6869930035303.737)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Задержка передачи (нс)"=manual_time, "Широта пропускания принимающего (б/с)"=manual_bps)
+plot(factor(size, levels=size), real_time, type="o", col="black", lty=0, ylim=c(-30172.2004857712, 41710.0044315712), xlab="", ylab="")
+points(factor(size, levels=size), real_time, col="black", pch="o")
+lines(factor(size, levels=size), real_time, col="black", lty=1, lwd=2)
+title(main="Зависимость задержки от размера сообщения", xlab="Размер сообщения (б)", ylab="Задержка (нс)")
+points(factor(size, levels=size), cpu_time, col="red", pch="X")
+lines(factor(size, levels=size), cpu_time, col="red", lty=2, lwd=2)
+points(factor(size, levels=size), manual_time, col="blue", pch="+")
+lines(factor(size, levels=size), manual_time, col="blue", lty=3, lwd=2)
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)", "Задержка передачи (нс)"), col=c("black", "red", "blue"), lty=c(1, 2, 3), pch=c("o", "X", "+"), ncol=1)
+plot(factor(size, levels=size), bytes_per_second, type="o", col="black", lty=0, ylim=c(-12202184413058.38, 31076488357793.137), xlab="", ylab="")
+points(factor(size, levels=size), bytes_per_second, col="black", pch="o")
+lines(factor(size, levels=size), bytes_per_second, col="black", lty=1, lwd=2)
+title(main="Зависимость широты пропускания от размера сообщения", xlab="Размер сообщения (б)", ylab="Широта пропускания (байт/сек)")
+points(factor(size, levels=size), manual_bps, col="red", pch="X")
+lines(factor(size, levels=size), manual_bps, col="red", lty=2, lwd=2)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+
+## Benchmark name is "MIRA_RPC_BM_64" by var=size where
+``` {r echo=TRUE}
+#png(filename="plot.png", width = 1600, height = 900)
+size <- c(1024, 4096, 16384, 65536, 262144, 1048576, 4194304, 16777216, 67108864)
+real_time <- c(228480.6996655, 239069.72307689994, 294043.2237461, 599405.5929765, 2757791.1197324, 12549108.428762604, 39024540.451505, 165139375.3227425, 919160538.9933112)
+cpu_time <- c(228600.6841527, 239188.76460180004, 294157.8857295, 599542.3858202, 2757913.4674674, 12549268.2256256, 39024988.17490201, 165140909.2456502, 919168332.6944578)
+bytes_per_second <- c(864406.1567993, 3397639.180548, 11157012.311954897, 21859116.7171818, 19169743.0961094, 16827996.9726744, 21515874.492444903, 20319110.0058807, 14618378.7690909)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second)
+plot(factor(size, levels=size), real_time, type="o", col="black", lty=0, ylim=c(-505586656.6882237, 1424983470.082347), xlab="", ylab="")
+points(factor(size, levels=size), real_time, col="black", pch="o")
+lines(factor(size, levels=size), real_time, col="black", lty=1, lwd=2)
+title(main="Зависимость задержки от размера сообщения", xlab="Размер сообщения (б)", ylab="Задержка (нс)")
+points(factor(size, levels=size), cpu_time, col="red", pch="X")
+lines(factor(size, levels=size), cpu_time, col="red", lty=2, lwd=2)
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(factor(size, levels=size), bytes_per_second, type="o", col="black", lty=0, ylim=c(-12274665.74142996, 34998188.615411066), xlab="", ylab="")
+points(factor(size, levels=size), bytes_per_second, col="black", pch="o")
+lines(factor(size, levels=size), bytes_per_second, col="black", lty=1, lwd=2)
+title(main="Зависимость широты пропускания от размера сообщения", xlab="Размер сообщения (б)", ylab="Широта пропускания (байт/сек)")
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)"), col=c("black"), lty=c(1), pch=c("o"), ncol=1)
+```
+

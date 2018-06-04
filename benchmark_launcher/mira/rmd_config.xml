@@ -1,0 +1,105 @@
+<rmd>
+    <benchmark name="MIRA_PUB_SUB_INNER_BM_64">
+        <titles>
+            <remap title="size" remap="Размер сообщения (б)"/>
+            <remap title="real_time" remap="Время отправки (нс)"/>
+            <remap title="cpu_time" remap="Время отправки CPU (нс)"/>
+            <remap title="bytes_per_second" remap="Широта пропускания публикующего (б/с)"/>
+            <remap title="manual_time" remap="Задержка передачи (нс)"/>
+            <remap title="manual_bps" remap="Широта пропускания принимающего (б/с)"/>
+        </titles>
+        <plots>
+            <plot title="Зависимость задержки от размера сообщения" ylab="Задержка (нс)" values="False" bars="False">
+                <measure name="real_time" col="black" type="o" lty="1"/>
+                <measure name="cpu_time" col="red" type="X" lty="2"/>
+                <measure name="manual_time" col="blue" type="+" lty="3"/>
+            </plot>
+            <plot title="Зависимость широты пропускания от размера сообщения" ylab="Широта пропускания (байт/сек)" values="False" bars="False">
+                <measure name="bytes_per_second" col="black" type="o" lty="1"/>
+                <measure name="manual_bps" col="red" type="X" lty="2"/>
+            </plot>
+        </plots>
+    </benchmark>
+    <benchmark name="MIRA_PUB_SUB_OUTER_BM_64">
+        <titles>
+            <remap title="size" remap="Размер сообщения (б)"/>
+            <remap title="real_time" remap="Время отправки (нс)"/>
+            <remap title="cpu_time" remap="Время отправки CPU (нс)"/>
+            <remap title="bytes_per_second" remap="Широта пропускания публикующего (б/с)"/>
+            <remap title="manual_time" remap="Задержка передачи (нс)"/>
+            <remap title="manual_bps" remap="Широта пропускания принимающего (б/с)"/>
+        </titles>
+        <plots>
+            <plot title="Зависимость задержки от размера сообщения" ylab="Задержка (нс)" values="False" bars="False">
+                <measure name="real_time" col="black" type="o" lty="1"/>
+                <measure name="cpu_time" col="red" type="X" lty="2"/>
+                <measure name="manual_time" col="blue" type="+" lty="3"/>
+            </plot>
+            <plot title="Зависимость широты пропускания от размера сообщения" ylab="Широта пропускания (байт/сек)" values="False" bars="False">
+                <measure name="bytes_per_second" col="black" type="o" lty="1"/>
+                <measure name="manual_bps" col="red" type="X" lty="2"/>
+            </plot>
+        </plots>
+    </benchmark>
+    <benchmark name="MIRA_PUB_SUB_OUTER_BM_256">
+        <titles>
+            <remap title="size" remap="Размер сообщения (б)"/>
+            <remap title="real_time" remap="Время отправки (нс)"/>
+            <remap title="cpu_time" remap="Время отправки CPU (нс)"/>
+            <remap title="bytes_per_second" remap="Широта пропускания публикующего (б/с)"/>
+            <remap title="manual_time" remap="Задержка передачи (нс)"/>
+            <remap title="manual_bps" remap="Широта пропускания принимающего (б/с)"/>
+        </titles>
+        <plots>
+            <plot title="Зависимость задержки от размера сообщения" ylab="Задержка (нс)" values="False" bars="False">
+                <measure name="real_time" col="black" type="o" lty="1"/>
+                <measure name="cpu_time" col="red" type="X" lty="2"/>
+                <measure name="manual_time" col="blue" type="+" lty="3"/>
+            </plot>
+            <plot title="Зависимость широты пропускания от размера сообщения" ylab="Широта пропускания (байт/сек)" values="False" bars="False">
+                <measure name="bytes_per_second" col="black" type="o" lty="1"/>
+                <measure name="manual_bps" col="red" type="X" lty="2"/>
+            </plot>
+        </plots>
+    </benchmark>
+    <benchmark name="MIRA_PUB_SUB_INNER_BM_256">
+        <titles>
+            <remap title="size" remap="Размер сообщения (б)"/>
+            <remap title="real_time" remap="Время отправки (нс)"/>
+            <remap title="cpu_time" remap="Время отправки CPU (нс)"/>
+            <remap title="bytes_per_second" remap="Широта пропускания публикующего (б/с)"/>
+            <remap title="manual_time" remap="Задержка передачи (нс)"/>
+            <remap title="manual_bps" remap="Широта пропускания принимающего (б/с)"/>
+        </titles>
+        <plots>
+            <plot title="Зависимость задержки от размера сообщения" ylab="Задержка (нс)" values="False" bars="False">
+                <measure name="real_time" col="black" type="o" lty="1"/>
+                <measure name="cpu_time" col="red" type="X" lty="2"/>
+                <measure name="manual_time" col="blue" type="+" lty="3"/>
+            </plot>
+            <plot title="Зависимость широты пропускания от размера сообщения" ylab="Широта пропускания (байт/сек)" values="False" bars="False">
+                <measure name="bytes_per_second" col="black" type="o" lty="1"/>
+                <measure name="manual_bps" col="red" type="X" lty="2"/>
+            </plot>
+        </plots>
+    </benchmark>
+        <benchmark name="MIRA_RPC_BM_64">
+        <titles>
+            <remap title="size" remap="Размер сообщения (б)"/>
+            <remap title="real_time" remap="Время отправки (нс)"/>
+            <remap title="cpu_time" remap="Время отправки CPU (нс)"/>
+            <remap title="bytes_per_second" remap="Широта пропускания публикующего (б/с)"/>
+            <remap title="manual_time" remap="Задержка передачи (нс)"/>
+            <remap title="manual_bps" remap="Широта пропускания принимающего (б/с)"/>
+        </titles>
+        <plots>
+            <plot title="Зависимость задержки от размера сообщения" ylab="Задержка (нс)" values="False" bars="False">
+                <measure name="real_time" col="black" type="o" lty="1"/>
+                <measure name="cpu_time" col="red" type="X" lty="2"/>
+            </plot>
+            <plot title="Зависимость широты пропускания от размера сообщения" ylab="Широта пропускания (байт/сек)" values="False" bars="False">
+                <measure name="bytes_per_second" col="black" type="o" lty="1"/>
+            </plot>
+        </plots>
+    </benchmark>
+</rmd>

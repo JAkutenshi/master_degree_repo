@@ -9,3 +9,5 @@ tmp/*
 # some backup files
 *.recover.bak~
 *.bak
+
+*.idea

@@ -9,21 +9,18 @@
 	\def\arraystretch{1.5}
 	\newcommand{\sr}{\rule[-0.45cm]{0pt}{0.9cm}}
 %	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{|p{2cm}|p{2.5cm}|p{2.4cm}|p{2.1cm}|p{2.7cm}|p{2.4cm}|}
-		\hline
-		\multirow{2}{2cm}{\textbf{Тип порта}} & \multirow{2}{2.5cm}{\textbf{Транспорт соединения}} & \multirow{2}{2.4cm}{\textbf{Размер сообщения}} & \multirow{2}{2.1cm}[-0.2cm]{\textbf{Число входящих портов}} & \multicolumn{2}{l|}{ \sr \textbf{QoS}} \\ \cline{5-6} 
-		 & & & & \sr \textbf{Статус } & \sr \textbf{Приоритет} \\ \hline
-		Обычный           & tcp   & 1 КБ    & 1  & Применяется       & LOW               \\ \hline
-		С буфером         & udp   & 4 КБ    & 2  & Не применяется    & NORMAL            \\ \hline
-		RPC               & mcast & 16 КБ   & 4  & \multirow{8}{*}{} & HIGH              \\ \cline{1-4} \cline{6-6} 
-		\multirow{7}{*}{} & shmem & 64 КБ   & 8  &                   & CRITICAL          \\ \cline{2-4} \cline{6-6} 
-		 & \todo{local}           & 256 КБ  & 16                &    & \multirow{6}{*}{} \\ \cline{2-4}
-	     & fast\_tcp              & 1 МБ    & 32                &    &                   \\ \cline{2-4}
-		 & \multirow{4}{*}{}      & 4 МБ    & \multirow{4}{*}{} &    &                   \\ \cline{3-3}
-		 &                        & 16 МБ   &                   &    &                   \\ \cline{3-3}
-		 &                        & 64 МБ   &                   &    &                   \\ \cline{3-3}
-		 &                        & 256 МБ  &                   &    &                   \\ \cline{3-3}
-		 &                        & \todo{1 ГБ}  &              &    &                   \\ \hline
+		\begin{tabular}{|p{5cm}|p{4cm}|p{4cm}|}
+			\hline
+			\textbf{Тип порта} & \textbf{Протокол} & \textbf{Размер сообщения} \\ \hline
+			Обычный           & tcp                 & 1 КБ   \\ \hline
+			С буфером         & udp                 & 4 КБ   \\ \hline
+			RPC               & shmem               & 16 КБ  \\ \hline
+			\multirow{7}{*}{} & fast\_tcp           & 64 КБ  \\ \cline{2-3} 
+			                  &  \multirow{5}{*}{}  & 256 КБ \\ \cline{3-3} 
+			&                                       & 1 МБ   \\ \cline{3-3} 
+			&                                       & 4 МБ   \\ \cline{3-3}
+			&                                       & 16 МБ  \\ \cline{3-3}
+			&                                       & 64 МБ  \\ \hline
 		\end{tabular}%
 %	}
 

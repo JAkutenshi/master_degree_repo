@@ -1,0 +1,36 @@
+---
+title: "Пример обработки данных"
+author: "Ефремов Михаил"
+output:
+    html_document:
+        toc: true
+        theme: united
+---
+## Benchmark name is "MIRA_PUB_SUB_INNER_BM_64" by var=size where
+``` {r echo=TRUE}
+#png(filename="plot.png", width = 1600, height = 900)
+size <- c(1024, 4096, 16384, 65536, 262144, 1048576, 4194304, 16777216, 67108864)
+real_time <- c(1000.0240326, 891.5755876, 894.2225822999999, 864.9224724, 952.6836385, 944.7175817000001, 952.2467247000002, 946.0445644000001, 1044.5562757999999)
+cpu_time <- c(999.2380739, 890.3669717, 892.6214260999999, 863.3476341999998, 949.7381707999999, 940.2607363000001, 946.8335856000001, 941.3284715, 1042.3601843)
+bytes_per_second <- c(8824280.4041677, 155385045.6797919, 1539469260.685812, 7316986460.005478, 28009846750.838264, 113669718823.87907, 441692165392.88165, 1803306676934.3777, 6830783027307.4)
+manual_time <- c(15859938.6, 61798759.6, 37630944.3, 11500195.5, 7152557.6, 8772404.3, 12928263.6, 30545796.7, 62291567.2)
+manual_bps <- c(11027.026068500001, 6818.884734900001, 48399.0006365, 614360.4815249001, 3725213.601670501, 12062991.135311801, 32943762.1008296, 56622079.1085649, 17627257.595339797)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second, "Задержка передачи (нс)"=manual_time, "Широта пропускания принимающего (б/с)"=manual_bps)
+plot(factor(size, levels=size), real_time, type="o", col="black", lty=0, ylim=c(-53769608.11793877, 116062038.66557297), xlab="", ylab="")
+points(factor(size, levels=size), real_time, col="black", pch="o")
+lines(factor(size, levels=size), real_time, col="black", lty=1, lwd=2)
+title(main="Зависимость задержки от фактора", xlab="Размер сообщения (б)", ylab="Задержка (нс)")
+points(factor(size, levels=size), cpu_time, col="red", pch="X")
+lines(factor(size, levels=size), cpu_time, col="red", lty=2, lwd=2)
+points(factor(size, levels=size), manual_time, col="blue", pch="+")
+lines(factor(size, levels=size), manual_time, col="blue", lty=3, lwd=2)
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)", "Задержка передачи (нс)"), col=c("black", "red", "blue"), lty=c(1, 2, 3), pch=c("o", "X", "+"), ncol=1)
+plot(factor(size, levels=size), bytes_per_second, type="o", col="black", lty=0, ylim=c(-1632485843335.0254, 8463268877461.311), xlab="", ylab="")
+points(factor(size, levels=size), bytes_per_second, col="black", pch="o")
+lines(factor(size, levels=size), bytes_per_second, col="black", lty=1, lwd=2)
+title(main="Зависимость широты пропускания от фактора", xlab="Размер сообщения (б)", ylab="Широта пропускания (байт/сек)")
+points(factor(size, levels=size), manual_bps, col="red", pch="X")
+lines(factor(size, levels=size), manual_bps, col="red", lty=2, lwd=2)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)", "Широта пропускания принимающего (б/с)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+```
+

@@ -5,20 +5,18 @@
 %	\footnotesize
 	\def\arraystretch{1.3}
 %	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{|p{4cm}|p{3cm}|p{3cm}|p{3cm}|}
+		\begin{tabular}{|p{5cm}|p{4cm}|p{4cm}|}
 			\hline
-			\textbf{Подход к коммуникации} & \textbf{Реализация модуля} & \textbf{Размер сообщения} & \textbf{Время хранения сообщений в очереди} \\ \hline
-			Шаблон наблюдатель & В одном процессе (разделяемая память) & 1 КБ   & 1 мс              \\ \hline
-			RPC                & В разных процессах (TCP)              & 4 КБ   & 10 мс             \\ \hline
-			\multirow{8}{*}{}  & \multirow{8}{*}{}                     & 16 КБ  & 100 мс            \\ \cline{3-4} 
-			                   &                                       & 64 КБ  & 1 с               \\ \cline{3-4} 
-			                   &                                       & 256 КБ & 10 с              \\ \cline{3-4} 
-			                   &                                       & 1 МБ   & 100 с             \\ \cline{3-4} 
-			                   &                                       & 4 МБ   & \multirow{4}{*}{} \\ \cline{3-3}
-			                   &                                       & 16 МБ  &                   \\ \cline{3-3}
-  			                   &                                       & 64 МБ  &                   \\ \cline{3-3}
-			                   &                                       & 256 МБ &                   \\ \cline{3-3}
-                               &                                       & \todo{1 ГБ} &  \\ \hline
+			\textbf{Подход к коммуникации} & \textbf{Реализация модуля} & \textbf{Размер сообщения} \\ \hline
+			Шаблон наблюдатель & В одном процессе (разделяемая память) & 1 КБ   \\ \hline
+			RPC                & В разных процессах (TCP)              & 4 КБ   \\ \hline
+			\multirow{8}{*}{}  & \multirow{8}{*}{}                     & 16 КБ  \\ \cline{3-3} 
+			                   &                                       & 64 КБ  \\ \cline{3-3} 
+			                   &                                       & 256 КБ \\ \cline{3-3} 
+			                   &                                       & 1 МБ   \\ \cline{3-3} 
+			                   &                                       & 4 МБ   \\ \cline{3-3}
+			                   &                                       & 16 МБ  \\ \cline{3-3}
+  			                   &                                       & 64 МБ  \\ \hline
 		\end{tabular}%
 %	}
 	

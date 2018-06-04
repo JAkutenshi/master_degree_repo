@@ -1,0 +1,31 @@
+<merger>
+    <json url="mira_pub_sub_result_primary_64i.json">
+        <benchmark name="MIRA_PUB_SUB_INNER_BM_64">
+            <factor name="size"/>
+        </benchmark>
+        <secondary url="mira_pub_sub_result_secondary_64i.json" key="bm_id"/>
+    </json>
+    <json url="mira_pub_sub_result_primary_64o.json">
+        <benchmark name="MIRA_PUB_SUB_OUTER_BM_64">
+            <factor name="size"/>
+        </benchmark>
+        <secondary url="mira_pub_sub_result_secondary_64o.json" key="bm_id"/>
+    </json>
+    <json url="mira_pub_sub_result_primary_256o.json">
+        <benchmark name="MIRA_PUB_SUB_OUTER_BM_256">
+            <factor name="size"/>
+        </benchmark>
+        <secondary url="mira_pub_sub_result_secondary_256o.json" key="bm_id"/>
+    </json>
+    <json url="mira_pub_sub_result_primary_256i.json">
+        <benchmark name="MIRA_PUB_SUB_INNER_BM_256">
+            <factor name="size"/>
+        </benchmark>
+        <secondary url="mira_pub_sub_result_secondary_256i.json" key="bm_id"/>
+    </json>
+    <json url="mira_rpc_result_primary_64.json">
+        <benchmark name="MIRA_RPC_BM_64">
+            <factor name="size"/>
+        </benchmark>
+    </json>
+</merger>

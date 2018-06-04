@@ -1,0 +1,634 @@
+{
+  "benchmarks": [
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/1024",
+      "real_time": 904.211121,
+      "cpu_time": 898.581074,
+      "bytes_per_second": 9544676.944129,
+      "bm_id": 1527993293540561641
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/1024",
+      "real_time": 1654.195020,
+      "cpu_time": 1658.247875,
+      "bytes_per_second": 5217282.689500,
+      "bm_id": 1527993293559135519
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/1024",
+      "real_time": 1210.886989,
+      "cpu_time": 1209.407320,
+      "bytes_per_second": 7127339.810280,
+      "bm_id": 1527993293593038701
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/1024",
+      "real_time": 923.556856,
+      "cpu_time": 917.759612,
+      "bytes_per_second": 9344744.708649,
+      "bm_id": 1527993293617622253
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/1024",
+      "real_time": 1047.495950,
+      "cpu_time": 1043.430055,
+      "bytes_per_second": 8239080.106841,
+      "bm_id": 1527993293636383708
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/1024",
+      "real_time": 910.824282,
+      "cpu_time": 906.980660,
+      "bytes_per_second": 9475376.542768,
+      "bm_id": 1527993293657708954
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/1024",
+      "real_time": 1129.241424,
+      "cpu_time": 1126.803064,
+      "bytes_per_second": 7642655.375362,
+      "bm_id": 1527993293676187366
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/1024",
+      "real_time": 892.511651,
+      "cpu_time": 887.492222,
+      "bytes_per_second": 9669793.138317,
+      "bm_id": 1527993293698917625
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/1024",
+      "real_time": 891.586659,
+      "cpu_time": 886.145218,
+      "bytes_per_second": 9679825.237872,
+      "bm_id": 1527993293716857659
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/1024",
+      "real_time": 1661.958996,
+      "cpu_time": 1664.974778,
+      "bytes_per_second": 5192909.729781,
+      "bm_id": 1527993293734880223
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/4096",
+      "real_time": 1284.712571,
+      "cpu_time": 1283.138042,
+      "bytes_per_second": 107445507.071121,
+      "bm_id": 1527993293768893260
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/4096",
+      "real_time": 916.487049,
+      "cpu_time": 912.820871,
+      "bytes_per_second": 150614887.416501,
+      "bm_id": 1527993293795131976
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/4096",
+      "real_time": 912.004500,
+      "cpu_time": 907.176087,
+      "bytes_per_second": 151355167.207233,
+      "bm_id": 1527993293813498831
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/4096",
+      "real_time": 933.865387,
+      "cpu_time": 929.222989,
+      "bytes_per_second": 147812089.032440,
+      "bm_id": 1527993293831861097
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/4096",
+      "real_time": 942.219922,
+      "cpu_time": 937.821194,
+      "bytes_per_second": 146501459.412475,
+      "bm_id": 1527993293850733682
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/4096",
+      "real_time": 934.085909,
+      "cpu_time": 929.498090,
+      "bytes_per_second": 147777193.071678,
+      "bm_id": 1527993293869781104
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/4096",
+      "real_time": 932.304330,
+      "cpu_time": 927.339737,
+      "bytes_per_second": 148059586.503529,
+      "bm_id": 1527993293888568749
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/4096",
+      "real_time": 921.513151,
+      "cpu_time": 916.762049,
+      "bytes_per_second": 149793406.054344,
+      "bm_id": 1527993293907477079
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/4096",
+      "real_time": 1656.316532,
+      "cpu_time": 1661.978942,
+      "bytes_per_second": 83339501.249554,
+      "bm_id": 1527993293926102536
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/4096",
+      "real_time": 1664.985699,
+      "cpu_time": 1664.174055,
+      "bytes_per_second": 82905573.169747,
+      "bm_id": 1527993293960098214
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/16384",
+      "real_time": 1291.087609,
+      "cpu_time": 1289.704499,
+      "bytes_per_second": 1057827172.600824,
+      "bm_id": 1527993293994212889
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/16384",
+      "real_time": 941.772077,
+      "cpu_time": 934.132450,
+      "bytes_per_second": 1450189050.842119,
+      "bm_id": 1527993294020141645
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/16384",
+      "real_time": 908.869687,
+      "cpu_time": 904.074397,
+      "bytes_per_second": 1502687980.837581,
+      "bm_id": 1527993294038965936
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/16384",
+      "real_time": 1050.237024,
+      "cpu_time": 1045.358549,
+      "bytes_per_second": 1300418404.543428,
+      "bm_id": 1527993294057576797
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/16384",
+      "real_time": 919.144414,
+      "cpu_time": 914.120900,
+      "bytes_per_second": 1485890066.127887,
+      "bm_id": 1527993294078911974
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/16384",
+      "real_time": 908.862486,
+      "cpu_time": 904.038915,
+      "bytes_per_second": 1502699886.308067,
+      "bm_id": 1527993294097795825
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/16384",
+      "real_time": 1111.765777,
+      "cpu_time": 1110.650097,
+      "bytes_per_second": 1228448998.456894,
+      "bm_id": 1527993294116469195
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/16384",
+      "real_time": 926.855786,
+      "cpu_time": 922.193620,
+      "bytes_per_second": 1473527571.393379,
+      "bm_id": 1527993294138809843
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/16384",
+      "real_time": 1644.281728,
+      "cpu_time": 1647.454694,
+      "bytes_per_second": 830604349.215229,
+      "bm_id": 1527993294157662417
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/16384",
+      "real_time": 1214.720772,
+      "cpu_time": 1214.802771,
+      "bytes_per_second": 1124330452.026442,
+      "bm_id": 1527993294191312732
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/65536",
+      "real_time": 1033.612161,
+      "cpu_time": 1029.660695,
+      "bytes_per_second": 6092757478.214022,
+      "bm_id": 1527993294216025535
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/65536",
+      "real_time": 898.049705,
+      "cpu_time": 893.203228,
+      "bytes_per_second": 7012471793.005456,
+      "bm_id": 1527993294237517933
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/65536",
+      "real_time": 998.293729,
+      "cpu_time": 996.588609,
+      "bytes_per_second": 6308311912.144524,
+      "bm_id": 1527993294255780800
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/65536",
+      "real_time": 1011.801180,
+      "cpu_time": 1008.102153,
+      "bytes_per_second": 6224096540.476426,
+      "bm_id": 1527993294276250978
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/65536",
+      "real_time": 930.946295,
+      "cpu_time": 926.916275,
+      "bytes_per_second": 6764674032.382335,
+      "bm_id": 1527993294296912723
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/65536",
+      "real_time": 984.832083,
+      "cpu_time": 979.466219,
+      "bytes_per_second": 6394540076.625800,
+      "bm_id": 1527993294315952764
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/65536",
+      "real_time": 1037.256526,
+      "cpu_time": 1032.030391,
+      "bytes_per_second": 6071350788.427702,
+      "bm_id": 1527993294336020370
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/65536",
+      "real_time": 1827.580258,
+      "cpu_time": 1829.414174,
+      "bytes_per_second": 3445839490.313411,
+      "bm_id": 1527993294357313165
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/65536",
+      "real_time": 1528.865287,
+      "cpu_time": 1529.162377,
+      "bytes_per_second": 4119099491.833781,
+      "bm_id": 1527993294392618706
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/65536",
+      "real_time": 1606.752375,
+      "cpu_time": 1609.130182,
+      "bytes_per_second": 3919426740.471770,
+      "bm_id": 1527993294424036976
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/262144",
+      "real_time": 870.033803,
+      "cpu_time": 864.526886,
+      "bytes_per_second": 29843400125.157079,
+      "bm_id": 1527993294456947499
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/262144",
+      "real_time": 880.062006,
+      "cpu_time": 869.002396,
+      "bytes_per_second": 29503338098.625642,
+      "bm_id": 1527993294475631113
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/262144",
+      "real_time": 921.892089,
+      "cpu_time": 914.667910,
+      "bytes_per_second": 28164648791.999218,
+      "bm_id": 1527993294493932993
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/262144",
+      "real_time": 901.020202,
+      "cpu_time": 892.954806,
+      "bytes_per_second": 28817075198.175749,
+      "bm_id": 1527993294513069693
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/262144",
+      "real_time": 901.044504,
+      "cpu_time": 894.642267,
+      "bytes_per_second": 28816297961.361864,
+      "bm_id": 1527993294531721317
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/262144",
+      "real_time": 898.880288,
+      "cpu_time": 892.464303,
+      "bytes_per_second": 28885678396.208950,
+      "bm_id": 1527993294550537974
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/262144",
+      "real_time": 887.219622,
+      "cpu_time": 880.517674,
+      "bytes_per_second": 29265320867.529245,
+      "bm_id": 1527993294569208494
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/262144",
+      "real_time": 906.872787,
+      "cpu_time": 898.671832,
+      "bytes_per_second": 28631101606.438859,
+      "bm_id": 1527993294587712841
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/262144",
+      "real_time": 887.194919,
+      "cpu_time": 879.987766,
+      "bytes_per_second": 29266135711.823455,
+      "bm_id": 1527993294606364495
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/262144",
+      "real_time": 887.114311,
+      "cpu_time": 880.371914,
+      "bytes_per_second": 29268794993.064463,
+      "bm_id": 1527993294624880444
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/1048576",
+      "real_time": 893.337934,
+      "cpu_time": 884.918480,
+      "bytes_per_second": 117098484106.216342,
+      "bm_id": 1527993294643255099
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/1048576",
+      "real_time": 1013.530253,
+      "cpu_time": 1004.211598,
+      "bytes_per_second": 103212032921.105767,
+      "bm_id": 1527993294664100330
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/1048576",
+      "real_time": 945.159716,
+      "cpu_time": 938.499051,
+      "bytes_per_second": 110678138386.642536,
+      "bm_id": 1527993294685094920
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/1048576",
+      "real_time": 959.507951,
+      "cpu_time": 949.039250,
+      "bytes_per_second": 109023086004.761252,
+      "bm_id": 1527993294704791359
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/1048576",
+      "real_time": 955.945095,
+      "cpu_time": 945.701362,
+      "bytes_per_second": 109429420625.318112,
+      "bm_id": 1527993294724718516
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/1048576",
+      "real_time": 953.511651,
+      "cpu_time": 946.310033,
+      "bytes_per_second": 109708693872.760504,
+      "bm_id": 1527993294744582614
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/1048576",
+      "real_time": 1044.209721,
+      "cpu_time": 1037.535800,
+      "bytes_per_second": 100179605438.263753,
+      "bm_id": 1527993294764443992
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/1048576",
+      "real_time": 928.591059,
+      "cpu_time": 919.783926,
+      "bytes_per_second": 112652945358.429346,
+      "bm_id": 1527993294786493725
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/1048576",
+      "real_time": 960.294129,
+      "cpu_time": 948.960851,
+      "bytes_per_second": 108933830414.786284,
+      "bm_id": 1527993294805834763
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/1048576",
+      "real_time": 954.544754,
+      "cpu_time": 945.822676,
+      "bytes_per_second": 109589956208.255377,
+      "bm_id": 1527993294825692630
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/4194304",
+      "real_time": 933.768177,
+      "cpu_time": 926.156736,
+      "bytes_per_second": 448914574806.988453,
+      "bm_id": 1527993294845495551
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/4194304",
+      "real_time": 911.987299,
+      "cpu_time": 904.820984,
+      "bytes_per_second": 459635945202.529102,
+      "bm_id": 1527993294875654484
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/4194304",
+      "real_time": 1075.335834,
+      "cpu_time": 1066.220853,
+      "bytes_per_second": 389815098663.232615,
+      "bm_id": 1527993294894819796
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/4194304",
+      "real_time": 1150.425943,
+      "cpu_time": 1140.997116,
+      "bytes_per_second": 364371254632.117401,
+      "bm_id": 1527993294917483539
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/4194304",
+      "real_time": 985.047305,
+      "cpu_time": 976.305285,
+      "bytes_per_second": 425545191638.387693,
+      "bm_id": 1527993294941622277
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/4194304",
+      "real_time": 1020.235624,
+      "cpu_time": 1006.788260,
+      "bytes_per_second": 410867974400.607909,
+      "bm_id": 1527993294962687590
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/4194304",
+      "real_time": 1263.456146,
+      "cpu_time": 1254.891501,
+      "bytes_per_second": 331774193761.597425,
+      "bm_id": 1527993294983939191
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/4194304",
+      "real_time": 999.406841,
+      "cpu_time": 991.145590,
+      "bytes_per_second": 419430933429.960278,
+      "bm_id": 1527993295010378724
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/4194304",
+      "real_time": 1040.241524,
+      "cpu_time": 1029.189893,
+      "bytes_per_second": 402966171155.255910,
+      "bm_id": 1527993295031276957
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/4194304",
+      "real_time": 1290.246525,
+      "cpu_time": 1283.699191,
+      "bytes_per_second": 324885311492.945299,
+      "bm_id": 1527993295053273934
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/16777216",
+      "real_time": 1040.119912,
+      "cpu_time": 1035.998660,
+      "bytes_per_second": 1612771474868.797251,
+      "bm_id": 1527993295080297578
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/16777216",
+      "real_time": 998.870587,
+      "cpu_time": 992.606840,
+      "bytes_per_second": 1679372429457.532660,
+      "bm_id": 1527993295144535000
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/16777216",
+      "real_time": 888.506651,
+      "cpu_time": 881.484999,
+      "bytes_per_second": 1887972052034.527042,
+      "bm_id": 1527993295165407398
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/16777216",
+      "real_time": 891.955896,
+      "cpu_time": 885.189888,
+      "bytes_per_second": 1880671155151.324677,
+      "bm_id": 1527993295184000640
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/16777216",
+      "real_time": 892.092509,
+      "cpu_time": 884.576975,
+      "bytes_per_second": 1880383152091.477695,
+      "bm_id": 1527993295202586713
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/16777216",
+      "real_time": 901.176018,
+      "cpu_time": 892.301394,
+      "bytes_per_second": 1861429611682.970644,
+      "bm_id": 1527993295221178420
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/16777216",
+      "real_time": 902.412141,
+      "cpu_time": 895.162826,
+      "bytes_per_second": 1858879826512.024215,
+      "bm_id": 1527993295239949830
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/16777216",
+      "real_time": 902.433043,
+      "cpu_time": 893.949405,
+      "bytes_per_second": 1858836771269.189374,
+      "bm_id": 1527993295258841457
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/16777216",
+      "real_time": 875.271127,
+      "cpu_time": 869.596337,
+      "bytes_per_second": 1916521261287.345898,
+      "bm_id": 1527993295277609523
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/16777216",
+      "real_time": 893.273127,
+      "cpu_time": 886.164738,
+      "bytes_per_second": 1877897893949.711275,
+      "bm_id": 1527993295295949195
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/67108864",
+      "real_time": 873.065407,
+      "cpu_time": 864.568525,
+      "bytes_per_second": 7686297824298.226228,
+      "bm_id": 1527993295314720416
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/67108864",
+      "real_time": 879.275428,
+      "cpu_time": 873.080806,
+      "bytes_per_second": 7632012136990.119167,
+      "bm_id": 1527993295495148874
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/67108864",
+      "real_time": 885.347935,
+      "cpu_time": 876.193715,
+      "bytes_per_second": 7579664978073.093952,
+      "bm_id": 1527993295513490157
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/67108864",
+      "real_time": 914.341934,
+      "cpu_time": 906.788792,
+      "bytes_per_second": 7339312005506.148971,
+      "bm_id": 1527993295532103038
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/67108864",
+      "real_time": 941.009501,
+      "cpu_time": 935.871036,
+      "bytes_per_second": 7131320914388.265659,
+      "bm_id": 1527993295551341610
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/67108864",
+      "real_time": 849.373237,
+      "cpu_time": 845.758446,
+      "bytes_per_second": 7900697172785.731149,
+      "bm_id": 1527993295571119935
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/67108864",
+      "real_time": 907.991099,
+      "cpu_time": 900.257908,
+      "bytes_per_second": 7390645945033.832799,
+      "bm_id": 1527993295589000867
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/67108864",
+      "real_time": 869.402440,
+      "cpu_time": 863.313100,
+      "bytes_per_second": 7718681733720.381049,
+      "bm_id": 1527993295608019432
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/67108864",
+      "real_time": 882.817282,
+      "cpu_time": 876.345404,
+      "bytes_per_second": 7601392579931.100373,
+      "bm_id": 1527993295626214242
+    },
+    {
+      "name": "MIRA_PUB_SUB_OUTER_BM_64/67108864",
+      "real_time": 901.582558,
+      "cpu_time": 893.627738,
+      "bytes_per_second": 7443179410819.214408,
+      "bm_id": 1527993295644767400
+    }
+  ]
+}

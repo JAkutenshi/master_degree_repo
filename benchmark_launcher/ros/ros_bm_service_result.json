@@ -1,0 +1,1202 @@
+{
+  "context": {
+    "date": "2018-06-03 14:40:31",
+    "executable": "/root/catkin_ws/devel/lib/service_benchmark/benchmark_client_node",
+    "num_cpus": 8,
+    "mhz_per_cpu": 2400,
+    "cpu_scaling_enabled": false,
+    "caches": [
+      {
+        "type": "Data",
+        "level": 1,
+        "size": 32000000,
+        "num_sharing": 1
+      },
+      {
+        "type": "Instruction",
+        "level": 1,
+        "size": 32000000,
+        "num_sharing": 1
+      },
+      {
+        "type": "Unified",
+        "level": 2,
+        "size": 4096000000,
+        "num_sharing": 1
+      }
+    ],
+    "library_build_type": "release"
+  },
+  "benchmarks": [
+    {
+      "name": "ClientFixture/ROS_BM_Service/1024/real_time",
+      "iterations": 813,
+      "real_time": 9.8110683148993587e+05,
+      "cpu_time": 3.2264285977859778e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 2.0874383240098846e+06,
+      "req_t": 4.9436750000000000e+06,
+      "resp_t": 9.0071000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1024/real_time",
+      "iterations": 813,
+      "real_time": 9.7438815252229385e+05,
+      "cpu_time": 3.2095243419434200e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 2.1018317953667259e+06,
+      "req_t": 8.9034800000000000e+05,
+      "resp_t": 8.3825000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1024/real_time",
+      "iterations": 813,
+      "real_time": 9.6009108241009770e+05,
+      "cpu_time": 3.2794377367773664e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 2.1331309471794548e+06,
+      "req_t": 4.9247900000000000e+06,
+      "resp_t": 8.7916000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1024/real_time",
+      "iterations": 813,
+      "real_time": 9.2631685485689493e+05,
+      "cpu_time": 3.0495481549815508e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 2.2109065480800220e+06,
+      "req_t": 4.8990850000000000e+06,
+      "resp_t": 7.9862000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1024/real_time",
+      "iterations": 813,
+      "real_time": 9.2879117958267429e+05,
+      "cpu_time": 3.1937664329643303e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 2.2050166334699802e+06,
+      "req_t": 4.9373830000000000e+06,
+      "resp_t": 4.4019000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1024/real_time",
+      "iterations": 813,
+      "real_time": 9.2133890159791394e+05,
+      "cpu_time": 3.1652902091020916e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 2.2228519781896472e+06,
+      "req_t": 8.7809300000000000e+05,
+      "resp_t": 4.3007000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1024/real_time",
+      "iterations": 813,
+      "real_time": 9.3928408487011527e+05,
+      "cpu_time": 3.2208417097170936e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 2.1803840105341491e+06,
+      "req_t": 4.9507320000000000e+06,
+      "resp_t": 4.1166000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1024/real_time",
+      "iterations": 813,
+      "real_time": 9.3541829151198140e+05,
+      "cpu_time": 3.2041404551045509e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 2.1893948606560556e+06,
+      "req_t": 4.9475590000000000e+06,
+      "resp_t": 4.0467000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1024/real_time",
+      "iterations": 813,
+      "real_time": 9.3250832472402218e+05,
+      "cpu_time": 3.4080512054120569e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 2.1962270423763888e+06,
+      "req_t": 4.9420490000000000e+06,
+      "resp_t": 4.3007000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1024/real_time",
+      "iterations": 813,
+      "real_time": 1.0376089877015426e+06,
+      "cpu_time": 3.2982818819188181e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 1.9737685624106082e+06,
+      "req_t": 5.0167520000000000e+06,
+      "resp_t": 7.3471000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1024/real_time_mean",
+      "iterations": 813,
+      "real_time": 9.5368526912674727e+05,
+      "cpu_time": 3.2255310725707258e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 2.1500950702272914e+06,
+      "req_t": 4.1330466000000001e+06,
+      "resp_t": 6.2681100000000006e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1024/real_time_median",
+      "iterations": 813,
+      "real_time": 9.3735118819104834e+05,
+      "cpu_time": 3.2151830258302571e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 2.1848894355951026e+06,
+      "req_t": 4.9397160000000000e+06,
+      "resp_t": 5.8745000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1024/real_time_stddev",
+      "iterations": 813,
+      "real_time": 3.6008254124979641e+04,
+      "cpu_time": 9.3009389286800633e+03,
+      "time_unit": "ns",
+      "bytes_per_second": 7.7625929421784836e+04,
+      "req_t": 1.7125362937885234e+06,
+      "resp_t": 2.1920200574153307e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4096/real_time",
+      "iterations": 711,
+      "real_time": 1.0570517890285484e+06,
+      "cpu_time": 3.3303578762306634e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 7.7498568045834452e+06,
+      "req_t": 9.9007000000000000e+05,
+      "resp_t": 6.6733000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4096/real_time",
+      "iterations": 711,
+      "real_time": 1.0156535949348357e+06,
+      "cpu_time": 3.2255210829817131e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 8.0657421396963578e+06,
+      "req_t": 5.5886980000000000e+06,
+      "resp_t": 6.1001000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4096/real_time",
+      "iterations": 711,
+      "real_time": 9.7212646132275788e+05,
+      "cpu_time": 3.2245242053445854e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 8.4268871653316263e+06,
+      "req_t": 5.5336830000000000e+06,
+      "resp_t": 7.2504000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4096/real_time",
+      "iterations": 711,
+      "real_time": 9.1149861040674464e+05,
+      "cpu_time": 3.1936296483825624e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 8.9873971353005394e+06,
+      "req_t": 8.3865600000000000e+05,
+      "resp_t": 7.2632000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4096/real_time",
+      "iterations": 711,
+      "real_time": 9.8939129817107983e+05,
+      "cpu_time": 3.3227338959212421e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 8.2798383360993415e+06,
+      "req_t": 5.5490390000000000e+06,
+      "resp_t": 7.4422000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4096/real_time",
+      "iterations": 711,
+      "real_time": 9.6894524613060174e+05,
+      "cpu_time": 3.2666830379746784e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 8.4545540965436772e+06,
+      "req_t": 5.5297610000000000e+06,
+      "resp_t": 7.3244000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4096/real_time",
+      "iterations": 711,
+      "real_time": 8.9999032489275595e+05,
+      "cpu_time": 3.3093800562587881e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 9.1023200732476413e+06,
+      "req_t": 8.2752600000000000e+05,
+      "resp_t": 7.2229000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4096/real_time",
+      "iterations": 711,
+      "real_time": 9.1319740506340319e+05,
+      "cpu_time": 3.2973629535864940e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 8.9706781409778874e+06,
+      "req_t": 5.4708610000000000e+06,
+      "resp_t": 7.6391000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4096/real_time",
+      "iterations": 711,
+      "real_time": 1.1127714205352298e+06,
+      "cpu_time": 3.1448175668073125e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 7.3617994215377541e+06,
+      "req_t": 5.6388310000000000e+06,
+      "resp_t": 1.0799500000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4096/real_time",
+      "iterations": 711,
+      "real_time": 9.5465504922616715e+05,
+      "cpu_time": 2.9608659915611765e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 8.5811100110352375e+06,
+      "req_t": 5.5235020000000000e+06,
+      "resp_t": 6.5205000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4096/real_time_mean",
+      "iterations": 711,
+      "real_time": 9.7952811997121247e+05,
+      "cpu_time": 3.2275876315049222e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 8.3980183324353509e+06,
+      "req_t": 4.1490627000000002e+06,
+      "resp_t": 7.4235600000000006e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4096/real_time_median",
+      "iterations": 711,
+      "real_time": 9.7053585372667981e+05,
+      "cpu_time": 3.2461020604781958e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 8.4407206309376508e+06,
+      "req_t": 5.5266315000000000e+06,
+      "resp_t": 7.2568000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4096/real_time_stddev",
+      "iterations": 711,
+      "real_time": 6.7745864006858246e+04,
+      "cpu_time": 1.1148477654110544e+04,
+      "time_unit": "ns",
+      "bytes_per_second": 5.6046972501155781e+05,
+      "req_t": 2.2529551403242243e+06,
+      "resp_t": 1.2771290061000980e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16384/real_time",
+      "iterations": 813,
+      "real_time": 9.4944079704748443e+05,
+      "cpu_time": 3.0094099507995090e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 3.4512947096754231e+07,
+      "req_t": 8.8299200000000000e+05,
+      "resp_t": 6.6230000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16384/real_time",
+      "iterations": 813,
+      "real_time": 1.0198490664193296e+06,
+      "cpu_time": 3.2389192742927390e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 3.2130244640069943e+07,
+      "req_t": 5.0014760000000000e+06,
+      "resp_t": 7.1007000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16384/real_time",
+      "iterations": 813,
+      "real_time": 1.1271378523990172e+06,
+      "cpu_time": 3.2688485362853709e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 2.9071865460161857e+07,
+      "req_t": 5.1018010000000000e+06,
+      "resp_t": 7.7964000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16384/real_time",
+      "iterations": 813,
+      "real_time": 1.0537433124215086e+06,
+      "cpu_time": 3.4403038253382506e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 3.1096757259316728e+07,
+      "req_t": 5.0160250000000000e+06,
+      "resp_t": 9.0339000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16384/real_time",
+      "iterations": 813,
+      "real_time": 1.1153673161140734e+06,
+      "cpu_time": 3.4497859901598986e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 2.9378662550524905e+07,
+      "req_t": 5.0781090000000000e+06,
+      "resp_t": 8.9875000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16384/real_time",
+      "iterations": 813,
+      "real_time": 1.0234721611319571e+06,
+      "cpu_time": 3.3089594833948428e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 3.2016503471631989e+07,
+      "req_t": 4.9859840000000000e+06,
+      "resp_t": 9.0111000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16384/real_time",
+      "iterations": 813,
+      "real_time": 1.0364979311195696e+06,
+      "cpu_time": 3.4006456949569407e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 3.1614148968542330e+07,
+      "req_t": 5.0007980000000000e+06,
+      "resp_t": 8.8320000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16384/real_time",
+      "iterations": 813,
+      "real_time": 1.0849184723251301e+06,
+      "cpu_time": 3.3746207011070091e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 3.0203191148339145e+07,
+      "req_t": 5.0464130000000000e+06,
+      "resp_t": 9.1127000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16384/real_time",
+      "iterations": 813,
+      "real_time": 1.1374903923732827e+06,
+      "cpu_time": 3.0941515375153749e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 2.8807276280929450e+07,
+      "req_t": 1.0563850000000000e+06,
+      "resp_t": 8.0890000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16384/real_time",
+      "iterations": 813,
+      "real_time": 1.0317073333328650e+06,
+      "cpu_time": 3.0749136531365331e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 3.1760945125925448e+07,
+      "req_t": 5.0065160000000000e+06,
+      "resp_t": 7.7833000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16384/real_time_mean",
+      "iterations": 813,
+      "real_time": 1.0579624634684219e+06,
+      "cpu_time": 3.2660558646986471e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 3.1059254200219601e+07,
+      "req_t": 4.2176499000000004e+06,
+      "resp_t": 8.2369600000000006e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16384/real_time_median",
+      "iterations": 813,
+      "real_time": 1.0451206217705391e+06,
+      "cpu_time": 3.2889040098401066e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 3.1355453113929529e+07,
+      "req_t": 5.0039960000000000e+06,
+      "resp_t": 8.4605000000000000e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16384/real_time_stddev",
+      "iterations": 813,
+      "real_time": 5.8422686561865798e+04,
+      "cpu_time": 1.5935925131579843e+04,
+      "time_unit": "ns",
+      "bytes_per_second": 1.7439220467706628e+06,
+      "req_t": 1.7127059324406600e+06,
+      "resp_t": 8.9668871620968275e+03
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/65536/real_time",
+      "iterations": 706,
+      "real_time": 1.0534043866840408e+06,
+      "cpu_time": 3.3830555382436304e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 1.2442704972265688e+08,
+      "req_t": 5.5653350000000000e+06,
+      "resp_t": 1.5494300000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/65536/real_time",
+      "iterations": 706,
+      "real_time": 9.9229477053823031e+05,
+      "cpu_time": 3.3435325920679816e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 1.3208978208048530e+08,
+      "req_t": 8.3583600000000000e+05,
+      "resp_t": 4.8233390000000000e+06
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/65536/real_time",
+      "iterations": 706,
+      "real_time": 1.0584406062309332e+06,
+      "cpu_time": 3.3900230311614845e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 1.2383500711177588e+08,
+      "req_t": 5.5676580000000000e+06,
+      "resp_t": 1.5765800000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/65536/real_time",
+      "iterations": 706,
+      "real_time": 1.0464152039647099e+06,
+      "cpu_time": 3.5991375495750766e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 1.2525811886466089e+08,
+      "req_t": 8.8005100000000000e+05,
+      "resp_t": 1.6613900000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/65536/real_time",
+      "iterations": 706,
+      "real_time": 1.1214871997163619e+06,
+      "cpu_time": 3.4544543484419252e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 1.1687338030532114e+08,
+      "req_t": 5.6139880000000000e+06,
+      "resp_t": 1.7437000000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/65536/real_time",
+      "iterations": 706,
+      "real_time": 1.1743695920674349e+06,
+      "cpu_time": 3.5870535694050888e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 1.1161051928230916e+08,
+      "req_t": 5.6769460000000000e+06,
+      "resp_t": 1.6427200000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/65536/real_time",
+      "iterations": 706,
+      "real_time": 1.1612674164306973e+06,
+      "cpu_time": 3.4697789518413658e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 1.1286978188268332e+08,
+      "req_t": 5.6583540000000000e+06,
+      "resp_t": 1.6975800000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/65536/real_time",
+      "iterations": 706,
+      "real_time": 1.1404518909356128e+06,
+      "cpu_time": 3.4547737535410846e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 1.1492988090227123e+08,
+      "req_t": 5.6385470000000000e+06,
+      "resp_t": 1.6874900000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/65536/real_time",
+      "iterations": 706,
+      "real_time": 1.1491205764866567e+06,
+      "cpu_time": 3.4604386118980160e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 1.1406287789288574e+08,
+      "req_t": 9.7622200000000000e+05,
+      "resp_t": 1.7264500000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/65536/real_time",
+      "iterations": 706,
+      "real_time": 1.1129436189798787e+06,
+      "cpu_time": 3.4553807223796111e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 1.1777056605988744e+08,
+      "req_t": 5.6156080000000000e+06,
+      "resp_t": 1.6419100000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/65536/real_time_mean",
+      "iterations": 706,
+      "real_time": 1.1010195262034556e+06,
+      "cpu_time": 3.4597628668555268e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 1.1937269641049369e+08,
+      "req_t": 4.2028545000000000e+06,
+      "resp_t": 6.3160640000000002e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/65536/real_time_median",
+      "iterations": 706,
+      "real_time": 1.1172154093481202e+06,
+      "cpu_time": 3.4550772379603476e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 1.1732197318260428e+08,
+      "req_t": 5.5908230000000000e+06,
+      "resp_t": 1.6744400000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/65536/real_time_stddev",
+      "iterations": 706,
+      "real_time": 5.9928330299586858e+04,
+      "cpu_time": 8.1689394293771275e+03,
+      "time_unit": "ns",
+      "bytes_per_second": 6.6758823445975203e+06,
+      "req_t": 2.2815161474948218e+06,
+      "resp_t": 1.4728372988592989e+06
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/262144/real_time",
+      "iterations": 18,
+      "real_time": 3.1676050388846815e+07,
+      "cpu_time": 5.6779844444449572e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 1.6551558466537945e+07,
+      "req_t": 3.1020619000000000e+07,
+      "resp_t": 6.5492600000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/262144/real_time",
+      "iterations": 18,
+      "real_time": 1.8109561666885081e+06,
+      "cpu_time": 3.7152049999998760e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 2.8950893988710201e+08,
+      "req_t": 1.3403100000000000e+06,
+      "resp_t": 4.7034200000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/262144/real_time",
+      "iterations": 18,
+      "real_time": 2.5174983499912035e+07,
+      "cpu_time": 4.6099849999996996e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 2.0825753470775142e+07,
+      "req_t": 2.0768701900000000e+08,
+      "resp_t": 5.4125400000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/262144/real_time",
+      "iterations": 18,
+      "real_time": 3.6443625055552632e+07,
+      "cpu_time": 5.2358105555554916e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 1.4386274669460149e+07,
+      "req_t": 3.5620793000000000e+07,
+      "resp_t": 8.2229400000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/262144/real_time",
+      "iterations": 18,
+      "real_time": 3.8673559777837202e+07,
+      "cpu_time": 5.4497972222221503e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 1.3556755649384405e+07,
+      "req_t": 2.2113962800000000e+08,
+      "resp_t": 5.8713800000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/262144/real_time",
+      "iterations": 18,
+      "real_time": 2.1008076055497643e+07,
+      "cpu_time": 5.3743794444442249e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 2.4956497616201181e+07,
+      "req_t": 2.0355784000000000e+07,
+      "resp_t": 6.5181300000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/262144/real_time",
+      "iterations": 18,
+      "real_time": 1.7549805555366522e+06,
+      "cpu_time": 3.7838894444439415e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 2.9874291105161500e+08,
+      "req_t": 1.1910220000000000e+06,
+      "resp_t": 5.6363300000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/262144/real_time",
+      "iterations": 18,
+      "real_time": 1.7177084444281517e+06,
+      "cpu_time": 3.6271772222217103e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 3.0522525618399841e+08,
+      "req_t": 1.1393880000000000e+06,
+      "resp_t": 5.7802600000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/262144/real_time",
+      "iterations": 18,
+      "real_time": 1.7270220555979500e+06,
+      "cpu_time": 3.5401322222227015e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 3.0357921504278344e+08,
+      "req_t": 1.1643890000000000e+06,
+      "resp_t": 5.6233700000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/262144/real_time",
+      "iterations": 18,
+      "real_time": 2.1026691666621547e+06,
+      "cpu_time": 3.6435961111111776e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 2.4934402820595491e+08,
+      "req_t": 1.8463264800000000e+08,
+      "resp_t": 5.2345300000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/262144/real_time_mean",
+      "iterations": 18,
+      "real_time": 1.6208963116655976e+07,
+      "cpu_time": 4.4657956666665926e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 1.5366771902438125e+08,
+      "req_t": 7.0529160000000000e+07,
+      "resp_t": 5.9552159999999998e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/262144/real_time_median",
+      "iterations": 18,
+      "real_time": 1.1555372611079898e+07,
+      "cpu_time": 4.1969372222218208e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 1.3715026291107804e+08,
+      "req_t": 2.5688201500000000e+07,
+      "resp_t": 5.7082950000000000e+05
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/262144/real_time_stddev",
+      "iterations": 18,
+      "real_time": 1.5957172772465004e+07,
+      "cpu_time": 8.9078161248032440e+04,
+      "time_unit": "ns",
+      "bytes_per_second": 1.4381375266036257e+08,
+      "req_t": 9.3709699573811337e+07,
+      "resp_t": 9.6854183000586854e+04
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1048576/real_time",
+      "iterations": 160,
+      "real_time": 9.5881691437512003e+06,
+      "cpu_time": 7.1257196874999756e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 2.1872288322810358e+08,
+      "req_t": 4.8938930000000000e+07,
+      "resp_t": 1.8360300000000000e+06
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1048576/real_time",
+      "iterations": 160,
+      "real_time": 1.0423367793748640e+07,
+      "cpu_time": 6.3989266875000834e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 2.0119716021704194e+08,
+      "req_t": 8.4774630000000000e+06,
+      "resp_t": 2.2539126000000000e+07
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1048576/real_time",
+      "iterations": 160,
+      "real_time": 4.3790770062514637e+06,
+      "cpu_time": 6.1555693750000582e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 4.7890274526028126e+08,
+      "req_t": 2.3108062000000000e+07,
+      "resp_t": 1.8642910000000000e+06
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1048576/real_time",
+      "iterations": 160,
+      "real_time": 5.0832742687589414e+06,
+      "cpu_time": 6.0500991874999902e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 4.1255928543710274e+08,
+      "req_t": 2.3815678000000000e+07,
+      "resp_t": 1.8608580000000000e+06
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1048576/real_time",
+      "iterations": 160,
+      "real_time": 6.0345227812490519e+06,
+      "cpu_time": 6.0525099999999558e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 3.4752574081192255e+08,
+      "req_t": 2.4741248000000000e+07,
+      "resp_t": 1.8865200000000000e+06
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1048576/real_time",
+      "iterations": 160,
+      "real_time": 5.3353362562575061e+06,
+      "cpu_time": 6.1810742500000284e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 3.9306838393557149e+08,
+      "req_t": 3.5807270000000000e+06,
+      "resp_t": 2.2347825000000000e+07
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1048576/real_time",
+      "iterations": 160,
+      "real_time": 4.3712407374982834e+06,
+      "cpu_time": 5.6374551875000284e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 4.7976126823896384e+08,
+      "req_t": 2.5800870000000000e+06,
+      "resp_t": 1.7908910000000000e+06
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1048576/real_time",
+      "iterations": 160,
+      "real_time": 4.5784493000041945e+06,
+      "cpu_time": 6.5089426250000135e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 4.5804853621466959e+08,
+      "req_t": 2.7602630000000000e+06,
+      "resp_t": 2.2411410000000000e+07
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1048576/real_time",
+      "iterations": 160,
+      "real_time": 4.7495940999965575e+06,
+      "cpu_time": 6.5350048749999166e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 4.4154341525763649e+08,
+      "req_t": 2.5397200000000000e+06,
+      "resp_t": 2.2803095000000000e+07
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1048576/real_time",
+      "iterations": 160,
+      "real_time": 5.7627774624961596e+06,
+      "cpu_time": 6.9008926874999376e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 3.6391341044282037e+08,
+      "req_t": 2.3891520000000000e+07,
+      "resp_t": 2.4644580000000000e+06
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1048576/real_time_mean",
+      "iterations": 160,
+      "real_time": 6.0305808850012003e+06,
+      "cpu_time": 6.3546194562499993e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 3.7952428290441144e+08,
+      "req_t": 1.6443369800000001e+07,
+      "resp_t": 1.0180450400000000e+07
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1048576/real_time_median",
+      "iterations": 160,
+      "real_time": 5.2093052625082238e+06,
+      "cpu_time": 6.2900004687500570e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 4.0281383468633711e+08,
+      "req_t": 1.5792762500000000e+07,
+      "resp_t": 2.1754890000000000e+06
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/1048576/real_time_stddev",
+      "iterations": 160,
+      "real_time": 2.1765412992285220e+06,
+      "cpu_time": 4.3708553189540966e+04,
+      "time_unit": "ns",
+      "bytes_per_second": 1.0007551374887222e+08,
+      "req_t": 1.5204871139988320e+07,
+      "resp_t": 1.0627131945485441e+07
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4194304/real_time",
+      "iterations": 48,
+      "real_time": 1.5007268354186939e+07,
+      "cpu_time": 2.2297233125000056e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 5.5896968069206464e+08,
+      "req_t": 7.5694334000000000e+07,
+      "resp_t": 7.9575740000000000e+06
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4194304/real_time",
+      "iterations": 48,
+      "real_time": 1.5386709791641807e+07,
+      "cpu_time": 2.2275440000000256e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 5.4518530040494847e+08,
+      "req_t": 7.1476990000000000e+06,
+      "resp_t": 8.2384980000000000e+06
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4194304/real_time",
+      "iterations": 48,
+      "real_time": 1.3873370979164673e+07,
+      "cpu_time": 2.3520433333333498e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 6.0465535107496178e+08,
+      "req_t": 6.6273210000000000e+06,
+      "resp_t": 7.5890698000000000e+07
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4194304/real_time",
+      "iterations": 48,
+      "real_time": 1.5342163062503763e+07,
+      "cpu_time": 2.2260612916666553e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 5.4676827288465941e+08,
+      "req_t": 6.7726880000000000e+06,
+      "resp_t": 7.7214101000000000e+07
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4194304/real_time",
+      "iterations": 48,
+      "real_time": 1.4707917770844385e+07,
+      "cpu_time": 2.2379852083333298e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 5.7034640325694501e+08,
+      "req_t": 7.1215790000000000e+06,
+      "resp_t": 7.5858820000000000e+06
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4194304/real_time",
+      "iterations": 48,
+      "real_time": 1.3967224437503016e+07,
+      "cpu_time": 2.1788176250000144e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 6.0059233941111279e+08,
+      "req_t": 7.5252253000000000e+07,
+      "resp_t": 7.3596370000000000e+06
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4194304/real_time",
+      "iterations": 48,
+      "real_time": 1.3972012250026941e+07,
+      "cpu_time": 2.2040439374999925e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 6.0038653344179726e+08,
+      "req_t": 6.5515690000000000e+06,
+      "resp_t": 7.6065126000000000e+07
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4194304/real_time",
+      "iterations": 48,
+      "real_time": 1.3926273250035591e+07,
+      "cpu_time": 2.1594496458333298e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 6.0235842349126399e+08,
+      "req_t": 6.5483710000000000e+06,
+      "resp_t": 7.3774360000000000e+06
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4194304/real_time",
+      "iterations": 48,
+      "real_time": 1.4619192729166267e+07,
+      "cpu_time": 2.4273167083333307e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 5.7380788087321436e+08,
+      "req_t": 7.2724920000000000e+06,
+      "resp_t": 7.5991317000000000e+07
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4194304/real_time",
+      "iterations": 48,
+      "real_time": 1.3805141479148611e+07,
+      "cpu_time": 2.1885874374999818e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 6.0764375451495481e+08,
+      "req_t": 7.5110979000000000e+07,
+      "resp_t": 7.3388480000000000e+06
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4194304/real_time_mean",
+      "iterations": 48,
+      "real_time": 1.4460727410422200e+07,
+      "cpu_time": 2.2431572500000014e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 5.8107139400459230e+08,
+      "req_t": 2.7409928500000000e+07,
+      "resp_t": 3.5101911700000003e+07
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4194304/real_time_median",
+      "iterations": 48,
+      "real_time": 1.4295602489596603e+07,
+      "cpu_time": 2.2268026458333405e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 5.8709720715750575e+08,
+      "req_t": 7.1346390000000000e+06,
+      "resp_t": 8.0980360000000000e+06
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/4194304/real_time_stddev",
+      "iterations": 48,
+      "real_time": 6.2911780792974983e+05,
+      "cpu_time": 8.3111984219035730e+04,
+      "time_unit": "ns",
+      "bytes_per_second": 2.4922900074042212e+07,
+      "req_t": 3.3084809669330753e+07,
+      "resp_t": 3.5452233884579234e+07
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16777216/real_time",
+      "iterations": 14,
+      "real_time": 5.0574010928487822e+07,
+      "cpu_time": 4.7652050714285718e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 6.6347183828164864e+08,
+      "req_t": 2.5535576200000000e+08,
+      "resp_t": 3.0572472000000000e+07
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16777216/real_time",
+      "iterations": 14,
+      "real_time": 5.0856810357150353e+07,
+      "cpu_time": 4.8410946428572340e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 6.5978247090917540e+08,
+      "req_t": 2.0865606000000000e+07,
+      "resp_t": 2.6534543100000000e+08
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16777216/real_time",
+      "iterations": 14,
+      "real_time": 5.0259410214234129e+07,
+      "cpu_time": 4.8210107142857090e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 6.6762486581064057e+08,
+      "req_t": 2.0651835000000000e+07,
+      "resp_t": 2.9607015000000000e+07
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16777216/real_time",
+      "iterations": 14,
+      "real_time": 5.0168803357077457e+07,
+      "cpu_time": 4.8868174999999572e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 6.6883062291072929e+08,
+      "req_t": 2.0408705000000000e+07,
+      "resp_t": 2.6511430200000000e+08
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16777216/real_time",
+      "iterations": 14,
+      "real_time": 4.9494992857164882e+07,
+      "cpu_time": 5.0315005714286650e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 6.7793588932991767e+08,
+      "req_t": 2.0424202000000000e+07,
+      "resp_t": 2.6442503700000000e+08
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16777216/real_time",
+      "iterations": 14,
+      "real_time": 5.0870794785623729e+07,
+      "cpu_time": 4.7397314285713779e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 6.5960109609851432e+08,
+      "req_t": 2.0826620000000000e+07,
+      "resp_t": 2.6539840200000000e+08
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16777216/real_time",
+      "iterations": 14,
+      "real_time": 5.1219415142960705e+07,
+      "cpu_time": 4.5961678571428014e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 6.5511158037132573e+08,
+      "req_t": 2.1264703000000000e+07,
+      "resp_t": 2.9954130000000000e+07
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16777216/real_time",
+      "iterations": 14,
+      "real_time": 4.9866969642867580e+07,
+      "cpu_time": 4.2883969285713825e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 6.7287890642457056e+08,
+      "req_t": 1.9848261000000000e+07,
+      "resp_t": 2.6537294900000000e+08
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16777216/real_time",
+      "iterations": 14,
+      "real_time": 4.8660233214312546e+07,
+      "cpu_time": 4.2176473571429495e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 6.8956578675275552e+08,
+      "req_t": 2.0140957000000000e+07,
+      "resp_t": 2.6387348500000000e+08
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16777216/real_time",
+      "iterations": 14,
+      "real_time": 4.9201331785687737e+07,
+      "cpu_time": 4.4768444999999497e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 6.8198218995691311e+08,
+      "req_t": 2.0053333000000000e+07,
+      "resp_t": 2.9147381000000000e+07
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16777216/real_time_mean",
+      "iterations": 14,
+      "real_time": 5.0117277228556700e+07,
+      "cpu_time": 4.6664416571428608e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 6.6967852468461907e+08,
+      "req_t": 4.3983998400000006e+07,
+      "resp_t": 1.7088106040000001e+08
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16777216/real_time_median",
+      "iterations": 14,
+      "real_time": 5.0214106785655789e+07,
+      "cpu_time": 4.7524682499999749e+06,
+      "time_unit": "ns",
+      "bytes_per_second": 6.6822774436068487e+08,
+      "req_t": 2.0538018500000000e+07,
+      "resp_t": 2.6414926100000000e+08
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/16777216/real_time_stddev",
+      "iterations": 14,
+      "real_time": 8.1463648196543322e+05,
+      "cpu_time": 2.6595196181372565e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 1.0956741243138146e+07,
+      "req_t": 7.4269675714122579e+07,
+      "resp_t": 1.2140722295530045e+08
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/67108864/real_time",
+      "iterations": 2,
+      "real_time": 2.9466157549995840e+08,
+      "cpu_time": 5.6766324499999851e+07,
+      "time_unit": "ns",
+      "bytes_per_second": 4.5549789711220402e+08,
+      "req_t": 1.3812315400000000e+08,
+      "resp_t": 1.5653704400000000e+08
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/67108864/real_time",
+      "iterations": 2,
+      "real_time": 2.7984161700078404e+08,
+      "cpu_time": 5.6743378999999374e+07,
+      "time_unit": "ns",
+      "bytes_per_second": 4.7962032752127773e+08,
+      "req_t": 1.3157351500000000e+08,
+      "resp_t": 1.7957504390000000e+09
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/67108864/real_time",
+      "iterations": 2,
+      "real_time": 2.6754434400027093e+08,
+      "cpu_time": 5.6887799000000075e+07,
+      "time_unit": "ns",
+      "bytes_per_second": 5.0166535383705992e+08,
+      "req_t": 1.2429227700000000e+08,
+      "resp_t": 1.4325066000000000e+08
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/67108864/real_time",
+      "iterations": 2,
+      "real_time": 2.7062650400057465e+08,
+      "cpu_time": 5.7931517000000097e+07,
+      "time_unit": "ns",
+      "bytes_per_second": 4.9595189686119956e+08,
+      "req_t": 1.2653566600000000e+08,
+      "resp_t": 1.7915731290000000e+09
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/67108864/real_time",
+      "iterations": 2,
+      "real_time": 2.6923084349982673e+08,
+      "cpu_time": 5.7708348999999434e+07,
+      "time_unit": "ns",
+      "bytes_per_second": 4.9852285219351691e+08,
+      "req_t": 1.2743181000000000e+08,
+      "resp_t": 1.4179781500000000e+08
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/67108864/real_time",
+      "iterations": 2,
+      "real_time": 2.7351835100034803e+08,
+      "cpu_time": 5.7127039000000045e+07,
+      "time_unit": "ns",
+      "bytes_per_second": 4.9070831082858205e+08,
+      "req_t": 1.7793502440000000e+09,
+      "resp_t": 1.4165042100000000e+08
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/67108864/real_time",
+      "iterations": 2,
+      "real_time": 2.8189579900026727e+08,
+      "cpu_time": 5.7738932000000350e+07,
+      "time_unit": "ns",
+      "bytes_per_second": 4.7612532175363398e+08,
+      "req_t": 1.3011744700000000e+08,
+      "resp_t": 1.7992606360000000e+09
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/67108864/real_time",
+      "iterations": 2,
+      "real_time": 2.7082811800028139e+08,
+      "cpu_time": 5.7168686999999888e+07,
+      "time_unit": "ns",
+      "bytes_per_second": 4.9558269278325284e+08,
+      "req_t": 1.2644319900000000e+08,
+      "resp_t": 1.4438369600000000e+08
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/67108864/real_time",
+      "iterations": 2,
+      "real_time": 2.7172867349963778e+08,
+      "cpu_time": 5.7124548000000000e+07,
+      "time_unit": "ns",
+      "bytes_per_second": 4.9394024661213714e+08,
+      "req_t": 1.2524192900000000e+08,
+      "resp_t": 1.7939692620000000e+09
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/67108864/real_time",
+      "iterations": 2,
+      "real_time": 2.8033049300029236e+08,
+      "cpu_time": 5.7234257500000216e+07,
+      "time_unit": "ns",
+      "bytes_per_second": 4.7878390453891873e+08,
+      "req_t": 1.2441215600000000e+08,
+      "resp_t": 1.5591693000000000e+08
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/67108864/real_time_mean",
+      "iterations": 2,
+      "real_time": 2.7602063185022420e+08,
+      "cpu_time": 5.7243083199999936e+07,
+      "time_unit": "ns",
+      "bytes_per_second": 4.8663988040417826e+08,
+      "req_t": 2.9335213969999999e+08,
+      "resp_t": 8.0640900320000005e+08
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/67108864/real_time_median",
+      "iterations": 2,
+      "real_time": 2.7262351224999291e+08,
+      "cpu_time": 5.7147862999999963e+07,
+      "time_unit": "ns",
+      "bytes_per_second": 4.9232427872035956e+08,
+      "req_t": 1.2698373800000000e+08,
+      "resp_t": 1.5622698700000000e+08
+    },
+    {
+      "name": "ClientFixture/ROS_BM_Service/67108864/real_time_stddev",
+      "iterations": 2,
+      "real_time": 8.2587799252316244e+06,
+      "cpu_time": 4.1801633938456472e+05,
+      "time_unit": "ns",
+      "bytes_per_second": 1.4121986142595602e+07,
+      "req_t": 5.2214335799628013e+08,
+      "resp_t": 8.5098090206651831e+08
+    }
+  ]
+}

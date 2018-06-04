@@ -1,0 +1,15 @@
+<merger>
+    <json url="ros_pubsub_results_primary.json">
+        <benchmark name="PublisherFixture/ROS_BM_Publish_method">
+            <factor name="subs_count"/>
+            <factor name="size"/>
+            <factor name="buffer"/>
+        </benchmark>
+        <secondary url="ros_pubsub_result_secondary.json" key="bm_id"/>
+    </json>
+    <json url="ros_bm_service_result.json">
+        <benchmark name="ClientFixture/ROS_BM_Service">
+            <factor name="size"/>
+        </benchmark>
+    </json>
+</merger>

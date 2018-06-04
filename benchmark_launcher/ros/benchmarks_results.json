@@ -1,0 +1,4160 @@
+{
+    "PublisherFixture/ROS_BM_Publish_method/1/1024/1": {
+        "real_time": {
+            "mean": 4580.186172553285,
+            "error": 18.029897218025948
+        },
+        "cpu_time": {
+            "mean": 3979.014066657179,
+            "error": 11.501917051940545
+        },
+        "bytes_per_second": {
+            "mean": 223577799.00550812,
+            "error": 881120.9966740806
+        },
+        "manual_bandwidth": {
+            "mean": 285570646.1227563,
+            "error": 8531286.728999257
+        },
+        "manual_latency": {
+            "mean": 100541167.69730183,
+            "error": 1536299.7627908261
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/1024/10": {
+        "real_time": {
+            "mean": 4682.1144877890165,
+            "error": 24.794808575524215
+        },
+        "cpu_time": {
+            "mean": 4022.6201363443483,
+            "error": 14.31779002032501
+        },
+        "bytes_per_second": {
+            "mean": 218715403.4698433,
+            "error": 1159283.3034638958
+        },
+        "manual_bandwidth": {
+            "mean": 266508563.34648475,
+            "error": 21264290.31265141
+        },
+        "manual_latency": {
+            "mean": 89514370.37282008,
+            "error": 7116622.6234444035
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/1024/100": {
+        "real_time": {
+            "mean": 4696.130734695629,
+            "error": 20.960037350053927
+        },
+        "cpu_time": {
+            "mean": 4043.0389562330433,
+            "error": 13.258790762194428
+        },
+        "bytes_per_second": {
+            "mean": 218059518.18379253,
+            "error": 976621.9756411359
+        },
+        "manual_bandwidth": {
+            "mean": 295981091.74113256,
+            "error": 1608564.812309076
+        },
+        "manual_latency": {
+            "mean": 98827380.76116,
+            "error": 144652.32442781056
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/1024/1000": {
+        "real_time": {
+            "mean": 4647.609275461621,
+            "error": 17.959916499186388
+        },
+        "cpu_time": {
+            "mean": 3996.525072522072,
+            "error": 15.047092355288646
+        },
+        "bytes_per_second": {
+            "mean": 220334104.45400634,
+            "error": 849228.2675447217
+        },
+        "manual_bandwidth": {
+            "mean": 233548707.55889267,
+            "error": 1206953.734283158
+        },
+        "manual_latency": {
+            "mean": 98645086.48662971,
+            "error": 239637.69745545895
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/1024/10000": {
+        "real_time": {
+            "mean": 4677.977688931564,
+            "error": 30.472220371242113
+        },
+        "cpu_time": {
+            "mean": 4032.751272340824,
+            "error": 20.84279680220509
+        },
+        "bytes_per_second": {
+            "mean": 218914227.22643536,
+            "error": 1415534.5957390952
+        },
+        "manual_bandwidth": {
+            "mean": 289649824.28957945,
+            "error": 1688420.4370700594
+        },
+        "manual_latency": {
+            "mean": 99219020.04579222,
+            "error": 202162.42587943026
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/4096/1": {
+        "real_time": {
+            "mean": 5141.29448106764,
+            "error": 30.75994067968539
+        },
+        "cpu_time": {
+            "mean": 4555.869325588748,
+            "error": 24.144533107591247
+        },
+        "bytes_per_second": {
+            "mean": 796736934.3596822,
+            "error": 4791040.95068105
+        },
+        "manual_bandwidth": {
+            "mean": 562460814.8161839,
+            "error": 25650987.535541978
+        },
+        "manual_latency": {
+            "mean": 73825278.00071314,
+            "error": 3079951.8835958014
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/4096/10": {
+        "real_time": {
+            "mean": 5086.4825499693825,
+            "error": 28.242552606336766
+        },
+        "cpu_time": {
+            "mean": 4520.956539210994,
+            "error": 14.922031408720681
+        },
+        "bytes_per_second": {
+            "mean": 805315086.1682184,
+            "error": 4451524.65437945
+        },
+        "manual_bandwidth": {
+            "mean": 541051935.4185402,
+            "error": 2913781.36516332
+        },
+        "manual_latency": {
+            "mean": 77874221.18243358,
+            "error": 186738.44875053316
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/4096/100": {
+        "real_time": {
+            "mean": 4996.712260876187,
+            "error": 24.568153993123822
+        },
+        "cpu_time": {
+            "mean": 4484.187911371033,
+            "error": 18.80458550482751
+        },
+        "bytes_per_second": {
+            "mean": 819773825.8472631,
+            "error": 4024816.6385969035
+        },
+        "manual_bandwidth": {
+            "mean": 519480747.8371477,
+            "error": 8598346.142891003
+        },
+        "manual_latency": {
+            "mean": 78586582.6695374,
+            "error": 518186.4962304772
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/4096/1000": {
+        "real_time": {
+            "mean": 4914.350042001504,
+            "error": 17.20038942048109
+        },
+        "cpu_time": {
+            "mean": 4390.631452501739,
+            "error": 18.44425135192809
+        },
+        "bytes_per_second": {
+            "mean": 833495450.3921818,
+            "error": 2921914.388424611
+        },
+        "manual_bandwidth": {
+            "mean": 517619176.04281694,
+            "error": 13649900.86932795
+        },
+        "manual_latency": {
+            "mean": 79166648.66358423,
+            "error": 1102361.7170409411
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/4096/10000": {
+        "real_time": {
+            "mean": 4930.20967126802,
+            "error": 24.949654644254306
+        },
+        "cpu_time": {
+            "mean": 4406.624640378626,
+            "error": 25.593657259029943
+        },
+        "bytes_per_second": {
+            "mean": 830833871.4981556,
+            "error": 4219965.290847874
+        },
+        "manual_bandwidth": {
+            "mean": 532817554.3644816,
+            "error": 6873805.621558318
+        },
+        "manual_latency": {
+            "mean": 78445081.83738217,
+            "error": 415565.14169292804
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/16384/1": {
+        "real_time": {
+            "mean": 11413.245646123949,
+            "error": 677.8079064345868
+        },
+        "cpu_time": {
+            "mean": 10687.832977406468,
+            "error": 641.8344182178664
+        },
+        "bytes_per_second": {
+            "mean": 1444943827.793212,
+            "error": 90375803.07103169
+        },
+        "manual_bandwidth": {
+            "mean": 4854025925.934568,
+            "error": 568203902.1749297
+        },
+        "manual_latency": {
+            "mean": 3676285.601414365,
+            "error": 711940.3772369343
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/16384/10": {
+        "real_time": {
+            "mean": 10797.271739557818,
+            "error": 484.13916051505964
+        },
+        "cpu_time": {
+            "mean": 10110.794076117785,
+            "error": 455.96700274155813
+        },
+        "bytes_per_second": {
+            "mean": 1522427786.9583912,
+            "error": 63650795.55187451
+        },
+        "manual_bandwidth": {
+            "mean": 4244976091.8839583,
+            "error": 1475301762.223472
+        },
+        "manual_latency": {
+            "mean": 10023994.052193463,
+            "error": 8850568.907099418
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/16384/100": {
+        "real_time": {
+            "mean": 9838.876178620927,
+            "error": 509.2441367421486
+        },
+        "cpu_time": {
+            "mean": 9185.984708335725,
+            "error": 479.24632902078594
+        },
+        "bytes_per_second": {
+            "mean": 1672845539.8542438,
+            "error": 83931487.49692294
+        },
+        "manual_bandwidth": {
+            "mean": 5039883825.957062,
+            "error": 1512394363.5957756
+        },
+        "manual_latency": {
+            "mean": 6987833.432573368,
+            "error": 3427154.4320437456
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/16384/1000": {
+        "real_time": {
+            "mean": 10817.46587170375,
+            "error": 1247.0988301463635
+        },
+        "cpu_time": {
+            "mean": 10111.225631437,
+            "error": 1173.6644930957982
+        },
+        "bytes_per_second": {
+            "mean": 1552375281.0753336,
+            "error": 187364499.97309566
+        },
+        "manual_bandwidth": {
+            "mean": 3521025198.331669,
+            "error": 1061070420.695418
+        },
+        "manual_latency": {
+            "mean": 12683969.933360163,
+            "error": 9592492.606420035
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/16384/10000": {
+        "real_time": {
+            "mean": 10032.899855836778,
+            "error": 229.92921887879504
+        },
+        "cpu_time": {
+            "mean": 9360.39266823885,
+            "error": 217.5069397593826
+        },
+        "bytes_per_second": {
+            "mean": 1634542267.3890026,
+            "error": 37593377.13901422
+        },
+        "manual_bandwidth": {
+            "mean": 8555976419.073015,
+            "error": 1912670317.6993577
+        },
+        "manual_latency": {
+            "mean": 4338464.470109924,
+            "error": 1570309.919460168
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/65536/1": {
+        "real_time": {
+            "mean": 35241.86476183732,
+            "error": 4130.331531181394
+        },
+        "cpu_time": {
+            "mean": 33241.20863759325,
+            "error": 3879.2123587824685
+        },
+        "bytes_per_second": {
+            "mean": 1904870091.11708,
+            "error": 221788802.86904046
+        },
+        "manual_bandwidth": {
+            "mean": 1594122789.7331998,
+            "error": 782313124.0693822
+        },
+        "manual_latency": {
+            "mean": 39326305.28582083,
+            "error": 14669435.50758508
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/65536/10": {
+        "real_time": {
+            "mean": 32294.890055415395,
+            "error": 6564.418271476257
+        },
+        "cpu_time": {
+            "mean": 30496.115490451182,
+            "error": 6155.518142622925
+        },
+        "bytes_per_second": {
+            "mean": 2159542493.6796823,
+            "error": 377365489.501418
+        },
+        "manual_bandwidth": {
+            "mean": 809782798.6633061,
+            "error": 458565394.4011045
+        },
+        "manual_latency": {
+            "mean": 51469032.88383031,
+            "error": 15474521.356150426
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/65536/100": {
+        "real_time": {
+            "mean": 27581.031056461135,
+            "error": 2604.4174649304523
+        },
+        "cpu_time": {
+            "mean": 25898.2559040687,
+            "error": 2425.553310128629
+        },
+        "bytes_per_second": {
+            "mean": 2410643142.9612517,
+            "error": 209549273.17199036
+        },
+        "manual_bandwidth": {
+            "mean": 939146864.5975126,
+            "error": 233525554.35987887
+        },
+        "manual_latency": {
+            "mean": 60921372.31911387,
+            "error": 6740474.485129471
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/65536/1000": {
+        "real_time": {
+            "mean": 32410.539184549638,
+            "error": 2317.8314578924355
+        },
+        "cpu_time": {
+            "mean": 30571.879910891334,
+            "error": 2165.699250556343
+        },
+        "bytes_per_second": {
+            "mean": 2039646241.2514234,
+            "error": 140337524.89659855
+        },
+        "manual_bandwidth": {
+            "mean": 1267576171.691979,
+            "error": 540030455.1186442
+        },
+        "manual_latency": {
+            "mean": 45286113.04486585,
+            "error": 12390544.002252577
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/65536/10000": {
+        "real_time": {
+            "mean": 30851.068553369067,
+            "error": 3702.8320237644525
+        },
+        "cpu_time": {
+            "mean": 29106.578206122278,
+            "error": 3477.697489059759
+        },
+        "bytes_per_second": {
+            "mean": 2187382139.450816,
+            "error": 312371935.56565326
+        },
+        "manual_bandwidth": {
+            "mean": 1099325007.183746,
+            "error": 467886650.7934888
+        },
+        "manual_latency": {
+            "mean": 46460204.54936122,
+            "error": 11379281.731424253
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/262144/1": {
+        "real_time": {
+            "mean": 114268.43880865749,
+            "error": 9655.940820038815
+        },
+        "cpu_time": {
+            "mean": 108479.34467634936,
+            "error": 9026.035532469208
+        },
+        "bytes_per_second": {
+            "mean": 2323881701.4534497,
+            "error": 201647124.22507384
+        },
+        "manual_bandwidth": {
+            "mean": 561893310.21282,
+            "error": 49289713.85482975
+        },
+        "manual_latency": {
+            "mean": 76813681.20076752,
+            "error": 726651.4131475204
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/262144/10": {
+        "real_time": {
+            "mean": 93697.43355981298,
+            "error": 13996.326504105624
+        },
+        "cpu_time": {
+            "mean": 89347.84447660146,
+            "error": 12998.872132939057
+        },
+        "bytes_per_second": {
+            "mean": 2926476322.412967,
+            "error": 500261450.9118949
+        },
+        "manual_bandwidth": {
+            "mean": 489084389.21603614,
+            "error": 76009169.19448672
+        },
+        "manual_latency": {
+            "mean": 77811452.96430251,
+            "error": 869290.0728286378
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/262144/100": {
+        "real_time": {
+            "mean": 115074.4071538304,
+            "error": 4930.997633263859
+        },
+        "cpu_time": {
+            "mean": 109212.65418650089,
+            "error": 4644.447612467461
+        },
+        "bytes_per_second": {
+            "mean": 2285440169.120406,
+            "error": 98486721.61743796
+        },
+        "manual_bandwidth": {
+            "mean": 660527389.5495522,
+            "error": 63956179.130741775
+        },
+        "manual_latency": {
+            "mean": 68887668.59135279,
+            "error": 5636348.035804996
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/262144/1000": {
+        "real_time": {
+            "mean": 83764.88011132626,
+            "error": 3595.205686746097
+        },
+        "cpu_time": {
+            "mean": 80272.52386504423,
+            "error": 3387.412771927822
+        },
+        "bytes_per_second": {
+            "mean": 3139900191.558425,
+            "error": 137728893.0178106
+        },
+        "manual_bandwidth": {
+            "mean": 692023701.5569701,
+            "error": 31716887.65820384
+        },
+        "manual_latency": {
+            "mean": 78444876.04642949,
+            "error": 822306.901024237
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/262144/10000": {
+        "real_time": {
+            "mean": 100852.87849219091,
+            "error": 14406.34369655925
+        },
+        "cpu_time": {
+            "mean": 96188.6194666941,
+            "error": 13456.056683025941
+        },
+        "bytes_per_second": {
+            "mean": 2675212009.490981,
+            "error": 305700622.34707683
+        },
+        "manual_bandwidth": {
+            "mean": 629218457.0725011,
+            "error": 101423171.23366849
+        },
+        "manual_latency": {
+            "mean": 77162712.9916431,
+            "error": 1576171.2851386436
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/1048576/1": {
+        "real_time": {
+            "mean": 1045110.7708889504,
+            "error": 9099.132907604158
+        },
+        "cpu_time": {
+            "mean": 1006048.5644091123,
+            "error": 7544.709980206784
+        },
+        "bytes_per_second": {
+            "mean": 1003449314.9936724,
+            "error": 8728092.591160385
+        },
+        "manual_bandwidth": {
+            "mean": 105805925.1746181,
+            "error": 39965706.24303227
+        },
+        "manual_latency": {
+            "mean": 137343184.1157684,
+            "error": 65618374.33865673
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/1048576/10": {
+        "real_time": {
+            "mean": 1043938.4474867955,
+            "error": 13090.070333398204
+        },
+        "cpu_time": {
+            "mean": 1009134.8073967369,
+            "error": 6480.483955164688
+        },
+        "bytes_per_second": {
+            "mean": 1004721114.4900757,
+            "error": 12640103.427314373
+        },
+        "manual_bandwidth": {
+            "mean": 71085398.25787535,
+            "error": 59575217.46504334
+        },
+        "manual_latency": {
+            "mean": 152659687.22916666,
+            "error": 35240895.884987265
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/1048576/100": {
+        "real_time": {
+            "mean": 1051105.2499288847,
+            "error": 8784.289230201135
+        },
+        "cpu_time": {
+            "mean": 1004895.4915821294,
+            "error": 7189.517621437181
+        },
+        "bytes_per_second": {
+            "mean": 997716470.024121,
+            "error": 8350304.381103307
+        },
+        "manual_bandwidth": {
+            "mean": 90615069.17813474,
+            "error": 36041692.05333186
+        },
+        "manual_latency": {
+            "mean": 125700754.313254,
+            "error": 25725999.229229312
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/1048576/1000": {
+        "real_time": {
+            "mean": 1044106.2189312959,
+            "error": 8941.366085089872
+        },
+        "cpu_time": {
+            "mean": 996014.952023052,
+            "error": 7528.926893618643
+        },
+        "bytes_per_second": {
+            "mean": 1004412110.5288732,
+            "error": 8706954.190833192
+        },
+        "manual_bandwidth": {
+            "mean": 175012270.98146084,
+            "error": 77660774.61705416
+        },
+        "manual_latency": {
+            "mean": 101784359.23296383,
+            "error": 23340851.561146364
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/1048576/10000": {
+        "real_time": {
+            "mean": 1052824.5458658107,
+            "error": 7598.040304108453
+        },
+        "cpu_time": {
+            "mean": 1002082.1166906192,
+            "error": 8144.654303710467
+        },
+        "bytes_per_second": {
+            "mean": 996056474.4295423,
+            "error": 7236681.554998507
+        },
+        "manual_bandwidth": {
+            "mean": 142791755.3746472,
+            "error": 55424894.98994434
+        },
+        "manual_latency": {
+            "mean": 102741443.81669703,
+            "error": 15483655.382571109
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/4194304/1": {
+        "real_time": {
+            "mean": 3753850.3210739205,
+            "error": 706675.3378419151
+        },
+        "cpu_time": {
+            "mean": 3713596.038016802,
+            "error": 689981.2380754665
+        },
+        "bytes_per_second": {
+            "mean": 1217603642.0833662,
+            "error": 320320924.1766724
+        },
+        "manual_bandwidth": {
+            "mean": 16458417.004081905,
+            "error": 5141757.459153834
+        },
+        "manual_latency": {
+            "mean": 590373219.65,
+            "error": 109529204.51912637
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/4194304/10": {
+        "real_time": {
+            "mean": 2538826.699143001,
+            "error": 987457.1780103601
+        },
+        "cpu_time": {
+            "mean": 2497592.8508471227,
+            "error": 966682.2873291837
+        },
+        "bytes_per_second": {
+            "mean": 2222609749.2521906,
+            "error": 933199231.6757798
+        },
+        "manual_bandwidth": {
+            "mean": 38100873.85264189,
+            "error": 17062858.216149423
+        },
+        "manual_latency": {
+            "mean": 407792625.5516667,
+            "error": 149148041.97388497
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/4194304/100": {
+        "real_time": {
+            "mean": 2434603.9247404262,
+            "error": 536836.8789845853
+        },
+        "cpu_time": {
+            "mean": 2402506.9499997115,
+            "error": 543421.1266679144
+        },
+        "bytes_per_second": {
+            "mean": 1876029897.5067196,
+            "error": 417626326.40598315
+        },
+        "manual_bandwidth": {
+            "mean": 49531512.28005635,
+            "error": 18471800.79118444
+        },
+        "manual_latency": {
+            "mean": 382650046.6,
+            "error": 121248130.84545507
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/4194304/1000": {
+        "real_time": {
+            "mean": 3573191.76375081,
+            "error": 524116.9335615906
+        },
+        "cpu_time": {
+            "mean": 3540859.590603914,
+            "error": 518934.75173964974
+        },
+        "bytes_per_second": {
+            "mean": 1226689567.3281274,
+            "error": 212791713.92733794
+        },
+        "manual_bandwidth": {
+            "mean": 28570435.29598547,
+            "error": 8857522.467697563
+        },
+        "manual_latency": {
+            "mean": 376512161.325,
+            "error": 139691848.53374967
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/4194304/10000": {
+        "real_time": {
+            "mean": 2344889.4259120347,
+            "error": 762457.4493198871
+        },
+        "cpu_time": {
+            "mean": 2321858.0445348253,
+            "error": 759220.7995574039
+        },
+        "bytes_per_second": {
+            "mean": 2134439129.120278,
+            "error": 693812467.1234555
+        },
+        "manual_bandwidth": {
+            "mean": 43746289.07796217,
+            "error": 14355277.294630555
+        },
+        "manual_latency": {
+            "mean": 349799361.53166664,
+            "error": 106387171.40491742
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/16777216/1": {
+        "real_time": {
+            "mean": 21395027.363643862,
+            "error": 285204.60794436384
+        },
+        "cpu_time": {
+            "mean": 20282776.990910977,
+            "error": 89652.83891615979
+        },
+        "bytes_per_second": {
+            "mean": 784414946.7656333,
+            "error": 10691858.098165983
+        },
+        "manual_bandwidth": {
+            "mean": 25394987.034445845,
+            "error": 5111512.132408662
+        },
+        "manual_latency": {
+            "mean": 1127483215.9,
+            "error": 71526616.94983083
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/16777216/10": {
+        "real_time": {
+            "mean": 21004428.776471764,
+            "error": 183773.98147737733
+        },
+        "cpu_time": {
+            "mean": 20058544.814708058,
+            "error": 123519.22092097075
+        },
+        "bytes_per_second": {
+            "mean": 798853509.4188143,
+            "error": 6947498.830246847
+        },
+        "manual_bandwidth": {
+            "mean": 17397175.311926328,
+            "error": 5789201.991901488
+        },
+        "manual_latency": {
+            "mean": 1317382247.15,
+            "error": 154517581.732747
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/16777216/100": {
+        "real_time": {
+            "mean": 20703334.917135566,
+            "error": 261092.54280888953
+        },
+        "cpu_time": {
+            "mean": 20001775.965714283,
+            "error": 123083.01114933312
+        },
+        "bytes_per_second": {
+            "mean": 810590878.1915822,
+            "error": 10275022.219329203
+        },
+        "manual_bandwidth": {
+            "mean": 13619220.63213782,
+            "error": 3999779.7512129853
+        },
+        "manual_latency": {
+            "mean": 1411569675.05,
+            "error": 151070840.03198588
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/16777216/1000": {
+        "real_time": {
+            "mean": 20928469.642888427,
+            "error": 341639.9894299474
+        },
+        "cpu_time": {
+            "mean": 20107569.845712792,
+            "error": 109968.91574631626
+        },
+        "bytes_per_second": {
+            "mean": 802032047.0617198,
+            "error": 13462150.828423824
+        },
+        "manual_bandwidth": {
+            "mean": 19075255.851903733,
+            "error": 6014586.456175158
+        },
+        "manual_latency": {
+            "mean": 1282624062.85,
+            "error": 140203711.34864628
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/16777216/10000": {
+        "real_time": {
+            "mean": 21080164.358799644,
+            "error": 192197.7630626849
+        },
+        "cpu_time": {
+            "mean": 20199333.585295126,
+            "error": 83741.768684994
+        },
+        "bytes_per_second": {
+            "mean": 795992774.0525539,
+            "error": 7225188.4380879095
+        },
+        "manual_bandwidth": {
+            "mean": 26685113.049180597,
+            "error": 6835038.955395834
+        },
+        "manual_latency": {
+            "mean": 1113078642.0,
+            "error": 124354704.82137366
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/67108864/1": {
+        "real_time": {
+            "mean": 86678925.24996433,
+            "error": 2031964.3710683775
+        },
+        "cpu_time": {
+            "mean": 85284846.61250034,
+            "error": 1868281.0309350232
+        },
+        "bytes_per_second": {
+            "mean": 774956270.4606626,
+            "error": 17777810.70826405
+        },
+        "manual_bandwidth": {
+            "mean": 19110785.712584555,
+            "error": 3711474.493977202
+        },
+        "manual_latency": {
+            "mean": 3856921917.3,
+            "error": 104548119.15106623
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/67108864/10": {
+        "real_time": {
+            "mean": 86175066.38751139,
+            "error": 1201298.8390112643
+        },
+        "cpu_time": {
+            "mean": 84428311.06249854,
+            "error": 126503.90333249937
+        },
+        "bytes_per_second": {
+            "mean": 779016401.2050602,
+            "error": 10850426.47000265
+        },
+        "manual_bandwidth": {
+            "mean": 17568500.79245288,
+            "error": 307711.9643322917
+        },
+        "manual_latency": {
+            "mean": 3821787509.6,
+            "error": 63215027.0519912
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/67108864/100": {
+        "real_time": {
+            "mean": 85672930.42501661,
+            "error": 1049289.1523213729
+        },
+        "cpu_time": {
+            "mean": 83528424.77499607,
+            "error": 284622.9605159083
+        },
+        "bytes_per_second": {
+            "mean": 783521912.9193466,
+            "error": 9620649.962284958
+        },
+        "manual_bandwidth": {
+            "mean": 17636101.26386756,
+            "error": 356548.9167657433
+        },
+        "manual_latency": {
+            "mean": 3807758396.2,
+            "error": 71993806.1911433
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/67108864/1000": {
+        "real_time": {
+            "mean": 84531585.93753187,
+            "error": 1115664.7291956255
+        },
+        "cpu_time": {
+            "mean": 83198716.40000471,
+            "error": 117661.56298118706
+        },
+        "bytes_per_second": {
+            "mean": 794131967.7890902,
+            "error": 10380888.72947467
+        },
+        "manual_bandwidth": {
+            "mean": 17661296.76422714,
+            "error": 362993.2650406391
+        },
+        "manual_latency": {
+            "mean": 3802408177.5,
+            "error": 72980776.75421093
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/1/67108864/10000": {
+        "real_time": {
+            "mean": 84508287.60006744,
+            "error": 1017462.8057940182
+        },
+        "cpu_time": {
+            "mean": 83497380.48749842,
+            "error": 247987.324856808
+        },
+        "bytes_per_second": {
+            "mean": 794310429.5221562,
+            "error": 9471502.082859723
+        },
+        "manual_bandwidth": {
+            "mean": 13972486.088328427,
+            "error": 2355967.834184374
+        },
+        "manual_latency": {
+            "mean": 3073897082.7,
+            "error": 518304555.41246194
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/1024/1": {
+        "real_time": {
+            "mean": 5157.011854205701,
+            "error": 58.954286139282324
+        },
+        "cpu_time": {
+            "mean": 4074.007642896597,
+            "error": 33.401969007338344
+        },
+        "bytes_per_second": {
+            "mean": 397220849.88300574,
+            "error": 4558106.104909914
+        },
+        "manual_bandwidth": {
+            "mean": 488726486.6053093,
+            "error": 82671101.97510673
+        },
+        "manual_latency": {
+            "mean": 82142198.40676616,
+            "error": 13850032.422341717
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/1024/10": {
+        "real_time": {
+            "mean": 4786.512908634228,
+            "error": 16.287397401040042
+        },
+        "cpu_time": {
+            "mean": 3977.817551199181,
+            "error": 12.875501402097207
+        },
+        "bytes_per_second": {
+            "mean": 427877594.2851998,
+            "error": 1453067.5194622453
+        },
+        "manual_bandwidth": {
+            "mean": 13510473485.041466,
+            "error": 2623027242.2639065
+        },
+        "manual_latency": {
+            "mean": 3681929.9947898104,
+            "error": 1053655.9593130029
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/1024/100": {
+        "real_time": {
+            "mean": 4788.4441863204265,
+            "error": 22.11685001939491
+        },
+        "cpu_time": {
+            "mean": 3942.1589292166345,
+            "error": 23.964955009164076
+        },
+        "bytes_per_second": {
+            "mean": 427712338.78835094,
+            "error": 1970668.8045866834
+        },
+        "manual_bandwidth": {
+            "mean": 11753311273.55764,
+            "error": 2650571637.378738
+        },
+        "manual_latency": {
+            "mean": 5016327.149989426,
+            "error": 2065121.8579583599
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/1024/1000": {
+        "real_time": {
+            "mean": 4785.349781783731,
+            "error": 13.853851682377904
+        },
+        "cpu_time": {
+            "mean": 3949.1776102545314,
+            "error": 21.575372439314556
+        },
+        "bytes_per_second": {
+            "mean": 427979202.6862031,
+            "error": 1238671.597650643
+        },
+        "manual_bandwidth": {
+            "mean": 11971461234.445177,
+            "error": 1413192356.06071
+        },
+        "manual_latency": {
+            "mean": 4393799.865931442,
+            "error": 1054004.5538302695
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/1024/10000": {
+        "real_time": {
+            "mean": 4820.713313170985,
+            "error": 150.2750837188442
+        },
+        "cpu_time": {
+            "mean": 3975.039859758196,
+            "error": 114.49023174513647
+        },
+        "bytes_per_second": {
+            "mean": 425490283.8058814,
+            "error": 11981607.302327417
+        },
+        "manual_bandwidth": {
+            "mean": 7387770172.393695,
+            "error": 2494341218.1204343
+        },
+        "manual_latency": {
+            "mean": 13871864.109881664,
+            "error": 14017778.26383962
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/4096/1": {
+        "real_time": {
+            "mean": 5066.614075190955,
+            "error": 39.04993144439736
+        },
+        "cpu_time": {
+            "mean": 4390.646898982709,
+            "error": 29.801391179126863
+        },
+        "bytes_per_second": {
+            "mean": 1617027284.1902287,
+            "error": 12421879.085053511
+        },
+        "manual_bandwidth": {
+            "mean": 868839785.6372092,
+            "error": 26199194.40081072
+        },
+        "manual_latency": {
+            "mean": 69236999.46569867,
+            "error": 1541647.280477352
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/4096/10": {
+        "real_time": {
+            "mean": 5010.18803186704,
+            "error": 24.610917310130315
+        },
+        "cpu_time": {
+            "mean": 4358.697393979326,
+            "error": 20.653031218009538
+        },
+        "bytes_per_second": {
+            "mean": 1635137728.5418162,
+            "error": 8026912.362926266
+        },
+        "manual_bandwidth": {
+            "mean": 1189163222.6229599,
+            "error": 14199197.736822525
+        },
+        "manual_latency": {
+            "mean": 69397024.38562232,
+            "error": 640350.2173359664
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/4096/100": {
+        "real_time": {
+            "mean": 4992.848741784826,
+            "error": 24.384786852914242
+        },
+        "cpu_time": {
+            "mean": 4342.987223008087,
+            "error": 20.334370389886598
+        },
+        "bytes_per_second": {
+            "mean": 1640815507.0075707,
+            "error": 8011949.778449515
+        },
+        "manual_bandwidth": {
+            "mean": 1051863292.1080315,
+            "error": 28133915.34566447
+        },
+        "manual_latency": {
+            "mean": 77179944.7658565,
+            "error": 1367314.6175976396
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/4096/1000": {
+        "real_time": {
+            "mean": 5008.709241208635,
+            "error": 24.65206309638507
+        },
+        "cpu_time": {
+            "mean": 4355.563179992146,
+            "error": 24.33640883977147
+        },
+        "bytes_per_second": {
+            "mean": 1635620657.844274,
+            "error": 8032575.129729185
+        },
+        "manual_bandwidth": {
+            "mean": 769163817.824446,
+            "error": 12267006.737022895
+        },
+        "manual_latency": {
+            "mean": 77771458.24521479,
+            "error": 763199.58625247
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/4096/10000": {
+        "real_time": {
+            "mean": 4968.031603459658,
+            "error": 33.16171300444978
+        },
+        "cpu_time": {
+            "mean": 4330.63404212249,
+            "error": 30.70564767302176
+        },
+        "bytes_per_second": {
+            "mean": 1649071796.7249732,
+            "error": 10986262.721618978
+        },
+        "manual_bandwidth": {
+            "mean": 1089872499.312002,
+            "error": 25472732.683634024
+        },
+        "manual_latency": {
+            "mean": 76338393.0376416,
+            "error": 1255917.0741226007
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/16384/1": {
+        "real_time": {
+            "mean": 7521.461427117245,
+            "error": 612.7595717414616
+        },
+        "cpu_time": {
+            "mean": 6941.257041351013,
+            "error": 563.7719649328567
+        },
+        "bytes_per_second": {
+            "mean": 4405431196.978784,
+            "error": 340990921.7458348
+        },
+        "manual_bandwidth": {
+            "mean": 6882682990.76209,
+            "error": 4884137873.716329
+        },
+        "manual_latency": {
+            "mean": 35454693.13271073,
+            "error": 23104093.56852267
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/16384/10": {
+        "real_time": {
+            "mean": 9648.827123774035,
+            "error": 720.5719369163553
+        },
+        "cpu_time": {
+            "mean": 8940.691778472941,
+            "error": 661.3141246785209
+        },
+        "bytes_per_second": {
+            "mean": 3426325958.521861,
+            "error": 231357593.91185912
+        },
+        "manual_bandwidth": {
+            "mean": 8547580529.917875,
+            "error": 2477724199.539558
+        },
+        "manual_latency": {
+            "mean": 6082395.292379005,
+            "error": 3208777.6682622414
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/16384/100": {
+        "real_time": {
+            "mean": 9307.297751659746,
+            "error": 825.5622340160936
+        },
+        "cpu_time": {
+            "mean": 8598.71304644371,
+            "error": 754.3195756166486
+        },
+        "bytes_per_second": {
+            "mean": 3569727017.760775,
+            "error": 315861802.5702487
+        },
+        "manual_bandwidth": {
+            "mean": 7020589668.383814,
+            "error": 3148570983.2121267
+        },
+        "manual_latency": {
+            "mean": 13708409.237381566,
+            "error": 12155865.66644907
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/16384/1000": {
+        "real_time": {
+            "mean": 8786.187739685674,
+            "error": 812.9119632209694
+        },
+        "cpu_time": {
+            "mean": 8123.481326494989,
+            "error": 745.4952783132663
+        },
+        "bytes_per_second": {
+            "mean": 3791193511.2788916,
+            "error": 380772171.25669056
+        },
+        "manual_bandwidth": {
+            "mean": 6562330665.497423,
+            "error": 2363868441.908392
+        },
+        "manual_latency": {
+            "mean": 8357396.402100799,
+            "error": 6887890.678871272
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/16384/10000": {
+        "real_time": {
+            "mean": 8932.244906434218,
+            "error": 481.44456338630306
+        },
+        "cpu_time": {
+            "mean": 8256.99268562074,
+            "error": 440.67807134159165
+        },
+        "bytes_per_second": {
+            "mean": 3687889300.5797815,
+            "error": 205199115.5939655
+        },
+        "manual_bandwidth": {
+            "mean": 8256254659.259003,
+            "error": 3542146359.3892784
+        },
+        "manual_latency": {
+            "mean": 10419793.151907107,
+            "error": 5644471.218157307
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/65536/1": {
+        "real_time": {
+            "mean": 34846.32125337281,
+            "error": 3311.9748095741666
+        },
+        "cpu_time": {
+            "mean": 32616.890693069163,
+            "error": 2996.9060589252485
+        },
+        "bytes_per_second": {
+            "mean": 3823183776.5883217,
+            "error": 371947251.38136494
+        },
+        "manual_bandwidth": {
+            "mean": 4092402725.4754357,
+            "error": 1774175612.9015772
+        },
+        "manual_latency": {
+            "mean": 22585023.41780781,
+            "error": 12031443.279875088
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/65536/10": {
+        "real_time": {
+            "mean": 17500.153627816115,
+            "error": 2561.969508898075
+        },
+        "cpu_time": {
+            "mean": 16762.5256312205,
+            "error": 2344.7468123845674
+        },
+        "bytes_per_second": {
+            "mean": 7706105140.572764,
+            "error": 854447206.2189896
+        },
+        "manual_bandwidth": {
+            "mean": 1003249693.6337998,
+            "error": 377627647.7247067
+        },
+        "manual_latency": {
+            "mean": 64216843.20106669,
+            "error": 7699734.225490354
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/65536/100": {
+        "real_time": {
+            "mean": 28008.43602805565,
+            "error": 5871.686184556035
+        },
+        "cpu_time": {
+            "mean": 26223.890796388507,
+            "error": 5331.189390388123
+        },
+        "bytes_per_second": {
+            "mean": 5101436170.133032,
+            "error": 1169250470.4260793
+        },
+        "manual_bandwidth": {
+            "mean": 7171677046.238512,
+            "error": 4684033432.146964
+        },
+        "manual_latency": {
+            "mean": 35890701.40487538,
+            "error": 17275877.47210314
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/65536/1000": {
+        "real_time": {
+            "mean": 42374.0165652213,
+            "error": 4263.9488779065005
+        },
+        "cpu_time": {
+            "mean": 39491.78780987342,
+            "error": 3863.8296953548497
+        },
+        "bytes_per_second": {
+            "mean": 3146917715.8547606,
+            "error": 305224207.58202386
+        },
+        "manual_bandwidth": {
+            "mean": 6653376706.351194,
+            "error": 1703738830.5408075
+        },
+        "manual_latency": {
+            "mean": 9491419.226514764,
+            "error": 3728077.856128419
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/65536/10000": {
+        "real_time": {
+            "mean": 28791.789275937354,
+            "error": 3825.9398143015633
+        },
+        "cpu_time": {
+            "mean": 27099.29849543299,
+            "error": 3457.734748148487
+        },
+        "bytes_per_second": {
+            "mean": 4673009781.780072,
+            "error": 522036731.0247682
+        },
+        "manual_bandwidth": {
+            "mean": 4783599694.026499,
+            "error": 3016845234.852686
+        },
+        "manual_latency": {
+            "mean": 33457553.783326417,
+            "error": 13492952.8449161
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/262144/1": {
+        "real_time": {
+            "mean": 138466.80334453724,
+            "error": 18115.164397195
+        },
+        "cpu_time": {
+            "mean": 129852.51859758081,
+            "error": 16444.058292123715
+        },
+        "bytes_per_second": {
+            "mean": 3929260681.2738633,
+            "error": 635598746.2735716
+        },
+        "manual_bandwidth": {
+            "mean": 1104191718.8160434,
+            "error": 172898945.43996578
+        },
+        "manual_latency": {
+            "mean": 80577364.41085295,
+            "error": 2283622.9806183097
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/262144/10": {
+        "real_time": {
+            "mean": 156678.52654583377,
+            "error": 11631.77890383077
+        },
+        "cpu_time": {
+            "mean": 146432.22351725868,
+            "error": 10511.009444992487
+        },
+        "bytes_per_second": {
+            "mean": 3377772643.1434693,
+            "error": 241979210.44431674
+        },
+        "manual_bandwidth": {
+            "mean": 3473434842.778556,
+            "error": 515072189.1634131
+        },
+        "manual_latency": {
+            "mean": 73459386.45098288,
+            "error": 5066773.800114665
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/262144/100": {
+        "real_time": {
+            "mean": 118446.11124035002,
+            "error": 19400.237870417768
+        },
+        "cpu_time": {
+            "mean": 112039.72276923378,
+            "error": 17546.581297902492
+        },
+        "bytes_per_second": {
+            "mean": 4632655800.211837,
+            "error": 721828669.5715684
+        },
+        "manual_bandwidth": {
+            "mean": 1893473696.7061825,
+            "error": 334050707.98887503
+        },
+        "manual_latency": {
+            "mean": 83045250.55993205,
+            "error": 1150655.1572076525
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/262144/1000": {
+        "real_time": {
+            "mean": 116784.93429238015,
+            "error": 50262.76127130939
+        },
+        "cpu_time": {
+            "mean": 110091.70791835929,
+            "error": 45727.172591483315
+        },
+        "bytes_per_second": {
+            "mean": 6262394445.192435,
+            "error": 2453529767.9123864
+        },
+        "manual_bandwidth": {
+            "mean": 2105065632.068996,
+            "error": 1229439368.0167556
+        },
+        "manual_latency": {
+            "mean": 69250492.06501743,
+            "error": 14782161.802466031
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/262144/10000": {
+        "real_time": {
+            "mean": 118492.05242499604,
+            "error": 28538.186098964517
+        },
+        "cpu_time": {
+            "mean": 110418.11147389459,
+            "error": 27349.54671720582
+        },
+        "bytes_per_second": {
+            "mean": 5106005358.142822,
+            "error": 1688580077.7103875
+        },
+        "manual_bandwidth": {
+            "mean": 1237491098.9358497,
+            "error": 334348930.61610883
+        },
+        "manual_latency": {
+            "mean": 77199931.33760805,
+            "error": 5924746.658031758
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/1048576/1": {
+        "real_time": {
+            "mean": 1049393.0118269408,
+            "error": 15618.110484022623
+        },
+        "cpu_time": {
+            "mean": 998608.2619041704,
+            "error": 14263.967983242845
+        },
+        "bytes_per_second": {
+            "mean": 1999232016.0359528,
+            "error": 30148996.92056227
+        },
+        "manual_bandwidth": {
+            "mean": 297587554.9579857,
+            "error": 131122031.54186772
+        },
+        "manual_latency": {
+            "mean": 101937629.46190262,
+            "error": 13830006.679197786
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/1048576/10": {
+        "real_time": {
+            "mean": 1062913.473846598,
+            "error": 8825.852034283336
+        },
+        "cpu_time": {
+            "mean": 1008077.2297174223,
+            "error": 9114.023890339882
+        },
+        "bytes_per_second": {
+            "mean": 1973262041.9217057,
+            "error": 16415494.637822146
+        },
+        "manual_bandwidth": {
+            "mean": 315903457.72692543,
+            "error": 102963522.84584193
+        },
+        "manual_latency": {
+            "mean": 102703338.59898433,
+            "error": 20077660.367160603
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/1048576/100": {
+        "real_time": {
+            "mean": 1045177.2451610618,
+            "error": 27011.99078632279
+        },
+        "cpu_time": {
+            "mean": 977938.2818736115,
+            "error": 26874.481417949235
+        },
+        "bytes_per_second": {
+            "mean": 2008952571.5023131,
+            "error": 53927893.335172236
+        },
+        "manual_bandwidth": {
+            "mean": 404496438.7546527,
+            "error": 123513623.19091327
+        },
+        "manual_latency": {
+            "mean": 88118620.99615079,
+            "error": 15297003.463393996
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/1048576/1000": {
+        "real_time": {
+            "mean": 1043647.9576920314,
+            "error": 25359.039401626156
+        },
+        "cpu_time": {
+            "mean": 976763.3032344186,
+            "error": 23103.72748528502
+        },
+        "bytes_per_second": {
+            "mean": 2011586122.5647187,
+            "error": 50128345.768254116
+        },
+        "manual_bandwidth": {
+            "mean": 555374458.9687614,
+            "error": 157702959.62927088
+        },
+        "manual_latency": {
+            "mean": 82358254.74070504,
+            "error": 5554113.87997322
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/1048576/10000": {
+        "real_time": {
+            "mean": 1056295.8743406371,
+            "error": 8709.160753603652
+        },
+        "cpu_time": {
+            "mean": 1001880.9252224505,
+            "error": 9557.35296505234
+        },
+        "bytes_per_second": {
+            "mean": 1985621035.2700417,
+            "error": 16405885.12645997
+        },
+        "manual_bandwidth": {
+            "mean": 277874947.56378603,
+            "error": 76692864.1452876
+        },
+        "manual_latency": {
+            "mean": 101509351.58627497,
+            "error": 10743438.664017845
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/4194304/1": {
+        "real_time": {
+            "mean": 2557254.6511730812,
+            "error": 916601.7133956109
+        },
+        "cpu_time": {
+            "mean": 2528496.416431994,
+            "error": 926181.3733525956
+        },
+        "bytes_per_second": {
+            "mean": 4849990870.313324,
+            "error": 2815234953.926125
+        },
+        "manual_bandwidth": {
+            "mean": 43486142.14427169,
+            "error": 21684836.6327043
+        },
+        "manual_latency": {
+            "mean": 596726049.9999999,
+            "error": 250782141.76078212
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/4194304/10": {
+        "real_time": {
+            "mean": 2448094.834862402,
+            "error": 835105.9135317716
+        },
+        "cpu_time": {
+            "mean": 2410404.031687948,
+            "error": 847574.6398422688
+        },
+        "bytes_per_second": {
+            "mean": 4865094016.236982,
+            "error": 2548881079.1119556
+        },
+        "manual_bandwidth": {
+            "mean": 51878344.542379335,
+            "error": 22528344.619731322
+        },
+        "manual_latency": {
+            "mean": 472805668.7499999,
+            "error": 143266523.90851635
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/4194304/100": {
+        "real_time": {
+            "mean": 2315141.7616982264,
+            "error": 1080538.3050665115
+        },
+        "cpu_time": {
+            "mean": 2273895.2883129334,
+            "error": 1109880.488817454
+        },
+        "bytes_per_second": {
+            "mean": 5910106222.714949,
+            "error": 2995576989.423021
+        },
+        "manual_bandwidth": {
+            "mean": 46890340.817584045,
+            "error": 13126471.815864379
+        },
+        "manual_latency": {
+            "mean": 342137895.0,
+            "error": 89842636.02573341
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/4194304/1000": {
+        "real_time": {
+            "mean": 2359972.559685654,
+            "error": 843790.1285426639
+        },
+        "cpu_time": {
+            "mean": 2311370.5142863803,
+            "error": 836629.1419386917
+        },
+        "bytes_per_second": {
+            "mean": 5012215604.68105,
+            "error": 2555118320.904202
+        },
+        "manual_bandwidth": {
+            "mean": 46795938.886254385,
+            "error": 23541978.656829927
+        },
+        "manual_latency": {
+            "mean": 421625248.225,
+            "error": 169849111.22054356
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/4194304/10000": {
+        "real_time": {
+            "mean": 2039001.39545636,
+            "error": 892283.6677851806
+        },
+        "cpu_time": {
+            "mean": 2020847.947879585,
+            "error": 901495.5150694778
+        },
+        "bytes_per_second": {
+            "mean": 6158570988.034955,
+            "error": 3045902436.1701994
+        },
+        "manual_bandwidth": {
+            "mean": 52337303.617246225,
+            "error": 18663812.660735276
+        },
+        "manual_latency": {
+            "mean": 443514995.05,
+            "error": 145530049.065551
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/16777216/1": {
+        "real_time": {
+            "mean": 22559426.36559212,
+            "error": 132532.73009992015
+        },
+        "cpu_time": {
+            "mean": 21285161.103121914,
+            "error": 116018.60174901446
+        },
+        "bytes_per_second": {
+            "mean": 1487469904.2389154,
+            "error": 8732900.763595732
+        },
+        "manual_bandwidth": {
+            "mean": 66693479.00302472,
+            "error": 2233400.68039588
+        },
+        "manual_latency": {
+            "mean": 1008205188.7,
+            "error": 33603114.27836867
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/16777216/10": {
+        "real_time": {
+            "mean": 22561735.027286913,
+            "error": 254285.47341035245
+        },
+        "cpu_time": {
+            "mean": 21388009.081821375,
+            "error": 105459.6104027104
+        },
+        "bytes_per_second": {
+            "mean": 1487560472.1948926,
+            "error": 16799820.088445462
+        },
+        "manual_bandwidth": {
+            "mean": 57474150.51280172,
+            "error": 10947958.548493136
+        },
+        "manual_latency": {
+            "mean": 1075517916.8,
+            "error": 117946813.29908836
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/16777216/100": {
+        "real_time": {
+            "mean": 22355699.803196214,
+            "error": 258785.99833182665
+        },
+        "cpu_time": {
+            "mean": 21274983.38709595,
+            "error": 121287.45240045972
+        },
+        "bytes_per_second": {
+            "mean": 1501298809.8137298,
+            "error": 17914558.600198194
+        },
+        "manual_bandwidth": {
+            "mean": 51800864.92281709,
+            "error": 12560674.914053893
+        },
+        "manual_latency": {
+            "mean": 1129658543.0,
+            "error": 85811673.62440419
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/16777216/1000": {
+        "real_time": {
+            "mean": 22414016.296895057,
+            "error": 263876.3791182658
+        },
+        "cpu_time": {
+            "mean": 21266647.921870433,
+            "error": 139737.44727926404
+        },
+        "bytes_per_second": {
+            "mean": 1497391531.0611567,
+            "error": 17509654.12595628
+        },
+        "manual_bandwidth": {
+            "mean": 50552285.35404814,
+            "error": 12629402.640213313
+        },
+        "manual_latency": {
+            "mean": 992827572.75,
+            "error": 138919466.18320212
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/16777216/10000": {
+        "real_time": {
+            "mean": 22575119.67813741,
+            "error": 209718.2003966425
+        },
+        "cpu_time": {
+            "mean": 21325079.599998984,
+            "error": 135865.13463180122
+        },
+        "bytes_per_second": {
+            "mean": 1486570954.332946,
+            "error": 13785557.54123338
+        },
+        "manual_bandwidth": {
+            "mean": 62585798.89146529,
+            "error": 9276763.490548223
+        },
+        "manual_latency": {
+            "mean": 1032681598.45,
+            "error": 69949335.90273143
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/67108864/1": {
+        "real_time": {
+            "mean": 89927750.20001318,
+            "error": 1010956.4693702946
+        },
+        "cpu_time": {
+            "mean": 85783181.7124989,
+            "error": 921197.0296711763
+        },
+        "bytes_per_second": {
+            "mean": 1492840055.6196458,
+            "error": 16885470.05262691
+        },
+        "manual_bandwidth": {
+            "mean": 39672064.81443493,
+            "error": 11183541.389325876
+        },
+        "manual_latency": {
+            "mean": 3799002010.5,
+            "error": 167341937.18539673
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/67108864/10": {
+        "real_time": {
+            "mean": 90571704.1999992,
+            "error": 274458.73710260727
+        },
+        "cpu_time": {
+            "mean": 85892568.46249923,
+            "error": 328715.5898315884
+        },
+        "bytes_per_second": {
+            "mean": 1481918626.544727,
+            "error": 4489792.225970259
+        },
+        "manual_bandwidth": {
+            "mean": 34573926.6295575,
+            "error": 672830.027730761
+        },
+        "manual_latency": {
+            "mean": 3884474346.9,
+            "error": 70812910.69962636
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/67108864/100": {
+        "real_time": {
+            "mean": 88680996.94998363,
+            "error": 1379350.7167552954
+        },
+        "cpu_time": {
+            "mean": 86191063.26250406,
+            "error": 548921.8673053875
+        },
+        "bytes_per_second": {
+            "mean": 1514139480.1089492,
+            "error": 23771673.438875407
+        },
+        "manual_bandwidth": {
+            "mean": 34611524.52859531,
+            "error": 710796.3688077799
+        },
+        "manual_latency": {
+            "mean": 3880524864.1,
+            "error": 74513419.23050722
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/67108864/1000": {
+        "real_time": {
+            "mean": 89716667.31254117,
+            "error": 1191598.1479381516
+        },
+        "cpu_time": {
+            "mean": 85706402.67500095,
+            "error": 342953.7968535311
+        },
+        "bytes_per_second": {
+            "mean": 1496490513.9038959,
+            "error": 20240332.11353782
+        },
+        "manual_bandwidth": {
+            "mean": 34607090.33394261,
+            "error": 704582.2443099655
+        },
+        "manual_latency": {
+            "mean": 3880976503.3,
+            "error": 73896953.94807796
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/2/67108864/10000": {
+        "real_time": {
+            "mean": 89915839.62508684,
+            "error": 1064024.8052512829
+        },
+        "cpu_time": {
+            "mean": 86114938.05000237,
+            "error": 369454.1144309115
+        },
+        "bytes_per_second": {
+            "mean": 1493074867.8146243,
+            "error": 17823994.604803078
+        },
+        "manual_bandwidth": {
+            "mean": 27468889.404516257,
+            "error": 4631638.677247855
+        },
+        "manual_latency": {
+            "mean": 3127171751.1,
+            "error": 527284867.207374
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/1024/1": {
+        "real_time": {
+            "mean": 4684.410036701205,
+            "error": 60.29722551978686
+        },
+        "cpu_time": {
+            "mean": 3339.426264617111,
+            "error": 15.349268146626667
+        },
+        "bytes_per_second": {
+            "mean": 874634945.652821,
+            "error": 10831747.816341171
+        },
+        "manual_bandwidth": {
+            "mean": 33317737593.986713,
+            "error": 6114834339.560672
+        },
+        "manual_latency": {
+            "mean": 3587458.8356091543,
+            "error": 1198201.715259553
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/1024/10": {
+        "real_time": {
+            "mean": 4605.697632950371,
+            "error": 8.658764652639869
+        },
+        "cpu_time": {
+            "mean": 3347.2170040059764,
+            "error": 14.430738347581562
+        },
+        "bytes_per_second": {
+            "mean": 889338766.6675043,
+            "error": 1671162.9507472024
+        },
+        "manual_bandwidth": {
+            "mean": 38957175762.18716,
+            "error": 2906527056.274238
+        },
+        "manual_latency": {
+            "mean": 2653355.2797045363,
+            "error": 205348.80748897424
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/1024/100": {
+        "real_time": {
+            "mean": 4624.482520685689,
+            "error": 25.797886927212538
+        },
+        "cpu_time": {
+            "mean": 3307.0349335376313,
+            "error": 44.473307628386756
+        },
+        "bytes_per_second": {
+            "mean": 885769097.0603113,
+            "error": 4930092.690507076
+        },
+        "manual_bandwidth": {
+            "mean": 27310638125.28106,
+            "error": 9180506274.02676
+        },
+        "manual_latency": {
+            "mean": 6639831.718454286,
+            "error": 5547587.4230908295
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/1024/1000": {
+        "real_time": {
+            "mean": 4712.889624609076,
+            "error": 17.676794896224724
+        },
+        "cpu_time": {
+            "mean": 3370.339144370778,
+            "error": 26.1299960304341
+        },
+        "bytes_per_second": {
+            "mean": 869127377.0770099,
+            "error": 3261178.380196503
+        },
+        "manual_bandwidth": {
+            "mean": 23581343245.885048,
+            "error": 7145166103.341568
+        },
+        "manual_latency": {
+            "mean": 6253900.006806096,
+            "error": 3293237.9219612097
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/1024/10000": {
+        "real_time": {
+            "mean": 4587.953994373003,
+            "error": 41.06826992427554
+        },
+        "cpu_time": {
+            "mean": 3237.9827143256225,
+            "error": 47.96427511695175
+        },
+        "bytes_per_second": {
+            "mean": 892897826.9535488,
+            "error": 7949672.363512722
+        },
+        "manual_bandwidth": {
+            "mean": 16273678924.709589,
+            "error": 8669472093.041868
+        },
+        "manual_latency": {
+            "mean": 20032105.41607633,
+            "error": 18910484.66841879
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/4096/1": {
+        "real_time": {
+            "mean": 5346.713790906761,
+            "error": 46.739792035751734
+        },
+        "cpu_time": {
+            "mean": 4312.555429542455,
+            "error": 41.16047230201115
+        },
+        "bytes_per_second": {
+            "mean": 3064724132.7861276,
+            "error": 26795066.97977428
+        },
+        "manual_bandwidth": {
+            "mean": 2329416068.3462152,
+            "error": 32158709.28659882
+        },
+        "manual_latency": {
+            "mean": 69984912.93569992,
+            "error": 924101.5900100535
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/4096/10": {
+        "real_time": {
+            "mean": 5367.284222920496,
+            "error": 48.50126430918056
+        },
+        "cpu_time": {
+            "mean": 4326.7471633898185,
+            "error": 33.19038087468938
+        },
+        "bytes_per_second": {
+            "mean": 3053003432.596627,
+            "error": 27397143.527249746
+        },
+        "manual_bandwidth": {
+            "mean": 2381763236.2732363,
+            "error": 30317796.01614917
+        },
+        "manual_latency": {
+            "mean": 71100658.07463613,
+            "error": 800136.42600781
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/4096/100": {
+        "real_time": {
+            "mean": 5399.78996214403,
+            "error": 37.981743772666675
+        },
+        "cpu_time": {
+            "mean": 4343.02291016358,
+            "error": 31.870562949435577
+        },
+        "bytes_per_second": {
+            "mean": 3034455990.8642945,
+            "error": 21331297.73351266
+        },
+        "manual_bandwidth": {
+            "mean": 2033944234.4771824,
+            "error": 163309377.1631521
+        },
+        "manual_latency": {
+            "mean": 64148483.550389096,
+            "error": 5145873.1214110125
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/4096/1000": {
+        "real_time": {
+            "mean": 5361.902088942925,
+            "error": 40.67530422989271
+        },
+        "cpu_time": {
+            "mean": 4306.291444705461,
+            "error": 25.269956249749345
+        },
+        "bytes_per_second": {
+            "mean": 3055941645.1282587,
+            "error": 23202406.75696895
+        },
+        "manual_bandwidth": {
+            "mean": 2289535860.949351,
+            "error": 7939319.664766878
+        },
+        "manual_latency": {
+            "mean": 71400029.05294092,
+            "error": 328093.440898422
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/4096/10000": {
+        "real_time": {
+            "mean": 5370.790820216232,
+            "error": 29.66465923461235
+        },
+        "cpu_time": {
+            "mean": 4327.178122762954,
+            "error": 30.474331121810526
+        },
+        "bytes_per_second": {
+            "mean": 3050739653.3870015,
+            "error": 16952024.436683822
+        },
+        "manual_bandwidth": {
+            "mean": 2156300520.061728,
+            "error": 172160343.86811647
+        },
+        "manual_latency": {
+            "mean": 64072438.99136543,
+            "error": 5123552.423915263
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/16384/1": {
+        "real_time": {
+            "mean": 12739.164268983752,
+            "error": 1315.5246461279085
+        },
+        "cpu_time": {
+            "mean": 11534.677806046744,
+            "error": 1194.035215208974
+        },
+        "bytes_per_second": {
+            "mean": 5240856404.250961,
+            "error": 534104997.5065516
+        },
+        "manual_bandwidth": {
+            "mean": 13475766682.934181,
+            "error": 3108172038.806859
+        },
+        "manual_latency": {
+            "mean": 3373828.0174958035,
+            "error": 345044.6165415745
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/16384/10": {
+        "real_time": {
+            "mean": 8369.486783418668,
+            "error": 707.088886014683
+        },
+        "cpu_time": {
+            "mean": 7545.14963636342,
+            "error": 653.0801285626194
+        },
+        "bytes_per_second": {
+            "mean": 7923108962.661034,
+            "error": 625553658.8990549
+        },
+        "manual_bandwidth": {
+            "mean": 11314477975.625984,
+            "error": 6971713668.798103
+        },
+        "manual_latency": {
+            "mean": 20053693.589383326,
+            "error": 11569974.912931556
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/16384/100": {
+        "real_time": {
+            "mean": 9490.150547117206,
+            "error": 1308.6718208695256
+        },
+        "cpu_time": {
+            "mean": 8535.646722518413,
+            "error": 1197.9307069541508
+        },
+        "bytes_per_second": {
+            "mean": 7128254019.550135,
+            "error": 929694736.6592752
+        },
+        "manual_bandwidth": {
+            "mean": 15768120639.365692,
+            "error": 7673377884.754217
+        },
+        "manual_latency": {
+            "mean": 18481973.565961625,
+            "error": 14253484.91391341
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/16384/1000": {
+        "real_time": {
+            "mean": 10752.269587540362,
+            "error": 1545.6627714917743
+        },
+        "cpu_time": {
+            "mean": 9725.664769400386,
+            "error": 1402.537351781995
+        },
+        "bytes_per_second": {
+            "mean": 6292109405.968262,
+            "error": 795914899.7347996
+        },
+        "manual_bandwidth": {
+            "mean": 20973582784.367477,
+            "error": 6394727559.165229
+        },
+        "manual_latency": {
+            "mean": 7365034.737198986,
+            "error": 5499516.632828121
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/16384/10000": {
+        "real_time": {
+            "mean": 9245.790448701935,
+            "error": 444.120730451345
+        },
+        "cpu_time": {
+            "mean": 8384.418419042242,
+            "error": 409.88899192037866
+        },
+        "bytes_per_second": {
+            "mean": 7115003107.011942,
+            "error": 317944628.0425134
+        },
+        "manual_bandwidth": {
+            "mean": 34989820869.9505,
+            "error": 3536386437.960941
+        },
+        "manual_latency": {
+            "mean": 2647378.1340222927,
+            "error": 247846.67483784285
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/65536/1": {
+        "real_time": {
+            "mean": 29944.50241370626,
+            "error": 4549.856279953425
+        },
+        "cpu_time": {
+            "mean": 28100.971902250858,
+            "error": 4155.021582111412
+        },
+        "bytes_per_second": {
+            "mean": 9217878181.176826,
+            "error": 1818728718.3086696
+        },
+        "manual_bandwidth": {
+            "mean": 14011257059.91748,
+            "error": 8946989215.021978
+        },
+        "manual_latency": {
+            "mean": 33114581.10933975,
+            "error": 15790978.879236015
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/65536/10": {
+        "real_time": {
+            "mean": 27571.602306367615,
+            "error": 4549.030382942308
+        },
+        "cpu_time": {
+            "mean": 25937.902090064883,
+            "error": 4157.124695387012
+        },
+        "bytes_per_second": {
+            "mean": 10078705939.816374,
+            "error": 2014292450.4388633
+        },
+        "manual_bandwidth": {
+            "mean": 5530105923.034509,
+            "error": 2670574489.0614295
+        },
+        "manual_latency": {
+            "mean": 42154147.876311064,
+            "error": 15135405.373319646
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/65536/100": {
+        "real_time": {
+            "mean": 34644.16481699764,
+            "error": 4758.762805106463
+        },
+        "cpu_time": {
+            "mean": 32319.58201020346,
+            "error": 4238.646182584011
+        },
+        "bytes_per_second": {
+            "mean": 7833252639.021375,
+            "error": 1115146954.067427
+        },
+        "manual_bandwidth": {
+            "mean": 9560131902.1992,
+            "error": 4203309584.3225107
+        },
+        "manual_latency": {
+            "mean": 19961973.998794958,
+            "error": 9830250.692429999
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/65536/1000": {
+        "real_time": {
+            "mean": 36526.00896665214,
+            "error": 2848.89067700593
+        },
+        "cpu_time": {
+            "mean": 34106.24228974003,
+            "error": 2544.8255330694087
+        },
+        "bytes_per_second": {
+            "mean": 7254261781.212016,
+            "error": 566074622.3666888
+        },
+        "manual_bandwidth": {
+            "mean": 11418274712.35957,
+            "error": 4167294149.6812406
+        },
+        "manual_latency": {
+            "mean": 16673952.391487712,
+            "error": 6530526.803797288
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/65536/10000": {
+        "real_time": {
+            "mean": 27265.91673362119,
+            "error": 5689.229224504878
+        },
+        "cpu_time": {
+            "mean": 25648.98542756456,
+            "error": 5204.326119019913
+        },
+        "bytes_per_second": {
+            "mean": 10482922214.487345,
+            "error": 2423645457.136867
+        },
+        "manual_bandwidth": {
+            "mean": 7309314599.778905,
+            "error": 5522455367.977892
+        },
+        "manual_latency": {
+            "mean": 37669459.2848752,
+            "error": 19857354.678310614
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/262144/1": {
+        "real_time": {
+            "mean": 86679.54204052503,
+            "error": 16333.973957390002
+        },
+        "cpu_time": {
+            "mean": 82794.52101032724,
+            "error": 14648.4148942394
+        },
+        "bytes_per_second": {
+            "mean": 12849323610.198,
+            "error": 2286047708.0246763
+        },
+        "manual_bandwidth": {
+            "mean": 2259050407.348436,
+            "error": 588308022.6486944
+        },
+        "manual_latency": {
+            "mean": 86140909.76873703,
+            "error": 7676838.142816199
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/262144/10": {
+        "real_time": {
+            "mean": 210490.30252709132,
+            "error": 22713.262609186
+        },
+        "cpu_time": {
+            "mean": 193232.61614858796,
+            "error": 20317.402608123426
+        },
+        "bytes_per_second": {
+            "mean": 5124425685.3186455,
+            "error": 762560746.7701384
+        },
+        "manual_bandwidth": {
+            "mean": 3275857905.639853,
+            "error": 804232794.7426319
+        },
+        "manual_latency": {
+            "mean": 41921718.62008665,
+            "error": 9632441.903087135
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/262144/100": {
+        "real_time": {
+            "mean": 134070.25446016068,
+            "error": 47805.738000309204
+        },
+        "cpu_time": {
+            "mean": 124878.06475391709,
+            "error": 42753.57679857479
+        },
+        "bytes_per_second": {
+            "mean": 9851014823.972012,
+            "error": 3465363727.4629107
+        },
+        "manual_bandwidth": {
+            "mean": 5994457919.501843,
+            "error": 3922957196.021899
+        },
+        "manual_latency": {
+            "mean": 71624033.75718684,
+            "error": 17093461.11530628
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/262144/1000": {
+        "real_time": {
+            "mean": 167898.01963332348,
+            "error": 23186.69061564063
+        },
+        "cpu_time": {
+            "mean": 155198.68818133732,
+            "error": 20564.218317418254
+        },
+        "bytes_per_second": {
+            "mean": 6435647074.575093,
+            "error": 803274790.1335555
+        },
+        "manual_bandwidth": {
+            "mean": 3571684890.2738266,
+            "error": 1977248595.7033248
+        },
+        "manual_latency": {
+            "mean": 74279493.43260616,
+            "error": 14339688.746270718
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/262144/10000": {
+        "real_time": {
+            "mean": 149781.32933947368,
+            "error": 41427.53166566817
+        },
+        "cpu_time": {
+            "mean": 138081.84668269302,
+            "error": 38352.39319601055
+        },
+        "bytes_per_second": {
+            "mean": 8588301194.865343,
+            "error": 3417831547.9818845
+        },
+        "manual_bandwidth": {
+            "mean": 1755849440.5081794,
+            "error": 860041852.2109902
+        },
+        "manual_latency": {
+            "mean": 75645148.86241046,
+            "error": 14429412.48497313
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/1048576/1": {
+        "real_time": {
+            "mean": 1019453.1587962955,
+            "error": 41390.897619866984
+        },
+        "cpu_time": {
+            "mean": 946961.6993996624,
+            "error": 38031.31794753971
+        },
+        "bytes_per_second": {
+            "mean": 4126594766.9789224,
+            "error": 172711360.11457124
+        },
+        "manual_bandwidth": {
+            "mean": 1611068316.3186483,
+            "error": 315748859.62028605
+        },
+        "manual_latency": {
+            "mean": 82817313.55019698,
+            "error": 4580645.399520875
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/1048576/10": {
+        "real_time": {
+            "mean": 1053547.9085778226,
+            "error": 12083.390308020704
+        },
+        "cpu_time": {
+            "mean": 983041.5359255284,
+            "error": 11468.385680734003
+        },
+        "bytes_per_second": {
+            "mean": 3982054647.796869,
+            "error": 46176927.21399804
+        },
+        "manual_bandwidth": {
+            "mean": 903666628.6355705,
+            "error": 153501099.02539113
+        },
+        "manual_latency": {
+            "mean": 90803610.58428074,
+            "error": 3591521.007747946
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/1048576/100": {
+        "real_time": {
+            "mean": 1008150.0168363571,
+            "error": 61527.68856116176
+        },
+        "cpu_time": {
+            "mean": 946257.5054398484,
+            "error": 56657.45425311222
+        },
+        "bytes_per_second": {
+            "mean": 4191437308.220475,
+            "error": 290117878.2096411
+        },
+        "manual_bandwidth": {
+            "mean": 1090334610.9008038,
+            "error": 330667967.27507746
+        },
+        "manual_latency": {
+            "mean": 91138186.48844936,
+            "error": 9422277.05232869
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/1048576/1000": {
+        "real_time": {
+            "mean": 1065363.2333856323,
+            "error": 23024.236062891116
+        },
+        "cpu_time": {
+            "mean": 1011206.7681832307,
+            "error": 21396.79111420488
+        },
+        "bytes_per_second": {
+            "mean": 3940250242.7986403,
+            "error": 86296289.22941776
+        },
+        "manual_bandwidth": {
+            "mean": 487172300.56533176,
+            "error": 279121105.9707158
+        },
+        "manual_latency": {
+            "mean": 139895687.1297222,
+            "error": 61177106.1172286
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/1048576/10000": {
+        "real_time": {
+            "mean": 1057543.882882535,
+            "error": 16493.76186957844
+        },
+        "cpu_time": {
+            "mean": 1005631.0280327635,
+            "error": 10857.585575488149
+        },
+        "bytes_per_second": {
+            "mean": 3967768007.405999,
+            "error": 61528975.38355001
+        },
+        "manual_bandwidth": {
+            "mean": 530392484.89424354,
+            "error": 159471162.7130173
+        },
+        "manual_latency": {
+            "mean": 92438736.00555554,
+            "error": 14672659.022764377
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/4194304/1": {
+        "real_time": {
+            "mean": 2207735.459279661,
+            "error": 712543.5981615612
+        },
+        "cpu_time": {
+            "mean": 2146591.974364406,
+            "error": 708480.4975662022
+        },
+        "bytes_per_second": {
+            "mean": 9073821024.198309,
+            "error": 2906804006.8810368
+        },
+        "manual_bandwidth": {
+            "mean": 107360186.24234459,
+            "error": 46037140.00056294
+        },
+        "manual_latency": {
+            "mean": 619456585.3566667,
+            "error": 220881879.76329616
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/4194304/10": {
+        "real_time": {
+            "mean": 2015943.2467647314,
+            "error": 747346.6322095296
+        },
+        "cpu_time": {
+            "mean": 1980392.9275694578,
+            "error": 778814.2102788374
+        },
+        "bytes_per_second": {
+            "mean": 10838747136.070347,
+            "error": 4325118788.647504
+        },
+        "manual_bandwidth": {
+            "mean": 112091357.4218053,
+            "error": 35035642.239725254
+        },
+        "manual_latency": {
+            "mean": 435758229.1333333,
+            "error": 162251575.73384032
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/4194304/100": {
+        "real_time": {
+            "mean": 1995241.8501838427,
+            "error": 529807.7871308494
+        },
+        "cpu_time": {
+            "mean": 1960510.2177928023,
+            "error": 534789.3815441749
+        },
+        "bytes_per_second": {
+            "mean": 9565382380.90919,
+            "error": 2609552153.2894616
+        },
+        "manual_bandwidth": {
+            "mean": 147367059.01183873,
+            "error": 58868137.64720743
+        },
+        "manual_latency": {
+            "mean": 443972059.35999995,
+            "error": 267470783.3162346
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/4194304/1000": {
+        "real_time": {
+            "mean": 1862110.5648453697,
+            "error": 782008.4045910864
+        },
+        "cpu_time": {
+            "mean": 1807315.7705451879,
+            "error": 795283.6692590922
+        },
+        "bytes_per_second": {
+            "mean": 11731203931.272608,
+            "error": 4027742340.8710446
+        },
+        "manual_bandwidth": {
+            "mean": 180829248.2683262,
+            "error": 67480674.63242607
+        },
+        "manual_latency": {
+            "mean": 365490733.16833335,
+            "error": 103159684.02553123
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/4194304/10000": {
+        "real_time": {
+            "mean": 1396115.5897024714,
+            "error": 246993.24173614135
+        },
+        "cpu_time": {
+            "mean": 1368306.8562658033,
+            "error": 229395.0300185924
+        },
+        "bytes_per_second": {
+            "mean": 12678530426.041998,
+            "error": 2245756364.4699993
+        },
+        "manual_bandwidth": {
+            "mean": 251041516.35877603,
+            "error": 44932746.47197919
+        },
+        "manual_latency": {
+            "mean": 269597561.4666667,
+            "error": 31270723.218450308
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/16777216/1": {
+        "real_time": {
+            "mean": 23292156.30967273,
+            "error": 221561.58970889493
+        },
+        "cpu_time": {
+            "mean": 21914477.358061578,
+            "error": 121454.02049406145
+        },
+        "bytes_per_second": {
+            "mean": 2881641092.722139,
+            "error": 27639910.082757823
+        },
+        "manual_bandwidth": {
+            "mean": 133697911.92292611,
+            "error": 3485184.7139132
+        },
+        "manual_latency": {
+            "mean": 1005167778.25,
+            "error": 27942522.24257635
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/16777216/10": {
+        "real_time": {
+            "mean": 23504962.296752755,
+            "error": 315009.7408357232
+        },
+        "cpu_time": {
+            "mean": 22159873.264530275,
+            "error": 96355.06654529495
+        },
+        "bytes_per_second": {
+            "mean": 2856000457.834505,
+            "error": 38479150.32659602
+        },
+        "manual_bandwidth": {
+            "mean": 133653012.92550774,
+            "error": 3395921.791414238
+        },
+        "manual_latency": {
+            "mean": 1005367566.55,
+            "error": 25567412.20909203
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/16777216/100": {
+        "real_time": {
+            "mean": 23068276.403340254,
+            "error": 218034.10129623275
+        },
+        "cpu_time": {
+            "mean": 21873380.620002083,
+            "error": 108142.04486355095
+        },
+        "bytes_per_second": {
+            "mean": 2909598738.8389,
+            "error": 27547368.549487088
+        },
+        "manual_bandwidth": {
+            "mean": 130036593.07107392,
+            "error": 2781529.6157058836
+        },
+        "manual_latency": {
+            "mean": 1032974701.15,
+            "error": 21834141.403913304
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/16777216/1000": {
+        "real_time": {
+            "mean": 23347286.599988975,
+            "error": 160992.0417707783
+        },
+        "cpu_time": {
+            "mean": 22050606.196670894,
+            "error": 126421.37370474405
+        },
+        "bytes_per_second": {
+            "mean": 2874616568.07146,
+            "error": 19892123.518976092
+        },
+        "manual_bandwidth": {
+            "mean": 124018878.37218018,
+            "error": 16075257.739810225
+        },
+        "manual_latency": {
+            "mean": 1032704555.4,
+            "error": 48819015.878354125
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/16777216/10000": {
+        "real_time": {
+            "mean": 23305184.95172296,
+            "error": 315305.8515821069
+        },
+        "cpu_time": {
+            "mean": 21952144.58275696,
+            "error": 142534.7209791605
+        },
+        "bytes_per_second": {
+            "mean": 2880529515.95339,
+            "error": 40412795.975114614
+        },
+        "manual_bandwidth": {
+            "mean": 104369022.20619102,
+            "error": 23018445.701037094
+        },
+        "manual_latency": {
+            "mean": 1106952711.4,
+            "error": 76485324.10102603
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/67108864/1": {
+        "real_time": {
+            "mean": 93498160.96246286,
+            "error": 1552598.4305825706
+        },
+        "cpu_time": {
+            "mean": 88778417.11252189,
+            "error": 1384243.4150400013
+        },
+        "bytes_per_second": {
+            "mean": 2872424553.5251665,
+            "error": 47963725.25322103
+        },
+        "manual_bandwidth": {
+            "mean": 76775254.21171837,
+            "error": 21702903.52081189
+        },
+        "manual_latency": {
+            "mean": 3926255453.55,
+            "error": 167984040.8815253
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/67108864/10": {
+        "real_time": {
+            "mean": 91232388.98746423,
+            "error": 1816550.8129691447
+        },
+        "cpu_time": {
+            "mean": 87516438.4750036,
+            "error": 748193.7689901167
+        },
+        "bytes_per_second": {
+            "mean": 2944440941.3977957,
+            "error": 60391082.15730229
+        },
+        "manual_bandwidth": {
+            "mean": 67084073.830885425,
+            "error": 1080325.2197378934
+        },
+        "manual_latency": {
+            "mean": 4003217457.1,
+            "error": 61411368.976190075
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/67108864/100": {
+        "real_time": {
+            "mean": 92551044.3624944,
+            "error": 1689450.5245293959
+        },
+        "cpu_time": {
+            "mean": 88371835.92498264,
+            "error": 799799.2353644996
+        },
+        "bytes_per_second": {
+            "mean": 2902150669.535243,
+            "error": 54396228.74398363
+        },
+        "manual_bandwidth": {
+            "mean": 66992589.310907885,
+            "error": 1087286.3784080667
+        },
+        "manual_latency": {
+            "mean": 4008701339.4,
+            "error": 61610678.771953404
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/67108864/1000": {
+        "real_time": {
+            "mean": 92941189.26244438,
+            "error": 536547.4918340886
+        },
+        "cpu_time": {
+            "mean": 88493378.37500286,
+            "error": 587689.2579304647
+        },
+        "bytes_per_second": {
+            "mean": 2888397199.7083015,
+            "error": 16545689.599116556
+        },
+        "manual_bandwidth": {
+            "mean": 67168469.40286735,
+            "error": 1219328.1149585133
+        },
+        "manual_latency": {
+            "mean": 3998641182.8,
+            "error": 68620651.88787568
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/4/67108864/10000": {
+        "real_time": {
+            "mean": 93057628.11248997,
+            "error": 606657.5991939419
+        },
+        "cpu_time": {
+            "mean": 87969822.2874964,
+            "error": 482056.23638872564
+        },
+        "bytes_per_second": {
+            "mean": 2884831442.8780107,
+            "error": 18851505.613260176
+        },
+        "manual_bandwidth": {
+            "mean": 53351514.60043373,
+            "error": 8995203.658785228
+        },
+        "manual_latency": {
+            "mean": 3220132418.9,
+            "error": 542922667.4686563
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/1024/1": {
+        "real_time": {
+            "mean": 6249.40646490663,
+            "error": 597.780400508631
+        },
+        "cpu_time": {
+            "mean": 3039.782576182089,
+            "error": 44.42282462998906
+        },
+        "bytes_per_second": {
+            "mean": 1332488547.6901639,
+            "error": 129429876.22963612
+        },
+        "manual_bandwidth": {
+            "mean": 63697450779.432655,
+            "error": 8249378611.220729
+        },
+        "manual_latency": {
+            "mean": 2062459.5037345835,
+            "error": 216868.0903162976
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/1024/10": {
+        "real_time": {
+            "mean": 6107.915192913591,
+            "error": 500.228673865054
+        },
+        "cpu_time": {
+            "mean": 3005.5745473444526,
+            "error": 39.62772257376886
+        },
+        "bytes_per_second": {
+            "mean": 1356733573.9255395,
+            "error": 108564517.9423209
+        },
+        "manual_bandwidth": {
+            "mean": 54151966031.10595,
+            "error": 3863727099.2153788
+        },
+        "manual_latency": {
+            "mean": 2086203.3690450503,
+            "error": 172190.47019026533
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/1024/100": {
+        "real_time": {
+            "mean": 5992.174665681887,
+            "error": 367.6203585342774
+        },
+        "cpu_time": {
+            "mean": 3013.767389001032,
+            "error": 69.37281826312277
+        },
+        "bytes_per_second": {
+            "mean": 1376222131.676145,
+            "error": 84595760.83477166
+        },
+        "manual_bandwidth": {
+            "mean": 40397784930.94996,
+            "error": 4378269856.749285
+        },
+        "manual_latency": {
+            "mean": 2136194.208640861,
+            "error": 310051.3896797169
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/1024/1000": {
+        "real_time": {
+            "mean": 6057.0764683186035,
+            "error": 432.15499092614243
+        },
+        "cpu_time": {
+            "mean": 3008.9449492888198,
+            "error": 33.78622519230692
+        },
+        "bytes_per_second": {
+            "mean": 1364425590.406985,
+            "error": 95470440.79685919
+        },
+        "manual_bandwidth": {
+            "mean": 42677174734.15156,
+            "error": 5581460833.119976
+        },
+        "manual_latency": {
+            "mean": 1986702.089213444,
+            "error": 332136.1614091088
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/1024/10000": {
+        "real_time": {
+            "mean": 5982.318517967719,
+            "error": 510.3346548725542
+        },
+        "cpu_time": {
+            "mean": 3003.2941593931237,
+            "error": 27.256694804797778
+        },
+        "bytes_per_second": {
+            "mean": 1387171478.396817,
+            "error": 119753343.40549731
+        },
+        "manual_bandwidth": {
+            "mean": 43473444560.08747,
+            "error": 6859330827.371836
+        },
+        "manual_latency": {
+            "mean": 2202890.4056161502,
+            "error": 371728.14262598316
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/4096/1": {
+        "real_time": {
+            "mean": 5298.868434206353,
+            "error": 400.4170460876008
+        },
+        "cpu_time": {
+            "mean": 3282.7024012936004,
+            "error": 127.78783815429162
+        },
+        "bytes_per_second": {
+            "mean": 6248669858.39148,
+            "error": 488709035.7609993
+        },
+        "manual_bandwidth": {
+            "mean": 29743578193.40341,
+            "error": 11093263753.431332
+        },
+        "manual_latency": {
+            "mean": 7468308.709027636,
+            "error": 3011804.6907032174
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/4096/10": {
+        "real_time": {
+            "mean": 5084.288325373656,
+            "error": 423.0242769156611
+        },
+        "cpu_time": {
+            "mean": 3203.3299574278667,
+            "error": 132.90526857066794
+        },
+        "bytes_per_second": {
+            "mean": 6520187621.122169,
+            "error": 518893651.1975815
+        },
+        "manual_bandwidth": {
+            "mean": 35891918134.00308,
+            "error": 15384156699.15309
+        },
+        "manual_latency": {
+            "mean": 6915341.520207157,
+            "error": 3839272.96625497
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/4096/100": {
+        "real_time": {
+            "mean": 5359.818269381755,
+            "error": 615.3024515345447
+        },
+        "cpu_time": {
+            "mean": 3295.026563652607,
+            "error": 185.27107850825197
+        },
+        "bytes_per_second": {
+            "mean": 6252563254.584262,
+            "error": 694805393.7581117
+        },
+        "manual_bandwidth": {
+            "mean": 22344468241.77512,
+            "error": 8194502422.149935
+        },
+        "manual_latency": {
+            "mean": 10212650.896962786,
+            "error": 3437126.5777400364
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/4096/1000": {
+        "real_time": {
+            "mean": 5419.77171932831,
+            "error": 496.7186256699
+        },
+        "cpu_time": {
+            "mean": 3309.6955330579476,
+            "error": 152.57591597430542
+        },
+        "bytes_per_second": {
+            "mean": 6129241916.539861,
+            "error": 519922763.02781594
+        },
+        "manual_bandwidth": {
+            "mean": 26025516391.198513,
+            "error": 10994227440.107058
+        },
+        "manual_latency": {
+            "mean": 6906430.322168343,
+            "error": 2640441.3563681105
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/4096/10000": {
+        "real_time": {
+            "mean": 5512.324932717507,
+            "error": 382.302273771242
+        },
+        "cpu_time": {
+            "mean": 3321.7468407977713,
+            "error": 99.20235944469991
+        },
+        "bytes_per_second": {
+            "mean": 5992100707.579203,
+            "error": 391759372.6813793
+        },
+        "manual_bandwidth": {
+            "mean": 38469930877.55172,
+            "error": 8527500054.653898
+        },
+        "manual_latency": {
+            "mean": 6342390.803027696,
+            "error": 1802818.2430558866
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/16384/1": {
+        "real_time": {
+            "mean": 9692.959681376462,
+            "error": 444.1460479829687
+        },
+        "cpu_time": {
+            "mean": 8444.946042044916,
+            "error": 418.3196699259402
+        },
+        "bytes_per_second": {
+            "mean": 13571873267.218204,
+            "error": 615307537.8420945
+        },
+        "manual_bandwidth": {
+            "mean": 28856689590.871117,
+            "error": 6788207895.528248
+        },
+        "manual_latency": {
+            "mean": 4243554.973943848,
+            "error": 1307544.1614260196
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/16384/10": {
+        "real_time": {
+            "mean": 9742.235739851585,
+            "error": 633.0306273394856
+        },
+        "cpu_time": {
+            "mean": 8367.012479025318,
+            "error": 504.5390784187083
+        },
+        "bytes_per_second": {
+            "mean": 13546676451.435375,
+            "error": 813881233.6748645
+        },
+        "manual_bandwidth": {
+            "mean": 30231073262.137306,
+            "error": 9200371393.882631
+        },
+        "manual_latency": {
+            "mean": 5674405.101053295,
+            "error": 3547197.669026926
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/16384/100": {
+        "real_time": {
+            "mean": 9684.345799853301,
+            "error": 375.26312104428195
+        },
+        "cpu_time": {
+            "mean": 8462.439291709787,
+            "error": 358.4633875463459
+        },
+        "bytes_per_second": {
+            "mean": 13570170488.942522,
+            "error": 525172629.6371652
+        },
+        "manual_bandwidth": {
+            "mean": 37944143944.3015,
+            "error": 7920607833.64282
+        },
+        "manual_latency": {
+            "mean": 4025887.318404039,
+            "error": 718198.2224548012
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/16384/1000": {
+        "real_time": {
+            "mean": 9419.618730980223,
+            "error": 488.2297866631848
+        },
+        "cpu_time": {
+            "mean": 8141.305977483957,
+            "error": 488.3653843194807
+        },
+        "bytes_per_second": {
+            "mean": 13985284237.868042,
+            "error": 776731622.0367256
+        },
+        "manual_bandwidth": {
+            "mean": 28941633241.141136,
+            "error": 10559693120.58176
+        },
+        "manual_latency": {
+            "mean": 8342028.220107794,
+            "error": 7324742.423798123
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/16384/10000": {
+        "real_time": {
+            "mean": 9106.713305290123,
+            "error": 323.5233158063404
+        },
+        "cpu_time": {
+            "mean": 7877.725071927637,
+            "error": 333.2453341078838
+        },
+        "bytes_per_second": {
+            "mean": 14425173466.713476,
+            "error": 517569149.7135568
+        },
+        "manual_bandwidth": {
+            "mean": 34264764504.390495,
+            "error": 9810439550.304937
+        },
+        "manual_latency": {
+            "mean": 5255394.743360797,
+            "error": 1920266.0881156314
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/65536/1": {
+        "real_time": {
+            "mean": 26357.95210569732,
+            "error": 977.2162775514182
+        },
+        "cpu_time": {
+            "mean": 13736.928344962123,
+            "error": 1088.0238168026342
+        },
+        "bytes_per_second": {
+            "mean": 19933719040.95071,
+            "error": 653948547.4365511
+        },
+        "manual_bandwidth": {
+            "mean": 3177106811.4947248,
+            "error": 493536680.3971242
+        },
+        "manual_latency": {
+            "mean": 77158951.52757393,
+            "error": 5240327.727541316
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/65536/10": {
+        "real_time": {
+            "mean": 35193.897385136064,
+            "error": 4162.67945599546
+        },
+        "cpu_time": {
+            "mean": 25703.564367585266,
+            "error": 6231.825374868693
+        },
+        "bytes_per_second": {
+            "mean": 15318412942.194447,
+            "error": 2033994683.026347
+        },
+        "manual_bandwidth": {
+            "mean": 11175450356.203901,
+            "error": 7233071757.40699
+        },
+        "manual_latency": {
+            "mean": 53135941.73016544,
+            "error": 29591467.655306242
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/65536/100": {
+        "real_time": {
+            "mean": 32024.28410567216,
+            "error": 4776.165661325662
+        },
+        "cpu_time": {
+            "mean": 22425.825988437267,
+            "error": 7136.983065345472
+        },
+        "bytes_per_second": {
+            "mean": 17007940188.724356,
+            "error": 2438123715.017853
+        },
+        "manual_bandwidth": {
+            "mean": 6678025224.872855,
+            "error": 3416607024.9668283
+        },
+        "manual_latency": {
+            "mean": 63351209.15346719,
+            "error": 21610913.411055405
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/65536/1000": {
+        "real_time": {
+            "mean": 37114.691981497155,
+            "error": 1992.6094585859576
+        },
+        "cpu_time": {
+            "mean": 31354.976325669682,
+            "error": 1368.9643376274712
+        },
+        "bytes_per_second": {
+            "mean": 14200083765.948536,
+            "error": 785916462.8938756
+        },
+        "manual_bandwidth": {
+            "mean": 12147668777.79102,
+            "error": 4134017550.8240476
+        },
+        "manual_latency": {
+            "mean": 24121523.844174843,
+            "error": 9924475.232040655
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/65536/10000": {
+        "real_time": {
+            "mean": 26744.575728683914,
+            "error": 1310.4981415284503
+        },
+        "cpu_time": {
+            "mean": 13767.792037115656,
+            "error": 901.332768821245
+        },
+        "bytes_per_second": {
+            "mean": 19674436567.124065,
+            "error": 822794832.3617641
+        },
+        "manual_bandwidth": {
+            "mean": 2955778345.460847,
+            "error": 637625635.2442074
+        },
+        "manual_latency": {
+            "mean": 82449028.50482565,
+            "error": 8786431.313403228
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/262144/1": {
+        "real_time": {
+            "mean": 109822.98327717185,
+            "error": 42275.16694174772
+        },
+        "cpu_time": {
+            "mean": 68027.28275471374,
+            "error": 20570.26968907611
+        },
+        "bytes_per_second": {
+            "mean": 23491295832.524227,
+            "error": 7009290365.2479
+        },
+        "manual_bandwidth": {
+            "mean": 3779829285.59348,
+            "error": 1777443801.346767
+        },
+        "manual_latency": {
+            "mean": 118490523.2363313,
+            "error": 11716793.698261892
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/262144/10": {
+        "real_time": {
+            "mean": 110800.22258164443,
+            "error": 49156.14332385876
+        },
+        "cpu_time": {
+            "mean": 68091.55215840395,
+            "error": 23964.678495004642
+        },
+        "bytes_per_second": {
+            "mean": 24476482502.333714,
+            "error": 7421989707.09485
+        },
+        "manual_bandwidth": {
+            "mean": 2794785200.495612,
+            "error": 1642849653.1916802
+        },
+        "manual_latency": {
+            "mean": 119467162.81183815,
+            "error": 27803671.52531792
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/262144/100": {
+        "real_time": {
+            "mean": 260218.0751775884,
+            "error": 12590.825802115525
+        },
+        "cpu_time": {
+            "mean": 125199.27996564968,
+            "error": 5864.887863177235
+        },
+        "bytes_per_second": {
+            "mean": 8093676400.117966,
+            "error": 406018136.5639087
+        },
+        "manual_bandwidth": {
+            "mean": 1879229365.4653416,
+            "error": 798429410.3012396
+        },
+        "manual_latency": {
+            "mean": 122014240.95323467,
+            "error": 21275483.63222599
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/262144/1000": {
+        "real_time": {
+            "mean": 243600.95310142808,
+            "error": 26442.975307986228
+        },
+        "cpu_time": {
+            "mean": 139800.24062381597,
+            "error": 9432.196902363472
+        },
+        "bytes_per_second": {
+            "mean": 8800792829.299368,
+            "error": 1017052569.0441203
+        },
+        "manual_bandwidth": {
+            "mean": 3328394580.4994574,
+            "error": 871447053.9907465
+        },
+        "manual_latency": {
+            "mean": 98086085.8001049,
+            "error": 17062740.587857027
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/262144/10000": {
+        "real_time": {
+            "mean": 76824.64563602976,
+            "error": 24344.238370691462
+        },
+        "cpu_time": {
+            "mean": 51768.185009942725,
+            "error": 15538.042639617028
+        },
+        "bytes_per_second": {
+            "mean": 29977588014.06074,
+            "error": 4910717763.910624
+        },
+        "manual_bandwidth": {
+            "mean": 1411382350.8212028,
+            "error": 495886121.5111264
+        },
+        "manual_latency": {
+            "mean": 113611207.19254439,
+            "error": 12769717.519096198
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/1048576/1": {
+        "real_time": {
+            "mean": 510811.6901620716,
+            "error": 203424.96865798684
+        },
+        "cpu_time": {
+            "mean": 348529.2104119652,
+            "error": 114467.69508044314
+        },
+        "bytes_per_second": {
+            "mean": 21468127100.79583,
+            "error": 7349066180.363326
+        },
+        "manual_bandwidth": {
+            "mean": 2698813036.744806,
+            "error": 1493124964.3677773
+        },
+        "manual_latency": {
+            "mean": 175578147.78588906,
+            "error": 28686658.147849564
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/1048576/10": {
+        "real_time": {
+            "mean": 762440.1167911757,
+            "error": 157560.2558234047
+        },
+        "cpu_time": {
+            "mean": 510935.05517043284,
+            "error": 17740.63856718847
+        },
+        "bytes_per_second": {
+            "mean": 11853508247.476137,
+            "error": 2418942137.388558
+        },
+        "manual_bandwidth": {
+            "mean": 1940537714.0710998,
+            "error": 597466372.6975052
+        },
+        "manual_latency": {
+            "mean": 135640486.32835308,
+            "error": 18305591.799866226
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/1048576/100": {
+        "real_time": {
+            "mean": 911047.9387184575,
+            "error": 187063.11743117555
+        },
+        "cpu_time": {
+            "mean": 528270.1555309125,
+            "error": 13041.982310874462
+        },
+        "bytes_per_second": {
+            "mean": 10127067200.823347,
+            "error": 2587792628.192919
+        },
+        "manual_bandwidth": {
+            "mean": 994764779.880153,
+            "error": 288313371.03442746
+        },
+        "manual_latency": {
+            "mean": 153970209.6454524,
+            "error": 17827681.7045867
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/1048576/1000": {
+        "real_time": {
+            "mean": 601452.4260553325,
+            "error": 249081.55362031164
+        },
+        "cpu_time": {
+            "mean": 403381.4325192258,
+            "error": 120093.06058011994
+        },
+        "bytes_per_second": {
+            "mean": 19398732091.098022,
+            "error": 7895001568.74893
+        },
+        "manual_bandwidth": {
+            "mean": 1060638106.6713841,
+            "error": 423438369.71049774
+        },
+        "manual_latency": {
+            "mean": 134003672.71977839,
+            "error": 4623009.824529463
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/1048576/10000": {
+        "real_time": {
+            "mean": 813896.3905363408,
+            "error": 160919.1353346139
+        },
+        "cpu_time": {
+            "mean": 496177.1286857225,
+            "error": 65962.20564140042
+        },
+        "bytes_per_second": {
+            "mean": 11799426264.071325,
+            "error": 4605639418.892138
+        },
+        "manual_bandwidth": {
+            "mean": 5200331369.972635,
+            "error": 1260534316.1358786
+        },
+        "manual_latency": {
+            "mean": 147217498.16139644,
+            "error": 10761398.029331991
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/4194304/1": {
+        "real_time": {
+            "mean": 1554646.5007241913,
+            "error": 287044.1502565952
+        },
+        "cpu_time": {
+            "mean": 1124270.9667290214,
+            "error": 89200.34516195515
+        },
+        "bytes_per_second": {
+            "mean": 22719089450.150375,
+            "error": 3677782947.2583647
+        },
+        "manual_bandwidth": {
+            "mean": 754037456.8582256,
+            "error": 150288282.3375997
+        },
+        "manual_latency": {
+            "mean": 346825505.2583333,
+            "error": 36482723.564213485
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/4194304/10": {
+        "real_time": {
+            "mean": 1321079.7203019361,
+            "error": 241505.33936167005
+        },
+        "cpu_time": {
+            "mean": 1049516.1158216244,
+            "error": 128200.22701322316
+        },
+        "bytes_per_second": {
+            "mean": 26569579728.799263,
+            "error": 3703943112.6842833
+        },
+        "manual_bandwidth": {
+            "mean": 472345704.5246213,
+            "error": 80568931.99678168
+        },
+        "manual_latency": {
+            "mean": 339775773.6261905,
+            "error": 8210332.4461387135
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/4194304/100": {
+        "real_time": {
+            "mean": 1115102.688853146,
+            "error": 30837.74159805516
+        },
+        "cpu_time": {
+            "mean": 952194.2029372273,
+            "error": 24844.59382636066
+        },
+        "bytes_per_second": {
+            "mean": 30131409511.12666,
+            "error": 833600080.8916495
+        },
+        "manual_bandwidth": {
+            "mean": 380410481.8633764,
+            "error": 125192809.56442629
+        },
+        "manual_latency": {
+            "mean": 456539274.82666665,
+            "error": 93863485.76241367
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/4194304/1000": {
+        "real_time": {
+            "mean": 1596832.6717077282,
+            "error": 219436.33363145025
+        },
+        "cpu_time": {
+            "mean": 1182508.6655702316,
+            "error": 106894.51303111068
+        },
+        "bytes_per_second": {
+            "mean": 21702803410.23856,
+            "error": 2867840375.8724337
+        },
+        "manual_bandwidth": {
+            "mean": 512917373.6292697,
+            "error": 124566711.79175131
+        },
+        "manual_latency": {
+            "mean": 340102879.95178574,
+            "error": 59753600.84327393
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/4194304/10000": {
+        "real_time": {
+            "mean": 1350034.4842400574,
+            "error": 143845.67647614595
+        },
+        "cpu_time": {
+            "mean": 1125260.5958965074,
+            "error": 132476.83500358622
+        },
+        "bytes_per_second": {
+            "mean": 25328765815.109386,
+            "error": 2538018850.915519
+        },
+        "manual_bandwidth": {
+            "mean": 609886016.6254795,
+            "error": 125249120.90761316
+        },
+        "manual_latency": {
+            "mean": 332545706.88531744,
+            "error": 32158637.801566906
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/16777216/1": {
+        "real_time": {
+            "mean": 26143153.374057334,
+            "error": 1954742.1149296358
+        },
+        "cpu_time": {
+            "mean": 22511168.3370364,
+            "error": 348356.5643824377
+        },
+        "bytes_per_second": {
+            "mean": 5182736990.753264,
+            "error": 372041177.6764079
+        },
+        "manual_bandwidth": {
+            "mean": 170878241.28796715,
+            "error": 39186154.90402873
+        },
+        "manual_latency": {
+            "mean": 1256933917.45,
+            "error": 54598039.56972751
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/16777216/10": {
+        "real_time": {
+            "mean": 26556223.67240634,
+            "error": 1877263.4512420236
+        },
+        "cpu_time": {
+            "mean": 22748359.231025398,
+            "error": 180510.44380819716
+        },
+        "bytes_per_second": {
+            "mean": 5096349623.214842,
+            "error": 340632221.3689809
+        },
+        "manual_bandwidth": {
+            "mean": 197037880.00146163,
+            "error": 48538996.56949784
+        },
+        "manual_latency": {
+            "mean": 1190112701.95,
+            "error": 96565580.83315068
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/16777216/100": {
+        "real_time": {
+            "mean": 25119723.291980334,
+            "error": 1135075.276467011
+        },
+        "cpu_time": {
+            "mean": 22583206.471997075,
+            "error": 181202.18052559294
+        },
+        "bytes_per_second": {
+            "mean": 5360592562.3836975,
+            "error": 220188224.9075294
+        },
+        "manual_bandwidth": {
+            "mean": 156218973.88218027,
+            "error": 48270672.15785009
+        },
+        "manual_latency": {
+            "mean": 1341391983.25,
+            "error": 127780889.50085628
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/16777216/1000": {
+        "real_time": {
+            "mean": 25506102.50713297,
+            "error": 2170659.106812352
+        },
+        "cpu_time": {
+            "mean": 22445104.485725712,
+            "error": 293557.7266487217
+        },
+        "bytes_per_second": {
+            "mean": 5320514158.94353,
+            "error": 393491020.92733747
+        },
+        "manual_bandwidth": {
+            "mean": 147643137.72752073,
+            "error": 38444859.538808495
+        },
+        "manual_latency": {
+            "mean": 1297891271.6,
+            "error": 170248690.29520205
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/16777216/10000": {
+        "real_time": {
+            "mean": 25385952.37243373,
+            "error": 1229907.5680288137
+        },
+        "cpu_time": {
+            "mean": 22495410.279310785,
+            "error": 193096.81285474557
+        },
+        "bytes_per_second": {
+            "mean": 5306957246.9734745,
+            "error": 233673933.74093315
+        },
+        "manual_bandwidth": {
+            "mean": 152538314.27993858,
+            "error": 46210028.049157105
+        },
+        "manual_latency": {
+            "mean": 1372224844.9,
+            "error": 138570278.48989418
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/67108864/1": {
+        "real_time": {
+            "mean": 120207000.35001254,
+            "error": 9845179.48946547
+        },
+        "cpu_time": {
+            "mean": 94906323.32498308,
+            "error": 2334678.1011406155
+        },
+        "bytes_per_second": {
+            "mean": 4522665854.849938,
+            "error": 394642656.2424072
+        },
+        "manual_bandwidth": {
+            "mean": 129915114.14094861,
+            "error": 35446934.14523491
+        },
+        "manual_latency": {
+            "mean": 4631043895.9,
+            "error": 215618631.24722803
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/67108864/10": {
+        "real_time": {
+            "mean": 135832183.7201038,
+            "error": 15477962.275800621
+        },
+        "cpu_time": {
+            "mean": 96267461.45996548,
+            "error": 1851195.0697821812
+        },
+        "bytes_per_second": {
+            "mean": 4054744034.389286,
+            "error": 515969653.2441008
+        },
+        "manual_bandwidth": {
+            "mean": 110213680.28714296,
+            "error": 2588182.1385391187
+        },
+        "manual_latency": {
+            "mean": 4875863732.6,
+            "error": 113383238.31897308
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/67108864/100": {
+        "real_time": {
+            "mean": 122985828.25716428,
+            "error": 11557077.089447528
+        },
+        "cpu_time": {
+            "mean": 94697308.01428925,
+            "error": 1635568.8605229435
+        },
+        "bytes_per_second": {
+            "mean": 4432288992.212332,
+            "error": 409972406.0742938
+        },
+        "manual_bandwidth": {
+            "mean": 114933284.83632219,
+            "error": 6709513.088424721
+        },
+        "manual_latency": {
+            "mean": 4698611895.5,
+            "error": 269085629.000947
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/67108864/1000": {
+        "real_time": {
+            "mean": 128046437.21431474,
+            "error": 9772637.089846073
+        },
+        "cpu_time": {
+            "mean": 94568736.32858397,
+            "error": 1061352.6898872827
+        },
+        "bytes_per_second": {
+            "mean": 4238887680.302912,
+            "error": 345649460.59181905
+        },
+        "manual_bandwidth": {
+            "mean": 114433365.43745105,
+            "error": 3373249.8876611553
+        },
+        "manual_latency": {
+            "mean": 4699079887.8,
+            "error": 145159940.02343446
+        }
+    },
+    "PublisherFixture/ROS_BM_Publish_method/8/67108864/10000": {
+        "real_time": {
+            "mean": 136672580.1200664,
+            "error": 12402532.044883858
+        },
+        "cpu_time": {
+            "mean": 95237181.67998594,
+            "error": 1311365.299832492
+        },
+        "bytes_per_second": {
+            "mean": 3988117682.2469215,
+            "error": 379202708.7291006
+        },
+        "manual_bandwidth": {
+            "mean": 93005388.66803208,
+            "error": 8534409.558709959
+        },
+        "manual_latency": {
+            "mean": 4690898936.3,
+            "error": 427702237.57030493
+        }
+    },
+    "ClientFixture/ROS_BM_Service/1024": {
+        "real_time": {
+            "mean": 953685.2691267472,
+            "error": 25756.96367736775
+        },
+        "cpu_time": {
+            "mean": 322553.1072570725,
+            "error": 6653.028645040759
+        },
+        "bytes_per_second": {
+            "mean": 2150095.0702272914,
+            "error": 55526.386744515374
+        },
+        "req_t": {
+            "mean": 4133046.6,
+            "error": 1224989.5527337657
+        },
+        "resp_t": {
+            "mean": 62681.1,
+            "error": 15679.677443660861
+        }
+    },
+    "ClientFixture/ROS_BM_Service/4096": {
+        "real_time": {
+            "mean": 979528.1199712123,
+            "error": 48459.104750262566
+        },
+        "cpu_time": {
+            "mean": 322758.7631504921,
+            "error": 7974.586410055719
+        },
+        "bytes_per_second": {
+            "mean": 8398018.33243535,
+            "error": 400908.03345480235
+        },
+        "req_t": {
+            "mean": 4149062.7,
+            "error": 1611555.048313513
+        },
+        "resp_t": {
+            "mean": 74235.6,
+            "error": 9135.395819874333
+        }
+    },
+    "ClientFixture/ROS_BM_Service/16384": {
+        "real_time": {
+            "mean": 1057962.4634684217,
+            "error": 41790.16873423553
+        },
+        "cpu_time": {
+            "mean": 326605.58646986476,
+            "error": 11399.082092530269
+        },
+        "bytes_per_second": {
+            "mean": 31059254.2002196,
+            "error": 1247440.0080304886
+        },
+        "req_t": {
+            "mean": 4217649.9,
+            "error": 1225110.896484179
+        },
+        "resp_t": {
+            "mean": 82369.6,
+            "error": 6414.079008983397
+        }
+    },
+    "ClientFixture/ROS_BM_Service/65536": {
+        "real_time": {
+            "mean": 1101019.5262034556,
+            "error": 42867.16655059591
+        },
+        "cpu_time": {
+            "mean": 345976.2866855526,
+            "error": 5843.301245175347
+        },
+        "bytes_per_second": {
+            "mean": 119372696.41049369,
+            "error": 4775306.752372491
+        },
+        "req_t": {
+            "mean": 4202854.5,
+            "error": 1631984.9425741108
+        },
+        "resp_t": {
+            "mean": 631606.4,
+            "error": 1053531.134214932
+        }
+    },
+    "ClientFixture/ROS_BM_Service/262144": {
+        "real_time": {
+            "mean": 16208963.116655976,
+            "error": 11414280.683181344
+        },
+        "cpu_time": {
+            "mean": 446579.5666666593,
+            "error": 63718.25070298241
+        },
+        "bytes_per_second": {
+            "mean": 153667719.02438125,
+            "error": 102871013.70485562
+        },
+        "req_t": {
+            "mean": 70529160.0,
+            "error": 67031223.44565864
+        },
+        "resp_t": {
+            "mean": 595521.6,
+            "error": 69280.49510227429
+        }
+    },
+    "ClientFixture/ROS_BM_Service/1048576": {
+        "real_time": {
+            "mean": 6030580.885001199,
+            "error": 1556895.6770838283
+        },
+        "cpu_time": {
+            "mean": 635461.9456249997,
+            "error": 31265.043092223656
+        },
+        "bytes_per_second": {
+            "mean": 379524282.90441144,
+            "error": 71584736.20178431
+        },
+        "req_t": {
+            "mean": 16443369.8,
+            "error": 10876153.903835965
+        },
+        "resp_t": {
+            "mean": 10180450.4,
+            "error": 7601664.067477269
+        }
+    },
+    "ClientFixture/ROS_BM_Service/4194304": {
+        "real_time": {
+            "mean": 14460727.4104222,
+            "error": 450012.50189440825
+        },
+        "cpu_time": {
+            "mean": 2243157.250000002,
+            "error": 59450.60127751428
+        },
+        "bytes_per_second": {
+            "mean": 581071394.0045922,
+            "error": 17827530.035576355
+        },
+        "req_t": {
+            "mean": 27409928.5,
+            "error": 23665802.789765567
+        },
+        "resp_t": {
+            "mean": 35101911.7,
+            "error": 25359238.392320134
+        }
+    },
+    "ClientFixture/ROS_BM_Service/16777216": {
+        "real_time": {
+            "mean": 50117277.2285567,
+            "error": 582715.3464151821
+        },
+        "cpu_time": {
+            "mean": 4666441.657142859,
+            "error": 190237.35492936085
+        },
+        "bytes_per_second": {
+            "mean": 669678524.6846191,
+            "error": 7837435.973490711
+        },
+        "req_t": {
+            "mean": 43983998.4,
+            "error": 53125634.27981844
+        },
+        "resp_t": {
+            "mean": 170881060.4,
+            "error": 86843461.52901293
+        }
+    },
+    "ClientFixture/ROS_BM_Service/67108864": {
+        "real_time": {
+            "mean": 276020631.85022414,
+            "error": 5907564.799315922
+        },
+        "cpu_time": {
+            "mean": 57243083.19999993,
+            "error": 299010.1000929494
+        },
+        "bytes_per_second": {
+            "mean": 486639880.40417826,
+            "error": 10101558.461140765
+        },
+        "req_t": {
+            "mean": 293352139.7,
+            "error": 373492906.92098725
+        },
+        "resp_t": {
+            "mean": 806409003.2,
+            "error": 608712772.0378512
+        }
+    }
+}

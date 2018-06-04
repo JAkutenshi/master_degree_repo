@@ -1,0 +1,17 @@
+{
+    "MIRA_PUB_SUB_INNER_BM_64": [
+        "size"
+    ],
+    "MIRA_PUB_SUB_OUTER_BM_64": [
+        "size"
+    ],
+    "MIRA_PUB_SUB_OUTER_BM_256": [
+        "size"
+    ],
+    "MIRA_PUB_SUB_INNER_BM_256": [
+        "size"
+    ],
+    "MIRA_RPC_BM_64": [
+        "size"
+    ]
+}

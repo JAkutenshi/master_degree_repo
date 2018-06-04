@@ -1,0 +1,66 @@
+subs_count <- c("1", "2", "4", "8")
+
+s_1k_real_time <- c(4682.1144877890165, 4786.512908634228, 4605.697632950371, 6107.915192913591)
+s_1k_cpu_time <- c(4022.6201363443483, 3977.817551199181, 3347.2170040059764, 3005.5745473444526)
+s_1k_bytes_per_second <- c(218715403.4698433, 427877594.2851998, 889338766.6675043, 1356733573.9255395)
+s_1k_manual_bandwidth <- c(266508563.34648475, 13510473485.041466, 38957175762.18716, 54151966031.10595)
+s_1k_manual_latency <- c(89514370.37282008, 3681929.9947898104, 2653355.2797045363, 2086203.3690450503)
+
+s_4k_real_time <- c(5086.4825499693825, 5010.18803186704, 5367.284222920496, 5084.288325373656)
+s_4k_cpu_time <- c(4520.956539210994, 4358.697393979326, 4326.7471633898185, 3203.3299574278667)
+s_4k_bytes_per_second <- c(805315086.1682184, 1635137728.5418162, 3053003432.596627, 6520187621.122169)
+s_4k_manual_bandwidth <- c(541051935.4185402, 1189163222.6229599, 2381763236.2732363, 35891918134.00308)
+s_4k_manual_latency <- c(77874221.18243358, 69397024.38562232, 71100658.07463613, 6915341.520207157)
+
+s_16k_real_time <- c(10797.271739557818, 9648.827123774035, 8369.486783418668, 9742.235739851585)
+s_16k_cpu_time <- c(10110.794076117785, 8940.691778472941, 7545.14963636342, 8367.012479025318)
+s_16k_bytes_per_second <- c(1522427786.9583912, 3426325958.521861, 7923108962.661034, 13546676451.435375)
+s_16k_manual_bandwidth <- c(4244976091.8839583, 8547580529.917875, 11314477975.625984, 30231073262.137306)
+s_16k_manual_latency <- c(10023994.052193463, 6082395.292379005, 20053693.589383326, 5674405.101053295)
+
+s_64k_real_time <- c(32294.890055415395, 17500.153627816115, 27571.602306367615, 35193.897385136064)
+s_64k_cpu_time <- c(30496.115490451182, 16762.5256312205, 25937.902090064883, 25703.564367585266)
+s_64k_bytes_per_second <- c(2159542493.6796823, 7706105140.572764, 10078705939.816374, 15318412942.194447)
+s_64k_manual_bandwidth <- c(809782798.6633061, 1003249693.6337998, 5530105923.034509, 11175450356.203901)
+s_64k_manual_latency <- c(51469032.88383031, 64216843.20106669, 42154147.876311064, 53135941.73016544)
+
+s_256k_real_time <- c(93697.43355981298, 156678.52654583377, 210490.30252709132, 110800.22258164443)
+s_256k_cpu_time <- c(89347.84447660146, 146432.22351725868, 193232.61614858796, 68091.55215840395)
+s_256k_bytes_per_second <- c(2926476322.412967, 3377772643.1434693, 5124425685.3186455, 24476482502.333714)
+s_256k_manual_bandwidth <- c(489084389.21603614, 3473434842.778556, 3275857905.639853, 2794785200.495612)
+s_256k_manual_latency <- c(77811452.96430251, 73459386.45098288, 41921718.62008665, 119467162.81183815)
+
+plot(factor(subs_count, levels=subs_count), s_1k_manual_latency / 1000000, type="o", col="black", lty=0, ylim=c(-100, 120), xlab="", ylab="")
+points(factor(subs_count, levels=subs_count), s_1k_manual_latency / 1000000, col="black", pch="o")
+lines(factor(subs_count, levels=subs_count), s_1k_manual_latency / 1000000, col="black", lty=1, lwd=2)
+points(factor(subs_count, levels=subs_count), s_4k_manual_latency / 1000000, col="red", pch="X")
+lines(factor(subs_count, levels=subs_count), s_4k_manual_latency / 1000000, col="red", lty=2, lwd=2)
+points(factor(subs_count, levels=subs_count), s_16k_manual_latency / 1000000, col="blue", pch="V")
+lines(factor(subs_count, levels=subs_count), s_16k_manual_latency / 1000000, col="blue", lty=3, lwd=2)
+points(factor(subs_count, levels=subs_count), s_64k_manual_latency / 1000000, col="blue", pch="A")
+lines(factor(subs_count, levels=subs_count), s_64k_manual_latency / 1000000, col="blue", lty=4, lwd=2)
+points(factor(subs_count, levels=subs_count), s_256k_manual_latency / 1000000, col="black", pch="o")
+lines(factor(subs_count, levels=subs_count), s_256k_manual_latency / 1000000, col="black", lty=5, lwd=2)
+title(xlab="Размер буфера", ylab="Задержка (мс)")
+legend("bottomright", legend=c("1 Кб", "4 Кб", "16 Кб", "64 Кб", "256 Кб"), col=c("black", "red", "blue", "blue", "black"), lty=c(1, 2, 3, 4, 5), pch=c("o", "X", "V", "A", "o"), ncol=1)
+
+s_1m_manual_latency <- c(101784359.23296383, 82358254.74070504, 139895687.1297222, 134003672.71977839)
+s_4m_manual_latency <- c(376512161.325, 421625248.225, 365490733.16833335, 340102879.95178574)
+s_16m_manual_latency <- c(1282624062.85, 992827572.75, 1032704555.4, 1297891271.6)
+s_64m_manual_latency <- c(3802408177.5, 3880976503.3, 3998641182.8, 4699079887.8)
+
+plot(factor(subs_count, levels=subs_count), s_1m_manual_latency / 1000000000, type="o", col="black", lty=0, ylim=c(-5, 5), xlab="", ylab="")
+points(factor(subs_count, levels=subs_count), s_1m_manual_latency / 1000000000, col="black", pch="o")
+lines(factor(subs_count, levels=subs_count), s_1m_manual_latency / 1000000000, col="black", lty=1, lwd=2)
+points(factor(subs_count, levels=subs_count), s_4m_manual_latency / 1000000000, col="red", pch="X")
+lines(factor(subs_count, levels=subs_count), s_4m_manual_latency / 1000000000, col="red", lty=2, lwd=2)
+points(factor(subs_count, levels=subs_count), s_16m_manual_latency / 1000000000, col="blue", pch="V")
+lines(factor(subs_count, levels=subs_count), s_16m_manual_latency / 1000000000, col="blue", lty=3, lwd=2)
+points(factor(subs_count, levels=subs_count), s_64m_manual_latency / 1000000000, col="black", pch="A")
+lines(factor(subs_count, levels=subs_count), s_64m_manual_latency / 1000000000, col="black", lty=4, lwd=2)
+
+title(xlab="Размер буфера", ylab="Задержка (с)")
+legend("bottomright", legend=c("1 Мб", "4 Мб", "16 Мб", "64 Мб"), col=c("black", "red", "blue", "black"), lty=c(1, 2, 3, 4), pch=c("o", "X", "V", "A"), ncol=1)
+
+
+
