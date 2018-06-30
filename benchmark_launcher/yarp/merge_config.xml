@@ -1,0 +1,37 @@
+<merger>
+    <json url="yarp_results.json">
+        <benchmark name="YARP_Buffered_shmem">
+            <factor name="size"/>
+        </benchmark>
+        <benchmark name="YARP_Unbuffered_shmem">
+            <factor name="size"/>
+        </benchmark>
+        <benchmark name="YARP_RPC_shmem">
+            <factor name="size"/>
+        </benchmark>
+        <benchmark name="YARP_Buffered_tcp">
+            <factor name="size"/>
+        </benchmark>
+        <benchmark name="YARP_Unbuffered_tcp">
+            <factor name="size"/>
+        </benchmark>
+        <benchmark name="YARP_RPC_tcp">
+            <factor name="size"/>
+        </benchmark>
+        <benchmark name="YARP_Buffered_udp">
+            <factor name="size"/>
+        </benchmark>
+        <benchmark name="YARP_Unbuffered_udp">
+            <factor name="size"/>
+        </benchmark>
+        <benchmark name="YARP_Buffered_fast_tcp">
+            <factor name="size"/>
+        </benchmark>
+        <benchmark name="YARP_Unbuffered_fast_tcp">
+            <factor name="size"/>
+        </benchmark>
+        <benchmark name="YARP_RPC_fast_tcp">
+            <factor name="size"/>
+        </benchmark>
+    </json>
+</merger>

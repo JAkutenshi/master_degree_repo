@@ -14,6 +14,12 @@ m <- rbind((req_t  / (1000000))[5:10], (resp_t  / (1000000))[5:10])
 barplot(m, names.arg = factor(size[5:10], levels = size[5:10]), col = c("blue", "red"), xlab = "Размер сообщения", ylab = "Задержка передачи (мс)", ylim = c(0, 1500))
 legend("topright", c("Запрос", "Ответ"), fill = c("blue", "red"))
 
+# ros_rpc_l
+m <- rbind((req_t  / (1000000))[1:10], (resp_t  / (1000000))[1:10])
+barplot(m, names.arg = factor(size[1:10], levels = size[1:10]), col = c("blue", "red"), xlab = "Размер сообщения", ylab = "Задержка передачи (мс)", ylim = c(0, 1500))
+legend("topright", c("Запрос", "Ответ"), fill = c("blue", "red"))
+
+
 # ros_rpc_bps
 plot(factor(size, levels=size), bytes_per_second / (1024*1024), type="o", col="black", lty=0, ylim=c(-10, 700), xlab="", ylab="")
 points(factor(size, levels=size), bytes_per_second / (1024*1024), col="black", pch="o")

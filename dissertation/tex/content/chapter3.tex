@@ -1,20 +1,30 @@
-\chapter{\todo{Результаты тестирования}}
-\section{\todo{Характеристики тестируемого окружения}}
+\chapter{Результаты тестирования}
+\section{Характеристики тестируемого окружения}
 	Тесты проводились на следующей аппаратной конфигурации:
 	\begin{itemize}[noitemsep]
 		\item 8 процессоров Intel Xeon E5-2580 2.4 ГГц;
 		\item 64 Гб оперативной памяти.
 	\end{itemize}
-	Операционная система: Ubuntu 16.04. Для тестирования был установлен Docker версии \todo{версия}.
+	Операционная система: Ubuntu 16.04. Для тестирования был установлен Docker версии 18.04.0-ce.
 \section{ROS}
 \label{title:chapter3:ros}
 \input{tex/content/chapter3/ros.tex}
-\section{\todo{YARP}}
+\section{YARP}
 \label{title:chapter3:yarp}
 \input{tex/content/chapter3/yarp.tex}
 \section{MIRA}
 \label{title:chapter3:mira}
 \input{tex/content/chapter3/mira.tex}
 %\section{\todo{OROCOS}}
-\section{\todo{Сравнение результатов}}
-\section{\todo{Выводы}}
+\section{Сравнение производительности фреймворков}
+\label{title:chapter3:compharison}
+\input{tex/content/chapter3/compharison.tex}
+\section{Выводы}
+Таким образом, результаты тестирования выявили следующие факты:
+\begin{itemize}
+	\item на производительность ROS не влияет ни количество подписчиков, ни размер буфера сообщений (но это сильно сказывается на объеме потребляемой оперативной памяти);
+	\item производительность ROS резко падает при передачи больших объемов данных;
+	\item YARP имеет наихудшие показатели производительности;
+	\item при разработке прикладного ПО для автономных роботов на платформе YARP рекомендуется использовать разделяемую память на основе фреймворка ACE;
+	\item MIRA имеет наилучшие показатели производительности при наименьшем потреблении системных ресурсов.
+\end{itemize}

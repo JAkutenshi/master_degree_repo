@@ -1,0 +1,261 @@
+
+title: "Пример обработки данных"
+author: "Ефремов Михаил"
+output:
+    html_document:
+        toc: true
+        theme: united
+---
+## Benchmark name is "YARP_Buffered_shmem" by var=size where
+``` {r echo=TRUE}
+#png(filename="plot.png", width = 1600, height = 900)
+size <- c(1024, 4096, 16384, 65536, 262144)
+real_time <- c(1527.7222221, 653809.4, 2502803.7555556, 10047465.6111112, 40747806.3333333)
+cpu_time <- c(1524.9286302, 653878.2658801001, 2502934.0299469, 10047714.0075057, 40748515.817470506)
+bytes_per_second <- c(177720380.0356929, 626617.9191139999, 654581.3518759, 654382.0161473, 644251.8247281)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second)
+plot(factor(size, levels=size), real_time, type="o", col="black", lty=0, ylim=c(-22727758.222862747, 63477798.96896345), xlab="", ylab="")
+points(factor(size, levels=size), real_time, col="black", pch="o")
+lines(factor(size, levels=size), real_time, col="black", lty=1, lwd=2)
+title(main="Зависимость задержки от фактора", xlab="Объем данных", ylab="Задержка (нс)")
+points(factor(size, levels=size), cpu_time, col="red", pch="X")
+lines(factor(size, levels=size), cpu_time, col="red", lty=2, lwd=2)
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(factor(size, levels=size), bytes_per_second, type="o", col="black", lty=0, ylim=c(-173233617.8303862, 351580615.7851931), xlab="", ylab="")
+points(factor(size, levels=size), bytes_per_second, col="black", pch="o")
+lines(factor(size, levels=size), bytes_per_second, col="black", lty=1, lwd=2)
+title(main="Зависимость широты пропускания от фактора", xlab="Объем данных", ylab="Пропускная способность (байт/сек)")
+text( factor(size, levels=size), bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)"), col=c("black"), lty=c(1), pch=c("o"), ncol=1)
+```
+
+## Benchmark name is "YARP_Unbuffered_shmem" by var=size where
+``` {r echo=TRUE}
+#png(filename="plot.png", width = 1600, height = 900)
+size <- c(1024, 4096, 16384, 65536, 262144)
+real_time <- c(650003.3444445, 663375.8888887, 2509004.9111109003, 10002478.4444445, 38678222.188889)
+cpu_time <- c(650122.2160921, 663471.6785193, 2509142.3851984995, 10002763.4121163, 38679011.60776521)
+bytes_per_second <- c(79765835.546048, 619212.8526684998, 653435.5055491, 655959.2823209, 677769.4446031)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second)
+plot(factor(size, levels=size), real_time, type="o", col="black", lty=0, ylim=c(-19005648.404860146, 58334663.357069865), xlab="", ylab="")
+points(factor(size, levels=size), real_time, col="black", pch="o")
+lines(factor(size, levels=size), real_time, col="black", lty=1, lwd=2)
+title(main="Зависимость задержки от фактора", xlab="Объем данных", ylab="Задержка (нс)")
+points(factor(size, levels=size), cpu_time, col="red", pch="X")
+lines(factor(size, levels=size), cpu_time, col="red", lty=2, lwd=2)
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(factor(size, levels=size), bytes_per_second, type="o", col="black", lty=0, ylim=c(-257418950.37433594, 337803998.77305245), xlab="", ylab="")
+points(factor(size, levels=size), bytes_per_second, col="black", pch="o")
+lines(factor(size, levels=size), bytes_per_second, col="black", lty=1, lwd=2)
+title(main="Зависимость широты пропускания от фактора", xlab="Объем данных", ylab="Пропускная способность (байт/сек)")
+text( factor(size, levels=size), bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)"), col=c("black"), lty=c(1), pch=c("o"), ncol=1)
+```
+
+## Benchmark name is "YARP_RPC_shmem" by var=size where
+``` {r echo=TRUE}
+#png(filename="plot.png", width = 1600, height = 900)
+size <- c(1024, 4096, 16384, 65536, 262144)
+real_time <- c(307413.0555557, 1257944.8555556, 4677492.4222222, 18909507.533333402, 70715916.2444444)
+cpu_time <- c(307497.5186205, 1258084.0090971, 4677702.0380984, 18909991.681968898, 70717087.89435841)
+bytes_per_second <- c(665707.5846997, 654961.9056116, 705576.584699, 696994.7944158999, 741825.4378628001)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second)
+plot(factor(size, levels=size), real_time, type="o", col="black", lty=0, ylim=c(-37464232.20219221, 108488733.15210631), xlab="", ylab="")
+points(factor(size, levels=size), real_time, col="black", pch="o")
+lines(factor(size, levels=size), real_time, col="black", lty=1, lwd=2)
+title(main="Зависимость задержки от фактора", xlab="Объем данных", ylab="Задержка (нс)")
+points(factor(size, levels=size), cpu_time, col="red", pch="X")
+lines(factor(size, levels=size), cpu_time, col="red", lty=2, lwd=2)
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(factor(size, levels=size), bytes_per_second, type="o", col="black", lty=0, ylim=c(526215.5275747528, 870571.8158996473), xlab="", ylab="")
+points(factor(size, levels=size), bytes_per_second, col="black", pch="o")
+lines(factor(size, levels=size), bytes_per_second, col="black", lty=1, lwd=2)
+title(main="Зависимость широты пропускания от фактора", xlab="Объем данных", ylab="Пропускная способность (байт/сек)")
+text( factor(size, levels=size), bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)"), col=c("black"), lty=c(1), pch=c("o"), ncol=1)
+```
+
+## Benchmark name is "YARP_Buffered_tcp" by var=size where
+``` {r echo=TRUE}
+#png(filename="plot.png", width = 1600, height = 900)
+size <- c(1024, 4096, 16384, 65536, 262144)
+real_time <- c(388261.1666667, 3614916.4555555, 14756935.855555499, 56423353.6000001, 223554893.65555558)
+cpu_time <- c(388286.6521431, 3615074.4676122004, 14757246.390785798, 56424302.5304481, 223557990.88297257)
+bytes_per_second <- c(95119191.5822219, 113335.1274148, 111146.8408907, 116263.512847, 117270.67721759998)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second)
+plot(factor(size, levels=size), real_time, type="o", col="black", lty=0, ylim=c(-114266095.14158726, 338212347.19122654), xlab="", ylab="")
+points(factor(size, levels=size), real_time, col="black", pch="o")
+lines(factor(size, levels=size), real_time, col="black", lty=1, lwd=2)
+title(main="Зависимость задержки от фактора", xlab="Объем данных", ylab="Задержка (нс)")
+points(factor(size, levels=size), cpu_time, col="red", pch="X")
+lines(factor(size, levels=size), cpu_time, col="red", lty=2, lwd=2)
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(factor(size, levels=size), bytes_per_second, type="o", col="black", lty=0, ylim=c(-191482804.12476134, 286713142.5478739), xlab="", ylab="")
+points(factor(size, levels=size), bytes_per_second, col="black", pch="o")
+lines(factor(size, levels=size), bytes_per_second, col="black", lty=1, lwd=2)
+title(main="Зависимость широты пропускания от фактора", xlab="Объем данных", ylab="Пропускная способность (байт/сек)")
+text( factor(size, levels=size), bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)"), col=c("black"), lty=c(1), pch=c("o"), ncol=1)
+```
+
+## Benchmark name is "YARP_Unbuffered_tcp" by var=size where
+``` {r echo=TRUE}
+#png(filename="plot.png", width = 1600, height = 900)
+size <- c(1024, 4096, 16384, 65536, 262144)
+real_time <- c(926387.6666667002, 3451537.5555555, 13698597.166666502, 53578402.955555305, 217454923.5444445)
+cpu_time <- c(926553.8052682001, 3451733.0456756996, 13698986.186006999, 53579385.9666939, 217458061.58080214)
+bytes_per_second <- c(110359.78881249999, 118674.81034989997, 119625.07397950001, 122326.72314570002, 120557.75827539999)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second)
+plot(factor(size, levels=size), real_time, type="o", col="black", lty=0, ylim=c(-109907101.34438886, 328291550.5918577), xlab="", ylab="")
+points(factor(size, levels=size), real_time, col="black", pch="o")
+lines(factor(size, levels=size), real_time, col="black", lty=1, lwd=2)
+title(main="Зависимость задержки от фактора", xlab="Объем данных", ylab="Задержка (нс)")
+points(factor(size, levels=size), cpu_time, col="red", pch="X")
+lines(factor(size, levels=size), cpu_time, col="red", lty=2, lwd=2)
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(factor(size, levels=size), bytes_per_second, type="o", col="black", lty=0, ylim=c(101271.40833288798, 131415.103625312), xlab="", ylab="")
+points(factor(size, levels=size), bytes_per_second, col="black", pch="o")
+lines(factor(size, levels=size), bytes_per_second, col="black", lty=1, lwd=2)
+title(main="Зависимость широты пропускания от фактора", xlab="Объем данных", ylab="Пропускная способность (байт/сек)")
+text( factor(size, levels=size), bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)"), col=c("black"), lty=c(1), pch=c("o"), ncol=1)
+```
+
+## Benchmark name is "YARP_RPC_tcp" by var=size where
+``` {r echo=TRUE}
+#png(filename="plot.png", width = 1600, height = 900)
+size <- c(1024, 4096, 16384, 65536, 262144)
+real_time <- c(1828471.9000000998, 7097240.5222221, 27689148.2111112, 107163885.93333331, 428156444.76666677)
+cpu_time <- c(1828641.931876, 7097512.9366208, 27689783.083026398, 107165576.71541741, 428162296.57934296)
+bytes_per_second <- c(111978.50719270001, 115874.3708357, 118372.9751462, 122337.87951809999, 122457.3502836)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second)
+plot(factor(size, levels=size), real_time, type="o", col="black", lty=0, ylim=c(-215551324.83855382, 645542093.3178968), xlab="", ylab="")
+points(factor(size, levels=size), real_time, col="black", pch="o")
+lines(factor(size, levels=size), real_time, col="black", lty=1, lwd=2)
+title(main="Зависимость задержки от фактора", xlab="Объем данных", ylab="Задержка (нс)")
+points(factor(size, levels=size), cpu_time, col="red", pch="X")
+lines(factor(size, levels=size), cpu_time, col="red", lty=2, lwd=2)
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(factor(size, levels=size), bytes_per_second, type="o", col="black", lty=0, ylim=c(95914.53846825908, 138521.3190080409), xlab="", ylab="")
+points(factor(size, levels=size), bytes_per_second, col="black", pch="o")
+lines(factor(size, levels=size), bytes_per_second, col="black", lty=1, lwd=2)
+title(main="Зависимость широты пропускания от фактора", xlab="Объем данных", ylab="Пропускная способность (байт/сек)")
+text( factor(size, levels=size), bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)"), col=c("black"), lty=c(1), pch=c("o"), ncol=1)
+```
+
+## Benchmark name is "YARP_Buffered_udp" by var=size where
+``` {r echo=TRUE}
+#png(filename="plot.png", width = 1600, height = 900)
+size <- c(1024, 4096, 16384, 65536, 262144)
+real_time <- c(106391.1222222, 362753.3222222, 2656463.8333332003, 9561054.2555556, 38210113.0666666)
+cpu_time <- c(106349.69185589999, 362753.56649820006, 2656586.5098473006, 9561280.1358983, 38210747.8914222)
+bytes_per_second <- c(961756.6771365998, 1129047.0698289, 627703.6754908001, 685456.4443161999, 686087.4486158)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second)
+plot(factor(size, levels=size), real_time, type="o", col="black", lty=0, ylim=c(-19517510.080341678, 57834607.66361978), xlab="", ylab="")
+points(factor(size, levels=size), real_time, col="black", pch="o")
+lines(factor(size, levels=size), real_time, col="black", lty=1, lwd=2)
+title(main="Зависимость задержки от фактора", xlab="Объем данных", ylab="Задержка (нс)")
+points(factor(size, levels=size), cpu_time, col="red", pch="X")
+lines(factor(size, levels=size), cpu_time, col="red", lty=2, lwd=2)
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(factor(size, levels=size), bytes_per_second, type="o", col="black", lty=0, ylim=c(260398.49357111187, 1496352.2517485882), xlab="", ylab="")
+points(factor(size, levels=size), bytes_per_second, col="black", pch="o")
+lines(factor(size, levels=size), bytes_per_second, col="black", lty=1, lwd=2)
+title(main="Зависимость широты пропускания от фактора", xlab="Объем данных", ylab="Пропускная способность (байт/сек)")
+text( factor(size, levels=size), bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)"), col=c("black"), lty=c(1), pch=c("o"), ncol=1)
+```
+
+## Benchmark name is "YARP_Unbuffered_udp" by var=size where
+``` {r echo=TRUE}
+#png(filename="plot.png", width = 1600, height = 900)
+size <- c(1024, 4096, 16384, 65536, 262144)
+real_time <- c(91970.1666668, 348155.3, 2387882.0666667, 9434949.6333333, 38311662.7)
+cpu_time <- c(91995.44850560001, 348202.94481849996, 2387958.5807459, 9435138.1779448, 38312393.850757)
+bytes_per_second <- c(1112172.9342499997, 1176280.3654824, 686061.21537, 694593.6572302999, 684262.8179420999)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second)
+plot(factor(size, levels=size), real_time, type="o", col="black", lty=0, ylim=c(-19370814.97373729, 57775178.99116109), xlab="", ylab="")
+points(factor(size, levels=size), real_time, col="black", pch="o")
+lines(factor(size, levels=size), real_time, col="black", lty=1, lwd=2)
+title(main="Зависимость задержки от фактора", xlab="Объем данных", ylab="Задержка (нс)")
+points(factor(size, levels=size), cpu_time, col="red", pch="X")
+lines(factor(size, levels=size), cpu_time, col="red", lty=2, lwd=2)
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(factor(size, levels=size), bytes_per_second, type="o", col="black", lty=0, ylim=c(389594.6001147402, 1470948.5833097594), xlab="", ylab="")
+points(factor(size, levels=size), bytes_per_second, col="black", pch="o")
+lines(factor(size, levels=size), bytes_per_second, col="black", lty=1, lwd=2)
+title(main="Зависимость широты пропускания от фактора", xlab="Объем данных", ylab="Пропускная способность (байт/сек)")
+text( factor(size, levels=size), bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)"), col=c("black"), lty=c(1), pch=c("o"), ncol=1)
+```
+
+## Benchmark name is "YARP_Buffered_fast_tcp" by var=size where
+``` {r echo=TRUE}
+#png(filename="plot.png", width = 1600, height = 900)
+size <- c(1024, 4096, 16384, 65536, 262144)
+real_time <- c(78209.31111099999, 616205.0555556, 1285011.3666667999, 57846151.26666659, 194723287.5333335)
+cpu_time <- c(78223.3539134, 616219.2385505999, 1285123.3702784001, 57847024.3029032, 194725959.7546386)
+bytes_per_second <- c(85792399.8100927, 1066262.7259801999, 1288871.7005404998, 235658.0293454, 136195.3881975)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second)
+plot(factor(size, levels=size), real_time, type="o", col="black", lty=0, ylim=c(-127456683.00702633, 322260852.07277596), xlab="", ylab="")
+points(factor(size, levels=size), real_time, col="black", pch="o")
+lines(factor(size, levels=size), real_time, col="black", lty=1, lwd=2)
+title(main="Зависимость задержки от фактора", xlab="Объем данных", ylab="Задержка (нс)")
+points(factor(size, levels=size), cpu_time, col="red", pch="X")
+lines(factor(size, levels=size), cpu_time, col="red", lty=2, lwd=2)
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(factor(size, levels=size), bytes_per_second, type="o", col="black", lty=0, ylim=c(-148211823.2941407, 234140418.49243087), xlab="", ylab="")
+points(factor(size, levels=size), bytes_per_second, col="black", pch="o")
+lines(factor(size, levels=size), bytes_per_second, col="black", lty=1, lwd=2)
+title(main="Зависимость широты пропускания от фактора", xlab="Объем данных", ylab="Пропускная способность (байт/сек)")
+text( factor(size, levels=size), bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)"), col=c("black"), lty=c(1), pch=c("o"), ncol=1)
+```
+
+## Benchmark name is "YARP_Unbuffered_fast_tcp" by var=size where
+``` {r echo=TRUE}
+#png(filename="plot.png", width = 1600, height = 900)
+size <- c(1024, 4096, 16384, 65536, 262144)
+real_time <- c(293.88888890000004, 330618.37777789996, 1281880.6000001996, 56484345.7, 194510792.6111109)
+cpu_time <- c(291.8382809, 330659.7862949, 1281958.5527356002, 56485293.1477672, 194513597.25163853)
+bytes_per_second <- c(349935865.43717635, 1247339.3922555998, 1304878.6949409998, 238301.8253401, 135183.1201221)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second)
+plot(factor(size, levels=size), real_time, type="o", col="black", lty=0, ylim=c(-126841227.34783107, 321355116.43775046), xlab="", ylab="")
+points(factor(size, levels=size), real_time, col="black", pch="o")
+lines(factor(size, levels=size), real_time, col="black", lty=1, lwd=2)
+title(main="Зависимость задержки от фактора", xlab="Объем данных", ylab="Задержка (нс)")
+points(factor(size, levels=size), cpu_time, col="red", pch="X")
+lines(factor(size, levels=size), cpu_time, col="red", lty=2, lwd=2)
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(factor(size, levels=size), bytes_per_second, type="o", col="black", lty=0, ylim=c(-214392260.47969577, 564463309.0369942), xlab="", ylab="")
+points(factor(size, levels=size), bytes_per_second, col="black", pch="o")
+lines(factor(size, levels=size), bytes_per_second, col="black", lty=1, lwd=2)
+title(main="Зависимость широты пропускания от фактора", xlab="Объем данных", ylab="Пропускная способность (байт/сек)")
+text( factor(size, levels=size), bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)"), col=c("black"), lty=c(1), pch=c("o"), ncol=1)
+```
+
+## Benchmark name is "YARP_RPC_fast_tcp" by var=size where
+``` {r echo=TRUE}
+#png(filename="plot.png", width = 1600, height = 900)
+size <- c(1024, 4096, 16384, 65536, 262144)
+real_time <- c(320.6777779, 6887535.5777777005, 26486211.4222221, 106202812.8111111, 429062746.4)
+cpu_time <- c(328.18611940000005, 6887750.2832518015, 26486781.0355221, 106204458.851956, 429068567.9018694)
+bytes_per_second <- c(684617577.1309322, 119002.95178129998, 123715.5871954, 123425.6590782, 122210.8236037)
+df <- data.frame("factor"=size, "Время отправки (нс)"=real_time, "Время отправки CPU (нс)"=cpu_time, "Широта пропускания публикующего (б/с)"=bytes_per_second)
+plot(factor(size, levels=size), real_time, type="o", col="black", lty=0, ylim=c(-222252527.13198328, 651321415.7116306), xlab="", ylab="")
+points(factor(size, levels=size), real_time, col="black", pch="o")
+lines(factor(size, levels=size), real_time, col="black", lty=1, lwd=2)
+title(main="Зависимость задержки от фактора", xlab="Объем данных", ylab="Задержка (нс)")
+points(factor(size, levels=size), cpu_time, col="red", pch="X")
+lines(factor(size, levels=size), cpu_time, col="red", lty=2, lwd=2)
+legend("bottomright", legend=c("Время отправки (нс)", "Время отправки CPU (нс)"), col=c("black", "red"), lty=c(1, 2), pch=c("o", "X"), ncol=1)
+plot(factor(size, levels=size), bytes_per_second, type="o", col="black", lty=0, ylim=c(-533835264.6511958, 1218571844.7339094), xlab="", ylab="")
+points(factor(size, levels=size), bytes_per_second, col="black", pch="o")
+lines(factor(size, levels=size), bytes_per_second, col="black", lty=1, lwd=2)
+title(main="Зависимость широты пропускания от фактора", xlab="Объем данных", ylab="Пропускная способность (байт/сек)")
+text( factor(size, levels=size), bytes_per_second, labels=bytes_per_second, cex= 0.7, pos=3)
+legend("bottomright", legend=c("Широта пропускания публикующего (б/с)"), col=c("black"), lty=c(1), pch=c("o"), ncol=1)
+```
+

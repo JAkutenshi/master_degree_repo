@@ -1,0 +1,35 @@
+{
+    "YARP_Buffered_shmem": [
+        "size"
+    ],
+    "YARP_Unbuffered_shmem": [
+        "size"
+    ],
+    "YARP_RPC_shmem": [
+        "size"
+    ],
+    "YARP_Buffered_tcp": [
+        "size"
+    ],
+    "YARP_Unbuffered_tcp": [
+        "size"
+    ],
+    "YARP_RPC_tcp": [
+        "size"
+    ],
+    "YARP_Buffered_udp": [
+        "size"
+    ],
+    "YARP_Unbuffered_udp": [
+        "size"
+    ],
+    "YARP_Buffered_fast_tcp": [
+        "size"
+    ],
+    "YARP_Unbuffered_fast_tcp": [
+        "size"
+    ],
+    "YARP_RPC_fast_tcp": [
+        "size"
+    ]
+}

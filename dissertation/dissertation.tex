@@ -11,22 +11,19 @@
 \usepackage{lipsum}
 \usepackage{enumitem}
 \usepackage{rotating}
+\usepackage{pdfpages}
 
-%@online{,
-%	title  = {},
-%	url   = {},
-%	media = {eresource},
-%	urldate = {2017-11-05}
-%}
-
-% http://cito-web.yspu.org/link1/metod/met125/node29.html статистическая обработка результата
 \renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\textit{#1}}
 \usepackage{unicode-math}
 \setmathfont{XITS Math}
+\setlist[itemize]{noitemsep, topsep=0pt}
+\setlist[description]{noitemsep, topsep=0pt}
+\addto\captionsrussian{\renewcommand{\figurename}{Рисунок}}
 
 \usepackage{mathtext}
 
 \begin{document}
+	\includepdf[pages=-]{title.pdf}
 	\pagenumbering{gobble}
 	\input{tex/essay.tex}             % Реферат ! ВНУТРИ НАЧИНАЕТСЯ НУМЕРАЦИЯ !
 	\input{tex/abstract.tex}          % Аннотация на английском
@@ -50,7 +47,7 @@
 		\titlecontents{chapter}[2cm]{}{Приложение \thecontentslabel . }{}{\titlerule*[1pc]{ }\contentspage}
 %		\input{tex/application/tables.tex}
 		\input{tex/application/dockerfiles.tex}
-		\input{tex/application/analyser.tex}
+		\input{tex/application/code.tex}
 		\input{tex/application/configs.tex}
 	\endgroup
 	

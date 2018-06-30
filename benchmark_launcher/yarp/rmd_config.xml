@@ -1,0 +1,200 @@
+<rmd>
+    <benchmark name="YARP_Buffered_shmem">
+        <titles>
+            <remap title="size" remap="Объем данных"/>
+            <remap title="real_time" remap="Время отправки (нс)"/>
+            <remap title="cpu_time" remap="Время отправки CPU (нс)"/>
+            <remap title="bytes_per_second" remap="Широта пропускания публикующего (б/с)"/>
+        </titles>
+        <plots>
+            <plot title="Зависимость задержки от фактора" ylab="Задержка (нс)" values="False" bars="False">
+                <measure name="real_time" col="black" type="o" lty="1"/>
+                <measure name="cpu_time" col="red" type="X" lty="2"/>
+                <!--measure name="manual_latency" col="blue" type="+" lty="3"/-->
+            </plot>
+            <plot title="Зависимость широты пропускания от фактора" ylab="Пропускная способность (байт/сек)" values="True" bars="False">
+                <measure name="bytes_per_second" col="black" type="o" lty="1"/>
+            </plot>
+        </plots>
+    </benchmark>
+    <benchmark name="YARP_Unbuffered_shmem">
+        <titles>
+            <remap title="size" remap="Объем данных"/>
+            <remap title="real_time" remap="Время отправки (нс)"/>
+            <remap title="cpu_time" remap="Время отправки CPU (нс)"/>
+            <remap title="bytes_per_second" remap="Широта пропускания публикующего (б/с)"/>
+        </titles>
+        <plots>
+            <plot title="Зависимость задержки от фактора" ylab="Задержка (нс)" values="False" bars="False">
+                <measure name="real_time" col="black" type="o" lty="1"/>
+                <measure name="cpu_time" col="red" type="X" lty="2"/>
+                <!--measure name="manual_latency" col="blue" type="+" lty="3"/-->
+            </plot>
+            <plot title="Зависимость широты пропускания от фактора" ylab="Пропускная способность (байт/сек)" values="True" bars="False">
+                <measure name="bytes_per_second" col="black" type="o" lty="1"/>
+            </plot>
+        </plots>
+    </benchmark>
+    <benchmark name="YARP_RPC_shmem">
+        <titles>
+            <remap title="size" remap="Объем данных"/>
+            <remap title="real_time" remap="Время отправки (нс)"/>
+            <remap title="cpu_time" remap="Время отправки CPU (нс)"/>
+            <remap title="bytes_per_second" remap="Широта пропускания публикующего (б/с)"/>
+        </titles>
+        <plots>
+            <plot title="Зависимость задержки от фактора" ylab="Задержка (нс)" values="False" bars="False">
+                <measure name="real_time" col="black" type="o" lty="1"/>
+                <measure name="cpu_time" col="red" type="X" lty="2"/>
+                <!--measure name="manual_latency" col="blue" type="+" lty="3"/-->
+            </plot>
+            <plot title="Зависимость широты пропускания от фактора" ylab="Пропускная способность (байт/сек)" values="True" bars="False">
+                <measure name="bytes_per_second" col="black" type="o" lty="1"/>
+            </plot>
+        </plots>
+    </benchmark>
+    <benchmark name="YARP_Buffered_tcp">
+        <titles>
+            <remap title="size" remap="Объем данных"/>
+            <remap title="real_time" remap="Время отправки (нс)"/>
+            <remap title="cpu_time" remap="Время отправки CPU (нс)"/>
+            <remap title="bytes_per_second" remap="Широта пропускания публикующего (б/с)"/>
+        </titles>
+        <plots>
+            <plot title="Зависимость задержки от фактора" ylab="Задержка (нс)" values="False" bars="False">
+                <measure name="real_time" col="black" type="o" lty="1"/>
+                <measure name="cpu_time" col="red" type="X" lty="2"/>
+                <!--measure name="manual_latency" col="blue" type="+" lty="3"/-->
+            </plot>
+            <plot title="Зависимость широты пропускания от фактора" ylab="Пропускная способность (байт/сек)" values="True" bars="False">
+                <measure name="bytes_per_second" col="black" type="o" lty="1"/>
+            </plot>
+        </plots>
+    </benchmark>
+    <benchmark name="YARP_Unbuffered_tcp">
+        <titles>
+            <remap title="size" remap="Объем данных"/>
+            <remap title="real_time" remap="Время отправки (нс)"/>
+            <remap title="cpu_time" remap="Время отправки CPU (нс)"/>
+            <remap title="bytes_per_second" remap="Широта пропускания публикующего (б/с)"/>
+        </titles>
+        <plots>
+            <plot title="Зависимость задержки от фактора" ylab="Задержка (нс)" values="False" bars="False">
+                <measure name="real_time" col="black" type="o" lty="1"/>
+                <measure name="cpu_time" col="red" type="X" lty="2"/>
+                <!--measure name="manual_latency" col="blue" type="+" lty="3"/-->
+            </plot>
+            <plot title="Зависимость широты пропускания от фактора" ylab="Пропускная способность (байт/сек)" values="True" bars="False">
+                <measure name="bytes_per_second" col="black" type="o" lty="1"/>
+            </plot>
+        </plots>
+    </benchmark>
+    <benchmark name="YARP_RPC_tcp">
+        <titles>
+            <remap title="size" remap="Объем данных"/>
+            <remap title="real_time" remap="Время отправки (нс)"/>
+            <remap title="cpu_time" remap="Время отправки CPU (нс)"/>
+            <remap title="bytes_per_second" remap="Широта пропускания публикующего (б/с)"/>
+        </titles>
+        <plots>
+            <plot title="Зависимость задержки от фактора" ylab="Задержка (нс)" values="False" bars="False">
+                <measure name="real_time" col="black" type="o" lty="1"/>
+                <measure name="cpu_time" col="red" type="X" lty="2"/>
+                <!--measure name="manual_latency" col="blue" type="+" lty="3"/-->
+            </plot>
+            <plot title="Зависимость широты пропускания от фактора" ylab="Пропускная способность (байт/сек)" values="True" bars="False">
+                <measure name="bytes_per_second" col="black" type="o" lty="1"/>
+            </plot>
+        </plots>
+    </benchmark>
+    <benchmark name="YARP_Buffered_udp">
+        <titles>
+            <remap title="size" remap="Объем данных"/>
+            <remap title="real_time" remap="Время отправки (нс)"/>
+            <remap title="cpu_time" remap="Время отправки CPU (нс)"/>
+            <remap title="bytes_per_second" remap="Широта пропускания публикующего (б/с)"/>
+        </titles>
+        <plots>
+            <plot title="Зависимость задержки от фактора" ylab="Задержка (нс)" values="False" bars="False">
+                <measure name="real_time" col="black" type="o" lty="1"/>
+                <measure name="cpu_time" col="red" type="X" lty="2"/>
+                <!--measure name="manual_latency" col="blue" type="+" lty="3"/-->
+            </plot>
+            <plot title="Зависимость широты пропускания от фактора" ylab="Пропускная способность (байт/сек)" values="True" bars="False">
+                <measure name="bytes_per_second" col="black" type="o" lty="1"/>
+            </plot>
+        </plots>
+    </benchmark>
+    <benchmark name="YARP_Unbuffered_udp">
+        <titles>
+            <remap title="size" remap="Объем данных"/>
+            <remap title="real_time" remap="Время отправки (нс)"/>
+            <remap title="cpu_time" remap="Время отправки CPU (нс)"/>
+            <remap title="bytes_per_second" remap="Широта пропускания публикующего (б/с)"/>
+        </titles>
+        <plots>
+            <plot title="Зависимость задержки от фактора" ylab="Задержка (нс)" values="False" bars="False">
+                <measure name="real_time" col="black" type="o" lty="1"/>
+                <measure name="cpu_time" col="red" type="X" lty="2"/>
+                <!--measure name="manual_latency" col="blue" type="+" lty="3"/-->
+            </plot>
+            <plot title="Зависимость широты пропускания от фактора" ylab="Пропускная способность (байт/сек)" values="True" bars="False">
+                <measure name="bytes_per_second" col="black" type="o" lty="1"/>
+            </plot>
+        </plots>
+    </benchmark>
+    <benchmark name="YARP_Buffered_fast_tcp">
+        <titles>
+            <remap title="size" remap="Объем данных"/>
+            <remap title="real_time" remap="Время отправки (нс)"/>
+            <remap title="cpu_time" remap="Время отправки CPU (нс)"/>
+            <remap title="bytes_per_second" remap="Широта пропускания публикующего (б/с)"/>
+        </titles>
+        <plots>
+            <plot title="Зависимость задержки от фактора" ylab="Задержка (нс)" values="False" bars="False">
+                <measure name="real_time" col="black" type="o" lty="1"/>
+                <measure name="cpu_time" col="red" type="X" lty="2"/>
+                <!--measure name="manual_latency" col="blue" type="+" lty="3"/-->
+            </plot>
+            <plot title="Зависимость широты пропускания от фактора" ylab="Пропускная способность (байт/сек)" values="True" bars="False">
+                <measure name="bytes_per_second" col="black" type="o" lty="1"/>
+            </plot>
+        </plots>
+    </benchmark>
+    <benchmark name="YARP_Unbuffered_fast_tcp">
+        <titles>
+            <remap title="size" remap="Объем данных"/>
+            <remap title="real_time" remap="Время отправки (нс)"/>
+            <remap title="cpu_time" remap="Время отправки CPU (нс)"/>
+            <remap title="bytes_per_second" remap="Широта пропускания публикующего (б/с)"/>
+        </titles>
+        <plots>
+            <plot title="Зависимость задержки от фактора" ylab="Задержка (нс)" values="False" bars="False">
+                <measure name="real_time" col="black" type="o" lty="1"/>
+                <measure name="cpu_time" col="red" type="X" lty="2"/>
+                <!--measure name="manual_latency" col="blue" type="+" lty="3"/-->
+            </plot>
+            <plot title="Зависимость широты пропускания от фактора" ylab="Пропускная способность (байт/сек)" values="True" bars="False">
+                <measure name="bytes_per_second" col="black" type="o" lty="1"/>
+            </plot>
+        </plots>
+    </benchmark>
+    <benchmark name="YARP_RPC_fast_tcp">
+        <titles>
+            <remap title="size" remap="Объем данных"/>
+            <remap title="real_time" remap="Время отправки (нс)"/>
+            <remap title="cpu_time" remap="Время отправки CPU (нс)"/>
+            <remap title="bytes_per_second" remap="Широта пропускания публикующего (б/с)"/>
+        </titles>
+        <plots>
+            <plot title="Зависимость задержки от фактора" ylab="Задержка (нс)" values="False" bars="False">
+                <measure name="real_time" col="black" type="o" lty="1"/>
+                <measure name="cpu_time" col="red" type="X" lty="2"/>
+                <!--measure name="manual_latency" col="blue" type="+" lty="3"/-->
+            </plot>
+            <plot title="Зависимость широты пропускания от фактора" ylab="Пропускная способность (байт/сек)" values="True" bars="False">
+                <measure name="bytes_per_second" col="black" type="o" lty="1"/>
+            </plot>
+        </plots>
+    </benchmark>
+</rmd>

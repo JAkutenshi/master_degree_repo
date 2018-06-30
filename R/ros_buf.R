@@ -61,21 +61,23 @@ points(factor(buffer, levels=buffer), b_4k_manual_latency / 1000000, col="red", 
 lines(factor(buffer, levels=buffer), b_4k_manual_latency / 1000000, col="red", lty=2, lwd=2)
 points(factor(buffer, levels=buffer), b_16k_manual_latency / 1000000, col="blue", pch="V")
 lines(factor(buffer, levels=buffer), b_16k_manual_latency / 1000000, col="blue", lty=3, lwd=2)
-
 points(factor(buffer, levels=buffer), b_64k_manual_latency / 1000000, col="blue", pch="A")
 lines(factor(buffer, levels=buffer), b_64k_manual_latency / 1000000, col="blue", lty=4, lwd=2)
 points(factor(buffer, levels=buffer), b_256k_manual_latency / 1000000, col="black", pch="o")
 lines(factor(buffer, levels=buffer), b_256k_manual_latency / 1000000, col="black", lty=5, lwd=2)
-#points(factor(buffer, levels=buffer), b_1m_manual_latency / 1000000000, col="blue", pch="V")
-#lines(factor(buffer, levels=buffer), b_1m_manual_latency / 1000000000, col="blue", lty=6, lwd=2)
-
-#points(factor(buffer, levels=buffer), b_4m_manual_latency / 1000000000, col="black", pch="o")
-#lines(factor(buffer, levels=buffer), b_4m_manual_latency / 1000000000, col="black", lty=7, lwd=2)
-#points(factor(buffer, levels=buffer), b_16m_manual_latency / 1000000000, col="red", pch="X")
-#lines(factor(buffer, levels=buffer), b_16m_manual_latency / 1000000000, col="red", lty=8, lwd=2)
-#points(factor(buffer, levels=buffer), b_64m_manual_latency / 1000000000, col="blue", pch="V")
-#lines(factor(buffer, levels=buffer), b_64m_manual_latency / 1000000000, col="blue", lty=9, lwd=2)
-
 title(xlab="Размер буфера", ylab="Задержка (мс)")
 legend("bottomright", legend=c("1 Кб", "4 Кб", "16 Кб", "64 Кб", "256 Кб"), col=c("black", "red", "blue", "blue", "black"), lty=c(1, 2, 3, 4, 5), pch=c("o", "X", "V", "A", "o"), ncol=1)
+
+
+plot(factor(buffer, levels=buffer), b_1m_manual_latency / 1000000000, type="o", col="black", lty=0, ylim=c(-5, 5), xlab="", ylab="")
+points(factor(buffer, levels=buffer), b_1m_manual_latency / 1000000000, col="black", pch="o")
+lines(factor(buffer, levels=buffer), b_1m_manual_latency / 1000000000, col="black", lty=1, lwd=2)
+points(factor(buffer, levels=buffer), b_4m_manual_latency / 1000000000, col="red", pch="x")
+lines(factor(buffer, levels=buffer), b_4m_manual_latency / 1000000000, col="red", lty=2, lwd=2)
+points(factor(buffer, levels=buffer), b_16m_manual_latency / 1000000000, col="blue", pch="v")
+lines(factor(buffer, levels=buffer), b_16m_manual_latency / 1000000000, col="blue", lty=3, lwd=2)
+points(factor(buffer, levels=buffer), b_64m_manual_latency / 1000000000, col="black", pch="*")
+lines(factor(buffer, levels=buffer), b_64m_manual_latency / 1000000000, col="black", lty=4, lwd=2)
+title(xlab="Размер буфера", ylab="Задержка (с)")
+legend("bottomright", legend=c("1 Мб", "4 Мб", "16 Мб", "64 Мб"), col=c("black", "red", "blue", "black"), lty=c(1, 2, 3, 4), pch=c("o", "x", "v", "*"), ncol=1)
 

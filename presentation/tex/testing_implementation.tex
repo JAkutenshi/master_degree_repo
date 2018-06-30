@@ -1,59 +1,101 @@
 \section{Реализация}
 
 
-\subsection{Конфигурация окружения}
-\begin{frame}{Конфигурация окружения}
-	Тут спеки машины
+\subsection{Конфигурация}
+\begin{frame}{Конфигурация среды тестирования производительности}
+	Тесты проводились на следующей аппаратной конфигурации:
+	\begin{itemize}
+		\item 8 процессоров Intel Xeon E5-2580 2.4 ГГц;
+		\item 64 Гб оперативной памяти.
+	\end{itemize}
+	Операционная система: Ubuntu 16.04. Для тестирования был установлен Docker версии 18.04.0-ce.
 	
-	Тут картинка из иерархии docker-образов
+	\vspace{1em}
+	\centering
+	\includegraphics[scale=.5]{img/dockers.png}
 \end{frame}
 
-\subsection{Архитектура}
-\begin{frame}{Конвейер}
-	Тут картинка из шагов:
+\subsection{Бенчмарки}
+\begin{frame}{Требования к инструменту измерения производительности}
+	Измеряемые характеристики:
 	\begin{itemize}
-		\item Получения результатов с
+		\item Задержка передачи сообщений между зулами (нс)
+		\item Полоса пропускания канала коммуникации (б/с)
+	\end{itemize}
+	Требования к инструменту:
+	\begin{itemize}
+		\item Точность вычисления:
 		\begin{itemize}
-			\item ROS benchmark 
-			\item YARP benchmark
-			\item MIRA benchmark
-			\item ORoCoS benchmark
+			\item Высокоточные часы \texttt{std::chrono}
+			\item Такты процессора \texttt{asm rdtsc}
 		\end{itemize}
-		\item Разбиения на таблицы при помощи утилиты из 
-		\begin{itemize}
-			\item набор из основного json и дополнительных, которые будут сливаться с основным
-			\item input.xml, описывающий входные json-ы и выходные csv
-		\end{itemize}
-		\item Обработка таблиц при помощи R и утилиты преобразования из
-			\item набора из множества csv таблиц
-			\item analyse.xml, описывающий что читать из таблиц, каким R-скриптом это обрабатывать
-		\item В конце результаты: rmd html pdf
+		\item Сериализация результатов в файл
+		\item Возможность приостанавливать учет времени
+		\item Итеративность выполнения тестов
+	\end{itemize}
+
+	Решения:
+	\begin{itemize}
+		\item Google Benchmark framework
+		\item Собственная библиотека Benchmark gripper (причина: MIRA)
 	\end{itemize}
 \end{frame}
 
-\subsection{Бенчмарк}
-\begin{frame}{Пример алгоритма реализации бенчмарка}
-	Картинка с описанием связей узлов, сообщений и макросов тестов
+\begin{frame}{Benchmark Gripper: сценарии использования и диаграмма состояний}
+	\begin{columns}[onlytextwidth]
+		\begin{column}{0.49\textwidth}
+			\includegraphics[width=\textwidth]{img/uc.png}
+		\end{column}
+		\begin{column}{0.49\textwidth}
+			\includegraphics[width=\textwidth]{img/sm.png}
+		\end{column}
+	\end{columns}
 \end{frame}
 
-\subsection{Преобразователь}
-\begin{frame}{Реализация преобразователя json to csv}
-	Картинка с описанием шагов:
+\begin{frame}{Benchmark Gripper: диаграмма классов}
+\centering
+	\includegraphics[scale=.46]{img/class.png}
+\end{frame}
+
+\begin{frame}{Benchmark Gripper: преимущества и недостатки}
+	Преимущества:
 	\begin{itemize}
-		\item XML configuration
-		\item JSON merge
-		\item Преобразование (и схранение отдельным csv) JSON в структуру список-списков-списков(1) 
-		\item Преобразование (1) в список-списков средних значений измерений с СКО по множеству многофакторных бенчмарков;
-		\item Распиливание этого списка по множеству требуемых csv файлов
+		\item не требуется предварительная компиляция
+		\item интерфейс основан на макросах
+		\item высокая точность
+		\item сериализация результатов совместимая с Google Benchmark
+	\end{itemize}
+	Недостатки:
+	\begin{itemize}
+		\item скудный по-сравнению с Google benchmark функционал
+		\item длительное исполнение тестов
 	\end{itemize}
 \end{frame}
+
 
 \subsection{Анализатор}
-\begin{frame}{Реализация анализатора таблиц}
-	Картинка с описанием шагов:
-	\begin{itemize}
-		\item XML configuration
-		\item Преобразование таблицы в R-chunk и запись его в файл
-		\item Вызов knit и файлы результатов на выходе
-	\end{itemize}
+\begin{frame}{Анализатор результатов - Merger.py}
+	\begin{columns}[onlytextwidth]
+		\hspace{-0.5cm}
+		\begin{column}{0.45\textwidth}
+			\begin{itemize}
+				\item Принимает на вход:
+				\begin{itemize}
+					\item множество результатов в формате json
+					\item файлы конфигурации
+				\end{itemize}
+				\item Статистически обрабатывает результаты
+				\item Результат - файл rmarkdown
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.6\textwidth}
+			\includegraphics[width=\textwidth]{img/tmp.png}
+		\end{column}
+	\end{columns}
+	
+\end{frame}
+
+\subsection{Система}
+\begin{frame}{Система тестирования производительности}
+	\includegraphics[scale=.37]{img/deploy.png}
 \end{frame}

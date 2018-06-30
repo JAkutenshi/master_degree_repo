@@ -1,0 +1,37 @@
+size <- c("1K", "4K", "16K", "64K", "256K")
+
+b_shmem_real_time <- c(1527.7222221, 653809.4, 2502803.7555556, 10047465.6111112, 40747806.3333333)
+b_shmem_bytes_per_second <- c(620380.0356929, 626617.9191139999, 654581.3518759, 654382.0161473, 644251.8247281)
+b_tcp_real_time <- c(388261.1666667, 3614916.4555555, 14756935.855555499, 56423353.6000001, 223554893.65555558)
+b_tcp_bytes_per_second <- c(119191.5822219, 113335.1274148, 111146.8408907, 116263.512847, 117270.67721759998)
+b_udp_real_time <- c(106391.1222222, 362753.3222222, 2656463.8333332003, 9561054.2555556, 38210113.0666666)
+b_udp_bytes_per_second <- c(961756.6771365998, 1129047.0698289, 627703.6754908001, 685456.4443161999, 686087.4486158)
+b_fast_tcp_real_time <- c(78209.31111099999, 616205.0555556, 1285011.3666667999, 57846151.26666659, 194723287.5333335)
+b_fast_tcp_bytes_per_second <- c(1792399.8100927, 1066262.7259801999, 1288871.7005404998, 235658.0293454, 136195.3881975)
+
+# yarp_protocol_buf_bw
+plot(factor(size, levels=size),   b_tcp_bytes_per_second / (1024*1024), type="o", col="black", lty=0, ylim=c(0, 2), xlab="", ylab="")
+points(factor(size, levels=size), b_tcp_bytes_per_second / (1024*1024), col="black", pch="o")
+lines(factor(size, levels=size),  b_tcp_bytes_per_second / (1024*1024), col="black", lty=1, lwd=2)
+points(factor(size, levels=size), b_shmem_bytes_per_second / (1024*1024), col="red", pch="x")
+lines(factor(size, levels=size),  b_shmem_bytes_per_second / (1024*1024), col="red", lty=2, lwd=2)
+points(factor(size, levels=size), b_udp_bytes_per_second / (1024*1024), col="blue", pch="v")
+lines(factor(size, levels=size),  b_udp_bytes_per_second / (1024*1024), col="blue", lty=3, lwd=2)
+points(factor(size, levels=size), b_fast_tcp_bytes_per_second / (1024*1024), col="black", pch="*")
+lines(factor(size, levels=size),  b_fast_tcp_bytes_per_second / (1024*1024), col="black", lty=4, lwd=2)
+title(xlab="Объем данных", ylab="Пропускная способность (МБ/с)")
+legend("topright", legend=c("tcp", "shmem", "udp", "fast_tcp"), col=c("black", "red", "blue", "black"), lty=c(1, 2, 3, 4), pch=c("o", "x", "v", "*"), ncol=1)
+
+# yarp_protocol_buf_l
+plot(factor(size, levels=size),   b_tcp_real_time / (1000000), type="o", col="black", lty=0, ylim=c(0, 250), xlab="", ylab="")
+points(factor(size, levels=size), b_tcp_real_time / (1000000), col="black", pch="o")
+lines(factor(size, levels=size),  b_tcp_real_time / (1000000), col="black", lty=1, lwd=2)
+points(factor(size, levels=size), b_shmem_real_time / (1000000), col="red", pch="x")
+lines(factor(size, levels=size),  b_shmem_real_time / (1000000), col="red", lty=2, lwd=2)
+points(factor(size, levels=size), b_udp_real_time / (1000000), col="blue", pch="v")
+lines(factor(size, levels=size),  b_udp_real_time / (1000000), col="blue", lty=3, lwd=2)
+points(factor(size, levels=size), b_fast_tcp_real_time / (1000000), col="black", pch="*")
+lines(factor(size, levels=size),  b_fast_tcp_real_time / (1000000), col="black", lty=4, lwd=2)
+title(xlab="Объем данных", ylab="Задержка (мс)")
+legend("topleft", legend=c("tcp", "shmem", "udp", "fast_tcp"), col=c("black", "red", "blue", "black"), lty=c(1, 2, 3, 4), pch=c("o", "x", "v", "*"), ncol=1)
+

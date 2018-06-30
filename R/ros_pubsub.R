@@ -13,7 +13,7 @@ points(factor(size, levels=size), cpu_time / 1000000000, col="red", pch="X")
 lines(factor(size, levels=size), cpu_time / 1000000000, col="red", lty=2, lwd=2)
 points(factor(size, levels=size), manual_latency / 1000000000, col="blue", pch="V")
 lines(factor(size, levels=size), manual_latency / 1000000000, col="blue", lty=3, lwd=2)
-title(xlab="Размер сообщения", ylab="Задержка (мс)")
+title(xlab="Размер сообщения", ylab="Задержка (с)")
 legend("bottomright", legend=c("Время отправки", "Время отправки CPU", "Задержка передачи"), col=c("black", "red", "blue"), lty=c(1, 2, 3), pch=c("o", "X"), ncol=1)
 
 mbps = manual_bandwidth / (1024*1024)
